@@ -37,7 +37,7 @@
 #include <functional>
 
 #include <GenericBase.h>
-#include <Laser.h>
+#include <Lidar3D.h>
 #include <OmniRobot.h>
 
 
@@ -45,7 +45,7 @@
 #define BASIC_PERIOD 100
 
 
-using TuplePrx = std::tuple<RoboCompLaser::LaserPrxPtr,RoboCompOmniRobot::OmniRobotPrxPtr>;
+using TuplePrx = std::tuple<RoboCompLidar3D::Lidar3DPrxPtr,RoboCompOmniRobot::OmniRobotPrxPtr>;
 
 
 class GenericWorker : public QWidget, public Ui_guiDlg
@@ -66,7 +66,7 @@ public:
 	atomic_bool hibernation = false;
 
 
-	RoboCompLaser::LaserPrxPtr laser_proxy;
+	RoboCompLidar3D::Lidar3DPrxPtr lidar3d_proxy;
 	RoboCompOmniRobot::OmniRobotPrxPtr omnirobot_proxy;
 
 

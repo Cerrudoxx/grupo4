@@ -71,10 +71,8 @@ ICES__home_usuario_robocomp_components_grupo4_practica1_src: src/CMakeFiles/ICES
 	cd /home/usuario/robocomp/components/grupo4/practica1/src && robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/CommonBehavior.idsl /home/usuario/robocomp/components/grupo4/practica1/src/CommonBehavior.ice
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "BU robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/GenericBase.idsl /home/usuario/robocomp/components/grupo4/practica1/src/GenericBase.ice"
 	cd /home/usuario/robocomp/components/grupo4/practica1/src && robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/GenericBase.idsl /home/usuario/robocomp/components/grupo4/practica1/src/GenericBase.ice
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "BU robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/GenericBase.idsl /home/usuario/robocomp/components/grupo4/practica1/src/GenericBase.ice"
-	cd /home/usuario/robocomp/components/grupo4/practica1/src && robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/GenericBase.idsl /home/usuario/robocomp/components/grupo4/practica1/src/GenericBase.ice
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "BU robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/Laser.idsl /home/usuario/robocomp/components/grupo4/practica1/src/Laser.ice"
-	cd /home/usuario/robocomp/components/grupo4/practica1/src && robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/Laser.idsl /home/usuario/robocomp/components/grupo4/practica1/src/Laser.ice
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "BU robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/Lidar3D.idsl /home/usuario/robocomp/components/grupo4/practica1/src/Lidar3D.ice"
+	cd /home/usuario/robocomp/components/grupo4/practica1/src && robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/Lidar3D.idsl /home/usuario/robocomp/components/grupo4/practica1/src/Lidar3D.ice
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "BU robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/OmniRobot.idsl /home/usuario/robocomp/components/grupo4/practica1/src/OmniRobot.ice"
 	cd /home/usuario/robocomp/components/grupo4/practica1/src && robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/OmniRobot.idsl /home/usuario/robocomp/components/grupo4/practica1/src/OmniRobot.ice
 .PHONY : ICES__home_usuario_robocomp_components_grupo4_practica1_src

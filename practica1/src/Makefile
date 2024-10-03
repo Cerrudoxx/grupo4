@@ -265,29 +265,29 @@ GenericBase.cpp.s:
 	cd /home/usuario/robocomp/components/grupo4/practica1 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/GenericBase.cpp.s
 .PHONY : GenericBase.cpp.s
 
-Laser.o: Laser.cpp.o
-.PHONY : Laser.o
+Lidar3D.o: Lidar3D.cpp.o
+.PHONY : Lidar3D.o
 
 # target to build an object file
-Laser.cpp.o:
-	cd /home/usuario/robocomp/components/grupo4/practica1 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/Laser.cpp.o
-.PHONY : Laser.cpp.o
+Lidar3D.cpp.o:
+	cd /home/usuario/robocomp/components/grupo4/practica1 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/Lidar3D.cpp.o
+.PHONY : Lidar3D.cpp.o
 
-Laser.i: Laser.cpp.i
-.PHONY : Laser.i
+Lidar3D.i: Lidar3D.cpp.i
+.PHONY : Lidar3D.i
 
 # target to preprocess a source file
-Laser.cpp.i:
-	cd /home/usuario/robocomp/components/grupo4/practica1 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/Laser.cpp.i
-.PHONY : Laser.cpp.i
+Lidar3D.cpp.i:
+	cd /home/usuario/robocomp/components/grupo4/practica1 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/Lidar3D.cpp.i
+.PHONY : Lidar3D.cpp.i
 
-Laser.s: Laser.cpp.s
-.PHONY : Laser.s
+Lidar3D.s: Lidar3D.cpp.s
+.PHONY : Lidar3D.s
 
 # target to generate assembly for a file
-Laser.cpp.s:
-	cd /home/usuario/robocomp/components/grupo4/practica1 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/Laser.cpp.s
-.PHONY : Laser.cpp.s
+Lidar3D.cpp.s:
+	cd /home/usuario/robocomp/components/grupo4/practica1 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/Lidar3D.cpp.s
+.PHONY : Lidar3D.cpp.s
 
 OmniRobot.o: OmniRobot.cpp.o
 .PHONY : OmniRobot.o
@@ -623,9 +623,9 @@ help:
 	@echo "... GenericBase.o"
 	@echo "... GenericBase.i"
 	@echo "... GenericBase.s"
-	@echo "... Laser.o"
-	@echo "... Laser.i"
-	@echo "... Laser.s"
+	@echo "... Lidar3D.o"
+	@echo "... Lidar3D.i"
+	@echo "... Lidar3D.s"
 	@echo "... OmniRobot.o"
 	@echo "... OmniRobot.i"
 	@echo "... OmniRobot.s"

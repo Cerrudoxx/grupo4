@@ -83,12 +83,12 @@ src/GenericBase.cpp:
 src/GenericBase.h: src/GenericBase.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/GenericBase.h
 
-src/Laser.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/practica1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "BU ice=>h/cpp: Generating Laser.h and Laser.cpp from /home/usuario/robocomp/components/grupo4/practica1/src/Laser.ice"
-	cd /home/usuario/robocomp/components/grupo4/practica1/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/practica1/src/Laser.ice -I/home/usuario/robocomp/components/grupo4/practica1/src/ --output-dir .
+src/Lidar3D.cpp:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/practica1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "BU ice=>h/cpp: Generating Lidar3D.h and Lidar3D.cpp from /home/usuario/robocomp/components/grupo4/practica1/src/Lidar3D.ice"
+	cd /home/usuario/robocomp/components/grupo4/practica1/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/practica1/src/Lidar3D.ice -I/home/usuario/robocomp/components/grupo4/practica1/src/ --output-dir .
 
-src/Laser.h: src/Laser.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate src/Laser.h
+src/Lidar3D.h: src/Lidar3D.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate src/Lidar3D.h
 
 src/OmniRobot.cpp:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/practica1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "BU ice=>h/cpp: Generating OmniRobot.h and OmniRobot.cpp from /home/usuario/robocomp/components/grupo4/practica1/src/OmniRobot.ice"
@@ -305,19 +305,19 @@ src/CMakeFiles/chocachoca.dir/GenericBase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chocachoca.dir/GenericBase.cpp.s"
 	cd /home/usuario/robocomp/components/grupo4/practica1/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica1/src/GenericBase.cpp -o CMakeFiles/chocachoca.dir/GenericBase.cpp.s
 
-src/CMakeFiles/chocachoca.dir/Laser.cpp.o: src/CMakeFiles/chocachoca.dir/flags.make
-src/CMakeFiles/chocachoca.dir/Laser.cpp.o: src/Laser.cpp
-src/CMakeFiles/chocachoca.dir/Laser.cpp.o: src/CMakeFiles/chocachoca.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/chocachoca.dir/Laser.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/practica1/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/chocachoca.dir/Laser.cpp.o -MF CMakeFiles/chocachoca.dir/Laser.cpp.o.d -o CMakeFiles/chocachoca.dir/Laser.cpp.o -c /home/usuario/robocomp/components/grupo4/practica1/src/Laser.cpp
+src/CMakeFiles/chocachoca.dir/Lidar3D.cpp.o: src/CMakeFiles/chocachoca.dir/flags.make
+src/CMakeFiles/chocachoca.dir/Lidar3D.cpp.o: src/Lidar3D.cpp
+src/CMakeFiles/chocachoca.dir/Lidar3D.cpp.o: src/CMakeFiles/chocachoca.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/chocachoca.dir/Lidar3D.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica1/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/chocachoca.dir/Lidar3D.cpp.o -MF CMakeFiles/chocachoca.dir/Lidar3D.cpp.o.d -o CMakeFiles/chocachoca.dir/Lidar3D.cpp.o -c /home/usuario/robocomp/components/grupo4/practica1/src/Lidar3D.cpp
 
-src/CMakeFiles/chocachoca.dir/Laser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chocachoca.dir/Laser.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/practica1/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica1/src/Laser.cpp > CMakeFiles/chocachoca.dir/Laser.cpp.i
+src/CMakeFiles/chocachoca.dir/Lidar3D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chocachoca.dir/Lidar3D.cpp.i"
+	cd /home/usuario/robocomp/components/grupo4/practica1/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica1/src/Lidar3D.cpp > CMakeFiles/chocachoca.dir/Lidar3D.cpp.i
 
-src/CMakeFiles/chocachoca.dir/Laser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chocachoca.dir/Laser.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/practica1/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica1/src/Laser.cpp -o CMakeFiles/chocachoca.dir/Laser.cpp.s
+src/CMakeFiles/chocachoca.dir/Lidar3D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chocachoca.dir/Lidar3D.cpp.s"
+	cd /home/usuario/robocomp/components/grupo4/practica1/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica1/src/Lidar3D.cpp -o CMakeFiles/chocachoca.dir/Lidar3D.cpp.s
 
 src/CMakeFiles/chocachoca.dir/OmniRobot.cpp.o: src/CMakeFiles/chocachoca.dir/flags.make
 src/CMakeFiles/chocachoca.dir/OmniRobot.cpp.o: src/OmniRobot.cpp
@@ -349,7 +349,7 @@ chocachoca_OBJECTS = \
 "CMakeFiles/chocachoca.dir/genericworker.cpp.o" \
 "CMakeFiles/chocachoca.dir/CommonBehavior.cpp.o" \
 "CMakeFiles/chocachoca.dir/GenericBase.cpp.o" \
-"CMakeFiles/chocachoca.dir/Laser.cpp.o" \
+"CMakeFiles/chocachoca.dir/Lidar3D.cpp.o" \
 "CMakeFiles/chocachoca.dir/OmniRobot.cpp.o"
 
 # External object files for target chocachoca
@@ -369,7 +369,7 @@ bin/chocachoca: src/CMakeFiles/chocachoca.dir/commonbehaviorI.cpp.o
 bin/chocachoca: src/CMakeFiles/chocachoca.dir/genericworker.cpp.o
 bin/chocachoca: src/CMakeFiles/chocachoca.dir/CommonBehavior.cpp.o
 bin/chocachoca: src/CMakeFiles/chocachoca.dir/GenericBase.cpp.o
-bin/chocachoca: src/CMakeFiles/chocachoca.dir/Laser.cpp.o
+bin/chocachoca: src/CMakeFiles/chocachoca.dir/Lidar3D.cpp.o
 bin/chocachoca: src/CMakeFiles/chocachoca.dir/OmniRobot.cpp.o
 bin/chocachoca: src/CMakeFiles/chocachoca.dir/build.make
 bin/chocachoca: /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.2.4
@@ -400,8 +400,8 @@ src/CMakeFiles/chocachoca.dir/depend: src/CommonBehavior.cpp
 src/CMakeFiles/chocachoca.dir/depend: src/CommonBehavior.h
 src/CMakeFiles/chocachoca.dir/depend: src/GenericBase.cpp
 src/CMakeFiles/chocachoca.dir/depend: src/GenericBase.h
-src/CMakeFiles/chocachoca.dir/depend: src/Laser.cpp
-src/CMakeFiles/chocachoca.dir/depend: src/Laser.h
+src/CMakeFiles/chocachoca.dir/depend: src/Lidar3D.cpp
+src/CMakeFiles/chocachoca.dir/depend: src/Lidar3D.h
 src/CMakeFiles/chocachoca.dir/depend: src/OmniRobot.cpp
 src/CMakeFiles/chocachoca.dir/depend: src/OmniRobot.h
 src/CMakeFiles/chocachoca.dir/depend: src/chocachoca_autogen/timestamp

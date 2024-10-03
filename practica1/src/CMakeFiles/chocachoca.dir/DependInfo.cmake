@@ -11,7 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "src/chocachoca_autogen/timestamp" "custom" "src/chocachoca_autogen/deps"
   "/home/usuario/robocomp/components/grupo4/practica1/src/CommonBehavior.cpp" "src/CMakeFiles/chocachoca.dir/CommonBehavior.cpp.o" "gcc" "src/CMakeFiles/chocachoca.dir/CommonBehavior.cpp.o.d"
   "/home/usuario/robocomp/components/grupo4/practica1/src/GenericBase.cpp" "src/CMakeFiles/chocachoca.dir/GenericBase.cpp.o" "gcc" "src/CMakeFiles/chocachoca.dir/GenericBase.cpp.o.d"
-  "/home/usuario/robocomp/components/grupo4/practica1/src/Laser.cpp" "src/CMakeFiles/chocachoca.dir/Laser.cpp.o" "gcc" "src/CMakeFiles/chocachoca.dir/Laser.cpp.o.d"
+  "/home/usuario/robocomp/components/grupo4/practica1/src/Lidar3D.cpp" "src/CMakeFiles/chocachoca.dir/Lidar3D.cpp.o" "gcc" "src/CMakeFiles/chocachoca.dir/Lidar3D.cpp.o.d"
   "/home/usuario/robocomp/components/grupo4/practica1/src/OmniRobot.cpp" "src/CMakeFiles/chocachoca.dir/OmniRobot.cpp.o" "gcc" "src/CMakeFiles/chocachoca.dir/OmniRobot.cpp.o.d"
   "/home/usuario/robocomp/components/grupo4/practica1/src/chocachoca_autogen/mocs_compilation.cpp" "src/CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.o" "gcc" "src/CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.o.d"
   "/home/usuario/robocomp/components/grupo4/practica1/src/commonbehaviorI.cpp" "src/CMakeFiles/chocachoca.dir/commonbehaviorI.cpp.o" "gcc" "src/CMakeFiles/chocachoca.dir/commonbehaviorI.cpp.o.d"
@@ -31,7 +31,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/usuario/robocomp/components/grupo4/practica1/src/CommonBehavior.h" "/home/usuario/robocomp/components/grupo4/practica1/src/CommonBehavior.cpp"
   "/home/usuario/robocomp/components/grupo4/practica1/src/GenericBase.h" "/home/usuario/robocomp/components/grupo4/practica1/src/GenericBase.cpp"
-  "/home/usuario/robocomp/components/grupo4/practica1/src/Laser.h" "/home/usuario/robocomp/components/grupo4/practica1/src/Laser.cpp"
+  "/home/usuario/robocomp/components/grupo4/practica1/src/Lidar3D.h" "/home/usuario/robocomp/components/grupo4/practica1/src/Lidar3D.cpp"
   "/home/usuario/robocomp/components/grupo4/practica1/src/OmniRobot.h" "/home/usuario/robocomp/components/grupo4/practica1/src/OmniRobot.cpp"
   )
 

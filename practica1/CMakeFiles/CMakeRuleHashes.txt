@@ -3,6 +3,7 @@
 093440d401d2b4fcbfe40808fb13a6e1 src/CommonBehavior.cpp
 d6fb8daadbe4c58d19e3e6eb38c47c14 src/GenericBase.cpp
 336f4c184d719c7b6e372d83c615ce26 src/Laser.cpp
+2e5c1fa681bfde5421eadfe1425f1b46 src/Lidar3D.cpp
 5128cda20420dfb67b5584bc7d853b53 src/OmniRobot.cpp
 abbe5efd2594a7521ada34162afb69cc src/chocachoca_autogen/timestamp
 58d780d7761f58835cc828c7d10e95eb src/ui_mainUI.h

@@ -2,7 +2,6 @@
   /home/usuario/robocomp/components/grupo4/practica1/src/chocachoca_autogen/moc_predefs.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica1/src/CommonBehavior.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica1/src/GenericBase.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica1/src/Laser.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica1/src/OmniRobot.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica1/src/config.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica1/src/genericworker.h \

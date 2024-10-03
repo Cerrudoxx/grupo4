@@ -80,6 +80,41 @@ void SpecificWorker::initialize()
 void SpecificWorker::compute()
 {
     std::cout << "Compute worker" << std::endl;
+	RoboCompLidar3D::TData ldata;
+
+	try {
+		ldata= this->lidar3d_proxy->getLidarData("bpearl", 0, 2*M_PI, 1);
+
+	}catch (const Ice::Exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+
+    qDebug() << ldata.points.size();
+
+	RoboCompLidar3D::TData anilloPuntos;
+	//qDebug() << ldata.points[7000].z;
+	for (auto &d :ldata.points){
+		if(d.z > 0.2 && d.z < 0.25){
+			anilloPuntos.points.push_back(d);
+		}
+	}
+	float max = anilloPuntos.points[0].z;
+	float min = anilloPuntos.points[0].z;
+
+	for (int i=0; i<anilloPuntos.points.size(); i++){
+		if (anilloPuntos.points[i].z > max){
+			max = anilloPuntos.points[i].z;
+		}
+		if (anilloPuntos.points[i].z < min){
+			min = anilloPuntos.points[i].z;
+		}
+	}
+	qDebug() << "Max: " << max;
+	qDebug() << "Min: " << min;
+
+	qDebug() << anilloPuntos.points.size();
+/*
+	std::cout << "Compute worker" << std::endl;
 	RoboCompLaser::TLaserData ldata;
 
 	try {
@@ -88,10 +123,10 @@ void SpecificWorker::compute()
 		std::cout << e.what() << std::endl;
 	}
 
-     for (auto &d :ldata){
-       qDebug() << d.dist << d.angle;
-     }
-
+	for (auto &d :ldata){
+		qDebug() << d.dist << d.angle;
+	}
+*/
 /*
      float adv, side, rot=0.f;
 	try {
@@ -100,7 +135,7 @@ void SpecificWorker::compute()
 		std::cout << e.what() << std::endl;
 	}
 */
-	qDebug () << ldata.size();
+
 	
 }
 

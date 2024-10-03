@@ -1172,7 +1172,7 @@ src/CMakeFiles/chocachoca.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
  /home/usuario/robocomp/components/grupo4/practica1/src/GenericBase.h \
- /home/usuario/robocomp/components/grupo4/practica1/src/Laser.h \
+ /home/usuario/robocomp/components/grupo4/practica1/src/Lidar3D.h \
  /home/usuario/robocomp/components/grupo4/practica1/src/OmniRobot.h \
  /home/usuario/robocomp/components/grupo4/practica1/src/specificworker.h \
  /home/usuario/robocomp/components/grupo4/practica1/src/genericworker.h \

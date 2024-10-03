@@ -1,8 +1,8 @@
 CommonBehavior.Endpoints=tcp -p 10000
 
 # Proxies for required interfaces
-LaserProxy = laser:tcp -h localhost -p 10003
-OmnniRobotProxy = omnnirobot:tcp -h localhost -p 0
+Lidar3DProxy = lidar3d:tcp -h localhost -p 11988
+OmniRobotProxy = omnirobot:tcp -h localhost -p 10004
 
 
 

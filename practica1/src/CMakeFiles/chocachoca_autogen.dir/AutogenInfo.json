@@ -531,7 +531,7 @@
 	[
 		"/home/usuario/robocomp/components/grupo4/practica1/src/CommonBehavior.cpp",
 		"/home/usuario/robocomp/components/grupo4/practica1/src/GenericBase.cpp",
-		"/home/usuario/robocomp/components/grupo4/practica1/src/Laser.cpp",
+		"/home/usuario/robocomp/components/grupo4/practica1/src/Lidar3D.cpp",
 		"/home/usuario/robocomp/components/grupo4/practica1/src/OmniRobot.cpp",
 		"/home/usuario/robocomp/components/grupo4/practica1/src/ui_mainUI.h"
 	],
@@ -599,7 +599,7 @@
 	[
 		"/home/usuario/robocomp/components/grupo4/practica1/src/CommonBehavior.cpp",
 		"/home/usuario/robocomp/components/grupo4/practica1/src/GenericBase.cpp",
-		"/home/usuario/robocomp/components/grupo4/practica1/src/Laser.cpp",
+		"/home/usuario/robocomp/components/grupo4/practica1/src/Lidar3D.cpp",
 		"/home/usuario/robocomp/components/grupo4/practica1/src/OmniRobot.cpp",
 		"/home/usuario/robocomp/components/grupo4/practica1/src/mainUI.ui",
 		"/home/usuario/robocomp/components/grupo4/practica1/src/ui_mainUI.h"
