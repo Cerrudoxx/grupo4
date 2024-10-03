@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "" "src/chocachoca_autogen/timestamp" "custom" "src/chocachoca_autogen/deps"
   "/home/usuario/robocomp/components/grupo4/practica1/src/CommonBehavior.cpp" "src/CMakeFiles/chocachoca.dir/CommonBehavior.cpp.o" "gcc" "src/CMakeFiles/chocachoca.dir/CommonBehavior.cpp.o.d"
   "/home/usuario/robocomp/components/grupo4/practica1/src/GenericBase.cpp" "src/CMakeFiles/chocachoca.dir/GenericBase.cpp.o" "gcc" "src/CMakeFiles/chocachoca.dir/GenericBase.cpp.o.d"
   "/home/usuario/robocomp/components/grupo4/practica1/src/Laser.cpp" "src/CMakeFiles/chocachoca.dir/Laser.cpp.o" "gcc" "src/CMakeFiles/chocachoca.dir/Laser.cpp.o.d"
@@ -35,8 +36,12 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   )
 
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

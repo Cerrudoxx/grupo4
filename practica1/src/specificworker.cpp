@@ -88,6 +88,18 @@ void SpecificWorker::compute()
 		std::cout << e.what() << std::endl;
 	}
 
+     for (auto &d :ldata){
+       qDebug() << d.dist << d.angle;
+     }
+
+/*
+     float adv, side, rot=0.f;
+	try {
+		ldata = omnirobot_proxy->setSpeedBase(adv,side,rot);
+	}catch (const Ice::Exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+*/
 	qDebug () << ldata.size();
 	
 }

@@ -12,4 +12,5 @@
 /home/usuario/robocomp/components/grupo4/practica1/src/CMakeFiles/install.dir
 /home/usuario/robocomp/components/grupo4/practica1/src/CMakeFiles/install/local.dir
 /home/usuario/robocomp/components/grupo4/practica1/src/CMakeFiles/install/strip.dir
+/home/usuario/robocomp/components/grupo4/practica1/src/CMakeFiles/chocachoca_autogen_timestamp_deps.dir
 /home/usuario/robocomp/components/grupo4/practica1/src/CMakeFiles/chocachoca_autogen.dir
