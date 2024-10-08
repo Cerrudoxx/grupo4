@@ -27,29 +27,50 @@
 #ifndef SPECIFICWORKER_H
 #define SPECIFICWORKER_H
 
-#define HIBERNATION_ENABLED
+//#define HIBERNATION_ENABLED
 
 #include <genericworker.h>
+#include "abstract_graphic_viewer/abstract_graphic_viewer.h"
 
 class SpecificWorker : public GenericWorker
 {
-Q_OBJECT
-public:
-	SpecificWorker(TuplePrx tprx, bool startup_check);
-	~SpecificWorker();
-	bool setParams(RoboCompCommonBehavior::ParameterList params);
+    Q_OBJECT
+    public:
+        SpecificWorker(TuplePrx tprx, bool startup_check);
+        ~SpecificWorker();
+        bool setParams(RoboCompCommonBehavior::ParameterList params);
 
+    public slots:
+        void initialize();
+        void compute();
+        void emergency();
+        void restore();
+        int startup_check();
 
+    private:
+        struct Params
+        {
+            float ROBOT_WIDTH = 460;  // mm
+            float ROBOT_LENGTH = 480;  // mm
+            std::string LIDAR_NAME_LOW = "bpearl";
+            std::string LIDAR_NAME_HIGH = "helios";
+            //QRectF GRID_MAX_DIM{-6000, -6000, 12000, 12000};
+            QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
 
-public slots:
-	void initialize();
-	void compute();
-	void emergency();
-	void restore();
-	int startup_check();
-private:
-	bool startup_check_flag;
+        };
+        Params params;
 
+        bool startup_check_flag;
+        AbstractGraphicViewer *viewer;
+
+        // state machine
+        enum class STATE {FORWARD, TURN};
+        STATE state = STATE::FORWARD;
+
+        using RetVal = std::tuple<STATE, float, float>;
+        RetVal forward(auto &filtered_points);
+        RetVal turn(auto &filtered_points);
+        void draw_lidar(auto &filtered_points, QGraphicsScene *scene) const;
 };
 
 #endif

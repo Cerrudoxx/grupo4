@@ -1014,4 +1014,5 @@ src/CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.o: \
  /home/usuario/robocomp/components/grupo4/practica1/src/chocachoca_autogen/EWIEGA46WW/../../genericmonitor.h \
  /home/usuario/robocomp/components/grupo4/practica1/src/chocachoca_autogen/EWIEGA46WW/moc_specificworker.cpp \
  /home/usuario/robocomp/components/grupo4/practica1/src/chocachoca_autogen/EWIEGA46WW/../../specificworker.h \
- /home/usuario/robocomp/components/grupo4/practica1/src/genericworker.h
+ /home/usuario/robocomp/components/grupo4/practica1/src/genericworker.h \
+ /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h

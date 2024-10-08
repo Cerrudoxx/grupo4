@@ -16,9 +16,8 @@
  *    You should have received a copy of the GNU General Public License
  *    along with RoboComp.  If not, see <http://www.gnu.org/licenses/>.
  */
+#include <ranges>
 #include "specificworker.h"
-
-#include <rapplication/rapplication.h>
 
 /**
 * \brief Default constructor
@@ -26,10 +25,7 @@
 SpecificWorker::SpecificWorker(TuplePrx tprx, bool startup_check) : GenericWorker(tprx)
 {
 	this->startup_check_flag = startup_check;
-	// Uncomment if there's too many debug messages
-	// but it removes the possibility to see the messages
-	// shown in the console with qDebug()
-//	QLoggingCategory::setFilterRules("*.debug=false\n");
+    //	QLoggingCategory::setFilterRules("*.debug=false\n");
 }
 
 /**
@@ -42,17 +38,6 @@ SpecificWorker::~SpecificWorker()
 
 bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
-//	THE FOLLOWING IS JUST AN EXAMPLE
-//	To use innerModelPath parameter you should uncomment specificmonitor.cpp readConfig method content
-//	try
-//	{
-//		RoboCompCommonBehavior::Parameter par = params.at("InnerModelPath");
-//		std::string innermodel_path = par.value;
-//		innerModel = std::make_shared(innermodel_path);
-//	}
-//	catch(const std::exception &e) { qFatal("Error reading config params"); }
-	
-
 	return true;
 }
 
@@ -65,80 +50,114 @@ void SpecificWorker::initialize()
 	}
 	else
 	{
+        ///////////// Your code ////////
+        // Viewer
+        viewer = new AbstractGraphicViewer(this->frame, params.GRID_MAX_DIM);
+        viewer->add_robot(params.ROBOT_WIDTH, params.ROBOT_LENGTH, 0, 100, QColor("Blue"));
+        viewer->show();
 
+        ///////////////////////////////
 		#ifdef HIBERNATION_ENABLED
 			hibernationChecker.start(500);
 		#endif
 
 		this->setPeriod(STATES::Compute, 100);
-		//this->setPeriod(STATES::Emergency, 500);
-
 	}
-
 }
 
 void SpecificWorker::compute()
 {
-    std::cout << "Compute worker" << std::endl;
-	RoboCompLidar3D::TData ldata;
+    RoboCompLidar3D::TData ldata;
+    try{ ldata =  lidar3d_proxy->getLidarData("bpearl", 0, 2*M_PI, 1);}
+    catch(const Ice::Exception &e){std::cout << e << std::endl;}
 
-	try {
-		ldata= this->lidar3d_proxy->getLidarData("bpearl", 0, 2*M_PI, 1);
+    auto p_filter = std::ranges::views::filter(ldata.points,
+                                               [](auto  &a){ return a.z > 100 and a.z < 3000 and a.distance2d > 200;});
 
-	}catch (const Ice::Exception &e) {
-		std::cout << e.what() << std::endl;
-	}
+    draw_lidar(p_filter, &viewer->scene);
 
-    qDebug() << ldata.points.size();
+    /// Add State machine with your sweeping logic
+    float advance_speed = 0.f;  // initial robot speeds for this iteration
+    float rot_speed = 0.f;
+    RetVal ret_val;
 
-	RoboCompLidar3D::TData anilloPuntos;
-	//qDebug() << ldata.points[7000].z;
-	for (auto &d :ldata.points){
-		if(d.z > 0.2 && d.z < 0.25){
-			anilloPuntos.points.push_back(d);
-		}
-	}
-	float max = anilloPuntos.points[0].z;
-	float min = anilloPuntos.points[0].z;
+    switch(state)
+    {
+        case STATE::FORWARD:
+        {
+            ret_val = forward(p_filter);
+            break;
+        }
+        case STATE::TURN:
+        {
+            ret_val = turn(p_filter);
+            break;
+        }
+    }
+    /// unpack  the tuple
+    auto [st, adv, rot] = ret_val;
+    state = st;
 
-	for (int i=0; i<anilloPuntos.points.size(); i++){
-		if (anilloPuntos.points[i].z > max){
-			max = anilloPuntos.points[i].z;
-		}
-		if (anilloPuntos.points[i].z < min){
-			min = anilloPuntos.points[i].z;
-		}
-	}
-	qDebug() << "Max: " << max;
-	qDebug() << "Min: " << min;
-
-	qDebug() << anilloPuntos.points.size();
-/*
-	std::cout << "Compute worker" << std::endl;
-	RoboCompLaser::TLaserData ldata;
-
-	try {
-		ldata= this->laser_proxy->getLaserData();
-	}catch (const Ice::Exception &e) {
-		std::cout << e.what() << std::endl;
-	}
-
-	for (auto &d :ldata){
-		qDebug() << d.dist << d.angle;
-	}
-*/
-/*
-     float adv, side, rot=0.f;
-	try {
-		ldata = omnirobot_proxy->setSpeedBase(adv,side,rot);
-	}catch (const Ice::Exception &e) {
-		std::cout << e.what() << std::endl;
-	}
-*/
-
-	
+    /// Send movements commands to the robot
+    //try{ ldata =  omnirobot_proxy->setSpeedBase(0, adv, rot);
+    //catch(const Ice::Exception &e){std::cout << e << std::endl;}
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+SpecificWorker::RetVal SpecificWorker::forward(auto &filtered_points)
+{
+
+    return SpecificWorker::RetVal();
+}
+
+SpecificWorker::RetVal SpecificWorker::turn(auto &filtered_points)
+{
+
+    return SpecificWorker::RetVal();
+}
+
+/**
+ * Draws LIDAR points onto a QGraphicsScene.
+ *
+ * This method clears any existing graphical items from the scene, then iterates over the filtered
+ * LIDAR points to add new items. Each LIDAR point is represented as a colored rectangle. The point
+ * with the minimum distance is highlighted in red, while the other points are drawn in green.
+ *
+ * @param filtered_points A collection of filtered points to be drawn, each containing the coordinates
+ *                        and distance.
+ * @param scene A pointer to the QGraphicsScene where the points will be drawn.
+ */
+void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene) const
+{
+    static std::vector<QGraphicsItem*> items;   // store items so they can be shown between iterations
+
+    // remove all items drawn in the previous iteration
+    for(auto i: items)
+    {
+        scene->removeItem(i);
+        delete i;
+    }
+    items.clear();
+
+    auto color = QColor(Qt::green);
+    auto brush = QBrush(QColor(Qt::green));
+    for(const auto &p : filtered_points)
+    {
+        auto item = scene->addRect(-50, -50, 100, 100, color, brush);
+        item->setPos(p.x, p.y);
+        items.push_back(item);
+    }
+    // compute and draw minimum distance point
+    auto p_min = std::ranges::min_element(filtered_points, [](auto &a, auto &b){return a.distance2d < b.distance2d;});
+    auto item = scene->addRect(-150, -150, 300, 300, QColor(Qt::red), QBrush(QColor(Qt::red)));
+    item->setPos(p_min->x, p_min->y);
+    items.push_back(item);
+    lcdNumber_minangle->display(atan2(p_min->x,p_min->y));
+    lcdNumber_mindist->display(p_min->distance2d);
+    qDebug()  << atan2(p_min->x, p_min->y) << p_min->phi;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
 void SpecificWorker::emergency()
 {
     std::cout << "Emergency worker" << std::endl;
@@ -147,7 +166,6 @@ void SpecificWorker::emergency()
 	//if (SUCCESSFUL)
     //  emmit goToRestore()
 }
-
 //Execute one when exiting to emergencyState
 void SpecificWorker::restore()
 {
@@ -156,7 +174,6 @@ void SpecificWorker::restore()
 	//Restore emergency component
 
 }
-
 int SpecificWorker::startup_check()
 {
 	std::cout << "Startup check" << std::endl;
@@ -164,19 +181,18 @@ int SpecificWorker::startup_check()
 	return 0;
 }
 
-
-
+/**************************************/
+// From the RoboCompLidar3D you can call this methods:
+// this->lidar3d_proxy->getLidarData(...)
+// this->lidar3d_proxy->getLidarDataArrayProyectedInImage(...)
+// this->lidar3d_proxy->getLidarDataProyectedInImage(...)
+// this->lidar3d_proxy->getLidarDataWithThreshold2d(...)
 
 /**************************************/
-// From the RoboCompLaser you can call this methods:
-// this->laser_proxy->getLaserAndBStateData(...)
-// this->laser_proxy->getLaserConfData(...)
-// this->laser_proxy->getLaserData(...)
-
-/**************************************/
-// From the RoboCompLaser you can use this types:
-// RoboCompLaser::LaserConfData
-// RoboCompLaser::TData
+// From the RoboCompLidar3D you can use this types:
+// RoboCompLidar3D::TPoint
+// RoboCompLidar3D::TDataImage
+// RoboCompLidar3D::TData
 
 /**************************************/
 // From the RoboCompOmniRobot you can call this methods:
