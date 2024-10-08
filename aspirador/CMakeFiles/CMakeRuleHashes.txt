@@ -1,0 +1,6 @@
+# Hashes of file build rules.
+5733c6c4726f2e15270842a9aaf0e4dd src/CMakeFiles/aspirador_autogen
+a7d2e478bc10e34d58fef0f8b2a8d5e1 src/CommonBehavior.cpp
+822563d34a5ef2ee66efc81f2fc51de4 src/GenericBase.cpp
+89bd6fbebd2d09816b878dc06b85c714 src/OmniRobot.cpp
+1b8f4163e85c4509603827a2591c2294 src/ui_mainUI.h

@@ -1,0 +1,12 @@
+import "OmniRobot.idsl";
+
+Component aspirador
+{
+	Communications
+	{
+		requires OmniRobot;
+	};
+	language Cpp11;
+	gui Qt(QWidget);
+};
+

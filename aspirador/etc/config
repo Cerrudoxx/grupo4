@@ -1,0 +1,12 @@
+CommonBehavior.Endpoints=tcp -p 11000
+
+# Proxies for required interfaces
+OmniRobotProxy = omnirobot:tcp -h localhost -p 10004
+
+max_time=180
+robot_id=2
+
+Ice.Warn.Connections=0
+Ice.Trace.Network=0
+Ice.Trace.Protocol=0
+

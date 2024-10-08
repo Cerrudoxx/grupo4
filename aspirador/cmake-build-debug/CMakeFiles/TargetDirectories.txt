@@ -1,0 +1,16 @@
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/CMakeFiles/list_install_components.dir
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/CMakeFiles/install.dir
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/CMakeFiles/install/local.dir
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/CMakeFiles/install/strip.dir
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_beta-robotica-class_aspirador_src.dir
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/src/CMakeFiles/aspirador.dir
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/src/CMakeFiles/list_install_components.dir
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/src/CMakeFiles/install.dir
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/src/CMakeFiles/install/local.dir
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/src/CMakeFiles/install/strip.dir
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/src/CMakeFiles/aspirador_autogen_timestamp_deps.dir
+/home/usuario/robocomp/components/grupo4/beta-robotica-class/aspirador/cmake-build-debug/src/CMakeFiles/aspirador_autogen.dir
