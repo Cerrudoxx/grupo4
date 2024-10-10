@@ -1,12 +1,12 @@
-/home/usuario/robocomp/components/salvado/beta-robotica-class/chocachoca/cmake-build-debug/src/chocachoca_autogen/EWIEGA46WW/moc_specificworker.cpp: /home/usuario/robocomp/components/salvado/beta-robotica-class/chocachoca/src/specificworker.h \
-  /home/usuario/robocomp/components/salvado/beta-robotica-class/chocachoca/cmake-build-debug/src/chocachoca_autogen/moc_predefs.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/salvado/beta-robotica-class/chocachoca/cmake-build-debug/src/CommonBehavior.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/salvado/beta-robotica-class/chocachoca/cmake-build-debug/src/GenericBase.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/salvado/beta-robotica-class/chocachoca/cmake-build-debug/src/Lidar3D.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/salvado/beta-robotica-class/chocachoca/cmake-build-debug/src/OmniRobot.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/salvado/beta-robotica-class/chocachoca/cmake-build-debug/src/ui_mainUI.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/salvado/beta-robotica-class/chocachoca/src/config.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/salvado/beta-robotica-class/chocachoca/src/genericworker.h \
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/cmake-build-debug/src/chocachoca_autogen/EWIEGA46WW/moc_specificworker.cpp: /home/usuario/robocomp/components/grupo4/practica1/chocachoca/src/specificworker.h \
+  /home/usuario/robocomp/components/grupo4/practica1/chocachoca/cmake-build-debug/src/chocachoca_autogen/moc_predefs.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica1/chocachoca/cmake-build-debug/src/CommonBehavior.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica1/chocachoca/cmake-build-debug/src/GenericBase.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica1/chocachoca/cmake-build-debug/src/Lidar3D.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica1/chocachoca/cmake-build-debug/src/OmniRobot.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica1/chocachoca/cmake-build-debug/src/ui_mainUI.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica1/chocachoca/src/config.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica1/chocachoca/src/genericworker.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/qlog/qlog.h \
@@ -227,6 +227,7 @@
   /usr/include/c++/12/debug/debug.h \
   /usr/include/c++/12/deque \
   /usr/include/c++/12/exception \
+  /usr/include/c++/12/expected \
   /usr/include/c++/12/ext/aligned_buffer.h \
   /usr/include/c++/12/ext/alloc_traits.h \
   /usr/include/c++/12/ext/atomicity.h \

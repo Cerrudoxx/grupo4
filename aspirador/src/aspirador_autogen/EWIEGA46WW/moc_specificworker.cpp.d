@@ -1,7 +1,7 @@
-/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/EWIEGA46WW/moc_specificworker.cpp: /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/specificworker.h \
-  /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/moc_predefs.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/salvado/beta-robotica-class/aspirador/src/config.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericworker.h \
+/home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/EWIEGA46WW/moc_specificworker.cpp: /home/usuario/robocomp/components/grupo4/aspirador/src/specificworker.h \
+  /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/moc_predefs.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/aspirador/src/config.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/aspirador/src/genericworker.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/grid2d/grid.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/qlog/qlog.h \

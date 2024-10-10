@@ -1,7 +1,7 @@
 src/CMakeFiles/aspirador.dir/genericmonitor.cpp.o: \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericmonitor.cpp \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/genericmonitor.cpp \
  /usr/include/stdc-predef.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericmonitor.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/genericmonitor.h \
  /usr/include/Ice/Ice.h /usr/include/IceUtil/PushDisableWarnings.h \
  /usr/include/Ice/Config.h /usr/include/IceUtil/Config.h \
  /usr/include/c++/12/stdlib.h /usr/include/c++/12/cstdlib \
@@ -764,10 +764,10 @@ src/CMakeFiles/aspirador.dir/genericmonitor.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qwineventnotifier.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qxmlstream.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtcoreversion.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericworker.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/config.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/genericworker.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/config.h \
  /home/robocomp/robocomp/classes/qlog/qlog.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/config.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/config.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGuiDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
@@ -956,7 +956,7 @@ src/CMakeFiles/aspirador.dir/genericmonitor.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiversion.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/ui_mainUI.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h \
@@ -988,6 +988,6 @@ src/CMakeFiles/aspirador.dir/genericmonitor.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/CommonBehavior.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/GenericBase.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/OmniRobot.h
+ /home/usuario/robocomp/components/grupo4/aspirador/src/CommonBehavior.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/GenericBase.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/OmniRobot.h

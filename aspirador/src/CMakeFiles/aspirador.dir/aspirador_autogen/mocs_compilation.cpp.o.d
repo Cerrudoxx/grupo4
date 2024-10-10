@@ -1,7 +1,7 @@
 src/CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o: \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/mocs_compilation.cpp \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/AF5EVGCUJC/moc_abstract_graphic_viewer.cpp \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/AF5EVGCUJC/moc_abstract_graphic_viewer.cpp \
  /usr/include/c++/12/memory /usr/include/c++/12/bits/allocator.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
  /usr/include/c++/12/bits/new_allocator.h \
@@ -199,7 +199,7 @@ src/CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/12/bits/uses_allocator_args.h \
  /usr/include/c++/12/pstl/glue_memory_defs.h \
  /usr/include/c++/12/pstl/execution_defs.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/../../../../../../../../../robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/../../../../../../../../robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
@@ -434,8 +434,8 @@ src/CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainterpath.h \
  /usr/include/c++/12/iostream \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/EWIEGA46WW/moc_genericmonitor.cpp \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/EWIEGA46WW/../../genericmonitor.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/EWIEGA46WW/moc_genericmonitor.cpp \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/EWIEGA46WW/../../genericmonitor.h \
  /usr/include/Ice/Ice.h /usr/include/IceUtil/PushDisableWarnings.h \
  /usr/include/Ice/Config.h /usr/include/IceUtil/Config.h \
  /usr/include/c++/12/cassert /usr/include/c++/12/future \
@@ -847,10 +847,10 @@ src/CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qwineventnotifier.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qxmlstream.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtcoreversion.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/EWIEGA46WW/../../genericworker.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/EWIEGA46WW/../../config.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/EWIEGA46WW/../../genericworker.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/EWIEGA46WW/../../config.h \
  /home/robocomp/robocomp/classes/qlog/qlog.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/config.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/config.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGuiDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
@@ -992,7 +992,7 @@ src/CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiversion.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/ui_mainUI.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
@@ -1011,18 +1011,18 @@ src/CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSplitter \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsplitter.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/CommonBehavior.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/GenericBase.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/OmniRobot.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/CommonBehavior.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/GenericBase.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/OmniRobot.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QScreen \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/EWIEGA46WW/moc_genericworker.cpp \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/EWIEGA46WW/../../genericworker.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/EWIEGA46WW/moc_specificmonitor.cpp \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/EWIEGA46WW/../../specificmonitor.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/EWIEGA46WW/../../genericmonitor.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/EWIEGA46WW/moc_specificworker.cpp \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/EWIEGA46WW/../../specificworker.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericworker.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/EWIEGA46WW/moc_genericworker.cpp \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/EWIEGA46WW/../../genericworker.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/EWIEGA46WW/moc_specificmonitor.cpp \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/EWIEGA46WW/../../specificmonitor.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/EWIEGA46WW/../../genericmonitor.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/EWIEGA46WW/moc_specificworker.cpp \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/EWIEGA46WW/../../specificworker.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/genericworker.h \
  /home/robocomp/robocomp/classes/grid2d/grid.h \
  /usr/include/boost/functional/hash.hpp \
  /usr/include/boost/container_hash/hash.hpp \

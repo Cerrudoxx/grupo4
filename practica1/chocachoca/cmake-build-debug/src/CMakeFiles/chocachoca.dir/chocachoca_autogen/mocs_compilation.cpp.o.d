@@ -271,6 +271,8 @@ src/CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
  /usr/include/c++/12/bits/vector.tcc /usr/include/c++/12/array \
+ /usr/include/c++/12/bits/move_only_function.h \
+ /usr/include/c++/12/bits/mofunc_impl.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringview.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearray.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h \
@@ -1031,4 +1033,5 @@ src/CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.o: \
  /home/usuario/robocomp/components/grupo4/practica1/chocachoca/cmake-build-debug/src/chocachoca_autogen/EWIEGA46WW/moc_specificworker.cpp \
  /home/usuario/robocomp/components/grupo4/practica1/chocachoca/cmake-build-debug/src/chocachoca_autogen/EWIEGA46WW/../../../../src/specificworker.h \
  /home/usuario/robocomp/components/grupo4/practica1/chocachoca/src/./genericworker.h \
- /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h
+ /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /usr/include/c++/12/expected

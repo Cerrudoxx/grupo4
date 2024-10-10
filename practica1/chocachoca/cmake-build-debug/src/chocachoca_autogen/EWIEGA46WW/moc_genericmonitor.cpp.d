@@ -1,7 +1,7 @@
-/home/usuario/robocomp/components/salvado/beta-robotica-class/chocachoca/cmake-build-debug/src/chocachoca_autogen/EWIEGA46WW/moc_genericmonitor.cpp: /home/usuario/robocomp/components/salvado/beta-robotica-class/chocachoca/src/genericmonitor.h \
-  /home/usuario/robocomp/components/salvado/beta-robotica-class/chocachoca/cmake-build-debug/src/chocachoca_autogen/moc_predefs.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/salvado/beta-robotica-class/chocachoca/src/config.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/salvado/beta-robotica-class/chocachoca/src/genericworker.h \
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/cmake-build-debug/src/chocachoca_autogen/EWIEGA46WW/moc_genericmonitor.cpp: /home/usuario/robocomp/components/grupo4/practica1/chocachoca/src/genericmonitor.h \
+  /home/usuario/robocomp/components/grupo4/practica1/chocachoca/cmake-build-debug/src/chocachoca_autogen/moc_predefs.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica1/chocachoca/src/config.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica1/chocachoca/src/genericworker.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/qlog/qlog.h \
   /usr/include/GL/gl.h \

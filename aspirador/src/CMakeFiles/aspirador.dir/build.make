@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador
+CMAKE_SOURCE_DIR = /home/usuario/robocomp/components/grupo4/aspirador
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador
+CMAKE_BINARY_DIR = /home/usuario/robocomp/components/grupo4/aspirador
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/aspirador.dir/depend.make
@@ -70,240 +70,240 @@ include src/CMakeFiles/aspirador.dir/progress.make
 include src/CMakeFiles/aspirador.dir/flags.make
 
 src/CommonBehavior.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "BU ice=>h/cpp: Generating CommonBehavior.h and CommonBehavior.cpp from /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/CommonBehavior.ice"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && slice2cpp --underscore /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/CommonBehavior.ice -I/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/ --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "BU ice=>h/cpp: Generating CommonBehavior.h and CommonBehavior.cpp from /home/usuario/robocomp/components/grupo4/aspirador/src/CommonBehavior.ice"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/aspirador/src/CommonBehavior.ice -I/home/usuario/robocomp/components/grupo4/aspirador/src/ --output-dir .
 
 src/CommonBehavior.h: src/CommonBehavior.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/CommonBehavior.h
 
 src/GenericBase.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "BU ice=>h/cpp: Generating GenericBase.h and GenericBase.cpp from /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/GenericBase.ice"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && slice2cpp --underscore /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/GenericBase.ice -I/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/ --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "BU ice=>h/cpp: Generating GenericBase.h and GenericBase.cpp from /home/usuario/robocomp/components/grupo4/aspirador/src/GenericBase.ice"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/aspirador/src/GenericBase.ice -I/home/usuario/robocomp/components/grupo4/aspirador/src/ --output-dir .
 
 src/GenericBase.h: src/GenericBase.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/GenericBase.h
 
 src/OmniRobot.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "BU ice=>h/cpp: Generating OmniRobot.h and OmniRobot.cpp from /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/OmniRobot.ice"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && slice2cpp --underscore /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/OmniRobot.ice -I/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/ --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "BU ice=>h/cpp: Generating OmniRobot.h and OmniRobot.cpp from /home/usuario/robocomp/components/grupo4/aspirador/src/OmniRobot.ice"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/aspirador/src/OmniRobot.ice -I/home/usuario/robocomp/components/grupo4/aspirador/src/ --output-dir .
 
 src/OmniRobot.h: src/OmniRobot.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/OmniRobot.h
 
 src/ui_mainUI.h: /usr/lib/qt6/libexec/uic
 src/ui_mainUI.h: src/mainUI.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating ui_mainUI.h"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/lib/qt6/libexec/uic -o /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/ui_mainUI.h /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/mainUI.ui
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating ui_mainUI.h"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/lib/qt6/libexec/uic -o /home/usuario/robocomp/components/grupo4/aspirador/src/ui_mainUI.h /home/usuario/robocomp/components/grupo4/aspirador/src/mainUI.ui
 
 src/CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o: src/CMakeFiles/aspirador.dir/flags.make
 src/CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o: src/aspirador_autogen/mocs_compilation.cpp
 src/CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o: src/CMakeFiles/aspirador.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o -MF CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o -c /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o -MF CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.o -c /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/mocs_compilation.cpp
 
 src/CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.i"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/mocs_compilation.cpp > CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/mocs_compilation.cpp > CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.i
 
 src/CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.s"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/mocs_compilation.cpp -o CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/mocs_compilation.cpp -o CMakeFiles/aspirador.dir/aspirador_autogen/mocs_compilation.cpp.s
 
 src/CMakeFiles/aspirador.dir/specificworker.cpp.o: src/CMakeFiles/aspirador.dir/flags.make
 src/CMakeFiles/aspirador.dir/specificworker.cpp.o: src/specificworker.cpp
 src/CMakeFiles/aspirador.dir/specificworker.cpp.o: src/CMakeFiles/aspirador.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/aspirador.dir/specificworker.cpp.o"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/specificworker.cpp.o -MF CMakeFiles/aspirador.dir/specificworker.cpp.o.d -o CMakeFiles/aspirador.dir/specificworker.cpp.o -c /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/specificworker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/aspirador.dir/specificworker.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/specificworker.cpp.o -MF CMakeFiles/aspirador.dir/specificworker.cpp.o.d -o CMakeFiles/aspirador.dir/specificworker.cpp.o -c /home/usuario/robocomp/components/grupo4/aspirador/src/specificworker.cpp
 
 src/CMakeFiles/aspirador.dir/specificworker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aspirador.dir/specificworker.cpp.i"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/specificworker.cpp > CMakeFiles/aspirador.dir/specificworker.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/aspirador/src/specificworker.cpp > CMakeFiles/aspirador.dir/specificworker.cpp.i
 
 src/CMakeFiles/aspirador.dir/specificworker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aspirador.dir/specificworker.cpp.s"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/specificworker.cpp -o CMakeFiles/aspirador.dir/specificworker.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/aspirador/src/specificworker.cpp -o CMakeFiles/aspirador.dir/specificworker.cpp.s
 
 src/CMakeFiles/aspirador.dir/specificmonitor.cpp.o: src/CMakeFiles/aspirador.dir/flags.make
 src/CMakeFiles/aspirador.dir/specificmonitor.cpp.o: src/specificmonitor.cpp
 src/CMakeFiles/aspirador.dir/specificmonitor.cpp.o: src/CMakeFiles/aspirador.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/aspirador.dir/specificmonitor.cpp.o"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/specificmonitor.cpp.o -MF CMakeFiles/aspirador.dir/specificmonitor.cpp.o.d -o CMakeFiles/aspirador.dir/specificmonitor.cpp.o -c /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/specificmonitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/aspirador.dir/specificmonitor.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/specificmonitor.cpp.o -MF CMakeFiles/aspirador.dir/specificmonitor.cpp.o.d -o CMakeFiles/aspirador.dir/specificmonitor.cpp.o -c /home/usuario/robocomp/components/grupo4/aspirador/src/specificmonitor.cpp
 
 src/CMakeFiles/aspirador.dir/specificmonitor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aspirador.dir/specificmonitor.cpp.i"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/specificmonitor.cpp > CMakeFiles/aspirador.dir/specificmonitor.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/aspirador/src/specificmonitor.cpp > CMakeFiles/aspirador.dir/specificmonitor.cpp.i
 
 src/CMakeFiles/aspirador.dir/specificmonitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aspirador.dir/specificmonitor.cpp.s"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/specificmonitor.cpp -o CMakeFiles/aspirador.dir/specificmonitor.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/aspirador/src/specificmonitor.cpp -o CMakeFiles/aspirador.dir/specificmonitor.cpp.s
 
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.o: src/CMakeFiles/aspirador.dir/flags.make
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.o: /home/robocomp/robocomp/classes/grid2d/grid.cpp
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.o: src/CMakeFiles/aspirador.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.o"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.o -MF CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.o.d -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.o -c /home/robocomp/robocomp/classes/grid2d/grid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.o -MF CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.o.d -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.o -c /home/robocomp/robocomp/classes/grid2d/grid.cpp
 
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.i"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/grid2d/grid.cpp > CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/grid2d/grid.cpp > CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.i
 
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.s"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/grid2d/grid.cpp -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/grid2d/grid.cpp -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/grid2d/grid.cpp.s
 
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: src/CMakeFiles/aspirador.dir/flags.make
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: src/CMakeFiles/aspirador.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -MF CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o.d -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -c /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -MF CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o.d -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -c /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
 
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp > CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp > CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
 
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
 
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/aspirador.dir/flags.make
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: /home/robocomp/robocomp/classes/rapplication/rapplication.cpp
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/aspirador.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -MF CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o.d -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -c /home/robocomp/robocomp/classes/rapplication/rapplication.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -MF CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o.d -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -c /home/robocomp/robocomp/classes/rapplication/rapplication.cpp
 
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
 
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
 
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: src/CMakeFiles/aspirador.dir/flags.make
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: src/CMakeFiles/aspirador.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -MF CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o.d -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -c /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -MF CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o.d -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -c /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp
 
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp > CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp > CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
 
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
 
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/aspirador.dir/flags.make
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o: /home/robocomp/robocomp/classes/qlog/qlog.cpp
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/aspirador.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o -MF CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o.d -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o -c /home/robocomp/robocomp/classes/qlog/qlog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o -MF CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o.d -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o -c /home/robocomp/robocomp/classes/qlog/qlog.cpp
 
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.i"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/qlog/qlog.cpp > CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/qlog/qlog.cpp > CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.i
 
 src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.s"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/qlog/qlog.cpp -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/qlog/qlog.cpp -o CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.s
 
 src/CMakeFiles/aspirador.dir/main.cpp.o: src/CMakeFiles/aspirador.dir/flags.make
 src/CMakeFiles/aspirador.dir/main.cpp.o: src/main.cpp
 src/CMakeFiles/aspirador.dir/main.cpp.o: src/CMakeFiles/aspirador.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/aspirador.dir/main.cpp.o"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/main.cpp.o -MF CMakeFiles/aspirador.dir/main.cpp.o.d -o CMakeFiles/aspirador.dir/main.cpp.o -c /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/aspirador.dir/main.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/main.cpp.o -MF CMakeFiles/aspirador.dir/main.cpp.o.d -o CMakeFiles/aspirador.dir/main.cpp.o -c /home/usuario/robocomp/components/grupo4/aspirador/src/main.cpp
 
 src/CMakeFiles/aspirador.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aspirador.dir/main.cpp.i"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/main.cpp > CMakeFiles/aspirador.dir/main.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/aspirador/src/main.cpp > CMakeFiles/aspirador.dir/main.cpp.i
 
 src/CMakeFiles/aspirador.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aspirador.dir/main.cpp.s"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/main.cpp -o CMakeFiles/aspirador.dir/main.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/aspirador/src/main.cpp -o CMakeFiles/aspirador.dir/main.cpp.s
 
 src/CMakeFiles/aspirador.dir/genericmonitor.cpp.o: src/CMakeFiles/aspirador.dir/flags.make
 src/CMakeFiles/aspirador.dir/genericmonitor.cpp.o: src/genericmonitor.cpp
 src/CMakeFiles/aspirador.dir/genericmonitor.cpp.o: src/CMakeFiles/aspirador.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/aspirador.dir/genericmonitor.cpp.o"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/genericmonitor.cpp.o -MF CMakeFiles/aspirador.dir/genericmonitor.cpp.o.d -o CMakeFiles/aspirador.dir/genericmonitor.cpp.o -c /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericmonitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/aspirador.dir/genericmonitor.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/genericmonitor.cpp.o -MF CMakeFiles/aspirador.dir/genericmonitor.cpp.o.d -o CMakeFiles/aspirador.dir/genericmonitor.cpp.o -c /home/usuario/robocomp/components/grupo4/aspirador/src/genericmonitor.cpp
 
 src/CMakeFiles/aspirador.dir/genericmonitor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aspirador.dir/genericmonitor.cpp.i"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericmonitor.cpp > CMakeFiles/aspirador.dir/genericmonitor.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/aspirador/src/genericmonitor.cpp > CMakeFiles/aspirador.dir/genericmonitor.cpp.i
 
 src/CMakeFiles/aspirador.dir/genericmonitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aspirador.dir/genericmonitor.cpp.s"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericmonitor.cpp -o CMakeFiles/aspirador.dir/genericmonitor.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/aspirador/src/genericmonitor.cpp -o CMakeFiles/aspirador.dir/genericmonitor.cpp.s
 
 src/CMakeFiles/aspirador.dir/commonbehaviorI.cpp.o: src/CMakeFiles/aspirador.dir/flags.make
 src/CMakeFiles/aspirador.dir/commonbehaviorI.cpp.o: src/commonbehaviorI.cpp
 src/CMakeFiles/aspirador.dir/commonbehaviorI.cpp.o: src/CMakeFiles/aspirador.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/aspirador.dir/commonbehaviorI.cpp.o"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/commonbehaviorI.cpp.o -MF CMakeFiles/aspirador.dir/commonbehaviorI.cpp.o.d -o CMakeFiles/aspirador.dir/commonbehaviorI.cpp.o -c /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/commonbehaviorI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/aspirador.dir/commonbehaviorI.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/commonbehaviorI.cpp.o -MF CMakeFiles/aspirador.dir/commonbehaviorI.cpp.o.d -o CMakeFiles/aspirador.dir/commonbehaviorI.cpp.o -c /home/usuario/robocomp/components/grupo4/aspirador/src/commonbehaviorI.cpp
 
 src/CMakeFiles/aspirador.dir/commonbehaviorI.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aspirador.dir/commonbehaviorI.cpp.i"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/commonbehaviorI.cpp > CMakeFiles/aspirador.dir/commonbehaviorI.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/aspirador/src/commonbehaviorI.cpp > CMakeFiles/aspirador.dir/commonbehaviorI.cpp.i
 
 src/CMakeFiles/aspirador.dir/commonbehaviorI.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aspirador.dir/commonbehaviorI.cpp.s"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/commonbehaviorI.cpp -o CMakeFiles/aspirador.dir/commonbehaviorI.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/aspirador/src/commonbehaviorI.cpp -o CMakeFiles/aspirador.dir/commonbehaviorI.cpp.s
 
 src/CMakeFiles/aspirador.dir/genericworker.cpp.o: src/CMakeFiles/aspirador.dir/flags.make
 src/CMakeFiles/aspirador.dir/genericworker.cpp.o: src/genericworker.cpp
 src/CMakeFiles/aspirador.dir/genericworker.cpp.o: src/CMakeFiles/aspirador.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/aspirador.dir/genericworker.cpp.o"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/genericworker.cpp.o -MF CMakeFiles/aspirador.dir/genericworker.cpp.o.d -o CMakeFiles/aspirador.dir/genericworker.cpp.o -c /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericworker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/aspirador.dir/genericworker.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/genericworker.cpp.o -MF CMakeFiles/aspirador.dir/genericworker.cpp.o.d -o CMakeFiles/aspirador.dir/genericworker.cpp.o -c /home/usuario/robocomp/components/grupo4/aspirador/src/genericworker.cpp
 
 src/CMakeFiles/aspirador.dir/genericworker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aspirador.dir/genericworker.cpp.i"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericworker.cpp > CMakeFiles/aspirador.dir/genericworker.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/aspirador/src/genericworker.cpp > CMakeFiles/aspirador.dir/genericworker.cpp.i
 
 src/CMakeFiles/aspirador.dir/genericworker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aspirador.dir/genericworker.cpp.s"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericworker.cpp -o CMakeFiles/aspirador.dir/genericworker.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/aspirador/src/genericworker.cpp -o CMakeFiles/aspirador.dir/genericworker.cpp.s
 
 src/CMakeFiles/aspirador.dir/CommonBehavior.cpp.o: src/CMakeFiles/aspirador.dir/flags.make
 src/CMakeFiles/aspirador.dir/CommonBehavior.cpp.o: src/CommonBehavior.cpp
 src/CMakeFiles/aspirador.dir/CommonBehavior.cpp.o: src/CMakeFiles/aspirador.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/aspirador.dir/CommonBehavior.cpp.o"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/CommonBehavior.cpp.o -MF CMakeFiles/aspirador.dir/CommonBehavior.cpp.o.d -o CMakeFiles/aspirador.dir/CommonBehavior.cpp.o -c /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/CommonBehavior.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/aspirador.dir/CommonBehavior.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/CommonBehavior.cpp.o -MF CMakeFiles/aspirador.dir/CommonBehavior.cpp.o.d -o CMakeFiles/aspirador.dir/CommonBehavior.cpp.o -c /home/usuario/robocomp/components/grupo4/aspirador/src/CommonBehavior.cpp
 
 src/CMakeFiles/aspirador.dir/CommonBehavior.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aspirador.dir/CommonBehavior.cpp.i"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/CommonBehavior.cpp > CMakeFiles/aspirador.dir/CommonBehavior.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/aspirador/src/CommonBehavior.cpp > CMakeFiles/aspirador.dir/CommonBehavior.cpp.i
 
 src/CMakeFiles/aspirador.dir/CommonBehavior.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aspirador.dir/CommonBehavior.cpp.s"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/CommonBehavior.cpp -o CMakeFiles/aspirador.dir/CommonBehavior.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/aspirador/src/CommonBehavior.cpp -o CMakeFiles/aspirador.dir/CommonBehavior.cpp.s
 
 src/CMakeFiles/aspirador.dir/GenericBase.cpp.o: src/CMakeFiles/aspirador.dir/flags.make
 src/CMakeFiles/aspirador.dir/GenericBase.cpp.o: src/GenericBase.cpp
 src/CMakeFiles/aspirador.dir/GenericBase.cpp.o: src/CMakeFiles/aspirador.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/aspirador.dir/GenericBase.cpp.o"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/GenericBase.cpp.o -MF CMakeFiles/aspirador.dir/GenericBase.cpp.o.d -o CMakeFiles/aspirador.dir/GenericBase.cpp.o -c /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/GenericBase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/aspirador.dir/GenericBase.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/GenericBase.cpp.o -MF CMakeFiles/aspirador.dir/GenericBase.cpp.o.d -o CMakeFiles/aspirador.dir/GenericBase.cpp.o -c /home/usuario/robocomp/components/grupo4/aspirador/src/GenericBase.cpp
 
 src/CMakeFiles/aspirador.dir/GenericBase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aspirador.dir/GenericBase.cpp.i"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/GenericBase.cpp > CMakeFiles/aspirador.dir/GenericBase.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/aspirador/src/GenericBase.cpp > CMakeFiles/aspirador.dir/GenericBase.cpp.i
 
 src/CMakeFiles/aspirador.dir/GenericBase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aspirador.dir/GenericBase.cpp.s"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/GenericBase.cpp -o CMakeFiles/aspirador.dir/GenericBase.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/aspirador/src/GenericBase.cpp -o CMakeFiles/aspirador.dir/GenericBase.cpp.s
 
 src/CMakeFiles/aspirador.dir/OmniRobot.cpp.o: src/CMakeFiles/aspirador.dir/flags.make
 src/CMakeFiles/aspirador.dir/OmniRobot.cpp.o: src/OmniRobot.cpp
 src/CMakeFiles/aspirador.dir/OmniRobot.cpp.o: src/CMakeFiles/aspirador.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/aspirador.dir/OmniRobot.cpp.o"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/OmniRobot.cpp.o -MF CMakeFiles/aspirador.dir/OmniRobot.cpp.o.d -o CMakeFiles/aspirador.dir/OmniRobot.cpp.o -c /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/OmniRobot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/aspirador.dir/OmniRobot.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/aspirador.dir/OmniRobot.cpp.o -MF CMakeFiles/aspirador.dir/OmniRobot.cpp.o.d -o CMakeFiles/aspirador.dir/OmniRobot.cpp.o -c /home/usuario/robocomp/components/grupo4/aspirador/src/OmniRobot.cpp
 
 src/CMakeFiles/aspirador.dir/OmniRobot.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aspirador.dir/OmniRobot.cpp.i"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/OmniRobot.cpp > CMakeFiles/aspirador.dir/OmniRobot.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/aspirador/src/OmniRobot.cpp > CMakeFiles/aspirador.dir/OmniRobot.cpp.i
 
 src/CMakeFiles/aspirador.dir/OmniRobot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aspirador.dir/OmniRobot.cpp.s"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/OmniRobot.cpp -o CMakeFiles/aspirador.dir/OmniRobot.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/aspirador/src/OmniRobot.cpp -o CMakeFiles/aspirador.dir/OmniRobot.cpp.s
 
 # Object files for target aspirador
 aspirador_OBJECTS = \
@@ -413,15 +413,15 @@ bin/aspirador: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4
 bin/aspirador: /usr/lib/x86_64-linux-gnu/libGLX.so
 bin/aspirador: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 bin/aspirador: src/CMakeFiles/aspirador.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable ../bin/aspirador"
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/aspirador.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable ../bin/aspirador"
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/aspirador.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/aspirador.dir/build: bin/aspirador
 .PHONY : src/CMakeFiles/aspirador.dir/build
 
 src/CMakeFiles/aspirador.dir/clean:
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src && $(CMAKE_COMMAND) -P CMakeFiles/aspirador.dir/cmake_clean.cmake
+	cd /home/usuario/robocomp/components/grupo4/aspirador/src && $(CMAKE_COMMAND) -P CMakeFiles/aspirador.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/aspirador.dir/clean
 
 src/CMakeFiles/aspirador.dir/depend: src/CommonBehavior.cpp
@@ -431,6 +431,6 @@ src/CMakeFiles/aspirador.dir/depend: src/GenericBase.h
 src/CMakeFiles/aspirador.dir/depend: src/OmniRobot.cpp
 src/CMakeFiles/aspirador.dir/depend: src/OmniRobot.h
 src/CMakeFiles/aspirador.dir/depend: src/ui_mainUI.h
-	cd /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/CMakeFiles/aspirador.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/usuario/robocomp/components/grupo4/aspirador && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robocomp/components/grupo4/aspirador /home/usuario/robocomp/components/grupo4/aspirador/src /home/usuario/robocomp/components/grupo4/aspirador /home/usuario/robocomp/components/grupo4/aspirador/src /home/usuario/robocomp/components/grupo4/aspirador/src/CMakeFiles/aspirador.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/aspirador.dir/depend
 

@@ -1,7 +1,7 @@
 src/CMakeFiles/aspirador.dir/OmniRobot.cpp.o: \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/OmniRobot.cpp \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/OmniRobot.cpp \
  /usr/include/stdc-predef.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/OmniRobot.h \
+ /home/usuario/robocomp/components/grupo4/aspirador/src/OmniRobot.h \
  /usr/include/IceUtil/PushDisableWarnings.h /usr/include/Ice/ProxyF.h \
  /usr/include/Ice/Config.h /usr/include/IceUtil/Config.h \
  /usr/include/c++/12/stdlib.h /usr/include/c++/12/cstdlib \
@@ -284,4 +284,4 @@ src/CMakeFiles/aspirador.dir/OmniRobot.cpp.o: \
  /usr/include/c++/12/deque /usr/include/c++/12/bits/stl_deque.h \
  /usr/include/c++/12/bits/deque.tcc /usr/include/Ice/FactoryTableInit.h \
  /usr/include/Ice/DefaultValueFactory.h \
- /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/GenericBase.h
+ /home/usuario/robocomp/components/grupo4/aspirador/src/GenericBase.h

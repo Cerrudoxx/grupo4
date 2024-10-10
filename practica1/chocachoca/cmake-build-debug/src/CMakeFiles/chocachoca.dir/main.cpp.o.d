@@ -258,6 +258,8 @@ src/CMakeFiles/chocachoca.dir/main.cpp.o: \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
  /usr/include/c++/12/bits/vector.tcc /usr/include/c++/12/array \
+ /usr/include/c++/12/bits/move_only_function.h \
+ /usr/include/c++/12/bits/mofunc_impl.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringview.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearray.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h \
@@ -1197,5 +1199,6 @@ src/CMakeFiles/chocachoca.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsPolygonItem \
+ /usr/include/c++/12/expected \
  /home/usuario/robocomp/components/grupo4/practica1/chocachoca/src/specificmonitor.h \
  /home/usuario/robocomp/components/grupo4/practica1/chocachoca/src/commonbehaviorI.h

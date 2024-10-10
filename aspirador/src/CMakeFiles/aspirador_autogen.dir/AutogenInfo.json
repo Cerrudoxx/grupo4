@@ -1,12 +1,12 @@
 {
-	"BUILD_DIR" : "/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen",
-	"CMAKE_BINARY_DIR" : "/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src",
+	"BUILD_DIR" : "/home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen",
+	"CMAKE_BINARY_DIR" : "/home/usuario/robocomp/components/grupo4/aspirador",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/usuario/robocomp/components/grupo4/aspirador/src",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/usuario/robocomp/components/grupo4/aspirador/src",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/CMakeLists.txt",
+		"/home/usuario/robocomp/components/grupo4/aspirador/src/CMakeLists.txt",
 		"/home/robocomp/robocomp/cmake/robocomp.cmake",
 		"/home/robocomp/robocomp/cmake/modules/qt.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake",
@@ -505,7 +505,7 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6StateMachine/Qt6StateMachineTargets-none.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6StateMachine/Qt6StateMachineAdditionalTargetInfo.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6StateMachine/Qt6StateMachineVersionlessTargets.cmake",
-		"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/CMakeListsSpecific.txt",
+		"/home/usuario/robocomp/components/grupo4/aspirador/src/CMakeListsSpecific.txt",
 		"/home/robocomp/robocomp/cmake/modules/opencv4.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake",
@@ -531,7 +531,7 @@
 		"/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake",
 		"/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador",
+	"CMAKE_SOURCE_DIR" : "/home/usuario/robocomp/components/grupo4/aspirador",
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
@@ -567,39 +567,39 @@
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/commonbehaviorI.h",
+			"/home/usuario/robocomp/components/grupo4/aspirador/src/commonbehaviorI.h",
 			"MU",
 			"EWIEGA46WW/moc_commonbehaviorI.cpp",
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericmonitor.h",
+			"/home/usuario/robocomp/components/grupo4/aspirador/src/genericmonitor.h",
 			"MU",
 			"EWIEGA46WW/moc_genericmonitor.cpp",
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericworker.h",
+			"/home/usuario/robocomp/components/grupo4/aspirador/src/genericworker.h",
 			"MU",
 			"EWIEGA46WW/moc_genericworker.cpp",
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/specificmonitor.h",
+			"/home/usuario/robocomp/components/grupo4/aspirador/src/specificmonitor.h",
 			"MU",
 			"EWIEGA46WW/moc_specificmonitor.cpp",
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/specificworker.h",
+			"/home/usuario/robocomp/components/grupo4/aspirador/src/specificworker.h",
 			"MU",
 			"EWIEGA46WW/moc_specificworker.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"ICE_CPP11_MAPPING",
@@ -620,11 +620,11 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src",
-		"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src",
+		"/home/usuario/robocomp/components/grupo4/aspirador/src",
+		"/home/usuario/robocomp/components/grupo4/aspirador/src",
 		"/opt/robocomp/include",
 		"/classes",
-		"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador",
+		"/home/usuario/robocomp/components/grupo4/aspirador",
 		"/home/robocomp/robocomp/classes",
 		"/home/robocomp/robocomp/libs",
 		"/home/robocomp/robocomp/interfaces",
@@ -657,23 +657,23 @@
 		"-c",
 		"/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
-		"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/CommonBehavior.cpp",
-		"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/GenericBase.cpp",
-		"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/OmniRobot.cpp",
-		"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/ui_mainUI.h"
+		"/home/usuario/robocomp/components/grupo4/aspirador/src/CommonBehavior.cpp",
+		"/home/usuario/robocomp/components/grupo4/aspirador/src/GenericBase.cpp",
+		"/home/usuario/robocomp/components/grupo4/aspirador/src/OmniRobot.cpp",
+		"/home/usuario/robocomp/components/grupo4/aspirador/src/ui_mainUI.h"
 	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 8,
-	"PARSE_CACHE_FILE" : "/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/CMakeFiles/aspirador_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/usuario/robocomp/components/grupo4/aspirador/src/CMakeFiles/aspirador_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt6/libexec/uic",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 2,
-	"SETTINGS_FILE" : "/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/CMakeFiles/aspirador_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/usuario/robocomp/components/grupo4/aspirador/src/CMakeFiles/aspirador_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
@@ -690,32 +690,32 @@
 		],
 		[ "/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp", "MU", null ],
 		[
-			"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/commonbehaviorI.cpp",
+			"/home/usuario/robocomp/components/grupo4/aspirador/src/commonbehaviorI.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericmonitor.cpp",
+			"/home/usuario/robocomp/components/grupo4/aspirador/src/genericmonitor.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericworker.cpp",
+			"/home/usuario/robocomp/components/grupo4/aspirador/src/genericworker.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/main.cpp",
+			"/home/usuario/robocomp/components/grupo4/aspirador/src/main.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/specificmonitor.cpp",
+			"/home/usuario/robocomp/components/grupo4/aspirador/src/specificmonitor.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/specificworker.cpp",
+			"/home/usuario/robocomp/components/grupo4/aspirador/src/specificworker.cpp",
 			"MU",
 			null
 		]
@@ -724,11 +724,11 @@
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
-		"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/CommonBehavior.cpp",
-		"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/GenericBase.cpp",
-		"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/OmniRobot.cpp",
-		"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/mainUI.ui",
-		"/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/ui_mainUI.h"
+		"/home/usuario/robocomp/components/grupo4/aspirador/src/CommonBehavior.cpp",
+		"/home/usuario/robocomp/components/grupo4/aspirador/src/GenericBase.cpp",
+		"/home/usuario/robocomp/components/grupo4/aspirador/src/OmniRobot.cpp",
+		"/home/usuario/robocomp/components/grupo4/aspirador/src/mainUI.ui",
+		"/home/usuario/robocomp/components/grupo4/aspirador/src/ui_mainUI.h"
 	],
 	"UIC_UI_FILES" : [],
 	"VERBOSITY" : 0

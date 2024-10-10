@@ -1,6 +1,6 @@
-/home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/EWIEGA46WW/moc_genericworker.cpp: /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/genericworker.h \
-  /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/src/aspirador_autogen/moc_predefs.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/salvado/beta-robotica-class/aspirador/src/config.h \
+/home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/EWIEGA46WW/moc_genericworker.cpp: /home/usuario/robocomp/components/grupo4/aspirador/src/genericworker.h \
+  /home/usuario/robocomp/components/grupo4/aspirador/src/aspirador_autogen/moc_predefs.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/aspirador/src/config.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/qlog/qlog.h \
   /usr/include/GL/gl.h \
   /usr/include/alloca.h \

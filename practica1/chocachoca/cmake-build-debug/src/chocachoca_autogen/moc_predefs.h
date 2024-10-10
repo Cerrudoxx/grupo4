@@ -101,6 +101,7 @@
 #define __GXX_WEAK__ 1
 #define __SHRT_WIDTH__ 16
 #define __FLT32_IS_IEC_60559__ 2
+#define __cpp_size_t_suffix 202011L
 #define __LDBL_MIN__ 3.36210314311209350626267781732175260e-4932L
 #define __DBL_IS_IEC_60559__ 2
 #define __DEC32_MAX__ 9.999999E96DF
@@ -159,7 +160,7 @@
 #define __LDBL_HAS_DENORM__ 1
 #define QT_WIDGETS_LIB 1
 #define __SEG_GS 1
-#define __cplusplus 202002L
+#define __cplusplus 202100L
 #define __cpp_ref_qualifiers 200710L
 #define __DEC32_MIN__ 1E-95DF
 #define __DEPRECATED 1
@@ -220,9 +221,11 @@
 #define __FLT_MANT_DIG__ 24
 #define __LDBL_DECIMAL_DIG__ 21
 #define __VERSION__ "12.3.0"
+#define __cpp_multidimensional_subscript 202110L
 #define __UINT64_C(c) c ## UL
 #define __cpp_unicode_characters 201411L
 #define _STDC_PREDEF_H 1
+#define __cpp_if_consteval 202106L
 #define __INT_LEAST32_MAX__ 0x7fffffff
 #define __GCC_ATOMIC_INT_LOCK_FREE 2
 #define __FLT128_MAX_EXP__ 16384
@@ -421,7 +424,7 @@
 #define __FLT32X_NORM_MAX__ 1.79769313486231570814527423731704357e+308F32x
 #define __CHAR32_TYPE__ unsigned int
 #define __FLT_MAX__ 3.40282346638528859811704183484516925e+38F
-#define __cpp_constexpr 202002L
+#define __cpp_constexpr 202110L
 #define __SSE2__ 1
 #define __cpp_deduction_guides 201907L
 #define __INT32_TYPE__ int

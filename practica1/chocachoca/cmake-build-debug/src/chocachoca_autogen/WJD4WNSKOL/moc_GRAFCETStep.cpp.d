@@ -1,5 +1,5 @@
-/home/usuario/robocomp/components/salvado/beta-robotica-class/chocachoca/cmake-build-debug/src/chocachoca_autogen/WJD4WNSKOL/moc_GRAFCETStep.cpp: /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
-  /home/usuario/robocomp/components/salvado/beta-robotica-class/chocachoca/cmake-build-debug/src/chocachoca_autogen/moc_predefs.h \
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/cmake-build-debug/src/chocachoca_autogen/WJD4WNSKOL/moc_GRAFCETStep.cpp: /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
+  /home/usuario/robocomp/components/grupo4/practica1/chocachoca/cmake-build-debug/src/chocachoca_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

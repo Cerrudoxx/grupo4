@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador
+CMAKE_SOURCE_DIR = /home/usuario/robocomp/components/grupo4/aspirador
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador
+CMAKE_BINARY_DIR = /home/usuario/robocomp/components/grupo4/aspirador
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles /home/usuario/robocomp/components/grupo4/aspirador//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robocomp/components/salvado/beta-robotica-class/aspirador/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robocomp/components/grupo4/aspirador/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -162,17 +162,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ICES__home_usuario_robocomp_components_salvado_beta-robotica-class_aspirador_src
+# Target rules for targets named ICES__home_usuario_robocomp_components_grupo4_aspirador_src
 
 # Build rule for target.
-ICES__home_usuario_robocomp_components_salvado_beta-robotica-class_aspirador_src: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ICES__home_usuario_robocomp_components_salvado_beta-robotica-class_aspirador_src
-.PHONY : ICES__home_usuario_robocomp_components_salvado_beta-robotica-class_aspirador_src
+ICES__home_usuario_robocomp_components_grupo4_aspirador_src: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ICES__home_usuario_robocomp_components_grupo4_aspirador_src
+.PHONY : ICES__home_usuario_robocomp_components_grupo4_aspirador_src
 
 # fast build rule for target.
-ICES__home_usuario_robocomp_components_salvado_beta-robotica-class_aspirador_src/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/ICES__home_usuario_robocomp_components_salvado_beta-robotica-class_aspirador_src.dir/build.make src/CMakeFiles/ICES__home_usuario_robocomp_components_salvado_beta-robotica-class_aspirador_src.dir/build
-.PHONY : ICES__home_usuario_robocomp_components_salvado_beta-robotica-class_aspirador_src/fast
+ICES__home_usuario_robocomp_components_grupo4_aspirador_src/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_aspirador_src.dir/build.make src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_aspirador_src.dir/build
+.PHONY : ICES__home_usuario_robocomp_components_grupo4_aspirador_src/fast
 
 #=============================================================================
 # Target rules for targets named aspirador
@@ -212,7 +212,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... ICES__home_usuario_robocomp_components_salvado_beta-robotica-class_aspirador_src"
+	@echo "... ICES__home_usuario_robocomp_components_grupo4_aspirador_src"
 	@echo "... aspirador_autogen"
 	@echo "... aspirador"
 .PHONY : help

@@ -263,7 +263,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "src/CMakeFiles/ICES__home_usuario_robocomp_components_salvado_beta-robotica-class_aspirador_src.dir/DependInfo.cmake"
+  "src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_aspirador_src.dir/DependInfo.cmake"
   "src/CMakeFiles/aspirador.dir/DependInfo.cmake"
   "src/CMakeFiles/aspirador_autogen.dir/DependInfo.cmake"
   )
