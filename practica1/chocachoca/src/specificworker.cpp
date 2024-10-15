@@ -83,6 +83,11 @@ void SpecificWorker::compute()
 
     switch(state)
     {
+    case STATE::FOLLOW_WALL:
+        {
+            ret_val = follow_wall(p_filter);
+            break;
+        }
         case STATE::SPIRAL:
         {
                 ret_val = spiral(p_filter);
@@ -98,6 +103,7 @@ void SpecificWorker::compute()
             ret_val = turn(p_filter);
             break;
         }
+
     }
     /// unpack  the tuple
     auto [st, adv, rot] = ret_val;
@@ -126,14 +132,14 @@ SpecificWorker::RetVal SpecificWorker::forward(auto &points)
     // check if the central part of the filtered_points vector has a minimum lower than the size of the robot
     auto offset_begin = closest_lidar_index_to_given_angle(points, -params.LIDAR_FRONT_SECTION);
     auto offset_end = closest_lidar_index_to_given_angle(points, params.LIDAR_FRONT_SECTION);
-
+    qDebug () << "Forward";
     //float umbralEspiral = 1400;
     if(offset_begin and offset_end)
     {
         auto min_point = std::min_element(std::begin(points) + offset_begin.value(), std::begin(points) + offset_end.value(), [](auto &a, auto &b)
         { return a.distance2d < b.distance2d; });
         if (min_point != points.end() and min_point->distance2d < params.STOP_THRESHOLD)
-            return RetVal(STATE::TURN, 0.f, 0.f);  // stop and change state if obstacle detected
+            return RetVal(STATE::FOLLOW_WALL, 0.f, 0.f);  // stop and change state if obstacle detected
         else if (min_point != points.end() and min_point->distance2d < params.SPIRAL_THRESHOLD)
         {
             return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
@@ -168,6 +174,7 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
     static bool first_time = true;
     static int sign = 1;
     float factorGiro = 1;
+    qDebug() << "Turn";
     // check if the central part of the filtered_points vector is free to go. If so stop turning and change state to FORWARD
     auto offset_begin = closest_lidar_index_to_given_angle(points, -params.LIDAR_FRONT_SECTION);
     auto offset_end = closest_lidar_index_to_given_angle(points, params.LIDAR_FRONT_SECTION);
@@ -208,21 +215,22 @@ SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
     static bool first_time = true;
     //static float factorGiro = 0.02;
     //float umbralEspiral = 1400;
+    qDebug() << "Spiral";
     if(offset_begin and offset_end)
     {
         auto min_point = std::min_element(std::begin(points) + offset_begin.value(), std::begin(points) + offset_end.value(), [](auto &a, auto &b)
         { return a.distance2d < b.distance2d; });
         if (min_point != points.end() and min_point->distance2d < params.STOP_THRESHOLD)
         {
-            params.FACTOR_GIRO_SPIRAL = 1;
-            params.FACTOR_VEL_SPIRAL = 0.1;
+            params.ROT_ACTUAL=params.ROT_INICIAL;
+            params.VEL_ACTUAL=params.VEL_INICIAL;
             first_time = true;
             return RetVal(STATE::TURN, 0.f, 0.f);  // stop and change state if obstacle detected
         }
         else if (min_point != points.end() and min_point->distance2d < params.SPIRAL_THRESHOLD)
         {
-            params.FACTOR_GIRO_SPIRAL = 1;
-            params.FACTOR_VEL_SPIRAL = 0.1;
+            params.ROT_ACTUAL=params.ROT_INICIAL;
+            params.VEL_ACTUAL=params.VEL_INICIAL;
             first_time = true;
             return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
 
@@ -234,14 +242,95 @@ SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
                 first_time = false;
                 return RetVal(STATE::SPIRAL, 200, 1.0f);
             }else
+            {
+                float alfa=1.f;
+                float incVel= (params.MAX_ADV_SPEED/1000.f)*alfa;
+                float incRot= (params.MAX_ROT_SPEED/1000.f)*alfa;
+                if(params.ROT_ACTUAL > 0.1)
+                {
+                    params.ROT_ACTUAL -= incRot;
+                }
+                if(params.VEL_ACTUAL < params.MAX_ADV_SPEED*0.75)
+                {
+                     params.VEL_ACTUAL += incVel;
+                }
+
+
+                return RetVal(STATE::SPIRAL, params.VEL_ACTUAL ,params.ROT_ACTUAL );
+            }
                 //params.FACTOR_GIRO_SPIRAL = std::log(params.FACTOR_GIRO_SPIRAL + params.FACTOR_VEL_SPIRAL);
-                params.FACTOR_GIRO_SPIRAL -= params.FACTOR_GIRO_SPIRAL / (500+params.FACTOR_GIRO_SPIRAL); ;
-                if(params.FACTOR_VEL_SPIRAL < 0.6)
-                    params.FACTOR_VEL_SPIRAL = 1 - params.FACTOR_GIRO_SPIRAL;
-                qDebug() << "Factor giro: " << params.FACTOR_GIRO_SPIRAL;
-                qDebug() << "Factor vel: " << params.FACTOR_VEL_SPIRAL;
-                return RetVal(STATE::SPIRAL, params.FACTOR_VEL_SPIRAL*params.MAX_ADV_SPEED, params.FACTOR_GIRO_SPIRAL);
+
         }
+    }
+    else // no valid readings
+    {
+        qWarning() << "No valid readings. Stopping";
+        return RetVal(STATE::FORWARD, 0.f, 0.f);
+    }
+
+
+}
+
+SpecificWorker::RetVal SpecificWorker::follow_wall(auto &points)
+{
+    auto offset_begin = closest_lidar_index_to_given_angle(points, -params.LIDAR_FRONT_SECTION);
+    auto offset_end = closest_lidar_index_to_given_angle(points, params.LIDAR_FRONT_SECTION);
+    //qDebug () << "Spiral";
+    static bool first_time = true;
+    //static float factorGiro = 0.02;
+    //float umbralEspiral = 1400;
+    qDebug() << "Follow Wall";
+    bool derecha=false;
+    srand (time(NULL));
+
+    if(offset_begin and offset_end)
+    {
+        auto min_point = std::min_element(std::begin(points) + offset_begin.value(), std::begin(points) + offset_end.value(), [](auto &a, auto &b)
+        { return a.distance2d < b.distance2d; });
+
+           //CONDICION FINAL FOLLOW WALL
+        if((min_point->phi <= 0.251 || min_point->phi >= 0.01 )&& min_point->distance2d < params.STOP_FOLLOW_WALL)
+        {
+            qDebug() << "STOP FOLLOW WALL";
+            float random = ((rand() % 100)+50) / 100.f;
+          if(derecha)
+          {
+              return RetVal(STATE::TURN, 0.f, -random);
+          }else
+          {
+              return RetVal(STATE::TURN, 0.f, +random);
+          }
+        }
+        float correccion=0.1f;
+        if(min_point->phi > 0.25f){
+            derecha = true;
+            float angulo= min_point->phi;
+            qDebug () << "Angulo derecha: "<< angulo;
+            if(angulo > 0.25)
+            {
+                return RetVal(STATE::FOLLOW_WALL, params.VEL_ACTUAL, -correccion);
+            }
+            if (angulo < 0.25)
+            {
+                return RetVal(STATE::FOLLOW_WALL, params.VEL_ACTUAL, correccion);
+            }
+            return RetVal(STATE::FOLLOW_WALL, params.VEL_ACTUAL, 0);
+        }else{
+            derecha = false;
+            float angulo= min_point->phi;
+            qDebug () << "Angulo izquierda: "<< angulo;
+            if(angulo < -0.24)
+            {
+                return RetVal(STATE::FOLLOW_WALL, params.VEL_ACTUAL, correccion);
+            }
+            if (angulo > -0.251)
+            {
+                return RetVal(STATE::FOLLOW_WALL, params.VEL_ACTUAL, -correccion);
+            }
+            return RetVal(STATE::FOLLOW_WALL, params.VEL_ACTUAL, 0);
+        }
+
+
     }
     else // no valid readings
     {
