@@ -65,7 +65,7 @@ class SpecificWorker : public GenericWorker
             float LIDAR_FRONT_SECTION = 0.5; // rads, aprox 30 degrees
             float VEL_ACTUAL = 200.f; // m/s
             float ROT_ACTUAL = 1.f; // rad/s
-            float VEL_INICIAL = 300.f; // m/s
+            float VEL_INICIAL = 200.f; // m/s
             float ROT_INICIAL = 1.f; // rad/s
             std::string LIDAR_NAME_LOW = "bpearl";
             std::string LIDAR_NAME_HIGH = "helios";
