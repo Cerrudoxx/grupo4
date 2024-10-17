@@ -55,18 +55,29 @@ class SpecificWorker : public GenericWorker
         {
             float ROBOT_WIDTH = 460;  // mm
             float ROBOT_LENGTH = 480;  // mm
+
             float MAX_ADV_SPEED = 1000; // mm/s
-            float MAX_ROT_SPEED = 1; // rad/s
-            float STOP_THRESHOLD = MAX_ADV_SPEED*0.7; // mm
-            float SPIRAL_THRESHOLD = MAX_ADV_SPEED*1.4; // mm
-            float STOP_FOLLOW_WALL = MAX_ADV_SPEED*0.5; // mm
-            float ADVANCE_THRESHOLD = ROBOT_WIDTH * 2; // mm
+            float MAX_ROT_SPEED = 2; // rad/s
+
+            float TURN_THRESHOLD = ROBOT_LENGTH + 50; // mm 530 Distnacia minima para girar (evita chocar con pared)
+
+            float SPIRAL_THRESHOLD = 2100;// mm Distancia minima alrededor para empezar a girar en espiral
+
+            float STOP_FOLLOW_WALL_THRESHOLD = TURN_THRESHOLD; // mm Distancia mininma para dejar de seguir la pared (ahora igual a TURN_THRESHOLD)
+            float START_FOLLOW_WALL_THRESHOLD = 850; //mm Distancia minima para empezar a seguir la pared
+            float MIN_FOLLOW_WALL_DISTANCE = TURN_THRESHOLD + 130; // mm 660 Distancia minima a la pared para seguir la pared (ancho del robot + margen)
+            float MAX_FOLLOW_WALL_DISTANCE = MIN_FOLLOW_WALL_DISTANCE + 300; // mm 960 Distancia maxima a la pared para seguir la pared (ancho del robot + margen)
+
+            float ADVANCE_THRESHOLD = ROBOT_WIDTH *1.5; // mm
+
             float LIDAR_OFFSET = 9.f/10.f; // eight tenths of vector's half size
             float LIDAR_FRONT_SECTION = 0.5; // rads, aprox 30 degrees
-            float VEL_ACTUAL = 200.f; // m/s
-            float ROT_ACTUAL = 1.f; // rad/s
-            float VEL_INICIAL = 200.f; // m/s
-            float ROT_INICIAL = 1.f; // rad/s
+
+            float VEL_ACTUAL = 200.f; // m/s usado en espiral
+            float ROT_ACTUAL = 1.f; // rad/s usado en espiral
+
+            float VEL_INICIAL = 200.f; // m/s usados para reset de velocidad
+            float ROT_INICIAL = 1.f; // rad/s usados para reset de velocidad de giro
             std::string LIDAR_NAME_LOW = "bpearl";
             std::string LIDAR_NAME_HIGH = "helios";
             QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
