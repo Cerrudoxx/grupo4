@@ -69,7 +69,7 @@ class SpecificWorker : public GenericWorker
 	//FOLLOW_WALL THRESHOLDS
             float STOP_FOLLOW_WALL_THRESHOLD = TURN_THRESHOLD; // mm Distancia mininma para dejar de seguir la pared (ahora igual a TURN_THRESHOLD)
             float START_FOLLOW_WALL_THRESHOLD = 850; //mm Distancia minima para empezar a seguir la pared
-            float MIN_FOLLOW_WALL_DISTANCE = TURN_THRESHOLD + 130; // mm 660 Distancia minima a la pared para seguir la pared (ancho del robot + margen)
+            float MIN_FOLLOW_WALL_DISTANCE = TURN_THRESHOLD + 150; // mm 660 Distancia minima a la pared para seguir la pared (ancho del robot + margen)
             float MAX_FOLLOW_WALL_DISTANCE = MIN_FOLLOW_WALL_DISTANCE + 300; // mm 960 Distancia maxima a la pared para seguir la pared (ancho del robot + margen)
 		
 	//FOLLOW_WALL COUNTER
@@ -78,7 +78,7 @@ class SpecificWorker : public GenericWorker
             int MIN_FOLLOW_WALL_COUNTER_RESET = FOLLOW_WALL_COUNTER*2; //Numero de iteraciones para resetear el contador de seguir la pared
             int FOLLOW_WALL_COUNTER_RESET = MIN_FOLLOW_WALL_COUNTER_RESET; //Numero de iteraciones para resetear el contador de seguir la pared
 
-            float ADVANCE_THRESHOLD = ROBOT_WIDTH *1.5; // mm
+            float ADVANCE_THRESHOLD = ROBOT_WIDTH *1.2; // mm
 
 	//AWAY_FROM_WALL THRESHOLD
             float AWAY_WALL_THRESHOLD = 2.5*1000; // mm Distancia minima para alejarse de la pared
@@ -88,7 +88,7 @@ class SpecificWorker : public GenericWorker
           
             //SPIRAL PARAMS
             float VEL_INICIAL = 300.f; // m/s usados para reset de velocidad
-            float ROT_INICIAL = 1.f; // rad/s usados para reset de velocidad de giro
+            float ROT_INICIAL = 0.8f; // rad/s usados para reset de velocidad de giro
 
             float VEL_ACTUAL = VEL_INICIAL; // m/s usado en espiral
             float ROT_ACTUAL = ROT_INICIAL; // rad/s usado en espiral
@@ -97,10 +97,16 @@ class SpecificWorker : public GenericWorker
           
           //LIDAR 3D
             float LIDAR_OFFSET = 9.f/10.f; // eight tenths of vector's half size
-            float LIDAR_FRONT_SECTION = 0.5; // rads, aprox 30 degrees           
+            float LIDAR_FRONT_SECTION = 0.5; // rads, aprox 30 degrees    
+
+            float LIDAR_RIGHT_SIDE_SECTION = M_PI/3; // rads, 90 degrees
+            float LIDAR_LEFT_SIDE_SECTION = -M_PI/3; // rads, 90 degrees
+
             std::string LIDAR_NAME_LOW = "bpearl";
             std::string LIDAR_NAME_HIGH = "helios";
             QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
+
+            float WALL_MIN_DISTANCE = 1000; // mm
 
         };
         Params params;

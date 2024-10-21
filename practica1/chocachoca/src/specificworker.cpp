@@ -66,13 +66,28 @@ void SpecificWorker::initialize()
         robot_draw = r;
         viewer->show();
 
-///////////////////////////////
-#ifdef HIBERNATION_ENABLED
-        hibernationChecker.start(500);
-#endif
+        connect(pushButton_stop, &QPushButton::clicked, [this]()
+                {
+                try
+                { omnirobot_proxy->setSpeedBase(0, 0, 0); }
+                catch (const Ice::Exception &e)
+                { std::cout << e << std::endl; }
+                std::terminate(); });
 
-        this->setPeriod(STATES::Compute, 100);
-    }
+        horizontalSlider_wall_distance->setValue(params.WALL_MIN_DISTANCE);
+        lcdNumber_wall_distance->display(params.WALL_MIN_DISTANCE);
+        // connect the slider with the wall distance using a lambda
+        connect(horizontalSlider_wall_distance, &QSlider::valueChanged, [this](int value)
+                {
+                params.WALL_MIN_DISTANCE = value;
+                lcdNumber_wall_distance->display(value); });
+///////////////////////////////
+		#ifdef HIBERNATION_ENABLED
+			hibernationChecker.start(500);
+		#endif
+
+		this->setPeriod(STATES::Compute, 100);
+	}
 }
 
 void SpecificWorker::compute()
@@ -331,7 +346,7 @@ SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
             first_time = true;
             return RetVal(STATE::TURN, 0.f, 0.f); // stop and change state if obstacle detected
         }
-        else if (min_point != points.end() and min_point->distance2d < params.SPIRAL_THRESHOLD/3)
+        else if (min_point != points.end() and min_point->distance2d < params.SPIRAL_THRESHOLD / 3)
         {
             params.ROT_ACTUAL = params.ROT_INICIAL;
             params.VEL_ACTUAL = params.VEL_INICIAL;
@@ -354,13 +369,11 @@ SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
                 if (std::abs(params.ROT_ACTUAL) > 0.33)
                 {
                     params.ROT_ACTUAL -= incRot;
-                    
                 }
-                if( params.VEL_ACTUAL < params.MAX_ADV_SPEED)
+                if (params.VEL_ACTUAL < params.MAX_ADV_SPEED)
                 {
                     params.VEL_ACTUAL += incVel;
                 }
-                
 
                 return RetVal(STATE::SPIRAL, params.VEL_ACTUAL, params.ROT_ACTUAL);
             }
@@ -592,10 +605,10 @@ SpecificWorker::RetVal SpecificWorker::follow_wall(auto &points)
  */
 void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
 {
-    static std::vector<QGraphicsItem *> items; // store items so they can be shown between iterations
+    static std::vector<QGraphicsItem*> items;   // store items so they can be shown between iterations
 
     // remove all items drawn in the previous iteration
-    for (auto i : items)
+    for(auto i: items)
     {
         scene->removeItem(i);
         delete i;
@@ -604,47 +617,75 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
 
     auto color = QColor(Qt::green);
     auto brush = QBrush(QColor(Qt::green));
-    for (const auto &p : filtered_points)
+    for(const auto &p : filtered_points)
     {
         auto item = scene->addRect(-50, -50, 100, 100, color, brush);
         item->setPos(p.x, p.y);
         items.push_back(item);
     }
-    // compute and draw minimum distance point
-    auto p_min = std::ranges::min_element(filtered_points, [](auto &a, auto &b)
-                                          { return a.distance2d < b.distance2d; });
-    auto item = scene->addRect(-150, -150, 300, 300, QColor(Qt::red), QBrush(QColor(Qt::red)));
-    item->setPos(p_min->x, p_min->y);
+
+    // compute and draw minimum distance point in frontal range
+    auto offset_begin = closest_lidar_index_to_given_angle(filtered_points, -params.LIDAR_FRONT_SECTION);
+    auto offset_end = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_FRONT_SECTION);
+    if(not offset_begin or not offset_end)
+    { std::cout << offset_begin.error() << " " << offset_end.error() << std::endl; return ;}    // abandon the ship
+    auto min_point = std::min_element(std::begin(filtered_points) + offset_begin.value(), std::begin(filtered_points) + offset_end.value(), [](auto &a, auto &b)
+    { return a.distance2d < b.distance2d; });
+    QColor dcolor;
+    if(min_point->distance2d < params.TURN_THRESHOLD)
+        dcolor = QColor(Qt::red);
+    else
+        dcolor = QColor(Qt::magenta);
+    auto ditem = scene->addRect(-100, -100, 200, 200, dcolor, QBrush(dcolor));
+    ditem->setPos(min_point->x, min_point->y);
+    items.push_back(ditem);
+
+    // compute and draw minimum distance point to wall
+    auto wall_res_right = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_RIGHT_SIDE_SECTION);
+    auto wall_res_left = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_LEFT_SIDE_SECTION);
+    if(not wall_res_right or not wall_res_left)   // abandon the ship
+    {
+        qWarning() << "No valid lateral readings" << QString::fromStdString(wall_res_right.error()) << QString::fromStdString(wall_res_left.error());
+        return;
+    }
+    auto right_point = filtered_points[wall_res_right.value()];
+    auto left_point = filtered_points[wall_res_left.value()];
+    // compare both to get the one with minimum distance
+    auto min_obj = (right_point.distance2d < left_point.distance2d) ? right_point : left_point;
+    auto item = scene->addRect(-100, -100, 200, 200, QColor(QColorConstants::Svg::orange), QBrush(QColor(QColorConstants::Svg::orange)));
+    item->setPos(min_obj.x, min_obj.y);
     items.push_back(item);
+
+    // draw a line from the robot to the minimum distance point
+    auto item_line = scene->addLine(QLineF(QPointF(0.f, 0.f), QPointF(min_obj.x, min_obj.y)), QPen(QColorConstants::Svg::orange, 10));
+    items.push_back(item_line);
+
+    // update UI
+    lcdNumber_minangle->display(atan2(min_obj.x,min_obj.y));
+    lcdNumber_mindist->display(min_obj.distance2d);
 
     // Draw two lines coming out from the robot at angles given by params.LIDAR_OFFSET
     // Calculate the end points of the lines
-    // float angle1 = params.LIDAR_FRONT_SECTION / 2.f;
-    auto res_right = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_FRONT_SECTION / 2.f);
-    auto res_left = closest_lidar_index_to_given_angle(filtered_points, -params.LIDAR_FRONT_SECTION / 2.f);
-    if (res_right and res_left)
-    {
-        float right_line_length = filtered_points[res_right.value()].distance2d;
-        float left_line_length = filtered_points[res_left.value()].distance2d;
-        float angle1 = filtered_points[res_left.value()].phi;
-        float angle2 = filtered_points[res_right.value()].phi;
-        QLineF line_left{QPointF(0.f, 0.f),
-                         robot_draw->mapToScene(left_line_length * sin(angle1), left_line_length * cos(angle1))};
-        QLineF line_right{QPointF(0.f, 0.f),
-                          robot_draw->mapToScene(right_line_length * sin(angle2), right_line_length * cos(angle2))};
-        QPen left_pen(Qt::blue, 10); // Blue color pen with thickness 3
-        QPen right_pen(Qt::red, 10); // Blue color pen with thickness 3
-        auto line1 = scene->addLine(line_left, left_pen);
-        auto line2 = scene->addLine(line_right, right_pen);
-        items.push_back(line1);
-        items.push_back(line2);
-    }
-    else
-        std::cout << res_right.error() << " " << res_left.error() << std::endl;
+    //float angle1 = params.LIDAR_FRONT_SECTION / 2.f;
+    auto res_right = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_FRONT_SECTION);
+    auto res_left = closest_lidar_index_to_given_angle(filtered_points, -params.LIDAR_FRONT_SECTION);
+    if(not res_right or not res_left)
+    { std::cout << res_right.error() << " " << res_left.error() << std::endl; return ;}
 
-    // update UI
-    lcdNumber_minangle->display(atan2(p_min->x, p_min->y));
-    lcdNumber_mindist->display(p_min->distance2d);
+    float right_line_length = filtered_points[res_right.value()].distance2d;
+    float left_line_length = filtered_points[res_left.value()].distance2d;
+    float angle1 = filtered_points[res_left.value()].phi;
+    float angle2 = filtered_points[res_right.value()].phi;
+    QLineF line_left{QPointF(0.f, 0.f),
+                     robot_draw->mapToScene(left_line_length * sin(angle1), left_line_length * cos(angle1))};
+    QLineF line_right{QPointF(0.f, 0.f),
+                      robot_draw->mapToScene(right_line_length * sin(angle2), right_line_length * cos(angle2))};
+    QPen left_pen(Qt::blue, 10); // Blue color pen with thickness 3
+    QPen right_pen(Qt::red, 10); // Blue color pen with thickness 3
+    auto line1 = scene->addLine(line_left, left_pen);
+    auto line2 = scene->addLine(line_right, right_pen);
+    items.push_back(line1);
+    items.push_back(line2);
 }
 
 /**
