@@ -348,14 +348,17 @@ SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
             else
             {
                 float alfa = params.ALFA_GIRO;
-                float incVel = (params.MAX_ADV_SPEED / 1000.f) * alfa *1.2;
+                float incVel = (params.MAX_ADV_SPEED / 1000.f) * alfa;
                 float incRot = (params.MAX_ROT_SPEED / 1000.f) * alfa;
                 qDebug() << "rot: " << params.ROT_ACTUAL << " vel: " << params.VEL_ACTUAL;
-                if (std::abs(params.ROT_ACTUAL) > 0.55)
+                if (std::abs(params.ROT_ACTUAL) > 0.33)
                 {
                     params.ROT_ACTUAL -= incRot;
-                    params.VEL_ACTUAL += incVel;
                     
+                }
+                if( params.VEL_ACTUAL < params.MAX_ADV_SPEED)
+                {
+                    params.VEL_ACTUAL += incVel;
                 }
                 
 
