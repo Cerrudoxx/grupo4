@@ -18,121 +18,121 @@
  */
 
 /**
-	\brief
-	@author authorname
+    \brief
+    @author authorname
 */
-
-
 
 #ifndef SPECIFICWORKER_H
 #define SPECIFICWORKER_H
 
-//#define HIBERNATION_ENABLED
+// #define HIBERNATION_ENABLED
 
 #include <genericworker.h>
 #include "abstract_graphic_viewer/abstract_graphic_viewer.h"
 #include <expected>
 #include <random>
 
-
 class SpecificWorker : public GenericWorker
 {
     Q_OBJECT
-    public:
-        SpecificWorker(TuplePrx tprx, bool startup_check);
-        ~SpecificWorker();
-        bool setParams(RoboCompCommonBehavior::ParameterList params);
+public:
+    SpecificWorker(TuplePrx tprx, bool startup_check);
+    ~SpecificWorker();
+    bool setParams(RoboCompCommonBehavior::ParameterList params);
 
-    public slots:
-        void initialize();
-        void compute();
-        void emergency();
-        void restore();
-        int startup_check();
+public slots:
+    void initialize();
+    void compute();
+    void emergency();
+    void restore();
+    int startup_check();
 
-    private:
-        struct Params
-        {
-            float ROBOT_WIDTH = 460;  // mm
-            float ROBOT_LENGTH = 480;  // mm
+private:
+    struct Params
+    {
+        float ROBOT_WIDTH = 460;  // mm
+        float ROBOT_LENGTH = 480; // mm
 
-            float MAX_ADV_SPEED = 1000; // mm/s
-            float MAX_ROT_SPEED = 1; // rad/s
+        float MAX_ADV_SPEED = 1000; // mm/s
+        float MAX_ROT_SPEED = 1;    // rad/s
 
-            float TURN_THRESHOLD = ROBOT_LENGTH + 50; // mm 530 Distnacia minima para girar (evita chocar con pared)
+        float TURN_THRESHOLD = ROBOT_LENGTH + 50; // mm 530 Distnacia minima para girar (evita chocar con pared)
 
-	//SPIRAL THRESHOLD
-            float SPIRAL_THRESHOLD = 1500;// mm Distancia minima alrededor para empezar a girar en espiral
-            
-      
+        // SPIRAL THRESHOLD
+        float SPIRAL_THRESHOLD = 1500; // mm Distancia minima alrededor para empezar a girar en espiral
 
-	//FOLLOW_WALL THRESHOLDS
-            float STOP_FOLLOW_WALL_THRESHOLD = TURN_THRESHOLD; // mm Distancia mininma para dejar de seguir la pared (ahora igual a TURN_THRESHOLD)
-            float START_FOLLOW_WALL_THRESHOLD = 850; //mm Distancia minima para empezar a seguir la pared
-            float MIN_FOLLOW_WALL_DISTANCE = TURN_THRESHOLD + 150; // mm 660 Distancia minima a la pared para seguir la pared (ancho del robot + margen)
-            float MAX_FOLLOW_WALL_DISTANCE = MIN_FOLLOW_WALL_DISTANCE + 300; // mm 960 Distancia maxima a la pared para seguir la pared (ancho del robot + margen)
-		
-	//FOLLOW_WALL COUNTER
-            int MIN_FOLLOW_WALL_COUNTER = 350; //Numero de iteraciones minimo para seguir la pared
-            int FOLLOW_WALL_COUNTER = MIN_FOLLOW_WALL_COUNTER + 500; //Numero de iteraciones maximo para seguir la pared
-            int MIN_FOLLOW_WALL_COUNTER_RESET = FOLLOW_WALL_COUNTER*2; //Numero de iteraciones para resetear el contador de seguir la pared
-            int FOLLOW_WALL_COUNTER_RESET = MIN_FOLLOW_WALL_COUNTER_RESET; //Numero de iteraciones para resetear el contador de seguir la pared
+        // FOLLOW_WALL THRESHOLDS
+        float STOP_FOLLOW_WALL_THRESHOLD = TURN_THRESHOLD;               // mm Distancia mininma para dejar de seguir la pared (ahora igual a TURN_THRESHOLD)
+        float START_FOLLOW_WALL_THRESHOLD = 850;                         // mm Distancia minima para empezar a seguir la pared
+        float MIN_FOLLOW_WALL_DISTANCE = TURN_THRESHOLD + 150;           // mm 660 Distancia minima a la pared para seguir la pared (ancho del robot + margen)
+        float MAX_FOLLOW_WALL_DISTANCE = MIN_FOLLOW_WALL_DISTANCE + 300; // mm 960 Distancia maxima a la pared para seguir la pared (ancho del robot + margen)
 
-            float ADVANCE_THRESHOLD = ROBOT_WIDTH *1.2; // mm
+        // FOLLOW_WALL COUNTER
+        int MIN_FOLLOW_WALL_COUNTER = 200;                                 // Numero de iteraciones minimo para seguir la pared
+        int FOLLOW_WALL_COUNTER = MIN_FOLLOW_WALL_COUNTER + 250;           // Numero de iteraciones maximo para seguir la pared
+        int MIN_FOLLOW_WALL_COUNTER_RESET = FOLLOW_WALL_COUNTER * 2;       // Numero de iteraciones para resetear el contador de seguir la pared
+        int FOLLOW_WALL_COUNTER_RESET = MIN_FOLLOW_WALL_COUNTER_RESET * 2; // Numero de iteraciones para resetear el contador de seguir la pared
 
-	//AWAY_FROM_WALL THRESHOLD
-            float AWAY_WALL_THRESHOLD = 2.5*1000; // mm Distancia minima para alejarse de la pared
-            
-            
-      
-          
-            //SPIRAL PARAMS
-            float VEL_INICIAL = 300.f; // m/s usados para reset de velocidad
-            float ROT_INICIAL = 0.8f; // rad/s usados para reset de velocidad de giro
+        float ADVANCE_THRESHOLD = ROBOT_WIDTH * 1.2; // mm
 
-            float VEL_ACTUAL = VEL_INICIAL; // m/s usado en espiral
-            float ROT_ACTUAL = ROT_INICIAL; // rad/s usado en espiral
+        // AWAY_FROM_WALL THRESHOLD
+        float AWAY_WALL_THRESHOLD = 2.5 * 1000; // mm Distancia minima para alejarse de la pared
+        float AWAY_WALL_SECURITY_BACK = ROBOT_LENGTH + 50; // mm Distancia minima para no chocar con la pared al alejarse
 
-            float ALFA_GIRO = 1; // multiplicador de velocidad de giro en espiral
-          
-          //LIDAR 3D
-            float LIDAR_OFFSET = 9.f/10.f; // eight tenths of vector's half size
-            float LIDAR_FRONT_SECTION = 0.5; // rads, aprox 30 degrees    
+        // SPIRAL PARAMS
+        float VEL_INICIAL = 300.f; // m/s usados para reset de velocidad
+        float ROT_INICIAL = 0.85f; // rad/s usados para reset de velocidad de giro
 
-            float LIDAR_RIGHT_SIDE_SECTION = M_PI/3; // rads, 90 degrees
-            float LIDAR_LEFT_SIDE_SECTION = -M_PI/3; // rads, 90 degrees
+        float VEL_ACTUAL = VEL_INICIAL; // m/s usado en espiral
+        float ROT_ACTUAL = ROT_INICIAL; // rad/s usado en espiral
 
-            std::string LIDAR_NAME_LOW = "bpearl";
-            std::string LIDAR_NAME_HIGH = "helios";
-            QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
+        float ALFA_GIRO = 1.15; // multiplicador de velocidad de giro en espiral
 
-            float WALL_MIN_DISTANCE = 1000; // mm
+        // LIDAR 3D
+        float LIDAR_OFFSET = 9.f / 10.f; // eight tenths of vector's half size
+        float LIDAR_FRONT_SECTION = 0.5; // rads, aprox 30 degrees
 
-        };
-        Params params;
+        float LIDAR_RIGHT_SIDE_SECTION = M_PI / 3; // rads, 90 degrees
+        float LIDAR_LEFT_SIDE_SECTION = -M_PI / 3; // rads, 90 degrees
 
-        bool startup_check_flag;
-        AbstractGraphicViewer *viewer;
-
-        // state machine
-        enum class STATE {SPIRAL, FORWARD, TURN, FOLLOW_WALL, AWAY_WALL};
-        STATE state = STATE::FORWARD;
-
-        using RetVal = std::tuple<STATE, float, float>;
         
-        RetVal forward(auto &filtered_points);
-        RetVal turn(auto &filtered_points);
-        RetVal spiral(auto &filtered_points);
-        RetVal follow_wall(auto &filtered_points);
-        RetVal away_wall(auto &filtered_points);      
-        
-        
-        void draw_lidar(auto &filtered_points, QGraphicsScene *scene);
-        QGraphicsPolygonItem* robot_draw;
-        std::expected<int, string> closest_lidar_index_to_given_angle(const auto &points, float angle);
 
-        // random number generator
-        std::random_device rd;
+        std::string LIDAR_NAME_LOW = "bpearl";
+        std::string LIDAR_NAME_HIGH = "helios";
+        QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
+
+        float WALL_MIN_DISTANCE = 1000; // mm
+    };
+    Params params;
+
+    bool startup_check_flag;
+    AbstractGraphicViewer *viewer;
+
+    // state machine
+    enum class STATE
+    {
+        SPIRAL,
+        FORWARD,
+        TURN,
+        FOLLOW_WALL,
+        AWAY_WALL
+    };
+    STATE state = STATE::FORWARD;
+
+    using RetVal = std::tuple<STATE, float, float>;
+
+    RetVal forward(auto &filtered_points);
+    RetVal turn(auto &filtered_points);
+    RetVal spiral(auto &filtered_points);
+    RetVal follow_wall(auto &filtered_points);
+    RetVal away_wall(auto &filtered_points);
+
+    void draw_lidar(auto &filtered_points, QGraphicsScene *scene);
+    QGraphicsPolygonItem *robot_draw;
+    std::expected<int, string> closest_lidar_index_to_given_angle(const auto &points, float angle);
+
+    // random number generator
+    std::random_device rd;
 };
 
 #endif

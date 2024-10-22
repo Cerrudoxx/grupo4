@@ -81,13 +81,13 @@ void SpecificWorker::initialize()
                 {
                 params.WALL_MIN_DISTANCE = value;
                 lcdNumber_wall_distance->display(value); });
-///////////////////////////////
-		#ifdef HIBERNATION_ENABLED
-			hibernationChecker.start(500);
-		#endif
+        ///////////////////////////////
+#ifdef HIBERNATION_ENABLED
+        hibernationChecker.start(500);
+#endif
 
-		this->setPeriod(STATES::Compute, 100);
-	}
+        this->setPeriod(STATES::Compute, 100);
+    }
 }
 
 void SpecificWorker::compute()
@@ -366,7 +366,7 @@ SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
                 float incVel = (params.MAX_ADV_SPEED / 1000.f) * alfa;
                 float incRot = (params.MAX_ROT_SPEED / 1000.f) * alfa;
                 qDebug() << "rot: " << params.ROT_ACTUAL << " vel: " << params.VEL_ACTUAL;
-                if (std::abs(params.ROT_ACTUAL) > 0.33)
+                if (std::abs(params.ROT_ACTUAL) > 0.45)
                 {
                     params.ROT_ACTUAL -= incRot;
                 }
@@ -425,10 +425,27 @@ SpecificWorker::RetVal SpecificWorker::away_wall(auto &points)
 {
     // Implement the logic for the away_wall state
     // For now, let's just return a default RetVal
-    qDebug() << Cyan << "Away Wall";
+
     auto offset_begin = closest_lidar_index_to_given_angle(points, -params.LIDAR_FRONT_SECTION);
     auto offset_end = closest_lidar_index_to_given_angle(points, params.LIDAR_FRONT_SECTION);
 
+    auto offset_begin_back = closest_lidar_index_to_given_angle(points, -(M_PI - params.LIDAR_FRONT_SECTION));
+    auto offset_end_back = closest_lidar_index_to_given_angle(points, M_PI - params.LIDAR_FRONT_SECTION);
+
+    auto min_point_back_left = std::min_element(std::begin(points), std::begin(points) + offset_begin_back.value(), [](auto &a, auto &b)
+                                                { return a.distance2d < b.distance2d; });
+    auto min_point_back_right = std::min_element(std::begin(points) + offset_end_back.value(), std::end(points), [](auto &a, auto &b)
+                                                 { return a.distance2d < b.distance2d; });
+    
+    auto min_point_back = min_point_back_right;
+    if (min_point_back_left < min_point_back_right)
+    {
+        min_point_back = min_point_back_left;
+    }
+
+
+
+    qDebug() << Cyan << "Away Wall";
     qDebug() << "Follow Wall Counter: " << params.FOLLOW_WALL_COUNTER;
     qDebug() << "Follow Wall Counter Reset: " << params.FOLLOW_WALL_COUNTER_RESET;
     int minFollowWallCounter = params.MIN_FOLLOW_WALL_COUNTER;
@@ -453,18 +470,31 @@ SpecificWorker::RetVal SpecificWorker::away_wall(auto &points)
         float distUltimoPunto = ultimoPunto->distance2d;
         qDebug() << "Distancia Primer Punto: " << distPrimerPunto;
         qDebug() << "Distancia Ultimo Punto: " << distUltimoPunto;
-        if (are_floats_equal(distPrimerPunto, distUltimoPunto, 50))
+        if (are_floats_equal(distPrimerPunto, distUltimoPunto, 20))
         {
             qDebug() << "Recto con pared";
-            qDebug() << "Distancia a la pared: " << min_point->distance2d;
-
+            qDebug() << "Distancia a la pared (frontal): " << min_point->distance2d;
+            qDebug() << "Distancia a la pared (trasera): " << min_point_back->distance2d;
             if (min_point->distance2d > params.AWAY_WALL_THRESHOLD)
             {
                 return RetVal(STATE::FORWARD, 0.f, 0.f);
             }
             else
             {
-                return RetVal(STATE::AWAY_WALL, -params.MAX_ADV_SPEED, 0);
+                if(min_point_back->distance2d > params.AWAY_WALL_SECURITY_BACK)
+                {
+                    qDebug() << "Distancia a la pared trasera:" << min_point_back->distance2d << "Distancia de seguridad: " << params.AWAY_WALL_SECURITY_BACK;
+                    qDebug() << "Alejandose de la pared";
+                    
+                    return RetVal(STATE::AWAY_WALL, -params.MAX_ADV_SPEED, 0);
+                }
+                else
+                {
+                    qDebug() << Red;
+                    qDebug() << "Acerquandose a la pared trasera-> STOP";
+                    return RetVal(STATE::FORWARD, 0.f, 0.f);
+                }
+                
             }
         }
         else
@@ -491,6 +521,11 @@ SpecificWorker::RetVal SpecificWorker::follow_wall(auto &points)
 {
     auto offset_begin = closest_lidar_index_to_given_angle(points, -params.LIDAR_FRONT_SECTION);
     auto offset_end = closest_lidar_index_to_given_angle(points, params.LIDAR_FRONT_SECTION);
+
+    auto offset_begin_right = closest_lidar_index_to_given_angle(points, params.LIDAR_RIGHT_SIDE_SECTION);
+    auto offset_end_right = closest_lidar_index_to_given_angle(points, params.LIDAR_RIGHT_SIDE_SECTION + 0.1f);
+
+
     static bool first_time = true;
     qDebug() << Magenta << "Follow Wall";
     bool derecha = false;
@@ -605,10 +640,10 @@ SpecificWorker::RetVal SpecificWorker::follow_wall(auto &points)
  */
 void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
 {
-    static std::vector<QGraphicsItem*> items;   // store items so they can be shown between iterations
+    static std::vector<QGraphicsItem *> items; // store items so they can be shown between iterations
 
     // remove all items drawn in the previous iteration
-    for(auto i: items)
+    for (auto i : items)
     {
         scene->removeItem(i);
         delete i;
@@ -617,7 +652,7 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
 
     auto color = QColor(Qt::green);
     auto brush = QBrush(QColor(Qt::green));
-    for(const auto &p : filtered_points)
+    for (const auto &p : filtered_points)
     {
         auto item = scene->addRect(-50, -50, 100, 100, color, brush);
         item->setPos(p.x, p.y);
@@ -627,12 +662,15 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
     // compute and draw minimum distance point in frontal range
     auto offset_begin = closest_lidar_index_to_given_angle(filtered_points, -params.LIDAR_FRONT_SECTION);
     auto offset_end = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_FRONT_SECTION);
-    if(not offset_begin or not offset_end)
-    { std::cout << offset_begin.error() << " " << offset_end.error() << std::endl; return ;}    // abandon the ship
+    if (not offset_begin or not offset_end)
+    {
+        std::cout << offset_begin.error() << " " << offset_end.error() << std::endl;
+        return;
+    } // abandon the ship
     auto min_point = std::min_element(std::begin(filtered_points) + offset_begin.value(), std::begin(filtered_points) + offset_end.value(), [](auto &a, auto &b)
-    { return a.distance2d < b.distance2d; });
+                                      { return a.distance2d < b.distance2d; });
     QColor dcolor;
-    if(min_point->distance2d < params.TURN_THRESHOLD)
+    if (min_point->distance2d < params.TURN_THRESHOLD)
         dcolor = QColor(Qt::red);
     else
         dcolor = QColor(Qt::magenta);
@@ -643,7 +681,7 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
     // compute and draw minimum distance point to wall
     auto wall_res_right = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_RIGHT_SIDE_SECTION);
     auto wall_res_left = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_LEFT_SIDE_SECTION);
-    if(not wall_res_right or not wall_res_left)   // abandon the ship
+    if (not wall_res_right or not wall_res_left) // abandon the ship
     {
         qWarning() << "No valid lateral readings" << QString::fromStdString(wall_res_right.error()) << QString::fromStdString(wall_res_left.error());
         return;
@@ -661,16 +699,19 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
     items.push_back(item_line);
 
     // update UI
-    lcdNumber_minangle->display(atan2(min_obj.x,min_obj.y));
+    lcdNumber_minangle->display(atan2(min_obj.x, min_obj.y));
     lcdNumber_mindist->display(min_obj.distance2d);
 
     // Draw two lines coming out from the robot at angles given by params.LIDAR_OFFSET
     // Calculate the end points of the lines
-    //float angle1 = params.LIDAR_FRONT_SECTION / 2.f;
+    // float angle1 = params.LIDAR_FRONT_SECTION / 2.f;
     auto res_right = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_FRONT_SECTION);
     auto res_left = closest_lidar_index_to_given_angle(filtered_points, -params.LIDAR_FRONT_SECTION);
-    if(not res_right or not res_left)
-    { std::cout << res_right.error() << " " << res_left.error() << std::endl; return ;}
+    if (not res_right or not res_left)
+    {
+        std::cout << res_right.error() << " " << res_left.error() << std::endl;
+        return;
+    }
 
     float right_line_length = filtered_points[res_right.value()].distance2d;
     float left_line_length = filtered_points[res_left.value()].distance2d;
@@ -686,6 +727,8 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
     auto line2 = scene->addLine(line_right, right_pen);
     items.push_back(line1);
     items.push_back(line2);
+
+   
 }
 
 /**
