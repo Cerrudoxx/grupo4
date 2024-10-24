@@ -56,7 +56,7 @@ private:
         float MAX_ADV_SPEED = 1000; // mm/s
         float MAX_ROT_SPEED = 1;    // rad/s
 
-        float TURN_THRESHOLD = ROBOT_LENGTH + 50; // mm 530 Distnacia minima para girar (evita chocar con pared)
+        float TURN_THRESHOLD = ROBOT_LENGTH + 70; // mm 530 Distnacia minima para girar (evita chocar con pared)
 
         // SPIRAL THRESHOLD
         float SPIRAL_THRESHOLD = 1500; // mm Distancia minima alrededor para empezar a girar en espiral
@@ -64,13 +64,13 @@ private:
         // FOLLOW_WALL THRESHOLDS
         float STOP_FOLLOW_WALL_THRESHOLD = TURN_THRESHOLD;               // mm Distancia mininma para dejar de seguir la pared (ahora igual a TURN_THRESHOLD)
         float START_FOLLOW_WALL_THRESHOLD = 850;                         // mm Distancia minima para empezar a seguir la pared
-        float MIN_FOLLOW_WALL_DISTANCE = TURN_THRESHOLD + 150;           // mm 660 Distancia minima a la pared para seguir la pared (ancho del robot + margen)
+        float MIN_FOLLOW_WALL_DISTANCE = TURN_THRESHOLD + 170;           // mm 660 Distancia minima a la pared para seguir la pared (ancho del robot + margen)
         float MAX_FOLLOW_WALL_DISTANCE = MIN_FOLLOW_WALL_DISTANCE + 300; // mm 960 Distancia maxima a la pared para seguir la pared (ancho del robot + margen)
 
         // FOLLOW_WALL COUNTER
         int MIN_FOLLOW_WALL_COUNTER = 200;                                 // Numero de iteraciones minimo para seguir la pared
-        int FOLLOW_WALL_COUNTER = MIN_FOLLOW_WALL_COUNTER + 250;           // Numero de iteraciones maximo para seguir la pared
-        int MIN_FOLLOW_WALL_COUNTER_RESET = FOLLOW_WALL_COUNTER * 2;       // Numero de iteraciones para resetear el contador de seguir la pared
+        int FOLLOW_WALL_COUNTER = MIN_FOLLOW_WALL_COUNTER + 200;           // Numero de iteraciones maximo para seguir la pared
+        int MIN_FOLLOW_WALL_COUNTER_RESET = FOLLOW_WALL_COUNTER ;       // Numero de iteraciones para resetear el contador de seguir la pared
         int FOLLOW_WALL_COUNTER_RESET = MIN_FOLLOW_WALL_COUNTER_RESET * 2; // Numero de iteraciones para resetear el contador de seguir la pared
 
         float ADVANCE_THRESHOLD = ROBOT_WIDTH * 1.2; // mm
