@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/usuario/robocomp/components/grupo4/person_tracker
+CMAKE_SOURCE_DIR = /home/usuario/robocomp/components/grupo4/practica2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuario/robocomp/components/grupo4/person_tracker
+CMAKE_BINARY_DIR = /home/usuario/robocomp/components/grupo4/practica2
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/person_tracker.dir/depend.make
@@ -70,317 +70,317 @@ include src/CMakeFiles/person_tracker.dir/progress.make
 include src/CMakeFiles/person_tracker.dir/flags.make
 
 src/CommonBehavior.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "BU ice=>h/cpp: Generating CommonBehavior.h and CommonBehavior.cpp from /home/usuario/robocomp/components/grupo4/person_tracker/src/CommonBehavior.ice"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/person_tracker/src/CommonBehavior.ice -I/home/usuario/robocomp/components/grupo4/person_tracker/src/ --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "BU ice=>h/cpp: Generating CommonBehavior.h and CommonBehavior.cpp from /home/usuario/robocomp/components/grupo4/practica2/src/CommonBehavior.ice"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/practica2/src/CommonBehavior.ice -I/home/usuario/robocomp/components/grupo4/practica2/src/ --output-dir .
 
 src/CommonBehavior.h: src/CommonBehavior.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/CommonBehavior.h
 
 src/Camera360RGB.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "BU ice=>h/cpp: Generating Camera360RGB.h and Camera360RGB.cpp from /home/usuario/robocomp/components/grupo4/person_tracker/src/Camera360RGB.ice"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/person_tracker/src/Camera360RGB.ice -I/home/usuario/robocomp/components/grupo4/person_tracker/src/ --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "BU ice=>h/cpp: Generating Camera360RGB.h and Camera360RGB.cpp from /home/usuario/robocomp/components/grupo4/practica2/src/Camera360RGB.ice"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/practica2/src/Camera360RGB.ice -I/home/usuario/robocomp/components/grupo4/practica2/src/ --output-dir .
 
 src/Camera360RGB.h: src/Camera360RGB.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/Camera360RGB.h
 
 src/GenericBase.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "BU ice=>h/cpp: Generating GenericBase.h and GenericBase.cpp from /home/usuario/robocomp/components/grupo4/person_tracker/src/GenericBase.ice"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/person_tracker/src/GenericBase.ice -I/home/usuario/robocomp/components/grupo4/person_tracker/src/ --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "BU ice=>h/cpp: Generating GenericBase.h and GenericBase.cpp from /home/usuario/robocomp/components/grupo4/practica2/src/GenericBase.ice"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/practica2/src/GenericBase.ice -I/home/usuario/robocomp/components/grupo4/practica2/src/ --output-dir .
 
 src/GenericBase.h: src/GenericBase.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/GenericBase.h
 
 src/Lidar3D.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "BU ice=>h/cpp: Generating Lidar3D.h and Lidar3D.cpp from /home/usuario/robocomp/components/grupo4/person_tracker/src/Lidar3D.ice"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/person_tracker/src/Lidar3D.ice -I/home/usuario/robocomp/components/grupo4/person_tracker/src/ --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "BU ice=>h/cpp: Generating Lidar3D.h and Lidar3D.cpp from /home/usuario/robocomp/components/grupo4/practica2/src/Lidar3D.ice"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/practica2/src/Lidar3D.ice -I/home/usuario/robocomp/components/grupo4/practica2/src/ --output-dir .
 
 src/Lidar3D.h: src/Lidar3D.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/Lidar3D.h
 
 src/OmniRobot.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "BU ice=>h/cpp: Generating OmniRobot.h and OmniRobot.cpp from /home/usuario/robocomp/components/grupo4/person_tracker/src/OmniRobot.ice"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/person_tracker/src/OmniRobot.ice -I/home/usuario/robocomp/components/grupo4/person_tracker/src/ --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "BU ice=>h/cpp: Generating OmniRobot.h and OmniRobot.cpp from /home/usuario/robocomp/components/grupo4/practica2/src/OmniRobot.ice"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/practica2/src/OmniRobot.ice -I/home/usuario/robocomp/components/grupo4/practica2/src/ --output-dir .
 
 src/OmniRobot.h: src/OmniRobot.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/OmniRobot.h
 
 src/VisualElementsPub.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "BU ice=>h/cpp: Generating VisualElementsPub.h and VisualElementsPub.cpp from /home/usuario/robocomp/components/grupo4/person_tracker/src/VisualElementsPub.ice"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/person_tracker/src/VisualElementsPub.ice -I/home/usuario/robocomp/components/grupo4/person_tracker/src/ --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "BU ice=>h/cpp: Generating VisualElementsPub.h and VisualElementsPub.cpp from /home/usuario/robocomp/components/grupo4/practica2/src/VisualElementsPub.ice"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && slice2cpp --underscore /home/usuario/robocomp/components/grupo4/practica2/src/VisualElementsPub.ice -I/home/usuario/robocomp/components/grupo4/practica2/src/ --output-dir .
 
 src/VisualElementsPub.h: src/VisualElementsPub.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/VisualElementsPub.h
 
 src/ui_mainUI.h: /usr/lib/qt6/libexec/uic
 src/ui_mainUI.h: src/mainUI.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating ui_mainUI.h"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/lib/qt6/libexec/uic -o /home/usuario/robocomp/components/grupo4/person_tracker/src/ui_mainUI.h /home/usuario/robocomp/components/grupo4/person_tracker/src/mainUI.ui
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating ui_mainUI.h"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/lib/qt6/libexec/uic -o /home/usuario/robocomp/components/grupo4/practica2/src/ui_mainUI.h /home/usuario/robocomp/components/grupo4/practica2/src/mainUI.ui
 
 src/CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.o: src/person_tracker_autogen/mocs_compilation.cpp
 src/CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.o -MF CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.o -c /home/usuario/robocomp/components/grupo4/person_tracker/src/person_tracker_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.o -MF CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.o -c /home/usuario/robocomp/components/grupo4/practica2/src/person_tracker_autogen/mocs_compilation.cpp
 
 src/CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/person_tracker/src/person_tracker_autogen/mocs_compilation.cpp > CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica2/src/person_tracker_autogen/mocs_compilation.cpp > CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.i
 
 src/CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/person_tracker/src/person_tracker_autogen/mocs_compilation.cpp -o CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica2/src/person_tracker_autogen/mocs_compilation.cpp -o CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.s
 
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -MF CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o.d -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -c /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -MF CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o.d -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -c /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
 
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp > CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp > CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
 
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
 
 src/CMakeFiles/person_tracker.dir/specificworker.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/specificworker.cpp.o: src/specificworker.cpp
 src/CMakeFiles/person_tracker.dir/specificworker.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/person_tracker.dir/specificworker.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/specificworker.cpp.o -MF CMakeFiles/person_tracker.dir/specificworker.cpp.o.d -o CMakeFiles/person_tracker.dir/specificworker.cpp.o -c /home/usuario/robocomp/components/grupo4/person_tracker/src/specificworker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/person_tracker.dir/specificworker.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/specificworker.cpp.o -MF CMakeFiles/person_tracker.dir/specificworker.cpp.o.d -o CMakeFiles/person_tracker.dir/specificworker.cpp.o -c /home/usuario/robocomp/components/grupo4/practica2/src/specificworker.cpp
 
 src/CMakeFiles/person_tracker.dir/specificworker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/specificworker.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/person_tracker/src/specificworker.cpp > CMakeFiles/person_tracker.dir/specificworker.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica2/src/specificworker.cpp > CMakeFiles/person_tracker.dir/specificworker.cpp.i
 
 src/CMakeFiles/person_tracker.dir/specificworker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/specificworker.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/person_tracker/src/specificworker.cpp -o CMakeFiles/person_tracker.dir/specificworker.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica2/src/specificworker.cpp -o CMakeFiles/person_tracker.dir/specificworker.cpp.s
 
 src/CMakeFiles/person_tracker.dir/specificmonitor.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/specificmonitor.cpp.o: src/specificmonitor.cpp
 src/CMakeFiles/person_tracker.dir/specificmonitor.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/person_tracker.dir/specificmonitor.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/specificmonitor.cpp.o -MF CMakeFiles/person_tracker.dir/specificmonitor.cpp.o.d -o CMakeFiles/person_tracker.dir/specificmonitor.cpp.o -c /home/usuario/robocomp/components/grupo4/person_tracker/src/specificmonitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/person_tracker.dir/specificmonitor.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/specificmonitor.cpp.o -MF CMakeFiles/person_tracker.dir/specificmonitor.cpp.o.d -o CMakeFiles/person_tracker.dir/specificmonitor.cpp.o -c /home/usuario/robocomp/components/grupo4/practica2/src/specificmonitor.cpp
 
 src/CMakeFiles/person_tracker.dir/specificmonitor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/specificmonitor.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/person_tracker/src/specificmonitor.cpp > CMakeFiles/person_tracker.dir/specificmonitor.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica2/src/specificmonitor.cpp > CMakeFiles/person_tracker.dir/specificmonitor.cpp.i
 
 src/CMakeFiles/person_tracker.dir/specificmonitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/specificmonitor.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/person_tracker/src/specificmonitor.cpp -o CMakeFiles/person_tracker.dir/specificmonitor.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica2/src/specificmonitor.cpp -o CMakeFiles/person_tracker.dir/specificmonitor.cpp.s
 
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: /home/robocomp/robocomp/classes/rapplication/rapplication.cpp
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -MF CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o.d -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -c /home/robocomp/robocomp/classes/rapplication/rapplication.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -MF CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o.d -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -c /home/robocomp/robocomp/classes/rapplication/rapplication.cpp
 
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
 
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
 
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -MF CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o.d -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -c /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -MF CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o.d -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -c /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp
 
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp > CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp > CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
 
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
 
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o: /home/robocomp/robocomp/classes/qlog/qlog.cpp
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o -MF CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o.d -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o -c /home/robocomp/robocomp/classes/qlog/qlog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o -MF CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o.d -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o -c /home/robocomp/robocomp/classes/qlog/qlog.cpp
 
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/qlog/qlog.cpp > CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/qlog/qlog.cpp > CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.i
 
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/qlog/qlog.cpp -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/qlog/qlog.cpp -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.s
 
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -MF CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o.d -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -c /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -MF CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o.d -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -c /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp
 
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp > CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp > CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
 
 src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp -o CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
 
 src/CMakeFiles/person_tracker.dir/main.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/main.cpp.o: src/main.cpp
 src/CMakeFiles/person_tracker.dir/main.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/person_tracker.dir/main.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/main.cpp.o -MF CMakeFiles/person_tracker.dir/main.cpp.o.d -o CMakeFiles/person_tracker.dir/main.cpp.o -c /home/usuario/robocomp/components/grupo4/person_tracker/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/person_tracker.dir/main.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/main.cpp.o -MF CMakeFiles/person_tracker.dir/main.cpp.o.d -o CMakeFiles/person_tracker.dir/main.cpp.o -c /home/usuario/robocomp/components/grupo4/practica2/src/main.cpp
 
 src/CMakeFiles/person_tracker.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/main.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/person_tracker/src/main.cpp > CMakeFiles/person_tracker.dir/main.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica2/src/main.cpp > CMakeFiles/person_tracker.dir/main.cpp.i
 
 src/CMakeFiles/person_tracker.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/main.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/person_tracker/src/main.cpp -o CMakeFiles/person_tracker.dir/main.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica2/src/main.cpp -o CMakeFiles/person_tracker.dir/main.cpp.s
 
 src/CMakeFiles/person_tracker.dir/genericmonitor.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/genericmonitor.cpp.o: src/genericmonitor.cpp
 src/CMakeFiles/person_tracker.dir/genericmonitor.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/person_tracker.dir/genericmonitor.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/genericmonitor.cpp.o -MF CMakeFiles/person_tracker.dir/genericmonitor.cpp.o.d -o CMakeFiles/person_tracker.dir/genericmonitor.cpp.o -c /home/usuario/robocomp/components/grupo4/person_tracker/src/genericmonitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/person_tracker.dir/genericmonitor.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/genericmonitor.cpp.o -MF CMakeFiles/person_tracker.dir/genericmonitor.cpp.o.d -o CMakeFiles/person_tracker.dir/genericmonitor.cpp.o -c /home/usuario/robocomp/components/grupo4/practica2/src/genericmonitor.cpp
 
 src/CMakeFiles/person_tracker.dir/genericmonitor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/genericmonitor.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/person_tracker/src/genericmonitor.cpp > CMakeFiles/person_tracker.dir/genericmonitor.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica2/src/genericmonitor.cpp > CMakeFiles/person_tracker.dir/genericmonitor.cpp.i
 
 src/CMakeFiles/person_tracker.dir/genericmonitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/genericmonitor.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/person_tracker/src/genericmonitor.cpp -o CMakeFiles/person_tracker.dir/genericmonitor.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica2/src/genericmonitor.cpp -o CMakeFiles/person_tracker.dir/genericmonitor.cpp.s
 
 src/CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.o: src/commonbehaviorI.cpp
 src/CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.o -MF CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.o.d -o CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.o -c /home/usuario/robocomp/components/grupo4/person_tracker/src/commonbehaviorI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.o -MF CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.o.d -o CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.o -c /home/usuario/robocomp/components/grupo4/practica2/src/commonbehaviorI.cpp
 
 src/CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/person_tracker/src/commonbehaviorI.cpp > CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica2/src/commonbehaviorI.cpp > CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.i
 
 src/CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/person_tracker/src/commonbehaviorI.cpp -o CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica2/src/commonbehaviorI.cpp -o CMakeFiles/person_tracker.dir/commonbehaviorI.cpp.s
 
 src/CMakeFiles/person_tracker.dir/genericworker.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/genericworker.cpp.o: src/genericworker.cpp
 src/CMakeFiles/person_tracker.dir/genericworker.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/person_tracker.dir/genericworker.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/genericworker.cpp.o -MF CMakeFiles/person_tracker.dir/genericworker.cpp.o.d -o CMakeFiles/person_tracker.dir/genericworker.cpp.o -c /home/usuario/robocomp/components/grupo4/person_tracker/src/genericworker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/person_tracker.dir/genericworker.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/genericworker.cpp.o -MF CMakeFiles/person_tracker.dir/genericworker.cpp.o.d -o CMakeFiles/person_tracker.dir/genericworker.cpp.o -c /home/usuario/robocomp/components/grupo4/practica2/src/genericworker.cpp
 
 src/CMakeFiles/person_tracker.dir/genericworker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/genericworker.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/person_tracker/src/genericworker.cpp > CMakeFiles/person_tracker.dir/genericworker.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica2/src/genericworker.cpp > CMakeFiles/person_tracker.dir/genericworker.cpp.i
 
 src/CMakeFiles/person_tracker.dir/genericworker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/genericworker.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/person_tracker/src/genericworker.cpp -o CMakeFiles/person_tracker.dir/genericworker.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica2/src/genericworker.cpp -o CMakeFiles/person_tracker.dir/genericworker.cpp.s
 
 src/CMakeFiles/person_tracker.dir/visualelementspubI.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/visualelementspubI.cpp.o: src/visualelementspubI.cpp
 src/CMakeFiles/person_tracker.dir/visualelementspubI.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/person_tracker.dir/visualelementspubI.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/visualelementspubI.cpp.o -MF CMakeFiles/person_tracker.dir/visualelementspubI.cpp.o.d -o CMakeFiles/person_tracker.dir/visualelementspubI.cpp.o -c /home/usuario/robocomp/components/grupo4/person_tracker/src/visualelementspubI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/person_tracker.dir/visualelementspubI.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/visualelementspubI.cpp.o -MF CMakeFiles/person_tracker.dir/visualelementspubI.cpp.o.d -o CMakeFiles/person_tracker.dir/visualelementspubI.cpp.o -c /home/usuario/robocomp/components/grupo4/practica2/src/visualelementspubI.cpp
 
 src/CMakeFiles/person_tracker.dir/visualelementspubI.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/visualelementspubI.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/person_tracker/src/visualelementspubI.cpp > CMakeFiles/person_tracker.dir/visualelementspubI.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica2/src/visualelementspubI.cpp > CMakeFiles/person_tracker.dir/visualelementspubI.cpp.i
 
 src/CMakeFiles/person_tracker.dir/visualelementspubI.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/visualelementspubI.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/person_tracker/src/visualelementspubI.cpp -o CMakeFiles/person_tracker.dir/visualelementspubI.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica2/src/visualelementspubI.cpp -o CMakeFiles/person_tracker.dir/visualelementspubI.cpp.s
 
 src/CMakeFiles/person_tracker.dir/CommonBehavior.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/CommonBehavior.cpp.o: src/CommonBehavior.cpp
 src/CMakeFiles/person_tracker.dir/CommonBehavior.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/person_tracker.dir/CommonBehavior.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/CommonBehavior.cpp.o -MF CMakeFiles/person_tracker.dir/CommonBehavior.cpp.o.d -o CMakeFiles/person_tracker.dir/CommonBehavior.cpp.o -c /home/usuario/robocomp/components/grupo4/person_tracker/src/CommonBehavior.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/person_tracker.dir/CommonBehavior.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/CommonBehavior.cpp.o -MF CMakeFiles/person_tracker.dir/CommonBehavior.cpp.o.d -o CMakeFiles/person_tracker.dir/CommonBehavior.cpp.o -c /home/usuario/robocomp/components/grupo4/practica2/src/CommonBehavior.cpp
 
 src/CMakeFiles/person_tracker.dir/CommonBehavior.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/CommonBehavior.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/person_tracker/src/CommonBehavior.cpp > CMakeFiles/person_tracker.dir/CommonBehavior.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica2/src/CommonBehavior.cpp > CMakeFiles/person_tracker.dir/CommonBehavior.cpp.i
 
 src/CMakeFiles/person_tracker.dir/CommonBehavior.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/CommonBehavior.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/person_tracker/src/CommonBehavior.cpp -o CMakeFiles/person_tracker.dir/CommonBehavior.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica2/src/CommonBehavior.cpp -o CMakeFiles/person_tracker.dir/CommonBehavior.cpp.s
 
 src/CMakeFiles/person_tracker.dir/Camera360RGB.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/Camera360RGB.cpp.o: src/Camera360RGB.cpp
 src/CMakeFiles/person_tracker.dir/Camera360RGB.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/person_tracker.dir/Camera360RGB.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/Camera360RGB.cpp.o -MF CMakeFiles/person_tracker.dir/Camera360RGB.cpp.o.d -o CMakeFiles/person_tracker.dir/Camera360RGB.cpp.o -c /home/usuario/robocomp/components/grupo4/person_tracker/src/Camera360RGB.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/person_tracker.dir/Camera360RGB.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/Camera360RGB.cpp.o -MF CMakeFiles/person_tracker.dir/Camera360RGB.cpp.o.d -o CMakeFiles/person_tracker.dir/Camera360RGB.cpp.o -c /home/usuario/robocomp/components/grupo4/practica2/src/Camera360RGB.cpp
 
 src/CMakeFiles/person_tracker.dir/Camera360RGB.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/Camera360RGB.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/person_tracker/src/Camera360RGB.cpp > CMakeFiles/person_tracker.dir/Camera360RGB.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica2/src/Camera360RGB.cpp > CMakeFiles/person_tracker.dir/Camera360RGB.cpp.i
 
 src/CMakeFiles/person_tracker.dir/Camera360RGB.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/Camera360RGB.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/person_tracker/src/Camera360RGB.cpp -o CMakeFiles/person_tracker.dir/Camera360RGB.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica2/src/Camera360RGB.cpp -o CMakeFiles/person_tracker.dir/Camera360RGB.cpp.s
 
 src/CMakeFiles/person_tracker.dir/GenericBase.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/GenericBase.cpp.o: src/GenericBase.cpp
 src/CMakeFiles/person_tracker.dir/GenericBase.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/CMakeFiles/person_tracker.dir/GenericBase.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/GenericBase.cpp.o -MF CMakeFiles/person_tracker.dir/GenericBase.cpp.o.d -o CMakeFiles/person_tracker.dir/GenericBase.cpp.o -c /home/usuario/robocomp/components/grupo4/person_tracker/src/GenericBase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/CMakeFiles/person_tracker.dir/GenericBase.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/GenericBase.cpp.o -MF CMakeFiles/person_tracker.dir/GenericBase.cpp.o.d -o CMakeFiles/person_tracker.dir/GenericBase.cpp.o -c /home/usuario/robocomp/components/grupo4/practica2/src/GenericBase.cpp
 
 src/CMakeFiles/person_tracker.dir/GenericBase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/GenericBase.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/person_tracker/src/GenericBase.cpp > CMakeFiles/person_tracker.dir/GenericBase.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica2/src/GenericBase.cpp > CMakeFiles/person_tracker.dir/GenericBase.cpp.i
 
 src/CMakeFiles/person_tracker.dir/GenericBase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/GenericBase.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/person_tracker/src/GenericBase.cpp -o CMakeFiles/person_tracker.dir/GenericBase.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica2/src/GenericBase.cpp -o CMakeFiles/person_tracker.dir/GenericBase.cpp.s
 
 src/CMakeFiles/person_tracker.dir/Lidar3D.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/Lidar3D.cpp.o: src/Lidar3D.cpp
 src/CMakeFiles/person_tracker.dir/Lidar3D.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/CMakeFiles/person_tracker.dir/Lidar3D.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/Lidar3D.cpp.o -MF CMakeFiles/person_tracker.dir/Lidar3D.cpp.o.d -o CMakeFiles/person_tracker.dir/Lidar3D.cpp.o -c /home/usuario/robocomp/components/grupo4/person_tracker/src/Lidar3D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/CMakeFiles/person_tracker.dir/Lidar3D.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/Lidar3D.cpp.o -MF CMakeFiles/person_tracker.dir/Lidar3D.cpp.o.d -o CMakeFiles/person_tracker.dir/Lidar3D.cpp.o -c /home/usuario/robocomp/components/grupo4/practica2/src/Lidar3D.cpp
 
 src/CMakeFiles/person_tracker.dir/Lidar3D.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/Lidar3D.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/person_tracker/src/Lidar3D.cpp > CMakeFiles/person_tracker.dir/Lidar3D.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica2/src/Lidar3D.cpp > CMakeFiles/person_tracker.dir/Lidar3D.cpp.i
 
 src/CMakeFiles/person_tracker.dir/Lidar3D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/Lidar3D.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/person_tracker/src/Lidar3D.cpp -o CMakeFiles/person_tracker.dir/Lidar3D.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica2/src/Lidar3D.cpp -o CMakeFiles/person_tracker.dir/Lidar3D.cpp.s
 
 src/CMakeFiles/person_tracker.dir/OmniRobot.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/OmniRobot.cpp.o: src/OmniRobot.cpp
 src/CMakeFiles/person_tracker.dir/OmniRobot.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object src/CMakeFiles/person_tracker.dir/OmniRobot.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/OmniRobot.cpp.o -MF CMakeFiles/person_tracker.dir/OmniRobot.cpp.o.d -o CMakeFiles/person_tracker.dir/OmniRobot.cpp.o -c /home/usuario/robocomp/components/grupo4/person_tracker/src/OmniRobot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object src/CMakeFiles/person_tracker.dir/OmniRobot.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/OmniRobot.cpp.o -MF CMakeFiles/person_tracker.dir/OmniRobot.cpp.o.d -o CMakeFiles/person_tracker.dir/OmniRobot.cpp.o -c /home/usuario/robocomp/components/grupo4/practica2/src/OmniRobot.cpp
 
 src/CMakeFiles/person_tracker.dir/OmniRobot.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/OmniRobot.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/person_tracker/src/OmniRobot.cpp > CMakeFiles/person_tracker.dir/OmniRobot.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica2/src/OmniRobot.cpp > CMakeFiles/person_tracker.dir/OmniRobot.cpp.i
 
 src/CMakeFiles/person_tracker.dir/OmniRobot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/OmniRobot.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/person_tracker/src/OmniRobot.cpp -o CMakeFiles/person_tracker.dir/OmniRobot.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica2/src/OmniRobot.cpp -o CMakeFiles/person_tracker.dir/OmniRobot.cpp.s
 
 src/CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.o: src/CMakeFiles/person_tracker.dir/flags.make
 src/CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.o: src/VisualElementsPub.cpp
 src/CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.o: src/CMakeFiles/person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object src/CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.o -MF CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.o.d -o CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.o -c /home/usuario/robocomp/components/grupo4/person_tracker/src/VisualElementsPub.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object src/CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.o -MF CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.o.d -o CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.o -c /home/usuario/robocomp/components/grupo4/practica2/src/VisualElementsPub.cpp
 
 src/CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/person_tracker/src/VisualElementsPub.cpp > CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica2/src/VisualElementsPub.cpp > CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.i
 
 src/CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/person_tracker/src/VisualElementsPub.cpp -o CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica2/src/VisualElementsPub.cpp -o CMakeFiles/person_tracker.dir/VisualElementsPub.cpp.s
 
 # Object files for target person_tracker
 person_tracker_OBJECTS = \
@@ -494,15 +494,15 @@ bin/person_tracker: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4
 bin/person_tracker: /usr/lib/x86_64-linux-gnu/libGLX.so
 bin/person_tracker: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 bin/person_tracker: src/CMakeFiles/person_tracker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable ../bin/person_tracker"
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/person_tracker.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/usuario/robocomp/components/grupo4/practica2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable ../bin/person_tracker"
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/person_tracker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/person_tracker.dir/build: bin/person_tracker
 .PHONY : src/CMakeFiles/person_tracker.dir/build
 
 src/CMakeFiles/person_tracker.dir/clean:
-	cd /home/usuario/robocomp/components/grupo4/person_tracker/src && $(CMAKE_COMMAND) -P CMakeFiles/person_tracker.dir/cmake_clean.cmake
+	cd /home/usuario/robocomp/components/grupo4/practica2/src && $(CMAKE_COMMAND) -P CMakeFiles/person_tracker.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/person_tracker.dir/clean
 
 src/CMakeFiles/person_tracker.dir/depend: src/Camera360RGB.cpp
@@ -518,6 +518,6 @@ src/CMakeFiles/person_tracker.dir/depend: src/OmniRobot.h
 src/CMakeFiles/person_tracker.dir/depend: src/VisualElementsPub.cpp
 src/CMakeFiles/person_tracker.dir/depend: src/VisualElementsPub.h
 src/CMakeFiles/person_tracker.dir/depend: src/ui_mainUI.h
-	cd /home/usuario/robocomp/components/grupo4/person_tracker && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robocomp/components/grupo4/person_tracker /home/usuario/robocomp/components/grupo4/person_tracker/src /home/usuario/robocomp/components/grupo4/person_tracker /home/usuario/robocomp/components/grupo4/person_tracker/src /home/usuario/robocomp/components/grupo4/person_tracker/src/CMakeFiles/person_tracker.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/usuario/robocomp/components/grupo4/practica2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robocomp/components/grupo4/practica2 /home/usuario/robocomp/components/grupo4/practica2/src /home/usuario/robocomp/components/grupo4/practica2 /home/usuario/robocomp/components/grupo4/practica2/src /home/usuario/robocomp/components/grupo4/practica2/src/CMakeFiles/person_tracker.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/person_tracker.dir/depend
 

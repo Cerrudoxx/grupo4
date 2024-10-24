@@ -197,18 +197,6 @@ SpecificWorker::RobotSpeed SpecificWorker::state_machine(const RoboCompVisualEle
  // State function to track a person
 SpecificWorker::RetVal SpecificWorker::track(const RoboCompVisualElementsPub::TObject &person)
 {
-    //qDebug() << __FUNCTION__;
-    // variance of the gaussian function is set by the user giving a point xset where the function must be yset, and solving for s
-//    auto gaussian_break = [](float x) -> float
-//    {
-//        // gaussian function where x is the rotation speed -1 to 1. Returns 1 for x = 0 and 0.4 for x = 0.5
-//        const double xset = 0.5;
-//        const double yset = 0.6;
-          // compute the variance s so the function is yset for x = xset
-          // float s =
-//        return (float)exp(-x*x/s);
-//    };
-
     auto distance = std::hypot(std::stof(person.attributes.at("x_pos")), std::stof(person.attributes.at("y_pos")));
     lcdNumber_dist_to_person->display(distance);
 
@@ -218,7 +206,20 @@ SpecificWorker::RetVal SpecificWorker::track(const RoboCompVisualElementsPub::TO
 
     /// TRACK   PUT YOUR CODE HERE
 
-    return RetVal(STATE::TRACK, 0, 0);
+
+    // Calculate the angle to the person using atan2
+    float x = std::stof(person.attributes.at("x_pos"));
+    float y = std::stof(person.attributes.at("y_pos"));
+    float angle_to_person = std::atan2(y, x);
+
+    qDebug() << "Angle to person: " << angle_to_person;
+
+    // Calculate the desired rotation speed based on the angle
+    float rotation_speed = angle_to_person;
+    qDebug() << "Rotation speed: " << rotation_speed;
+
+    return RetVal(STATE::TRACK, 0, rotation_speed);
+
 }
 //
 SpecificWorker::RetVal SpecificWorker::wait(const RoboCompVisualElementsPub::TObject &person)

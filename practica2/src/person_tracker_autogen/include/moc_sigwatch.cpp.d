@@ -1,5 +1,5 @@
-/home/usuario/robocomp/components/grupo4/person_tracker/src/person_tracker_autogen/include/moc_sigwatch.cpp: /home/robocomp/robocomp/classes/sigwatch/sigwatch.h \
-  /home/usuario/robocomp/components/grupo4/person_tracker/src/person_tracker_autogen/moc_predefs.h \
+/home/usuario/robocomp/components/grupo4/practica2/src/person_tracker_autogen/include/moc_sigwatch.cpp: /home/robocomp/robocomp/classes/sigwatch/sigwatch.h \
+  /home/usuario/robocomp/components/grupo4/practica2/src/person_tracker_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

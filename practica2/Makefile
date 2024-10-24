@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/usuario/robocomp/components/grupo4/person_tracker
+CMAKE_SOURCE_DIR = /home/usuario/robocomp/components/grupo4/practica2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuario/robocomp/components/grupo4/person_tracker
+CMAKE_BINARY_DIR = /home/usuario/robocomp/components/grupo4/practica2
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles /home/usuario/robocomp/components/grupo4/person_tracker//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robocomp/components/grupo4/practica2/CMakeFiles /home/usuario/robocomp/components/grupo4/practica2//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robocomp/components/grupo4/person_tracker/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robocomp/components/grupo4/practica2/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -162,17 +162,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ICES__home_usuario_robocomp_components_grupo4_person_tracker_src
+# Target rules for targets named ICES__home_usuario_robocomp_components_grupo4_practica2_src
 
 # Build rule for target.
-ICES__home_usuario_robocomp_components_grupo4_person_tracker_src: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ICES__home_usuario_robocomp_components_grupo4_person_tracker_src
-.PHONY : ICES__home_usuario_robocomp_components_grupo4_person_tracker_src
+ICES__home_usuario_robocomp_components_grupo4_practica2_src: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ICES__home_usuario_robocomp_components_grupo4_practica2_src
+.PHONY : ICES__home_usuario_robocomp_components_grupo4_practica2_src
 
 # fast build rule for target.
-ICES__home_usuario_robocomp_components_grupo4_person_tracker_src/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_person_tracker_src.dir/build.make src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_person_tracker_src.dir/build
-.PHONY : ICES__home_usuario_robocomp_components_grupo4_person_tracker_src/fast
+ICES__home_usuario_robocomp_components_grupo4_practica2_src/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_practica2_src.dir/build.make src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_practica2_src.dir/build
+.PHONY : ICES__home_usuario_robocomp_components_grupo4_practica2_src/fast
 
 #=============================================================================
 # Target rules for targets named person_tracker
@@ -212,7 +212,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... ICES__home_usuario_robocomp_components_grupo4_person_tracker_src"
+	@echo "... ICES__home_usuario_robocomp_components_grupo4_practica2_src"
 	@echo "... person_tracker_autogen"
 	@echo "... person_tracker"
 .PHONY : help
