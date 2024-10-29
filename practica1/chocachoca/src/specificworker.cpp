@@ -316,18 +316,30 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
     return RetVal(STATE::TURN, 0.f, sign * params.MAX_ROT_SPEED);
 }
 
+
+/**
+ * @brief Checks if the robot is close to an obstacle and decides whether to continue spiraling or to stop and turn.
+ *
+ * This function examines the filtered points to determine if the robot is close to an obstacle. If the minimum distance
+ * point is within the TURN_THRESHOLD, the robot will stop and change state to TURN. If the distance is less than the SPIRAL_THRESHOLD,
+ * the robot will continue to spiral. Otherwise, it will adjust its speed and rotation to continue spiraling.
+ *
+ * @param points A vector of filtered points representing the robot's perception of obstacles.
+ * @returns A tuple containing the next state (TURN or SPIRAL), and speed and rotation values.
+ */
 SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
 {
     auto offset_begin = closest_lidar_index_to_given_angle(points, -params.LIDAR_FRONT_SECTION);
     auto offset_end = closest_lidar_index_to_given_angle(points, params.LIDAR_FRONT_SECTION);
     // qDebug () << "Spiral";
-    static bool first_time = true;
+    static bool first_time = true; // flag to indicate the first time the robot enters the SPIRAL state
     qDebug() << Blue << "Spiral";
 
     qDebug() << "Follow Wall Counter: " << params.FOLLOW_WALL_COUNTER;
     qDebug() << "Follow Wall Counter Reset: " << params.FOLLOW_WALL_COUNTER_RESET;
     int minFollowWallCounter = params.MIN_FOLLOW_WALL_COUNTER;
     params.FOLLOW_WALL_COUNTER_RESET--;
+    //
     if (params.FOLLOW_WALL_COUNTER_RESET == 0)
     {
         params.FOLLOW_WALL_COUNTER = (std::rand() % minFollowWallCounter) + minFollowWallCounter;
@@ -339,7 +351,7 @@ SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
     {
         auto min_point = std::min_element(std::begin(points) + offset_begin.value(), std::begin(points) + offset_end.value(), [](auto &a, auto &b)
                                           { return a.distance2d < b.distance2d; });
-        if (min_point != points.end() and min_point->distance2d < params.TURN_THRESHOLD)
+        if (min_point != points.end() and min_point->distance2d < params.TURN_THRESHOLD) // obstacle detected
         {
             params.ROT_ACTUAL = params.ROT_INICIAL;
             params.VEL_ACTUAL = params.VEL_INICIAL;
@@ -355,7 +367,7 @@ SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
         }
         else
         {
-            if (first_time)
+            if (first_time) // first time entering the SPIRAL state
             {
                 first_time = false;
                 return RetVal(STATE::SPIRAL, 200, 1.0f);
@@ -368,11 +380,11 @@ SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
                 qDebug() << "rot: " << params.ROT_ACTUAL << " vel: " << params.VEL_ACTUAL;
                 if (std::abs(params.ROT_ACTUAL) > 0.45)
                 {
-                    params.ROT_ACTUAL -= incRot;
+                    params.ROT_ACTUAL -= incRot; // decrease rotation
                 }
                 if (params.VEL_ACTUAL < params.MAX_ADV_SPEED)
                 {
-                    params.VEL_ACTUAL += incVel;
+                    params.VEL_ACTUAL += incVel;  // increase speed
                 }
 
                 return RetVal(STATE::SPIRAL, params.VEL_ACTUAL, params.ROT_ACTUAL);
@@ -421,10 +433,19 @@ bool are_floats_equal(float a, float b, float percentage_error)
     return iguales;
 }
 
+/**
+ * @brief Checks if the robot is close to a wall and decides whether to move away or continue following it.
+ *
+ * This function examines the filtered points to determine if the robot is close to a wall. If the minimum distance
+ * point is within the AWAY_WALL_THRESHOLD, the robot will move away from the wall. If the distance is greater than
+ * the AWAY_WALL_THRESHOLD, the robot will continue to follow the wall. If the distance to the wall is less than the
+ * AWAY_WALL_SECURITY_BACK, the robot will stop and move away from the wall.
+ *
+ * @param points A vector of filtered points representing the robot's perception of obstacles.
+ * @returns A tuple containing the next state (AWAY_WALL or FORWARD), and speed and rotation values.
+ */
 SpecificWorker::RetVal SpecificWorker::away_wall(auto &points)
 {
-    // Implement the logic for the away_wall state
-    // For now, let's just return a default RetVal
 
     auto offset_begin = closest_lidar_index_to_given_angle(points, -params.LIDAR_FRONT_SECTION);
     auto offset_end = closest_lidar_index_to_given_angle(points, params.LIDAR_FRONT_SECTION);
@@ -450,7 +471,7 @@ SpecificWorker::RetVal SpecificWorker::away_wall(auto &points)
     qDebug() << "Follow Wall Counter Reset: " << params.FOLLOW_WALL_COUNTER_RESET;
     int minFollowWallCounter = params.MIN_FOLLOW_WALL_COUNTER;
     params.FOLLOW_WALL_COUNTER_RESET--;
-    if (params.FOLLOW_WALL_COUNTER_RESET == 0)
+    if (params.FOLLOW_WALL_COUNTER_RESET == 0) // reset the follow wall counter
     {
         params.FOLLOW_WALL_COUNTER = (std::rand() % minFollowWallCounter) + minFollowWallCounter;
         params.FOLLOW_WALL_COUNTER_RESET = params.MIN_FOLLOW_WALL_COUNTER_RESET;
@@ -470,18 +491,18 @@ SpecificWorker::RetVal SpecificWorker::away_wall(auto &points)
         float distUltimoPunto = ultimoPunto->distance2d;
         qDebug() << "Distancia Primer Punto: " << distPrimerPunto;
         qDebug() << "Distancia Ultimo Punto: " << distUltimoPunto;
-        if (are_floats_equal(distPrimerPunto, distUltimoPunto, 20))
+        if (are_floats_equal(distPrimerPunto, distUltimoPunto, 20)) // recto con pared
         {
             qDebug() << "Recto con pared";
             qDebug() << "Distancia a la pared (frontal): " << min_point->distance2d;
             qDebug() << "Distancia a la pared (trasera): " << min_point_back->distance2d;
-            if (min_point->distance2d > params.AWAY_WALL_THRESHOLD)
+            if (min_point->distance2d > params.AWAY_WALL_THRESHOLD) //start to move away from wall
             {
                 return RetVal(STATE::FORWARD, 0.f, 0.f);
             }
             else
             {
-                if(min_point_back->distance2d > params.AWAY_WALL_SECURITY_BACK)
+                if(min_point_back->distance2d > params.AWAY_WALL_SECURITY_BACK) //check if there is obstacles behind
                 {
                     qDebug() << "Distancia a la pared trasera:" << min_point_back->distance2d << "Distancia de seguridad: " << params.AWAY_WALL_SECURITY_BACK;
                     qDebug() << "Alejandose de la pared";
@@ -497,7 +518,7 @@ SpecificWorker::RetVal SpecificWorker::away_wall(auto &points)
                 
             }
         }
-        else
+        else // perpendicular to the wall
         {
             qDebug() << "Poniendose perpendicular a la pared";
             if (angulo > 0)
@@ -517,6 +538,17 @@ SpecificWorker::RetVal SpecificWorker::away_wall(auto &points)
     }
 }
 
+/**
+ * @brief Checks if the robot is close to a wall and decides whether to follow it or to spiral.
+ *
+ * This function examines the filtered points to determine if the robot is close to a wall. If the minimum distance
+ * point is within the STOP_FOLLOW_WALL_THRESHOLD, the robot will stop following the wall and change state to TURN.
+ * If the distance is less than the SPIRAL_THRESHOLD, the robot will continue to spiral. Otherwise, it will adjust
+ * its speed and rotation to continue following the wall.
+ *
+ * @param points A vector of filtered points representing the robot's perception of obstacles.
+ * @returns A tuple containing the next state (TURN or SPIRAL), and speed and rotation values.
+ */
 SpecificWorker::RetVal SpecificWorker::follow_wall(auto &points)
 {
     auto offset_begin = closest_lidar_index_to_given_angle(points, -params.LIDAR_FRONT_SECTION);
@@ -544,7 +576,7 @@ SpecificWorker::RetVal SpecificWorker::follow_wall(auto &points)
         auto min_point = std::min_element(std::begin(points) + offset_begin.value(), std::begin(points) + offset_end.value(), [](auto &a, auto &b)
                                           { return a.distance2d < b.distance2d; });
 
-        if (min_point->distance2d > params.SPIRAL_THRESHOLD)
+        if (min_point->distance2d > params.SPIRAL_THRESHOLD) // continue spiraling
         {
             return RetVal(STATE::SPIRAL, 0.f, 0.f);
         }
@@ -568,7 +600,7 @@ SpecificWorker::RetVal SpecificWorker::follow_wall(auto &points)
         float correccion = 0.3f;
         qDebug() << "Distancia Actual: " << distAct << "distancia Ideal: " << distIdeal << "Ancho Ideal: " << anchoIdeal;
 
-        if (angulo > 0)
+        if (angulo > 0)    // derecha
         {
             derecha = true;
             if (params.FOLLOW_WALL_COUNTER > 0)
