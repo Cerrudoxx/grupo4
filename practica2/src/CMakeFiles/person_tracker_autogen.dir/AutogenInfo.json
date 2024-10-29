@@ -38,7 +38,6 @@
 		"/usr/share/cmake-3.22/Modules/CheckIncludeFile.cmake",
 		"/usr/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake",
 		"/usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake",
-		"/usr/share/cmake-3.22/Modules/CheckIncludeFile.c.in",
 		"/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake",
 		"/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersion.cmake",

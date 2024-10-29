@@ -162,7 +162,7 @@ SpecificWorker::RobotSpeed SpecificWorker::state_machine(const RoboCompVisualEle
     // call the appropriate state function
     RetVal res;
     if(pushButton_stop->isChecked())    // stop if buttom is pressed
-        state = STATE::STOP;
+        state = STATE::TRACK;
 
     switch(state)
     {
@@ -206,19 +206,47 @@ SpecificWorker::RetVal SpecificWorker::track(const RoboCompVisualElementsPub::TO
 
     /// TRACK   PUT YOUR CODE HERE
 
-
+    float vel_giro;
     // Calculate the angle to the person using atan2
     float x = std::stof(person.attributes.at("x_pos"));
     float y = std::stof(person.attributes.at("y_pos"));
     float angle_to_person = std::atan2(y, x);
 
-    qDebug() << "Angle to person: " << angle_to_person;
+    // derecha max 0.5
+    // izquierda min 2.5
 
-    // Calculate the desired rotation speed based on the angle
-    float rotation_speed = angle_to_person;
-    qDebug() << "Rotation speed: " << rotation_speed;
 
-    return RetVal(STATE::TRACK, 0, rotation_speed);
+
+   qDebug() << "Angle to person: " << angle_to_person;
+
+    if((1.5 < angle_to_person)  && (angle_to_person< 1.7))
+    {
+        qDebug() << "Person in front";
+        vel_giro = 0;
+    }
+    else if(angle_to_person < 1.6)
+    {
+        vel_giro = ((1.6 - angle_to_person) / (1.6 - 0.5))*2.f;
+    }
+    else if(angle_to_person > 1.7)
+    {
+        vel_giro = ((angle_to_person - 1.7) / (2.5 - 1.7))*-2.f;
+    }
+  
+    if (distance > 420){
+        float normalized_speed = 1000;
+        if (distance > 1000){
+            qDebug() << "Distance to person: " << distance;
+            normalized_speed = 1000;
+        }else{
+            qDebug() << "Distance to person: " << distance;
+            normalized_speed = distance;
+        }
+        qDebug() << "Normalized speed: " << normalized_speed;
+        return RetVal(STATE::TRACK, normalized_speed, vel_giro);
+    }
+
+    return RetVal(STATE::TRACK, 0, vel_giro);
 
 }
 //
