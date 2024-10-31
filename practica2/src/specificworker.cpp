@@ -252,23 +252,9 @@ SpecificWorker::RetVal SpecificWorker::track(const RoboCompVisualElementsPub::TO
     auto distance = std::hypot(std::stof(person.attributes.at("x_pos")), std::stof(person.attributes.at("y_pos")));
     lcdNumber_dist_to_person->display(distance);
 
-    // check if the distance to the person is lower than a threshold
-    // if (distance < params.PERSON_MIN_DIST)
-    // {
-    //     qWarning() << __FUNCTION__ << "Distance to person lower than threshold";
-    //     return RetVal(STATE::WAIT, 0.f, 0.f);
-    // }
-
-    /// TRACK   PUT YOUR CODE HERE
-
-    float vel_giro;
-    // Calculate the angle to the person using atan2
     float x = std::stof(person.attributes.at("x_pos"));
     float y = std::stof(person.attributes.at("y_pos"));
     float angle_to_person = std::atan2(y, x);
-
-    // derecha max 0.5
-    // izquierda min 2.5
 
     qDebug() << "Angle to person: " << angle_to_person;
     float corrector = 0.9;
@@ -276,37 +262,23 @@ SpecificWorker::RetVal SpecificWorker::track(const RoboCompVisualElementsPub::TO
     float minAngle = 0;
     float center = 1.6;
 
+    auto calculate_vel_giro = [angle_to_person, center, minAngle, maxAngle, corrector]() -> float {
+        return compare_floats(angle_to_person, center, 0.1) ? 0 :
+               (angle_to_person < center && angle_to_person > minAngle) ? ((1.6 - angle_to_person) / (1.6 - 0.5)) * corrector :
+               (angle_to_person > center && angle_to_person < maxAngle) ? -((angle_to_person - 1.7) / (2.5 - 1.7)) * corrector : 0;
+    };
 
-    if (compare_floats(angle_to_person, center, 0.1))
-    {
-        qDebug() << "Person in front";
-        vel_giro = 0;
-    }
-    else if (angle_to_person < center && angle_to_person > minAngle)
-    {
-        vel_giro = ((1.6 - angle_to_person) / (1.6 - 0.5)) * corrector;
-    }
-    else if (angle_to_person > center && angle_to_person < maxAngle)
-    {
-        vel_giro = -((angle_to_person - 1.7) / (2.5 - 1.7)) * corrector;
-    }
+    float vel_giro = std::clamp(calculate_vel_giro(), -1.5f, 1.5f);
     qDebug() << "Vel giro: " << vel_giro;
 
-    vel_giro = std::clamp(vel_giro, -1.5f, 1.5f);
+    auto calculate_vel_forward = [distance, corrector]() -> float {
+        return distance > 700 ? std::min(1000.f, (distance - 600) * corrector) : 0;
+    };
 
-    if (distance > 700)
-    {
-        float vel_forward = std::min(1000.f, (distance - 600)*corrector);
-        qDebug() << "Vel forward: " << vel_forward;
-        return RetVal(STATE::TRACK, vel_forward, vel_giro);
-    }
-    else
-    {
-        qDebug() << "Person too close";
-        return RetVal(STATE::TRACK, 0.f, vel_giro);
-    }
+    float vel_forward = calculate_vel_forward();
+    qDebug() << "Vel forward: " << vel_forward;
 
-    return RetVal(STATE::TRACK, 0, vel_giro);
+    return distance > 700 ? RetVal(STATE::TRACK, vel_forward, vel_giro) : RetVal(STATE::TRACK, 0.f, vel_giro);
 }
 //
 SpecificWorker::RetVal SpecificWorker::wait(const RoboCompVisualElementsPub::TObject &person)
@@ -391,6 +363,7 @@ void SpecificWorker::draw_person(RoboCompVisualElementsPub::TObject &person, QGr
     for (auto i : items)
     {
         scene->removeItem(i);
+        0.9;
         delete i;
     }
     items.clear();
