@@ -1,12 +1,12 @@
 {
-	"BUILD_DIR" : "/home/usuario/robocomp/components/grupo4/practica2/src/person_tracker_autogen",
-	"CMAKE_BINARY_DIR" : "/home/usuario/robocomp/components/grupo4/practica2",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/usuario/robocomp/components/grupo4/practica2/src",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/usuario/robocomp/components/grupo4/practica2/src",
+	"BUILD_DIR" : "/home/antonio/robocomp/components/grupo4/practica2/src/person_tracker_autogen",
+	"CMAKE_BINARY_DIR" : "/home/antonio/robocomp/components/grupo4/practica2",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/antonio/robocomp/components/grupo4/practica2/src",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/antonio/robocomp/components/grupo4/practica2/src",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/usuario/robocomp/components/grupo4/practica2/src/CMakeLists.txt",
+		"/home/antonio/robocomp/components/grupo4/practica2/src/CMakeLists.txt",
 		"/home/robocomp/robocomp/cmake/robocomp.cmake",
 		"/home/robocomp/robocomp/cmake/modules/qt.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake",
@@ -504,7 +504,7 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6StateMachine/Qt6StateMachineTargets-none.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6StateMachine/Qt6StateMachineAdditionalTargetInfo.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6StateMachine/Qt6StateMachineVersionlessTargets.cmake",
-		"/home/usuario/robocomp/components/grupo4/practica2/src/CMakeListsSpecific.txt",
+		"/home/antonio/robocomp/components/grupo4/practica2/src/CMakeListsSpecific.txt",
 		"/home/robocomp/robocomp/cmake/modules/opencv4.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake",
@@ -530,81 +530,81 @@
 		"/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake",
 		"/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/usuario/robocomp/components/grupo4/practica2",
+	"CMAKE_SOURCE_DIR" : "/home/antonio/robocomp/components/grupo4/practica2",
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
 	[
 		[
-			"/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h",
-			"MU",
-			"AF5EVGCUJC/moc_abstract_graphic_viewer.cpp",
-			null
-		],
-		[
-			"/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h",
-			"MU",
-			"WJD4WNSKOL/moc_GRAFCETStep.cpp",
-			null
-		],
-		[
-			"/home/robocomp/robocomp/classes/qlog/qlog.h",
-			"MU",
-			"REUAXSVL7F/moc_qlog.cpp",
-			null
-		],
-		[
-			"/home/robocomp/robocomp/classes/rapplication/rapplication.h",
-			"MU",
-			"2NKKL3WBBN/moc_rapplication.cpp",
-			null
-		],
-		[
-			"/home/robocomp/robocomp/classes/sigwatch/sigwatch.h",
-			"MU",
-			"N4WA3CPOWS/moc_sigwatch.cpp",
-			null
-		],
-		[
-			"/home/usuario/robocomp/components/grupo4/practica2/src/commonbehaviorI.h",
+			"/home/antonio/robocomp/components/grupo4/practica2/src/commonbehaviorI.h",
 			"MU",
 			"EWIEGA46WW/moc_commonbehaviorI.cpp",
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/grupo4/practica2/src/genericmonitor.h",
+			"/home/antonio/robocomp/components/grupo4/practica2/src/genericmonitor.h",
 			"MU",
 			"EWIEGA46WW/moc_genericmonitor.cpp",
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/grupo4/practica2/src/genericworker.h",
+			"/home/antonio/robocomp/components/grupo4/practica2/src/genericworker.h",
 			"MU",
 			"EWIEGA46WW/moc_genericworker.cpp",
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/grupo4/practica2/src/specificmonitor.h",
+			"/home/antonio/robocomp/components/grupo4/practica2/src/specificmonitor.h",
 			"MU",
 			"EWIEGA46WW/moc_specificmonitor.cpp",
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/grupo4/practica2/src/specificworker.h",
+			"/home/antonio/robocomp/components/grupo4/practica2/src/specificworker.h",
 			"MU",
 			"EWIEGA46WW/moc_specificworker.cpp",
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/grupo4/practica2/src/visualelementspubI.h",
+			"/home/antonio/robocomp/components/grupo4/practica2/src/visualelementspubI.h",
 			"MU",
 			"EWIEGA46WW/moc_visualelementspubI.cpp",
+			null
+		],
+		[
+			"/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h",
+			"MU",
+			"ORSWWJ3MA2/moc_abstract_graphic_viewer.cpp",
+			null
+		],
+		[
+			"/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h",
+			"MU",
+			"NP6GTIEWDD/moc_GRAFCETStep.cpp",
+			null
+		],
+		[
+			"/home/robocomp/robocomp/classes/qlog/qlog.h",
+			"MU",
+			"RXLYN2WTY6/moc_qlog.cpp",
+			null
+		],
+		[
+			"/home/robocomp/robocomp/classes/rapplication/rapplication.h",
+			"MU",
+			"5MU7FIJP6A/moc_rapplication.cpp",
+			null
+		],
+		[
+			"/home/robocomp/robocomp/classes/sigwatch/sigwatch.h",
+			"MU",
+			"52YYH7PBE7/moc_sigwatch.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/usuario/robocomp/components/grupo4/practica2/src/person_tracker_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/usuario/robocomp/components/grupo4/practica2/src/person_tracker_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/antonio/robocomp/components/grupo4/practica2/src/person_tracker_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/antonio/robocomp/components/grupo4/practica2/src/person_tracker_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"ICE_CPP11_MAPPING",
@@ -625,11 +625,11 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/usuario/robocomp/components/grupo4/practica2/src",
-		"/home/usuario/robocomp/components/grupo4/practica2/src",
+		"/home/antonio/robocomp/components/grupo4/practica2/src",
+		"/home/antonio/robocomp/components/grupo4/practica2/src",
 		"/opt/robocomp/include",
 		"/classes",
-		"/home/usuario/robocomp/components/grupo4/practica2",
+		"/home/antonio/robocomp/components/grupo4/practica2",
 		"/home/robocomp/robocomp/classes",
 		"/home/robocomp/robocomp/libs",
 		"/home/robocomp/robocomp/interfaces",
@@ -644,10 +644,10 @@
 		"/usr/include/x86_64-linux-gnu/qt6/QtXml",
 		"/usr/include/x86_64-linux-gnu/qt6/QtStateMachine",
 		"/usr/include",
-		"/usr/include/c++/12",
-		"/usr/include/x86_64-linux-gnu/c++/12",
-		"/usr/include/c++/12/backward",
-		"/usr/lib/gcc/x86_64-linux-gnu/12/include",
+		"/usr/include/c++/13",
+		"/usr/include/x86_64-linux-gnu/c++/13",
+		"/usr/include/c++/13/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/13/include",
 		"/usr/local/include",
 		"/usr/include/x86_64-linux-gnu"
 	],
@@ -662,28 +662,63 @@
 		"-c",
 		"/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/usuario/robocomp/components/grupo4/practica2/src/person_tracker_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/antonio/robocomp/components/grupo4/practica2/src/person_tracker_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
-		"/home/usuario/robocomp/components/grupo4/practica2/src/Camera360RGB.cpp",
-		"/home/usuario/robocomp/components/grupo4/practica2/src/CommonBehavior.cpp",
-		"/home/usuario/robocomp/components/grupo4/practica2/src/GenericBase.cpp",
-		"/home/usuario/robocomp/components/grupo4/practica2/src/Lidar3D.cpp",
-		"/home/usuario/robocomp/components/grupo4/practica2/src/OmniRobot.cpp",
-		"/home/usuario/robocomp/components/grupo4/practica2/src/VisualElementsPub.cpp",
-		"/home/usuario/robocomp/components/grupo4/practica2/src/ui_mainUI.h"
+		"/home/antonio/robocomp/components/grupo4/practica2/src/Camera360RGB.cpp",
+		"/home/antonio/robocomp/components/grupo4/practica2/src/CommonBehavior.cpp",
+		"/home/antonio/robocomp/components/grupo4/practica2/src/GenericBase.cpp",
+		"/home/antonio/robocomp/components/grupo4/practica2/src/Lidar3D.cpp",
+		"/home/antonio/robocomp/components/grupo4/practica2/src/OmniRobot.cpp",
+		"/home/antonio/robocomp/components/grupo4/practica2/src/VisualElementsPub.cpp",
+		"/home/antonio/robocomp/components/grupo4/practica2/src/ui_mainUI.h"
 	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 8,
-	"PARSE_CACHE_FILE" : "/home/usuario/robocomp/components/grupo4/practica2/src/CMakeFiles/person_tracker_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/antonio/robocomp/components/grupo4/practica2/src/CMakeFiles/person_tracker_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt6/libexec/uic",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 2,
-	"SETTINGS_FILE" : "/home/usuario/robocomp/components/grupo4/practica2/src/CMakeFiles/person_tracker_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/antonio/robocomp/components/grupo4/practica2/src/CMakeFiles/person_tracker_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/antonio/robocomp/components/grupo4/practica2/src/commonbehaviorI.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/antonio/robocomp/components/grupo4/practica2/src/genericmonitor.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/antonio/robocomp/components/grupo4/practica2/src/genericworker.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/antonio/robocomp/components/grupo4/practica2/src/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/antonio/robocomp/components/grupo4/practica2/src/specificmonitor.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/antonio/robocomp/components/grupo4/practica2/src/specificworker.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/antonio/robocomp/components/grupo4/practica2/src/visualelementspubI.cpp",
+			"MU",
+			null
+		],
 		[
 			"/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp",
 			"MU",
@@ -700,55 +735,20 @@
 			"MU",
 			null
 		],
-		[ "/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp", "MU", null ],
-		[
-			"/home/usuario/robocomp/components/grupo4/practica2/src/commonbehaviorI.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/usuario/robocomp/components/grupo4/practica2/src/genericmonitor.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/usuario/robocomp/components/grupo4/practica2/src/genericworker.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/usuario/robocomp/components/grupo4/practica2/src/main.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/usuario/robocomp/components/grupo4/practica2/src/specificmonitor.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/usuario/robocomp/components/grupo4/practica2/src/specificworker.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/usuario/robocomp/components/grupo4/practica2/src/visualelementspubI.cpp",
-			"MU",
-			null
-		]
+		[ "/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
-		"/home/usuario/robocomp/components/grupo4/practica2/src/Camera360RGB.cpp",
-		"/home/usuario/robocomp/components/grupo4/practica2/src/CommonBehavior.cpp",
-		"/home/usuario/robocomp/components/grupo4/practica2/src/GenericBase.cpp",
-		"/home/usuario/robocomp/components/grupo4/practica2/src/Lidar3D.cpp",
-		"/home/usuario/robocomp/components/grupo4/practica2/src/OmniRobot.cpp",
-		"/home/usuario/robocomp/components/grupo4/practica2/src/VisualElementsPub.cpp",
-		"/home/usuario/robocomp/components/grupo4/practica2/src/mainUI.ui",
-		"/home/usuario/robocomp/components/grupo4/practica2/src/ui_mainUI.h"
+		"/home/antonio/robocomp/components/grupo4/practica2/src/Camera360RGB.cpp",
+		"/home/antonio/robocomp/components/grupo4/practica2/src/CommonBehavior.cpp",
+		"/home/antonio/robocomp/components/grupo4/practica2/src/GenericBase.cpp",
+		"/home/antonio/robocomp/components/grupo4/practica2/src/Lidar3D.cpp",
+		"/home/antonio/robocomp/components/grupo4/practica2/src/OmniRobot.cpp",
+		"/home/antonio/robocomp/components/grupo4/practica2/src/VisualElementsPub.cpp",
+		"/home/antonio/robocomp/components/grupo4/practica2/src/mainUI.ui",
+		"/home/antonio/robocomp/components/grupo4/practica2/src/ui_mainUI.h"
 	],
 	"UIC_UI_FILES" : [],
 	"VERBOSITY" : 0

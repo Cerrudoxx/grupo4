@@ -7,15 +7,15 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/robocomp/robocomp/cmake/modules/opencv4.cmake"
-  "/home/robocomp/robocomp/cmake/modules/qt.cmake"
-  "/home/robocomp/robocomp/cmake/robocomp.cmake"
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
   "CMakeLists.txt"
   "src/CMakeLists.txt"
   "src/CMakeListsSpecific.txt"
+  "/home/robocomp/robocomp/cmake/modules/opencv4.cmake"
+  "/home/robocomp/robocomp/cmake/modules/qt.cmake"
+  "/home/robocomp/robocomp/cmake/robocomp.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt6/3rdparty/kwin/FindXKB.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapAtomic.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake"
@@ -187,7 +187,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_practica2_src.dir/DependInfo.cmake"
+  "src/CMakeFiles/ICES__home_antonio_robocomp_components_grupo4_practica2_src.dir/DependInfo.cmake"
   "src/CMakeFiles/person_tracker.dir/DependInfo.cmake"
   "src/CMakeFiles/person_tracker_autogen.dir/DependInfo.cmake"
   )

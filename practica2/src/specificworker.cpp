@@ -20,89 +20,114 @@
 #include <cppitertools/enumerate.hpp>
 #include <cppitertools/range.hpp>
 
+#define BLUE "\033[34m"
+#define RED "\033[31m"
+#define GREEN "\033[32m"
+#define YELLOW "\033[33m"
+#define RESET "\033[0m"
+
 /**
-* \brief Default constructor
-*/
+ * \brief Default constructor
+ */
 SpecificWorker::SpecificWorker(TuplePrx tprx, bool startup_check) : GenericWorker(tprx)
 {
     std::locale::global(std::locale("C"));
-	this->startup_check_flag = startup_check;
+    this->startup_check_flag = startup_check;
 }
 
 /**
-* \brief Default destructor
-*/
+ * \brief Default destructor
+ */
 SpecificWorker::~SpecificWorker()
 {
-	std::cout << "Destroying SpecificWorker" << std::endl;
+    std::cout << "Destroying SpecificWorker" << std::endl;
 }
 bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
-	return true;
+    return true;
 }
 void SpecificWorker::initialize()
 {
-	std::cout << "Initialize worker" << std::endl;
-	if(this->startup_check_flag)
-	{
-		this->startup_check();
-	}
-	else
-	{
+    std::cout << "Initialize worker" << std::endl;
+    if (this->startup_check_flag)
+    {
+        this->startup_check();
+    }
+    else
+    {
         // Viewer
         viewer = new AbstractGraphicViewer(this->frame, params.GRID_MAX_DIM);
         auto [r, e] = viewer->add_robot(params.ROBOT_WIDTH, params.ROBOT_LENGTH, 0, 100, QColor("Blue"));
         robot_draw = r;
         viewer->setStyleSheet("background-color: lightGray;");
 
-
         // connect stop button un UI with a lambda function
         connect(pushButton_stop, &QPushButton::clicked, [this]()
-        {
+                {
             try
             { omnirobot_proxy->setSpeedBase(0, 0, 0); }
             catch (const Ice::Exception &e)
             { std::cout << e << std::endl; }
-            pushButton_stop->setText(pushButton_stop->isChecked() ? "Track" : "Stop");
-        });
+            pushButton_stop->setText(pushButton_stop->isChecked() ? "Track" : "Stop"); });
         viewer->show();
 
-		this->setPeriod(STATES::Compute, 100);
-		//this->setPeriod(STATES::Emergency, 500);
-
-	}
+        this->setPeriod(STATES::Compute, 100);
+        // this->setPeriod(STATES::Emergency, 500);
+    }
 }
 void SpecificWorker::compute()
 {
-     //read bpearl (lower) lidar and draw
+    // read bpearl (lower) lidar and draw
     auto ldata = read_lidar_bpearl();
-    if(ldata.points.empty()) { qWarning() << __FUNCTION__ << "Empty bpearl lidar data"; return; };
-    //draw_lidar(ldata.points, &viewer->scene);
+    if (ldata.points.empty())
+    {
+        qWarning() << __FUNCTION__ << "Empty bpearl lidar data";
+        return;
+    };
+    // draw_lidar(ldata.points, &viewer->scene);
     draw_lidar(ldata.points, &viewer->scene);
 
     auto ldata_helios = read_lidar_helios();
-    if(ldata_helios.points.empty()) { qWarning() << __FUNCTION__ << "Empty helios lidar data"; return; };
-    //draw_lidar(ldata.points, &viewer->scene);
+    if (ldata_helios.points.empty())
+    {
+        qWarning() << __FUNCTION__ << "Empty helios lidar data";
+        return;
+    };
+    // draw_lidar(ldata.points, &viewer->scene);
 
     // check if there is new YOLO data in buffer
     RoboCompVisualElementsPub::TData data;
     auto [data_] = buffer.read_first();
-    if(not data_.has_value()) { qWarning() << __FUNCTION__ << "Empty buffer"; return; }
-    else data = data_.value();
+    if (not data_.has_value())
+    {
+        qWarning() << __FUNCTION__ << "Empty buffer";
+        return;
+    }
+    else
+        data = data_.value();
 
     // get person and draw on viewer
     auto person = find_person_in_data(data.objects);
-    if(not person.has_value())
-    { qWarning() << __FUNCTION__ << QString::fromStdString(person.error()); return; }   // STOP THE ROBOT
+    if (not person.has_value())
+    {
+        qWarning() << __FUNCTION__ << QString::fromStdString(person.error());
+        return;
+    } // STOP THE ROBOT
 
     // call state machine to track person
     const auto &[adv, rot] = state_machine(person.value());
 
     // move the robot
-    try{ omnirobot_proxy->setSpeedBase(0.f, adv, rot); }
-    catch(const Ice::Exception &e){std::cout << e << std::endl;}
+    try
+    {
+        omnirobot_proxy->setSpeedBase(0.f, adv, rot);
+    }
+    catch (const Ice::Exception &e)
+    {
+        std::cout << e << std::endl;
+    }
     lcdNumber_adv->display(adv);
-    lcdNumber_rot ->display(rot);
+    lcdNumber_rot->display(rot);
 }
 
 //////////////////////////////////////////////////////////////////
@@ -113,14 +138,18 @@ RoboCompLidar3D::TData SpecificWorker::read_lidar_bpearl()
 {
     try
     {
-        auto ldata =  lidar3d1_proxy->getLidarData("bpearl", 0, 2*M_PI, 1);
+        auto ldata = lidar3d1_proxy->getLidarData("bpearl", 0, 2 * M_PI, 1);
         // filter points according to height and distance
-        RoboCompLidar3D::TPoints  p_filter;
+        RoboCompLidar3D::TPoints p_filter;
         std::ranges::copy_if(ldata.points, std::back_inserter(p_filter),
-                             [](auto  &a){ return a.z < 500 and a.distance2d > 200;});
+                             [](auto &a)
+                             { return a.z < 500 and a.distance2d > 200; });
         return RoboCompLidar3D::TData{.points = p_filter, .period = ldata.period, .timestamp = ldata.timestamp};
     }
-    catch(const Ice::Exception &e){std::cout << e << std::endl;}
+    catch (const Ice::Exception &e)
+    {
+        std::cout << e << std::endl;
+    }
     return {};
 }
 // Read the HELIOS lidar data and filter the points
@@ -128,23 +157,28 @@ RoboCompLidar3D::TData SpecificWorker::read_lidar_helios()
 {
     try
     {
-        auto ldata =  lidar3d_proxy->getLidarData("helios", 0, 2*M_PI, 1);
+        auto ldata = lidar3d_proxy->getLidarData("helios", 0, 2 * M_PI, 1);
         // filter points according to height and distance
-        RoboCompLidar3D::TPoints  p_filter;
+        RoboCompLidar3D::TPoints p_filter;
         std::ranges::copy_if(ldata.points, std::back_inserter(p_filter),
-                             [](auto  &a){ return a.z > 1300 and a.distance2d > 200;});
+                             [](auto &a)
+                             { return a.z > 1300 and a.distance2d > 200; });
         return RoboCompLidar3D::TData{.points = p_filter, .period = ldata.period, .timestamp = ldata.timestamp};
     }
-    catch(const Ice::Exception &e){std::cout << e << std::endl;}
+    catch (const Ice::Exception &e)
+    {
+        std::cout << e << std::endl;
+    }
     return {};
 }
 std::expected<RoboCompVisualElementsPub::TObject, std::string>
 SpecificWorker::find_person_in_data(const std::vector<RoboCompVisualElementsPub::TObject> &objects)
 {
-    if(objects.empty())
+    if (objects.empty())
         return std::unexpected("Empty objects in method <find_person_in_data>");
-    if(auto p_ = std::ranges::find_if(objects, [](auto &a)
-            { return a.id == 0 and std::stof(a.attributes.at("score")) > 0.6;}); p_ == std::end(objects))
+    if (auto p_ = std::ranges::find_if(objects, [](auto &a)
+                                       { return a.id == 0 and std::stof(a.attributes.at("score")) > 0.6; });
+        p_ == std::end(objects))
         return std::unexpected("No person found in method <find_person_in_data>");
     else
     {
@@ -161,27 +195,43 @@ SpecificWorker::RobotSpeed SpecificWorker::state_machine(const RoboCompVisualEle
 {
     // call the appropriate state function
     RetVal res;
-    if(pushButton_stop->isChecked())    // stop if buttom is pressed
+    if (pushButton_stop->isChecked()) // stop if buttom is pressed
         state = STATE::TRACK;
 
-    switch(state)
+    switch (state)
     {
-        case STATE::TRACK:
-            res = track(person);
-            label_state->setText("TRACK");
-            break;
-        case STATE::WAIT:
-            res = wait(person);
-            label_state->setText("WAIT");
-            break;
-        case STATE::STOP:
-            res = stop();
-            label_state->setText("STOP");
-            break;
+    case STATE::TRACK:
+        res = track(person);
+        label_state->setText("TRACK");
+        break;
+    case STATE::WAIT:
+        res = wait(person);
+        label_state->setText("WAIT");
+        break;
+    case STATE::STOP:
+        res = stop();
+        label_state->setText("STOP");
+        break;
     }
     auto &[st, speed, rot] = res;
     state = st;
     return {speed, rot};
+}
+
+/**
+ * @brief Compares two floating-point numbers with a given tolerance.
+ *
+ * This function checks if the absolute difference between two floating-point numbers
+ * is within a specified tolerance.
+ *
+ * @param a The first floating-point number.
+ * @param b The second floating-point number.
+ * @param tolerance The tolerance within which the two numbers are considered equal.
+ * @return True if the numbers are equal within the given tolerance, false otherwise.
+ */
+bool compare_floats(float a, float b, float tolerance)
+{
+    return std::fabs(a - b) <= tolerance;
 }
 /**
  * Analyzes the filtered points to determine whether to continue moving forward or to stop and turn.
@@ -194,15 +244,20 @@ SpecificWorker::RobotSpeed SpecificWorker::state_machine(const RoboCompVisualEle
  * @param filtered_points A vector of filtered points representing the robot's perception of obstacles.
  * @return A `RetVal` tuple consisting of the state (`FORWARD` or `TURN`), speed, and rotation.
  */
- // State function to track a person
+// State function to track a person
 SpecificWorker::RetVal SpecificWorker::track(const RoboCompVisualElementsPub::TObject &person)
 {
+    qDebug() << BLUE;
+    qDebug() << "TRACK";
     auto distance = std::hypot(std::stof(person.attributes.at("x_pos")), std::stof(person.attributes.at("y_pos")));
     lcdNumber_dist_to_person->display(distance);
 
     // check if the distance to the person is lower than a threshold
-    if(distance < params.PERSON_MIN_DIST)
-    {   qWarning() << __FUNCTION__ << "Distance to person lower than threshold"; return RetVal(STATE::WAIT, 0.f, 0.f);}
+    // if (distance < params.PERSON_MIN_DIST)
+    // {
+    //     qWarning() << __FUNCTION__ << "Distance to person lower than threshold";
+    //     return RetVal(STATE::WAIT, 0.f, 0.f);
+    // }
 
     /// TRACK   PUT YOUR CODE HERE
 
@@ -215,50 +270,53 @@ SpecificWorker::RetVal SpecificWorker::track(const RoboCompVisualElementsPub::TO
     // derecha max 0.5
     // izquierda min 2.5
 
+    qDebug() << "Angle to person: " << angle_to_person;
+    float corrector = 0.9;
+    float maxAngle = M_PI;
+    float minAngle = 0;
+    float center = 1.6;
 
 
-   qDebug() << "Angle to person: " << angle_to_person;
-
-    if((1.5 < angle_to_person)  && (angle_to_person< 1.7))
+    if (compare_floats(angle_to_person, center, 0.1))
     {
         qDebug() << "Person in front";
         vel_giro = 0;
     }
-    else if(angle_to_person < 1.6)
+    else if (angle_to_person < center && angle_to_person > minAngle)
     {
-        vel_giro = ((1.6 - angle_to_person) / (1.6 - 0.5))*2.f;
+        vel_giro = ((1.6 - angle_to_person) / (1.6 - 0.5)) * corrector;
     }
-    else if(angle_to_person > 1.7)
+    else if (angle_to_person > center && angle_to_person < maxAngle)
     {
-        vel_giro = ((angle_to_person - 1.7) / (2.5 - 1.7))*-2.f;
+        vel_giro = -((angle_to_person - 1.7) / (2.5 - 1.7)) * corrector;
     }
-  
-    if (distance > 420){
-        float normalized_speed = 1000;
-        if (distance > 1000){
-            qDebug() << "Distance to person: " << distance;
-            normalized_speed = 1000;
-        }else{
-            qDebug() << "Distance to person: " << distance;
-            normalized_speed = distance;
-        }
-        qDebug() << "Normalized speed: " << normalized_speed;
-        return RetVal(STATE::TRACK, normalized_speed, vel_giro);
+    qDebug() << "Vel giro: " << vel_giro;
+
+    vel_giro = std::clamp(vel_giro, -1.5f, 1.5f);
+
+    if (distance > 700)
+    {
+        float vel_forward = std::min(1000.f, (distance - 600)*corrector);
+        qDebug() << "Vel forward: " << vel_forward;
+        return RetVal(STATE::TRACK, vel_forward, vel_giro);
+    }
+    else
+    {
+        qDebug() << "Person too close";
+        return RetVal(STATE::TRACK, 0.f, vel_giro);
     }
 
     return RetVal(STATE::TRACK, 0, vel_giro);
-
 }
 //
 SpecificWorker::RetVal SpecificWorker::wait(const RoboCompVisualElementsPub::TObject &person)
 {
-    //qDebug() << __FUNCTION__ ;
-    // check if the person is further than a threshold
-    if(std::hypot(std::stof(person.attributes.at("x_pos")), std::stof(person.attributes.at("y_pos"))) > params.PERSON_MIN_DIST + 100)
+    // qDebug() << __FUNCTION__ ;
+    //  check if the person is further than a threshold
+    if (std::hypot(std::stof(person.attributes.at("x_pos")), std::stof(person.attributes.at("y_pos"))) > params.PERSON_MIN_DIST + 100)
         return RetVal(STATE::TRACK, 0.f, 0.f);
 
     return RetVal(STATE::WAIT, 0.f, 0.f);
-
 }
 /**
  * @brief Determines the robot's behavior when following a wall.
@@ -271,15 +329,15 @@ SpecificWorker::RetVal SpecificWorker::wait(const RoboCompVisualElementsPub::TOb
  * @param filtered_points A vector containing points with distance information used for making navigation decisions.
  * @returns A tuple containing the next state (WALL), and speed values.
  */
- //
+//
 SpecificWorker::RetVal SpecificWorker::stop()
 {
-    //qDebug() << __FUNCTION__ ;
-    // Check the status of the pushButton_stop
-    if(not pushButton_stop->isChecked())
+    // qDebug() << __FUNCTION__ ;
+    //  Check the status of the pushButton_stop
+    if (not pushButton_stop->isChecked())
         return RetVal(STATE::TRACK, 0.f, 0.f);
 
-    return RetVal (STATE::STOP, 0.f, 0.f);
+    return RetVal(STATE::STOP, 0.f, 0.f);
 }
 /**
  * Draws LIDAR points onto a QGraphicsScene.
@@ -294,10 +352,10 @@ SpecificWorker::RetVal SpecificWorker::stop()
  */
 void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
 {
-    static std::vector<QGraphicsItem*> items;   // store items so they can be shown between iterations
+    static std::vector<QGraphicsItem *> items; // store items so they can be shown between iterations
 
     // remove all items drawn in the previous iteration
-    for(auto i: items)
+    for (auto i : items)
     {
         scene->removeItem(i);
         delete i;
@@ -306,7 +364,7 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
 
     auto color = QColor(Qt::darkGreen);
     auto brush = QBrush(QColor(Qt::darkGreen));
-    for(const auto &p : filtered_points)
+    for (const auto &p : filtered_points)
     {
         auto item = scene->addRect(-50, -50, 100, 100, color, brush);
         item->setPos(p.x, p.y);
@@ -328,9 +386,9 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
  */
 void SpecificWorker::draw_person(RoboCompVisualElementsPub::TObject &person, QGraphicsScene *scene) const
 {
-    static std::vector<QGraphicsItem*> items;
+    static std::vector<QGraphicsItem *> items;
     // remove all items drawn in the previous iteration
-    for(auto i: items)
+    for (auto i : items)
     {
         scene->removeItem(i);
         delete i;
@@ -339,7 +397,7 @@ void SpecificWorker::draw_person(RoboCompVisualElementsPub::TObject &person, QGr
 
     // draw a circle around the person
     float radius = 300;
-    auto person_draw = scene->addEllipse(-radius, -radius, radius*2, radius*2, QPen(Qt::magenta, 30));
+    auto person_draw = scene->addEllipse(-radius, -radius, radius * 2, radius * 2, QPen(Qt::magenta, 30));
     person_draw->setPos(std::stof(person.attributes["x_pos"]), std::stof(person.attributes["y_pos"]));
     items.push_back(person_draw);
 
@@ -348,35 +406,36 @@ void SpecificWorker::draw_person(RoboCompVisualElementsPub::TObject &person, QGr
     auto y = std::stof(person.attributes.at("y_pos"));
     auto angle = std::stof(person.attributes.at("orientation")) + M_PI;
     auto item_radius = scene->addLine(QLineF(QPointF(x, y),
-                                                                    QPointF( x - radius * sin(angle),y + radius * cos(angle))),
-                                                         QPen(Qt::magenta, 20));
+                                             QPointF(x - radius * sin(angle), y + radius * cos(angle))),
+                                      QPen(Qt::magenta, 20));
     items.push_back(item_radius);
 
     // draw a line from the robot to the person circle but ending on the circunference. The end point is the exterior of the circle
     // I need a line from the robot to the person x,y but it has to be 300mm shorter
     auto len = std::hypot(x, y);
     auto item_line = scene->addLine(QLineF(QPointF(0.f, 0.f),
-                                                                   QPointF((len -radius) *x/len, (len - radius)*y/len )),
-                                                           QPen(Qt::magenta, 20));
+                                           QPointF((len - radius) * x / len, (len - radius) * y / len)),
+                                    QPen(Qt::magenta, 20));
     items.push_back(item_line);
 }
 std::expected<int, string> SpecificWorker::closest_lidar_index_to_given_angle(const auto &points, float angle)
 {
     // search for the point in points whose phi value is closest to angle
-    auto res = std::ranges::find_if(points, [angle](auto &a){ return a.phi > angle;});
-    if(res != std::end(points))
+    auto res = std::ranges::find_if(points, [angle](auto &a)
+                                    { return a.phi > angle; });
+    if (res != std::end(points))
         return std::distance(std::begin(points), res);
     else
         return std::unexpected("No closest value found in method <closest_lidar_index_to_given_angle>");
 }
 void SpecificWorker::draw_path_to_person(const auto &points, QGraphicsScene *scene)
 {
-    if(points.empty())
+    if (points.empty())
         return;
 
     // remove all items drawn in the previous iteration
-    static std::vector<QGraphicsItem*> items;
-    for(auto i: items)
+    static std::vector<QGraphicsItem *> items;
+    for (auto i : items)
     {
         scene->removeItem(i);
         delete i;
@@ -386,19 +445,19 @@ void SpecificWorker::draw_path_to_person(const auto &points, QGraphicsScene *sce
     // draw the path as a series of lines with dots in between
     for (auto i : iter::range(0UL, points.size() - 1))
     {
-        auto line = scene->addLine(QLineF(QPointF(points[i].x(), points[i].y()), QPointF(points[i+1].x(), points[i+1].y())),
+        auto line = scene->addLine(QLineF(QPointF(points[i].x(), points[i].y()), QPointF(points[i + 1].x(), points[i + 1].y())),
                                    QPen(Qt::blue, 40));
         items.push_back(line);
         auto dot = scene->addEllipse(-30, -30, 60, 60, QPen(Qt::darkBlue, 40));
         dot->setPos(points[i].x(), points[i].y());
-       items.push_back(dot);
+        items.push_back(dot);
     }
 }
 
 //////////////////////////////////////////////////////////////////
 /// SUBSCRIPTIONS (runs in a different thread)
 //////////////////////////////////////////////////////////////////
-//SUBSCRIPTION to setVisualObjects method from VisualElementsPub interface. This is called in a different thread.
+// SUBSCRIPTION to setVisualObjects method from VisualElementsPub interface. This is called in a different thread.
 void SpecificWorker::VisualElementsPub_setVisualObjects(RoboCompVisualElementsPub::TData data)
 {
     // std::cout << "VisualElements_setVisualObjects" << std::endl;
@@ -415,27 +474,24 @@ void SpecificWorker::VisualElementsPub_setVisualObjects(RoboCompVisualElementsPu
 void SpecificWorker::emergency()
 {
     std::cout << "Emergency worker" << std::endl;
-	//computeCODE
-	//
-	//if (SUCCESSFUL)
-    //  emmit goToRestore()
+    // computeCODE
+    //
+    // if (SUCCESSFUL)
+    //   emmit goToRestore()
 }
-//Execute one when exiting to emergencyState
+// Execute one when exiting to emergencyState
 void SpecificWorker::restore()
 {
     std::cout << "Restore worker" << std::endl;
-	//computeCODE
-	//Restore emergency component
-
+    // computeCODE
+    // Restore emergency component
 }
 int SpecificWorker::startup_check()
 {
-	std::cout << "Startup check" << std::endl;
-	QTimer::singleShot(200, qApp, SLOT(quit()));
-	return 0;
+    std::cout << "Startup check" << std::endl;
+    QTimer::singleShot(200, qApp, SLOT(quit()));
+    return 0;
 }
-
-
 
 /**************************************/
 // From the RoboCompLidar3D you can call this methods:
