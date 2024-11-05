@@ -185,7 +185,7 @@ SpecificWorker::RobotSpeed SpecificWorker::state_machine(TPerson &person)
 
     
     if (pushButton_stop->isChecked()) // stop if buttom is pressed
-        state = STATE::TRACK;
+        state = STATE::WAIT;
 
     switch (state)
     {
@@ -247,6 +247,7 @@ SpecificWorker::RetVal SpecificWorker::track(TPerson &person)
         qDebug() << "Persona no detectada en TRACK";
         return RetVal(STATE::SEARCH, 0.f, 0.f);
     }
+    qDebug() << "EL DIABLO:Pero que malditos tenis";
 
     auto distance = std::hypot(std::stof(person.value().attributes.at("x_pos")), std::stof(person.value().attributes.at("y_pos")));
     lcdNumber_dist_to_person->display(distance);
@@ -297,6 +298,7 @@ SpecificWorker::RetVal SpecificWorker::wait(TPerson &person)
 {
     // qDebug() << __FUNCTION__ ;
     //  check if the person is further than a threshold
+    qDebug() << GREEN << "WAIT" << RESET;
     if (person.has_value() && std::hypot(std::stof(person->attributes.at("x_pos")), std::stof(person->attributes.at("y_pos"))) > params.PERSON_MIN_DIST + 100)
         return RetVal(STATE::TRACK, 0.f, 0.f);
 
