@@ -79,15 +79,17 @@ class SpecificWorker : public GenericWorker
         // state machine
         enum class STATE
         {
-            TRACK, STOP, WAIT
+            TRACK, STOP, WAIT, SEARCH
         };
         STATE state = STATE::TRACK;
         using RetVal = std::tuple<STATE, float, float>;
         using RobotSpeed = std::tuple<float, float>;
-        RetVal track(const RoboCompVisualElementsPub::TObject &person);
-        RetVal wait(const RoboCompVisualElementsPub::TObject &person);
+        using TPerson=std::expected<RoboCompVisualElementsPub::TObject, std::string>;
+        RetVal track(TPerson &person);
+        RetVal wait(TPerson &person);
+        RetVal search(TPerson &person);
         RetVal stop();
-        RobotSpeed state_machine(const RoboCompVisualElementsPub::TObject &person);
+        RobotSpeed state_machine(TPerson &person);
 
         // lidar
         RoboCompLidar3D::TData read_lidar_bpearl();
@@ -104,6 +106,9 @@ class SpecificWorker : public GenericWorker
 
         // aux
         std::expected<int, string> closest_lidar_index_to_given_angle(const auto &points, float angle);
+
+       
+    
 
         // random number generator
         std::random_device rd;

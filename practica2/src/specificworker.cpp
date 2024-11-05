@@ -77,57 +77,44 @@ void SpecificWorker::initialize()
 }
 void SpecificWorker::compute()
 {
-    // read bpearl (lower) lidar and draw
+     //read bpearl (lower) lidar and draw
     auto ldata = read_lidar_bpearl();
-    if (ldata.points.empty())
-    {
-        qWarning() << __FUNCTION__ << "Empty bpearl lidar data";
-        return;
-    };
-    // draw_lidar(ldata.points, &viewer->scene);
+    if(ldata.points.empty()) { qWarning() << __FUNCTION__ << "Empty bpearl lidar data"; return; };
+    //draw_lidar(ldata.points, &viewer->scene);
     draw_lidar(ldata.points, &viewer->scene);
 
     auto ldata_helios = read_lidar_helios();
-    if (ldata_helios.points.empty())
-    {
-        qWarning() << __FUNCTION__ << "Empty helios lidar data";
-        return;
-    };
-    // draw_lidar(ldata.points, &viewer->scene);
+    if(ldata_helios.points.empty()) { qWarning() << __FUNCTION__ << "Empty helios lidar data"; return; };
+    //draw_lidar(ldata.points, &viewer->scene);
 
     // check if there is new YOLO data in buffer
     RoboCompVisualElementsPub::TData data;
     auto [data_] = buffer.read_first();
-    if (not data_.has_value())
-    {
-        qWarning() << __FUNCTION__ << "Empty buffer";
-        return;
-    }
-    else
-        data = data_.value();
+    if(not data_.has_value()) { qWarning() << __FUNCTION__ << "Empty buffer"; return; }
+    else data = data_.value();
 
     // get person and draw on viewer
     auto person = find_person_in_data(data.objects);
-    if (not person.has_value())
-    {
-        qWarning() << __FUNCTION__ << QString::fromStdString(person.error());
-        return;
-    } // STOP THE ROBOT
 
     // call state machine to track person
-    const auto &[adv, rot] = state_machine(person.value());
+    const auto &[adv, rot] = state_machine(person);
 
-    // move the robot
-    try
+    // plot on UI
+    if(person)
     {
-        omnirobot_proxy->setSpeedBase(0.f, adv, rot);
-    }
-    catch (const Ice::Exception &e)
-    {
-        std::cout << e << std::endl;
+        float d = std::hypot(std::stof(person.value().attributes.at("x_pos")),
+                                 std::stof(person.value().attributes.at("y_pos")));
+
+    }else{
+        state= STATE::SEARCH;
     }
     lcdNumber_adv->display(adv);
-    lcdNumber_rot->display(rot);
+    lcdNumber_rot ->display(rot);
+
+    // move the robot
+    try{ omnirobot_proxy->setSpeedBase(0.f, adv, rot); }
+    catch(const Ice::Exception &e){std::cout << e << std::endl;}
+
 }
 
 //////////////////////////////////////////////////////////////////
@@ -191,15 +178,21 @@ SpecificWorker::find_person_in_data(const std::vector<RoboCompVisualElementsPub:
 /// STATE  MACHINE
 //////////////////////////////////////////////////////////////////
 // State machine to track a person
-SpecificWorker::RobotSpeed SpecificWorker::state_machine(const RoboCompVisualElementsPub::TObject &person)
+SpecificWorker::RobotSpeed SpecificWorker::state_machine(TPerson &person)
 {
     // call the appropriate state function
     RetVal res;
+
+    
     if (pushButton_stop->isChecked()) // stop if buttom is pressed
         state = STATE::TRACK;
 
     switch (state)
     {
+    case STATE::SEARCH:
+        res = search(person);
+        label_state->setText("SEARCH");
+        break;
     case STATE::TRACK:
         res = track(person);
         label_state->setText("TRACK");
@@ -245,15 +238,21 @@ bool compare_floats(float a, float b, float tolerance)
  * @return A `RetVal` tuple consisting of the state (`FORWARD` or `TURN`), speed, and rotation.
  */
 // State function to track a person
-SpecificWorker::RetVal SpecificWorker::track(const RoboCompVisualElementsPub::TObject &person)
+SpecificWorker::RetVal SpecificWorker::track(TPerson &person)
 {
     qDebug() << BLUE;
     qDebug() << "TRACK";
-    auto distance = std::hypot(std::stof(person.attributes.at("x_pos")), std::stof(person.attributes.at("y_pos")));
+    qDebug() << RESET;
+    if(not person){
+        qDebug() << "Persona no detectada en TRACK";
+        return RetVal(STATE::SEARCH, 0.f, 0.f);
+    }
+
+    auto distance = std::hypot(std::stof(person.value().attributes.at("x_pos")), std::stof(person.value().attributes.at("y_pos")));
     lcdNumber_dist_to_person->display(distance);
 
-    float x = std::stof(person.attributes.at("x_pos"));
-    float y = std::stof(person.attributes.at("y_pos"));
+    float x = std::stof(person.value().attributes.at("x_pos"));
+    float y = std::stof(person.value().attributes.at("y_pos"));
     float angle_to_person = std::atan2(y, x);
 
     qDebug() << "Angle to person: " << angle_to_person;
@@ -280,12 +279,25 @@ SpecificWorker::RetVal SpecificWorker::track(const RoboCompVisualElementsPub::TO
 
     return distance > 700 ? RetVal(STATE::TRACK, vel_forward, vel_giro) : RetVal(STATE::TRACK, 0.f, vel_giro);
 }
-//
-SpecificWorker::RetVal SpecificWorker::wait(const RoboCompVisualElementsPub::TObject &person)
+
+SpecificWorker::RetVal SpecificWorker::search(TPerson &person)
 {
     // qDebug() << __FUNCTION__ ;
     //  check if the person is further than a threshold
-    if (std::hypot(std::stof(person.attributes.at("x_pos")), std::stof(person.attributes.at("y_pos"))) > params.PERSON_MIN_DIST + 100)
+
+    qDebug() << YELLOW << "SEARCH" << RESET;
+    if(not person){
+        return RetVal(STATE::SEARCH, 0.f, 1.5f);
+    }else{
+        return RetVal(STATE::TRACK, 0.f, 0.0f);
+    }    
+}
+//
+SpecificWorker::RetVal SpecificWorker::wait(TPerson &person)
+{
+    // qDebug() << __FUNCTION__ ;
+    //  check if the person is further than a threshold
+    if (person.has_value() && std::hypot(std::stof(person->attributes.at("x_pos")), std::stof(person->attributes.at("y_pos"))) > params.PERSON_MIN_DIST + 100)
         return RetVal(STATE::TRACK, 0.f, 0.f);
 
     return RetVal(STATE::WAIT, 0.f, 0.f);
