@@ -1,0 +1,16 @@
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/CMakeFiles/edit_cache.dir
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/CMakeFiles/rebuild_cache.dir
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/CMakeFiles/list_install_components.dir
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/CMakeFiles/install.dir
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/CMakeFiles/install/local.dir
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/CMakeFiles/install/strip.dir
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_practica1_chocachoca_src.dir
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/src/CMakeFiles/chocachoca.dir
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/src/CMakeFiles/edit_cache.dir
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/src/CMakeFiles/rebuild_cache.dir
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/src/CMakeFiles/list_install_components.dir
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/src/CMakeFiles/install.dir
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/src/CMakeFiles/install/local.dir
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/src/CMakeFiles/install/strip.dir
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/src/CMakeFiles/chocachoca_autogen_timestamp_deps.dir
+/home/usuario/robocomp/components/grupo4/practica1/chocachoca/src/CMakeFiles/chocachoca_autogen.dir

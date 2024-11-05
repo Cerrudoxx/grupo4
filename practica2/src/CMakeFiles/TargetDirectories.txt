@@ -1,0 +1,9 @@
+/home/robocomp/robocomp/components/grupo4/practica2/src/CMakeFiles/ICES__home_robocomp_robocomp_components_grupo4_practica2_src.dir
+/home/robocomp/robocomp/components/grupo4/practica2/src/CMakeFiles/person_tracker.dir
+/home/robocomp/robocomp/components/grupo4/practica2/src/CMakeFiles/edit_cache.dir
+/home/robocomp/robocomp/components/grupo4/practica2/src/CMakeFiles/rebuild_cache.dir
+/home/robocomp/robocomp/components/grupo4/practica2/src/CMakeFiles/list_install_components.dir
+/home/robocomp/robocomp/components/grupo4/practica2/src/CMakeFiles/install.dir
+/home/robocomp/robocomp/components/grupo4/practica2/src/CMakeFiles/install/local.dir
+/home/robocomp/robocomp/components/grupo4/practica2/src/CMakeFiles/install/strip.dir
+/home/robocomp/robocomp/components/grupo4/practica2/src/CMakeFiles/person_tracker_autogen.dir
