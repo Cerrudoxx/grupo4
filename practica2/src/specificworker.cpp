@@ -75,6 +75,7 @@ void SpecificWorker::initialize()
         // this->setPeriod(STATES::Emergency, 500);
     }
 }
+
 void SpecificWorker::compute()
 {
      //read bpearl (lower) lidar and draw
@@ -247,7 +248,7 @@ SpecificWorker::RetVal SpecificWorker::track(TPerson &person)
         qDebug() << "Persona no detectada en TRACK";
         return RetVal(STATE::SEARCH, 0.f, 0.f);
     }
-    qDebug() << "EL DIABLO:Pero que malditos tenis";
+
 
     auto distance = std::hypot(std::stof(person.value().attributes.at("x_pos")), std::stof(person.value().attributes.at("y_pos")));
     lcdNumber_dist_to_person->display(distance);
@@ -272,7 +273,7 @@ SpecificWorker::RetVal SpecificWorker::track(TPerson &person)
     qDebug() << "Vel giro: " << vel_giro;
 
     auto calculate_vel_forward = [distance, corrector]() -> float {
-        return distance > 700 ? std::min(1000.f, (distance - 600) * corrector) : 0;
+        return distance > 700 ? std::min(1000.f, ((distance - 600) * corrector) + 200) : 0;
     };
 
     float vel_forward = calculate_vel_forward();

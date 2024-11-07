@@ -212,7 +212,15 @@ std::tuple<std::vector<Eigen::Vector2f>, std::vector<QLineF>>
     std::vector<Eigen::Vector2f> points_inside;
     std::vector<QLineF> ls;
 
-    // your code here
+
+    std::transform(std::execution::par, helios.begin(), helios.end(), std::back_inserter(points_inside),
+                   [](auto &a){ return Eigen::Vector2f(a.x, a.y);});
+    std::transform(std::execution::par, bpearl.begin(), bpearl.end(), std::back_inserter(points_inside),
+                   [](auto &a){ return Eigen::Vector2f(a.x, a.y);});
+
+     
+    
+
 
     return std::make_tuple(points_inside, ls);
 }

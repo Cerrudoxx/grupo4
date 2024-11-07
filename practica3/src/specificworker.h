@@ -86,6 +86,9 @@ class SpecificWorker : public GenericWorker
         using RetVal = std::tuple<STATE, float, float>;
         using RobotSpeed = std::tuple<float, float>;
         using TPerson = std::expected<RoboCompVisualElementsPub::TObject, std::string>;
+
+        
+
         RetVal track(const TPerson &tp_person,
                      auto &filtered_points,
                      const rc::Room &room_model,
@@ -130,6 +133,11 @@ class SpecificWorker : public GenericWorker
         std::tuple<std::vector<Eigen::Vector2f>, std::vector<QLineF>> remove_wall_points(const auto &helios, const auto &bpearl);
         std::vector<QPolygonF> get_walls_as_polygons(const std::vector<QLineF> &lines, float robot_width);
 
+        using Lines = std::vector<std::pair<int, QLineF>>;
+        using Par_lines = std::vector<std::pair<QLineF, QLineF>>;
+        using Corners =  std::vector<std::tuple<int, QPointF>>;
+        using All_Corners = std::vector<std::tuple<QPointF, QPointF, QPointF, QPointF>>;
+        using Features = std::tuple<Lines, Par_lines, Corners, All_Corners>;
 
     void stop_robot();
 };
