@@ -1,5 +1,5 @@
-/home/usuario/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/EWIEGA46WW/moc_genericworker.cpp: /home/usuario/robocomp/components/grupo4/practica3/src/genericworker.h \
-  /home/usuario/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h \
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/EWIEGA46WW/moc_genericworker.cpp: /home/usuario/robocomp/components/grupo4/practica3/src/genericworker.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/config.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/qlog/qlog.h \

@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../genericworker.h"
+#include "../../../../../../../../../robocomp/components/grupo4/practica3/src/genericworker.h"
 #include <QtGui/qtextcursor.h>
 #include <QScreen>
 #include <QtCore/qbytearray.h>

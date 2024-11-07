@@ -81,40 +81,44 @@ void SpecificWorker::compute()
 
     auto helios_points = read_lidar_helios();
     if(helios_points.empty()) { qWarning() << __FUNCTION__ << "Empty helios lidar data"; return; };
-    //draw_lidar(ldata.points, &viewer->scene);
+    //draw_lidar(helios_points, &viewer->scene);
+
+    /// detect walls
+    auto lines = detect_wall_lines(helios_points, &viewer->scene);
 
     /// remove wall lines
-    auto new_data = remove_wall_points(helios_points, bpearl_points);
-    auto &[filtered_points, walls_polys] = new_data;
+     auto new_data = remove_wall_points(lines, bpearl_points);
+     auto filtered_points= new_data;
+     draw_lidar(filtered_points, &viewer->scene);
 
-    /// get walls as polygons
-    std::vector<QPolygonF> obstacles = get_walls_as_polygons(walls_polys, params.ROBOT_WIDTH/2);
+    // /// get walls as polygons
+    // std::vector<QPolygonF> obstacles = get_walls_as_polygons(walls_polys, params.ROBOT_WIDTH/2);
 
-    /// get obstacles as polygons using DBSCAN
-    auto obs = rc::dbscan(filtered_points, params.ROBOT_WIDTH, 2, params.ROBOT_WIDTH);
-    obstacles.insert(obstacles.end(), obs.begin(), obs.end());
-    draw_lidar(filtered_points, &viewer->scene);
+    // /// get obstacles as polygons using DBSCAN
+    // auto obs = rc::dbscan(filtered_points, params.ROBOT_WIDTH, 2, params.ROBOT_WIDTH);
+    // obstacles.insert(obstacles.end(), obs.begin(), obs.end());
+    // //draw_lidar(filtered_points, &viewer->scene);
 
-    /// check if there is new YOLO data in buffer
-    std::expected<RoboCompVisualElementsPub::TObject, std::string> tp_person = std::unexpected("No person found");
-    auto [data_] = buffer.read_first();
-    if(data_.has_value())
-        tp_person = find_person_in_data(data_.value().objects);
+    // /// check if there is new YOLO data in buffer
+    // std::expected<RoboCompVisualElementsPub::TObject, std::string> tp_person = std::unexpected("No person found");
+    // auto [data_] = buffer.read_first();
+    // if(data_.has_value())
+    //     tp_person = find_person_in_data(data_.value().objects);
 
-    // if no person, stop the robot and return
-    if(not tp_person)
-    { qWarning() << __FUNCTION__ << "No person found"; stop_robot(); return; }
+    // // if no person, stop the robot and return
+    // if(not tp_person)
+    // { qWarning() << __FUNCTION__ << "No person found"; stop_robot(); return; }
 
-    /// find the polygon that contains the person and remove it
-    obstacles = find_person_polygon_and_remove(tp_person.value(), obstacles);
-    draw_obstacles(obstacles, &viewer->scene, Qt::darkYellow);
+    // /// find the polygon that contains the person and remove it
+    // obstacles = find_person_polygon_and_remove(tp_person.value(), obstacles);
+    // draw_obstacles(obstacles, &viewer->scene, Qt::darkYellow);
 
-    /// compute an obstacle free path
+    // /// compute an obstacle free path
 
-    // If close to target, stop
-    float dist = std::hypot(std::stof(tp_person.value().attributes.at("x_pos")), std::stof(tp_person.value().attributes.at("y_pos")));
-    if (dist < params.PERSON_MIN_DIST)
-    { qWarning() << __FUNCTION__ << "Path length: " << " Close to person. Stopping"; stop_robot(); return; }
+    // // If close to target, stop
+    // float dist = std::hypot(std::stof(tp_person.value().attributes.at("x_pos")), std::stof(tp_person.value().attributes.at("y_pos")));
+    // if (dist < params.PERSON_MIN_DIST)
+    // { qWarning() << __FUNCTION__ << "Path length: " << " Close to person. Stopping"; stop_robot(); return; }
 
 
     // call state machine to track the first point of the path
@@ -206,24 +210,52 @@ void SpecificWorker::update_room_model(const auto &points, QGraphicsScene *scene
  * param points The set of points to be filtered.
  * return A vector of polygons representing the filtered points.
  */
-std::tuple<std::vector<Eigen::Vector2f>, std::vector<QLineF>>
-        SpecificWorker::remove_wall_points(const auto &helios, const auto &bpearl)
+std::vector<Eigen::Vector2f> SpecificWorker::remove_wall_points(const std::vector<QLineF> &Lines, const auto &bpearl)
 {
     std::vector<Eigen::Vector2f> points_inside;
-    std::vector<QLineF> ls;
 
+   for(const auto &p: bpearl)
+   {
+        bool dentro = true;
+        for (const auto &line : Lines)
+        {
+            auto  param_line = Eigen::ParametrizedLine<float, 2>::Through(Eigen::Vector2f(line.p1().x(), line.p1().y()),
+                                                                          Eigen::Vector2f(line.p2().x(), line.p2().y()));
+            if(param_line.distance(p) < params.POINT_LINE_MEMBERSHIP_THRESHOLD){
+                dentro = false;
+                break;
+            } 
+        }
+        if(dentro)
+            points_inside.emplace_back(p);
+   }
 
-    std::transform(std::execution::par, helios.begin(), helios.end(), std::back_inserter(points_inside),
-                   [](auto &a){ return Eigen::Vector2f(a.x, a.y);});
-    std::transform(std::execution::par, bpearl.begin(), bpearl.end(), std::back_inserter(points_inside),
-                   [](auto &a){ return Eigen::Vector2f(a.x, a.y);});
-
+      for(const auto &p: points_inside)
+   {
+      
+        for (const auto &line : Lines)
+        {
+            auto  param_line = Eigen::ParametrizedLine<float, 2>::Through(Eigen::Vector2f(line.p1().x(), line.p1().y()),
+                                                                          Eigen::Vector2f(line.p2().x(), line.p2().y()));
+           qDebug() << "Distance: " << param_line.distance(p); 
+        }
      
-    
-
-
-    return std::make_tuple(points_inside, ls);
+   }
+   
+    return points_inside;
 }
+
+
+std::vector<QLineF> SpecificWorker::detect_wall_lines(const auto &helios, QGraphicsScene *escena)
+{
+    std::vector<QLineF> lines;
+    const auto &[Lineas,_, __, ___]= room_detector.compute_features(helios, escena);
+    for(const auto &l: Lineas)
+     lines.emplace_back(l.second);
+    return lines;
+}
+
+
 std::expected<RoboCompVisualElementsPub::TObject, std::string>
 SpecificWorker::find_person_in_data(const std::vector<RoboCompVisualElementsPub::TObject> &objects)
 {
@@ -535,6 +567,9 @@ void SpecificWorker::draw_obstacles(const vector<QPolygonF> &list_poly, QGraphic
         items.push_back(item);
     }
 }
+
+
+
 void SpecificWorker::draw_path_to_person(const auto &points, QGraphicsScene *scene)
 {
     if(points.empty())

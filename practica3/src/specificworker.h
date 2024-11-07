@@ -68,6 +68,7 @@ class SpecificWorker : public GenericWorker
             float LIDAR_FRONT_SECTION = 0.2; // rads, aprox 12 degrees
             // person
             float PERSON_MIN_DIST = 1100; // mm
+            float POINT_LINE_MEMBERSHIP_THRESHOLD = 100; // threshold for point to line membership
 
             std::string LIDAR_NAME_LOW = "bpearl";
             std::string LIDAR_NAME_HIGH = "helios";
@@ -130,8 +131,11 @@ class SpecificWorker : public GenericWorker
         void update_room_model(const auto &points, QGraphicsScene *scene);
         rc::Room room_model;
         QPolygonF shrink_polygon(const QPolygonF &polygon, qreal amount);
-        std::tuple<std::vector<Eigen::Vector2f>, std::vector<QLineF>> remove_wall_points(const auto &helios, const auto &bpearl);
+        std::vector<Eigen::Vector2f> remove_wall_points(const std::vector<QLineF> &Lines, const auto &bpearl);
         std::vector<QPolygonF> get_walls_as_polygons(const std::vector<QLineF> &lines, float robot_width);
+        //Nuestro código
+        std::vector<QLineF> detect_wall_lines(const auto &helios, QGraphicsScene *);
+
 
         using Lines = std::vector<std::pair<int, QLineF>>;
         using Par_lines = std::vector<std::pair<QLineF, QLineF>>;

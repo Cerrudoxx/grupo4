@@ -58,6 +58,10 @@ namespace rc
 //        current_room.draw_on_2D_tab(current_room, "yellow", scene);
         return  current_room;
     }
+
+
+
+
     Room_Detector::Features Room_Detector::compute_features(const std::vector<Eigen::Vector2f> &line, QGraphicsScene *scene)
     {
         std::vector<Eigen::Vector2f> floor_line_cart = line;
