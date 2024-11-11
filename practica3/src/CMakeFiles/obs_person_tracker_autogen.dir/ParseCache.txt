@@ -4,24 +4,24 @@
 /home/usuario/robocomp/components/grupo4/practica3/src/specificworker.h
  mmc:Q_OBJECT
  mdp:/home/usuario/robocomp/components/grupo4/practica3/src/specificworker.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/Camera360RGB.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/CommonBehavior.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/GenericBase.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/Lidar3D.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/OmniRobot.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/VisualElementsPub.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/config.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/dbscan.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/genericworker.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/room.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/room_detector.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/ui_mainUI.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/doublebuffer_sync/doublebuffer_sync.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/qlog/qlog.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/threadpool/threadpool.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/Camera360RGB.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/CommonBehavior.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/GenericBase.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/Lidar3D.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/OmniRobot.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/VisualElementsPub.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/config.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/dbscan.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/genericworker.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/room.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/room_detector.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/ui_mainUI.h
+ mdp:/home/usuario/robocomp/robocomp_core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h
+ mdp:/home/usuario/robocomp/robocomp_core/classes/doublebuffer_sync/doublebuffer_sync.h
+ mdp:/home/usuario/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h
+ mdp:/home/usuario/robocomp/robocomp_core/classes/qlog/qlog.h
+ mdp:/home/usuario/robocomp/robocomp_core/classes/threadpool/threadpool.h
  mdp:/usr/include/GL/gl.h
  mdp:/usr/include/Ice/AsyncResult.h
  mdp:/usr/include/Ice/BatchRequestQueueF.h
@@ -1199,7 +1199,7 @@
 /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h
  mmc:Q_OBJECT
  mdp:/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h
  mdp:/usr/include/alloca.h
  mdp:/usr/include/asm-generic/errno-base.h
  mdp:/usr/include/asm-generic/errno.h
@@ -1645,12 +1645,12 @@
 /home/usuario/robocomp/components/grupo4/practica3/src/specificmonitor.h
  mmc:Q_OBJECT
  mdp:/home/usuario/robocomp/components/grupo4/practica3/src/specificmonitor.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/config.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/genericmonitor.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/genericworker.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/qlog/qlog.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/config.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/genericmonitor.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/genericworker.h
+ mdp:/home/usuario/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h
+ mdp:/home/usuario/robocomp/robocomp_core/classes/qlog/qlog.h
  mdp:/usr/include/GL/gl.h
  mdp:/usr/include/Ice/Application.h
  mdp:/usr/include/Ice/AsyncResult.h
@@ -2534,7 +2534,7 @@
 /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h
  mmc:Q_OBJECT
  mdp:/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h
  mdp:/usr/include/alloca.h
  mdp:/usr/include/asm-generic/errno-base.h
  mdp:/usr/include/asm-generic/errno.h
@@ -2909,11 +2909,11 @@
 /home/usuario/robocomp/components/grupo4/practica3/src/genericmonitor.h
  mmc:Q_OBJECT
  mdp:/home/usuario/robocomp/components/grupo4/practica3/src/genericmonitor.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/config.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/genericworker.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/qlog/qlog.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/config.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/genericworker.h
+ mdp:/home/usuario/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h
+ mdp:/home/usuario/robocomp/robocomp_core/classes/qlog/qlog.h
  mdp:/usr/include/GL/gl.h
  mdp:/usr/include/Ice/Application.h
  mdp:/usr/include/Ice/AsyncResult.h
@@ -3791,10 +3791,10 @@
 /home/usuario/robocomp/components/grupo4/practica3/src/genericworker.h
  mmc:Q_OBJECT
  mdp:/home/usuario/robocomp/components/grupo4/practica3/src/genericworker.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/config.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/qlog/qlog.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/config.h
+ mdp:/home/usuario/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h
+ mdp:/home/usuario/robocomp/robocomp_core/classes/qlog/qlog.h
  mdp:/usr/include/GL/gl.h
  mdp:/usr/include/alloca.h
  mdp:/usr/include/asm-generic/errno-base.h
@@ -4548,7 +4548,7 @@
 /home/robocomp/robocomp/classes/sigwatch/sigwatch.h
  mmc:Q_OBJECT
  mdp:/home/robocomp/robocomp/classes/sigwatch/sigwatch.h
- mdp:/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica3/src/obs_person_tracker_autogen/moc_predefs.h
  mdp:/usr/include/alloca.h
  mdp:/usr/include/asm-generic/errno-base.h
  mdp:/usr/include/asm-generic/errno.h

@@ -81,7 +81,7 @@ class SpecificWorker : public GenericWorker
         // state machine
         enum class STATE
         {
-            TRACK, STOP, WAIT
+            TRACK, STOP, WAIT, SEARCH
         };
         STATE state = STATE::TRACK;
         using RetVal = std::tuple<STATE, float, float>;
@@ -94,6 +94,7 @@ class SpecificWorker : public GenericWorker
                      auto &filtered_points,
                      const rc::Room &room_model,
                      const std::vector<QPolygonF> &obstacles);
+        RetVal search(const TPerson &person);
         RetVal wait(const TPerson &tp_person);
         RetVal stop();
         RobotSpeed state_machine(const TPerson &tp_person,
@@ -142,6 +143,9 @@ class SpecificWorker : public GenericWorker
         using Corners =  std::vector<std::tuple<int, QPointF>>;
         using All_Corners = std::vector<std::tuple<QPointF, QPointF, QPointF, QPointF>>;
         using Features = std::tuple<Lines, Par_lines, Corners, All_Corners>;
+
+        std::vector<QPolygonF> enlarge_polygons(const std::vector<QPolygonF> &polygons, float amount);
+
 
     void stop_robot();
 };
