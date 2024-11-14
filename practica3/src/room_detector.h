@@ -39,6 +39,7 @@ namespace rc   // aka RoboComp
         public:
             Room detect(const std::vector<Eigen::Vector2f> &line, QGraphicsScene *scene=nullptr, bool draw_lines=false);
             Features compute_features(const std::vector<Eigen::Vector2f> &line, QGraphicsScene *scene= nullptr);
+
         private:
             Eigen::Vector3f estimate_room_sizes(const Eigen::Vector2f &room_center, std::vector<Eigen::Vector2f> &floor_line_cart) const;
             Lines get_hough_lines(std::vector<Eigen::Vector2f> &floor_line_cart) const;

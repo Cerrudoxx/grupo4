@@ -109,7 +109,7 @@ void SpecificWorker::compute()
     // draw_obstacles(obstacles, &viewer->scene, Qt::darkRed);
 
     // /// get obstacles as polygons using DBSCAN
-    auto obs = rc::dbscan(filtered_points, params.ROBOT_WIDTH, 2, params.ROBOT_WIDTH);
+    auto obs = rc::dbscan(filtered_points, params.ROBOT_WIDTH, 2);
     obstacles.insert(obstacles.end(), obs.begin(), obs.end());
     draw_lidar(filtered_points, &viewer->scene);
     draw_obstacles(obstacles, &viewer->scene, Qt::darkRed);
@@ -315,19 +315,26 @@ std::vector<QPolygonF> SpecificWorker::find_person_polygon_and_remove(const Robo
 
 std::vector<QPolygonF> SpecificWorker::enlarge_polygons(const std::vector<QPolygonF> &polygons, float amount)
 {
-    std::vector<QPolygonF> enlarged_polygons;
-    for (const auto &polygon : polygons)
+    std::vector<QPolygonF> enlargedPolygons;
+    for (const auto &poly : polygons)
     {
-        QPolygonF enlargedPolygon;
-        for (const auto &point : polygon)
+        QPolygonF exp_poly; // expanded polygon
+        if (poly.size() < 3)
+            continue;              // skip polygons with less than 3 points
+        QPolygonF copy_poly(poly); // copy of the polygon to insert the first point at the end
+        copy_poly << poly[0] << poly[1];
+        for (const auto &p : iter::sliding_window(copy_poly, 3))
         {
-            QPointF direction = point - polygon.boundingRect().center();
-            direction = direction / std::sqrt(direction.x() * direction.x() + direction.y() * direction.y());
-            enlargedPolygon << point + direction * amount;
+            const auto p1 = Eigen::Vector2f{p[0].x(), p[0].y()};
+            const auto p2 = Eigen::Vector2f{p[1].x(), p[1].y()};
+            const auto p3 = Eigen::Vector2f{p[2].x(), p[2].y()};
+            const auto bisectrix = ((p1 - p2).normalized() + (p3 - p2).normalized()).normalized();
+            const Eigen::Vector2f np2 = p2 - amount * bisectrix;
+            exp_poly << QPointF{np2.x(), np2.y()};
         }
-        enlarged_polygons.push_back(enlargedPolygon);
+        enlargedPolygons.emplace_back(exp_poly);
     }
-    return enlarged_polygons;
+    return enlargedPolygons;
 }
 
 void SpecificWorker::stop_robot()

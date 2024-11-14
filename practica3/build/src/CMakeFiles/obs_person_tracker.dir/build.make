@@ -172,38 +172,24 @@ src/CMakeFiles/obs_person_tracker.dir/specificmonitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obs_person_tracker.dir/specificmonitor.cpp.s"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica3/src/specificmonitor.cpp -o CMakeFiles/obs_person_tracker.dir/specificmonitor.cpp.s
 
-src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
-src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o: ../src/room_detector.cpp
-src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o -MF CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/src/room_detector.cpp
+src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
+src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o: /home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp
+src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o -MF CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o -c /home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp
 
-src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obs_person_tracker.dir/room_detector.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica3/src/room_detector.cpp > CMakeFiles/obs_person_tracker.dir/room_detector.cpp.i
+src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.i"
+	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp > CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.i
 
-src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obs_person_tracker.dir/room_detector.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica3/src/room_detector.cpp -o CMakeFiles/obs_person_tracker.dir/room_detector.cpp.s
-
-src/CMakeFiles/obs_person_tracker.dir/room.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
-src/CMakeFiles/obs_person_tracker.dir/room.cpp.o: ../src/room.cpp
-src/CMakeFiles/obs_person_tracker.dir/room.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/room.cpp.o"
-	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/room.cpp.o -MF CMakeFiles/obs_person_tracker.dir/room.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/room.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/src/room.cpp
-
-src/CMakeFiles/obs_person_tracker.dir/room.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obs_person_tracker.dir/room.cpp.i"
-	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica3/src/room.cpp > CMakeFiles/obs_person_tracker.dir/room.cpp.i
-
-src/CMakeFiles/obs_person_tracker.dir/room.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obs_person_tracker.dir/room.cpp.s"
-	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica3/src/room.cpp -o CMakeFiles/obs_person_tracker.dir/room.cpp.s
+src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.s"
+	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp -o CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.s
 
 src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o: ../src/dbscan.cpp
 src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o -MF CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/src/dbscan.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.i: cmake_force
@@ -214,10 +200,38 @@ src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obs_person_tracker.dir/dbscan.cpp.s"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica3/src/dbscan.cpp -o CMakeFiles/obs_person_tracker.dir/dbscan.cpp.s
 
+src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
+src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: ../src/visibility_graph.cpp
+src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o -MF CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/src/visibility_graph.cpp
+
+src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.i"
+	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica3/src/visibility_graph.cpp > CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.i
+
+src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.s"
+	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica3/src/visibility_graph.cpp -o CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.s
+
+src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
+src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o: ../src/room_detector.cpp
+src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o"
+	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o -MF CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/src/room_detector.cpp
+
+src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obs_person_tracker.dir/room_detector.cpp.i"
+	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo4/practica3/src/room_detector.cpp > CMakeFiles/obs_person_tracker.dir/room_detector.cpp.i
+
+src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obs_person_tracker.dir/room_detector.cpp.s"
+	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo4/practica3/src/room_detector.cpp -o CMakeFiles/obs_person_tracker.dir/room_detector.cpp.s
+
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: /home/robocomp/robocomp/classes/rapplication/rapplication.cpp
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -MF CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -c /home/robocomp/robocomp/classes/rapplication/rapplication.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i: cmake_force
@@ -231,7 +245,7 @@ src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplicatio
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -MF CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -c /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i: cmake_force
@@ -245,7 +259,7 @@ src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/si
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o: /home/robocomp/robocomp/classes/qlog/qlog.cpp
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o -MF CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o -c /home/robocomp/robocomp/classes/qlog/qlog.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.i: cmake_force
@@ -259,7 +273,7 @@ src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.c
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -MF CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -c /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i: cmake_force
@@ -273,7 +287,7 @@ src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep
 src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: ../src/main.cpp
 src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/main.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/main.cpp.o -MF CMakeFiles/obs_person_tracker.dir/main.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/main.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/src/main.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/main.cpp.i: cmake_force
@@ -287,7 +301,7 @@ src/CMakeFiles/obs_person_tracker.dir/main.cpp.s: cmake_force
 src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o: ../src/genericmonitor.cpp
 src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o -MF CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/src/genericmonitor.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.i: cmake_force
@@ -301,7 +315,7 @@ src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.s: cmake_force
 src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o: ../src/commonbehaviorI.cpp
 src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o -MF CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/src/commonbehaviorI.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.i: cmake_force
@@ -315,7 +329,7 @@ src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.s: cmake_force
 src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.o: ../src/genericworker.cpp
 src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.o -MF CMakeFiles/obs_person_tracker.dir/genericworker.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/genericworker.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/src/genericworker.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.i: cmake_force
@@ -329,7 +343,7 @@ src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.s: cmake_force
 src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.o: ../src/visualelementspubI.cpp
 src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.o -MF CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/src/visualelementspubI.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.i: cmake_force
@@ -343,7 +357,7 @@ src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.s: cmake_force
 src/CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.o: src/CommonBehavior.cpp
 src/CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.o -MF CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/build/src/CommonBehavior.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.i: cmake_force
@@ -357,7 +371,7 @@ src/CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.s: cmake_force
 src/CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.o: src/Camera360RGB.cpp
 src/CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.o -MF CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/build/src/Camera360RGB.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.i: cmake_force
@@ -371,7 +385,7 @@ src/CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.s: cmake_force
 src/CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.o: src/GenericBase.cpp
 src/CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.o -MF CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/build/src/GenericBase.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.i: cmake_force
@@ -385,7 +399,7 @@ src/CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.s: cmake_force
 src/CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.o: src/Lidar3D.cpp
 src/CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.o -MF CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/build/src/Lidar3D.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.i: cmake_force
@@ -399,7 +413,7 @@ src/CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.s: cmake_force
 src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.o: src/OmniRobot.cpp
 src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.o -MF CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/build/src/OmniRobot.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.i: cmake_force
@@ -413,7 +427,7 @@ src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.s: cmake_force
 src/CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.o: src/CMakeFiles/obs_person_tracker.dir/flags.make
 src/CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.o: src/VisualElementsPub.cpp
 src/CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.o: src/CMakeFiles/obs_person_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object src/CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.o"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.o -MF CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.o.d -o CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.o -c /home/usuario/robocomp/components/grupo4/practica3/build/src/VisualElementsPub.cpp
 
 src/CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.i: cmake_force
@@ -430,9 +444,10 @@ obs_person_tracker_OBJECTS = \
 "CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o" \
 "CMakeFiles/obs_person_tracker.dir/specificworker.cpp.o" \
 "CMakeFiles/obs_person_tracker.dir/specificmonitor.cpp.o" \
-"CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o" \
-"CMakeFiles/obs_person_tracker.dir/room.cpp.o" \
+"CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o" \
 "CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o" \
+"CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o" \
+"CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o" \
 "CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o" \
 "CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o" \
 "CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o" \
@@ -456,9 +471,10 @@ obs_person_tracker_EXTERNAL_OBJECTS =
 ../bin/obs_person_tracker: src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
 ../bin/obs_person_tracker: src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.o
 ../bin/obs_person_tracker: src/CMakeFiles/obs_person_tracker.dir/specificmonitor.cpp.o
-../bin/obs_person_tracker: src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o
-../bin/obs_person_tracker: src/CMakeFiles/obs_person_tracker.dir/room.cpp.o
+../bin/obs_person_tracker: src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o
 ../bin/obs_person_tracker: src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o
+../bin/obs_person_tracker: src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o
+../bin/obs_person_tracker: src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o
 ../bin/obs_person_tracker: src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o
 ../bin/obs_person_tracker: src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o
 ../bin/obs_person_tracker: src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o
@@ -542,7 +558,7 @@ obs_person_tracker_EXTERNAL_OBJECTS =
 ../bin/obs_person_tracker: /usr/lib/x86_64-linux-gnu/libGLX.so
 ../bin/obs_person_tracker: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 ../bin/obs_person_tracker: src/CMakeFiles/obs_person_tracker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable ../../bin/obs_person_tracker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX executable ../../bin/obs_person_tracker"
 	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/obs_person_tracker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

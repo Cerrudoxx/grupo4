@@ -512,10 +512,6 @@
 		"/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules-release.cmake",
-		"/usr/lib/x86_64-linux-gnu/cmake/mlpack/mlpack-config-version.cmake",
-		"/usr/lib/x86_64-linux-gnu/cmake/mlpack/mlpack-config.cmake",
-		"/usr/lib/x86_64-linux-gnu/cmake/mlpack/mlpack-targets.cmake",
-		"/usr/lib/x86_64-linux-gnu/cmake/mlpack/mlpack-targets-none.cmake",
 		"/usr/share/cmake-3.22/Modules/FindIce.cmake",
 		"/usr/share/cmake-3.22/Modules/SelectLibraryConfigurations.cmake",
 		"/usr/share/cmake-3.22/Modules/SelectLibraryConfigurations.cmake",
@@ -549,6 +545,12 @@
 			"/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h",
 			"MU",
 			"WJD4WNSKOL/moc_GRAFCETStep.cpp",
+			null
+		],
+		[
+			"/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.h",
+			"MU",
+			"Y55KOZ7QAZ/moc_qcustomplot.cpp",
 			null
 		],
 		[
@@ -594,12 +596,6 @@
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/grupo4/practica3/src/room.h",
-			"MU",
-			"EWIEGA46WW/moc_room.cpp",
-			null
-		],
-		[
 			"/home/usuario/robocomp/components/grupo4/practica3/src/room_detector.h",
 			"MU",
 			"EWIEGA46WW/moc_room_detector.cpp",
@@ -615,6 +611,12 @@
 			"/home/usuario/robocomp/components/grupo4/practica3/src/specificworker.h",
 			"MU",
 			"EWIEGA46WW/moc_specificworker.cpp",
+			null
+		],
+		[
+			"/home/usuario/robocomp/components/grupo4/practica3/src/visibility_graph.h",
+			"MU",
+			"EWIEGA46WW/moc_visibility_graph.cpp",
 			null
 		],
 		[
@@ -716,6 +718,11 @@
 			"MU",
 			null
 		],
+		[
+			"/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp",
+			"MU",
+			null
+		],
 		[ "/home/robocomp/robocomp/classes/qlog/qlog.cpp", "MU", null ],
 		[
 			"/home/robocomp/robocomp/classes/rapplication/rapplication.cpp",
@@ -749,11 +756,6 @@
 			null
 		],
 		[
-			"/home/usuario/robocomp/components/grupo4/practica3/src/room.cpp",
-			"MU",
-			null
-		],
-		[
 			"/home/usuario/robocomp/components/grupo4/practica3/src/room_detector.cpp",
 			"MU",
 			null
@@ -765,6 +767,11 @@
 		],
 		[
 			"/home/usuario/robocomp/components/grupo4/practica3/src/specificworker.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/usuario/robocomp/components/grupo4/practica3/src/visibility_graph.cpp",
 			"MU",
 			null
 		],

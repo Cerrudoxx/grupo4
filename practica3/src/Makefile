@@ -491,6 +491,30 @@ home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s:
 	cd /home/usuario/robocomp/components/grupo4/practica3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
 .PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
 
+home/robocomp/robocomp/classes/qcustomplot/qcustomplot.o: home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o
+.PHONY : home/robocomp/robocomp/classes/qcustomplot/qcustomplot.o
+
+# target to build an object file
+home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o:
+	cd /home/usuario/robocomp/components/grupo4/practica3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o
+.PHONY : home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o
+
+home/robocomp/robocomp/classes/qcustomplot/qcustomplot.i: home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.i
+.PHONY : home/robocomp/robocomp/classes/qcustomplot/qcustomplot.i
+
+# target to preprocess a source file
+home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.i:
+	cd /home/usuario/robocomp/components/grupo4/practica3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.i
+.PHONY : home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.i
+
+home/robocomp/robocomp/classes/qcustomplot/qcustomplot.s: home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.s
+.PHONY : home/robocomp/robocomp/classes/qcustomplot/qcustomplot.s
+
+# target to generate assembly for a file
+home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.s:
+	cd /home/usuario/robocomp/components/grupo4/practica3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.s
+.PHONY : home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.s
+
 home/robocomp/robocomp/classes/qlog/qlog.o: home/robocomp/robocomp/classes/qlog/qlog.cpp.o
 .PHONY : home/robocomp/robocomp/classes/qlog/qlog.o
 
@@ -611,30 +635,6 @@ obs_person_tracker_autogen/mocs_compilation.cpp.s:
 	cd /home/usuario/robocomp/components/grupo4/practica3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilation.cpp.s
 .PHONY : obs_person_tracker_autogen/mocs_compilation.cpp.s
 
-room.o: room.cpp.o
-.PHONY : room.o
-
-# target to build an object file
-room.cpp.o:
-	cd /home/usuario/robocomp/components/grupo4/practica3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/room.cpp.o
-.PHONY : room.cpp.o
-
-room.i: room.cpp.i
-.PHONY : room.i
-
-# target to preprocess a source file
-room.cpp.i:
-	cd /home/usuario/robocomp/components/grupo4/practica3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/room.cpp.i
-.PHONY : room.cpp.i
-
-room.s: room.cpp.s
-.PHONY : room.s
-
-# target to generate assembly for a file
-room.cpp.s:
-	cd /home/usuario/robocomp/components/grupo4/practica3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/room.cpp.s
-.PHONY : room.cpp.s
-
 room_detector.o: room_detector.cpp.o
 .PHONY : room_detector.o
 
@@ -706,6 +706,30 @@ specificworker.s: specificworker.cpp.s
 specificworker.cpp.s:
 	cd /home/usuario/robocomp/components/grupo4/practica3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.s
 .PHONY : specificworker.cpp.s
+
+visibility_graph.o: visibility_graph.cpp.o
+.PHONY : visibility_graph.o
+
+# target to build an object file
+visibility_graph.cpp.o:
+	cd /home/usuario/robocomp/components/grupo4/practica3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o
+.PHONY : visibility_graph.cpp.o
+
+visibility_graph.i: visibility_graph.cpp.i
+.PHONY : visibility_graph.i
+
+# target to preprocess a source file
+visibility_graph.cpp.i:
+	cd /home/usuario/robocomp/components/grupo4/practica3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.i
+.PHONY : visibility_graph.cpp.i
+
+visibility_graph.s: visibility_graph.cpp.s
+.PHONY : visibility_graph.s
+
+# target to generate assembly for a file
+visibility_graph.cpp.s:
+	cd /home/usuario/robocomp/components/grupo4/practica3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.s
+.PHONY : visibility_graph.cpp.s
 
 visualelementspubI.o: visualelementspubI.cpp.o
 .PHONY : visualelementspubI.o
@@ -782,6 +806,9 @@ help:
 	@echo "... home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.o"
 	@echo "... home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.i"
 	@echo "... home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.s"
+	@echo "... home/robocomp/robocomp/classes/qcustomplot/qcustomplot.o"
+	@echo "... home/robocomp/robocomp/classes/qcustomplot/qcustomplot.i"
+	@echo "... home/robocomp/robocomp/classes/qcustomplot/qcustomplot.s"
 	@echo "... home/robocomp/robocomp/classes/qlog/qlog.o"
 	@echo "... home/robocomp/robocomp/classes/qlog/qlog.i"
 	@echo "... home/robocomp/robocomp/classes/qlog/qlog.s"
@@ -797,9 +824,6 @@ help:
 	@echo "... obs_person_tracker_autogen/mocs_compilation.o"
 	@echo "... obs_person_tracker_autogen/mocs_compilation.i"
 	@echo "... obs_person_tracker_autogen/mocs_compilation.s"
-	@echo "... room.o"
-	@echo "... room.i"
-	@echo "... room.s"
 	@echo "... room_detector.o"
 	@echo "... room_detector.i"
 	@echo "... room_detector.s"
@@ -809,6 +833,9 @@ help:
 	@echo "... specificworker.o"
 	@echo "... specificworker.i"
 	@echo "... specificworker.s"
+	@echo "... visibility_graph.o"
+	@echo "... visibility_graph.i"
+	@echo "... visibility_graph.s"
 	@echo "... visualelementspubI.o"
 	@echo "... visualelementspubI.i"
 	@echo "... visualelementspubI.s"
