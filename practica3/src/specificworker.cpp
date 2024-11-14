@@ -131,7 +131,7 @@ void SpecificWorker::compute()
     {
         // /// find the polygon that contains the person and remove it
         obstacles = find_person_polygon_and_remove(tp_person.value(), obstacles);
-        auto enlargedObstacles = enlarge_polygons(obstacles, 100);
+        auto enlargedObstacles = enlarge_polygons(obstacles, params.ROBOT_WIDTH / 2);  
         draw_obstacles(enlargedObstacles, &viewer->scene, Qt::darkYellow);
 
         /// compute an obstacle free path
@@ -144,6 +144,15 @@ void SpecificWorker::compute()
             stop_robot();
             return;
         }
+
+         Eigen::Vector2f goal{std::stof(tp_person.value().attributes.at("x_pos")), std::stof(tp_person.value().attributes.at("y_pos"))};
+        std::vector<Eigen::Vector2f> path = rc::VisibilityGraph().generate_path(Eigen::Vector2f::Zero(),
+                                                                                goal,
+                                                                                obstacles,
+                                                                                params.ROBOT_WIDTH / 2,
+                                                                                nullptr);
+
+        draw_path_to_person(path, &viewer->scene);
     }
 
     std::vector<RoboCompLidar3D::TPoint> ldata;
@@ -151,6 +160,20 @@ void SpecificWorker::compute()
                    { return RoboCompLidar3D::TPoint{a.x(), a.y(), 0, 0}; });
     // call state machine to track the first point of the path
     const auto &[adv, rot] = state_machine(tp_person, ldata, room_model, obstacles);
+
+      
+
+    // plot on UI
+    if(tp_person)
+    {
+        float d = std::hypot(std::stof(tp_person.value().attributes.at("x_pos")),
+                                 std::stof(tp_person.value().attributes.at("y_pos")));
+        plot_distance(running_average(d) - params.PERSON_MIN_DIST);
+        lcdNumber_dist_to_person->display(d);
+        lcdNumber_angle_to_person->display(atan2(std::stof(tp_person.value().attributes.at("x_pos")),
+                                                 std::stof(tp_person.value().attributes.at("y_pos"))));
+    }
+
 
     // move the robot
     try
@@ -522,6 +545,14 @@ SpecificWorker::RetVal SpecificWorker::stop() // TODO: release to let the joysit
 
     return RetVal(STATE::STOP, 0.f, 0.f);
 }
+float SpecificWorker::running_average(float dist)
+{
+    static float avg = 0;
+    static int count = 0;
+    avg = (avg * count + dist) / (count + 1);
+    count++;
+    return avg;
+}
 /**
  * Draws LIDAR points onto a QGraphicsScene.
  *
@@ -569,9 +600,9 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
  */
 void SpecificWorker::draw_person(RoboCompVisualElementsPub::TObject &person, QGraphicsScene *scene) const
 {
-    static std::vector<QGraphicsItem *> items;
+    static std::vector<QGraphicsItem*> items;
     // remove all items drawn in the previous iteration
-    for (auto i : items)
+    for(auto i: items)
     {
         scene->removeItem(i);
         delete i;
@@ -580,7 +611,7 @@ void SpecificWorker::draw_person(RoboCompVisualElementsPub::TObject &person, QGr
 
     // draw a circle around the person
     float radius = 300;
-    auto person_draw = scene->addEllipse(-radius, -radius, radius * 2, radius * 2, QPen(Qt::magenta, 30));
+    auto person_draw = scene->addEllipse(-radius, -radius, radius*2, radius*2, QPen(Qt::magenta, 30));
     person_draw->setPos(std::stof(person.attributes["x_pos"]), std::stof(person.attributes["y_pos"]));
     items.push_back(person_draw);
 
@@ -589,16 +620,16 @@ void SpecificWorker::draw_person(RoboCompVisualElementsPub::TObject &person, QGr
     auto y = std::stof(person.attributes.at("y_pos"));
     auto angle = std::stof(person.attributes.at("orientation")) + M_PI;
     auto item_radius = scene->addLine(QLineF(QPointF(x, y),
-                                             QPointF(x - radius * sin(angle), y + radius * cos(angle))),
-                                      QPen(Qt::magenta, 20));
+                                                                    QPointF( x - radius * sin(angle),y + radius * cos(angle))),
+                                                         QPen(Qt::magenta, 20));
     items.push_back(item_radius);
 
     // draw a line from the robot to the person circle but ending on the circunference. The end point is the exterior of the circle
     // I need a line from the robot to the person x,y but it has to be 300mm shorter
     auto len = std::hypot(x, y);
     auto item_line = scene->addLine(QLineF(QPointF(0.f, 0.f),
-                                           QPointF((len - radius) * x / len, (len - radius) * y / len)),
-                                    QPen(Qt::magenta, 20));
+                                                                   QPointF((len -radius) *x/len, (len - radius)*y/len )),
+                                                           QPen(Qt::magenta, 20));
     items.push_back(item_line);
 }
 std::expected<int, string> SpecificWorker::closest_lidar_index_to_given_angle(const auto &points, float angle)
@@ -638,32 +669,32 @@ QPolygonF SpecificWorker::shrink_polygon(const QPolygonF &polygon, qreal amount)
     }
     return shrunkPolygon;
 }
+
 void SpecificWorker::draw_obstacles(const vector<QPolygonF> &list_poly, QGraphicsScene *scene, const QColor &color) const
 {
-    static std::vector<QGraphicsItem *> items;
+    static std::vector<QGraphicsItem*> items;
     // remove all items drawn in the previous iteration
-    for (auto i : items)
+    for(auto i: items)
     {
         scene->removeItem(i);
         delete i;
     }
     items.clear();
 
-    for (const auto &poly : list_poly)
+    for(const auto &poly : list_poly)
     {
-        auto item = scene->addPolygon(poly, QPen(color, 30));
+        auto item = scene->addPolygon(poly, QPen(color, 50));
         items.push_back(item);
     }
 }
-
 void SpecificWorker::draw_path_to_person(const auto &points, QGraphicsScene *scene)
 {
-    if (points.empty())
+    if(points.empty())
         return;
 
     // remove all items drawn in the previous iteration
-    static std::vector<QGraphicsItem *> items;
-    for (auto i : items)
+    static std::vector<QGraphicsItem*> items;
+    for(auto i: items)
     {
         scene->removeItem(i);
         delete i;
@@ -673,35 +704,25 @@ void SpecificWorker::draw_path_to_person(const auto &points, QGraphicsScene *sce
     // draw the path as a series of lines with dots in between
     for (auto i : iter::range(0UL, points.size() - 1))
     {
-        auto line = scene->addLine(QLineF(QPointF(points[i].x(), points[i].y()), QPointF(points[i + 1].x(), points[i + 1].y())),
+        auto line = scene->addLine(QLineF(QPointF(points[i].x(), points[i].y()), QPointF(points[i+1].x(), points[i+1].y())),
                                    QPen(Qt::blue, 40));
         items.push_back(line);
         auto dot = scene->addEllipse(-30, -30, 60, 60, QPen(Qt::darkBlue, 40));
         dot->setPos(points[i].x(), points[i].y());
-        items.push_back(dot);
+       items.push_back(dot);
     }
 }
-void SpecificWorker::draw_path(const auto &points, QGraphicsScene *scene, const QColor &color) const
+
+void SpecificWorker::plot_distance(double distance)
 {
-    if (points.empty())
-        return;
-
-    // remove all items drawn in the previous iteration
-    static std::vector<QGraphicsItem *> items;
-    for (auto i : items)
-    {
-        scene->removeItem(i);
-        delete i;
-    }
-    items.clear();
-
-    // draw the path as a series of lines with dots in between
-    for (auto i : iter::range(0UL, points.size() - 1))
-    {
-        auto line = scene->addLine(QLineF(QPointF(points[i].x(), points[i].y()), QPointF(points[i + 1].x(), points[i + 1].y())),
-                                   QPen(color, 40));
-        items.push_back(line);
-    }
+    // add value to plot
+    static int key = 0;
+    plot->graph(0)->addData(key++, distance);
+    // Remove data points if there are more than X
+    if (plot->graph(0)->dataCount() > params.MAX_DIST_POINTS_TO_SHOW)
+        plot->graph(0)->data()->removeBefore(key - params.MAX_DIST_POINTS_TO_SHOW);
+    // plot
+    plot->rescaleAxes();  plot->replot();
 }
 //////////////////////////////////////////////////////////////////
 /// SUBSCRIPTIONS (called in a different thread)
