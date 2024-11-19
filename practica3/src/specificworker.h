@@ -32,12 +32,11 @@
 #include <expected>
 #include <random>
 #include <doublebuffer_sync/doublebuffer_sync.h>
-#include "room.h"
+#include <locale>
+#include <qcustomplot/qcustomplot.h>
 #include "room_detector.h"
 #include "dbscan.h"
-#include <locale>
-#include <Eigen/Geometry> // For ParametrizedLine
-#include <qcustomplot/qcustomplot.h>
+#include "visibility_graph.h"
 
 class SpecificWorker : public GenericWorker
 {
@@ -69,13 +68,16 @@ private:
         // person
         float PERSON_MIN_DIST = 1100;                // mm
         float POINT_LINE_MEMBERSHIP_THRESHOLD = 100; // threshold for point to line membership
-        int MAX_DIST_POINTS_TO_SHOW = 300; // points to show in plot
+        int MAX_DIST_POINTS_TO_SHOW = 300;           // points to show in plot
 
         std::string LIDAR_NAME_LOW = "bpearl";
         std::string LIDAR_NAME_HIGH = "helios";
         QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
 
         int MPC_NUM_STEPS = 10;
+        float acc_distance_factor = 2;
+        float k1 = 1.1; // proportional gain for the angle error;
+        float k2 = 0.5; // proportional gain for derivative of the angle error;
     };
     Params params;
 
@@ -91,18 +93,13 @@ private:
     using RetVal = std::tuple<STATE, float, float>;
     using RobotSpeed = std::tuple<float, float>;
     using TPerson = std::expected<RoboCompVisualElementsPub::TObject, std::string>;
-
-    RetVal track(const TPerson &tp_person,
-                 auto &filtered_points,
-                 const rc::Room &room_model,
-                 const std::vector<QPolygonF> &obstacles);
+    
+    RetVal track(const TPerson &person,  std::vector<Eigen::Vector2f> path);
+    RetVal wait(const TPerson &person);
     RetVal search(const TPerson &person);
-    RetVal wait(const TPerson &tp_person);
     RetVal stop();
-    RobotSpeed state_machine(const TPerson &tp_person,
-                             const RoboCompLidar3D::TPoints &points,
-                             const rc::Room &room_model,
-                             const std::vector<QPolygonF> &obstacles);
+    RobotSpeed state_machine(const TPerson &person,  std::vector<Eigen::Vector2f> path);
+
 
     // lidar
     std::vector<Eigen::Vector2f> read_lidar_bpearl();
@@ -116,8 +113,17 @@ private:
     void draw_path_to_person(const auto &points, QGraphicsScene *scene);
     void draw_obstacles(const vector<QPolygonF> &list_poly, QGraphicsScene *scene, const QColor &color) const;
 
+    // room
+    rc::Room_Detector room_detector;
+    std::vector<QLineF> detect_wall_lines(const vector<Eigen::Vector2f> &points, QGraphicsScene *scene);
+    std::vector<Eigen::Vector2f> remove_wall_points(const std::vector<QLineF> &lines, const auto &bpearl);
+    std::vector<QPolygonF> get_walls_as_polygons(const std::vector<QLineF> &lines, float robot_width);
+    std::vector<QPolygonF> enlarge_polygons(const std::vector<QPolygonF> &polygons, float amount);
+
+    // person
     std::expected<RoboCompVisualElementsPub::TObject, std::string> find_person_in_data(const std::vector<RoboCompVisualElementsPub::TObject> &objects);
-    std::vector<QPolygonF> find_person_polygon_and_remove(const RoboCompVisualElementsPub::TObject &person, std::vector<QPolygonF> &obstacles);
+    std::vector<QPolygonF> find_person_polygon_and_remove(const RoboCompVisualElementsPub::TObject &person, const std::vector<QPolygonF> &obstacles);
+
     // aux
     std::expected<int, string> closest_lidar_index_to_given_angle(const auto &points, float angle);
 
@@ -127,28 +133,9 @@ private:
     // DoubleBufferSync to syncronize the subscription thread with compute
     BufferSync<InOut<RoboCompVisualElementsPub::TData, RoboCompVisualElementsPub::TData>> buffer;
 
-    // room
-    rc::Room_Detector room_detector;
-    void update_room_model(const auto &points, QGraphicsScene *scene);
-    rc::Room room_model;
-    QPolygonF shrink_polygon(const QPolygonF &polygon, qreal amount);
-    std::vector<Eigen::Vector2f> remove_wall_points(const std::vector<QLineF> &Lines, const auto &bpearl);
-    std::vector<QPolygonF> get_walls_as_polygons(const std::vector<QLineF> &lines, float robot_width);
-    // Nuestro código
-    std::vector<QLineF> detect_wall_lines(const auto &helios, QGraphicsScene *);
-
-    using Lines = std::vector<std::pair<int, QLineF>>;
-    using Par_lines = std::vector<std::pair<QLineF, QLineF>>;
-    using Corners = std::vector<std::tuple<int, QPointF>>;
-    using All_Corners = std::vector<std::tuple<QPointF, QPointF, QPointF, QPointF>>;
-    using Features = std::tuple<Lines, Par_lines, Corners, All_Corners>;
-
-    std::vector<QPolygonF> enlarge_polygons(const std::vector<QPolygonF> &polygons, float amount);
-
     // QCustomPlot object
     QCustomPlot *plot;
     void plot_distance(double distance);
-    void stop_robot();
 
     float running_average(float dist);
 };

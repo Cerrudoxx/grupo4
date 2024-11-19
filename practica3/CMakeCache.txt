@@ -392,9 +392,6 @@ Ice_SLICE_DIR:PATH=/usr/share/ice/slice
 //Ice transformdb executable
 Ice_TRANSFORMDB_EXECUTABLE:FILEPATH=Ice_TRANSFORMDB_EXECUTABLE-NOTFOUND
 
-//The directory containing a CMake configuration file for MLPACK.
-MLPACK_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/mlpack
-
 //Path to a file.
 OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
 
