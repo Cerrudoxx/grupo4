@@ -391,26 +391,35 @@ SpecificWorker::RetVal SpecificWorker::track(const TPerson &tp_person, std::vect
     qDebug() << BLUE;
     qDebug() << "TRACK";
     qDebug() << RESET;
-    if (not tp_person)
+
+    if (!tp_person)
     {
         qDebug() << "Persona no detectada en TRACK";
         return RetVal(STATE::SEARCH, 0.f, 0.f);
     }
-    auto distance = std::hypot(std::stof(tp_person.value().attributes.at("x_pos")), std::stof(tp_person.value().attributes.at("y_pos")));
-    lcdNumber_dist_to_person->display(distance);
+
     float x = std::stof(tp_person.value().attributes.at("x_pos"));
     float y = std::stof(tp_person.value().attributes.at("y_pos"));
+    auto distance = std::hypot(x, y);
+    lcdNumber_dist_to_person->display(distance);
+
     float angle_to_person = std::atan2(y, x);
     qDebug() << "Angle to person: " << angle_to_person;
+
     float corrector = 0.9;
     float maxAngle = M_PI;
     float minAngle = 0;
     float center = 1.6;
+
     auto calculate_vel_giro = [angle_to_person, center, minAngle, maxAngle, corrector]() -> float
     {
-        return compare_floats(angle_to_person, center, 0.1) ? 0 : (angle_to_person < center && angle_to_person > minAngle) ? ((1.6 - angle_to_person) / (1.6 - 0.5)) * corrector
-                                                              : (angle_to_person > center && angle_to_person < maxAngle)   ? -((angle_to_person - 1.7) / (2.5 - 1.7)) * corrector
-                                                                                                                           : 0;
+        if (compare_floats(angle_to_person, center, 0.1))
+            return 0;
+        if (angle_to_person < center && angle_to_person > minAngle)
+            return ((1.6 - angle_to_person) / (1.6 - 0.5)) * corrector;
+        if (angle_to_person > center && angle_to_person < maxAngle)
+            return -((angle_to_person - 1.7) / (2.5 - 1.7)) * corrector;
+        return 0;
     };
 
     float vel_giro = std::clamp(calculate_vel_giro(), -1.5f, 1.5f);
@@ -431,20 +440,20 @@ SpecificWorker::RetVal SpecificWorker::track(const TPerson &tp_person, std::vect
 
         auto calculate_vel_giroNextStep = [angleNextStep, center, minAngle, maxAngle, corrector]() -> float
         {
-            return compare_floats(angleNextStep, center, 0.1) ? 0 : (angleNextStep < center && angleNextStep > minAngle) ? ((1.6 - angleNextStep) / (1.6 - 0.5)) * corrector
-                                      : (angleNextStep > center && angleNextStep < maxAngle)   ? -((angleNextStep - 1.7) / (2.5 - 1.7)) * corrector
-                                                                       : 0;
+            if (compare_floats(angleNextStep, center, 0.1))
+                return 0;
+            if (angleNextStep < center && angleNextStep > minAngle)
+                return ((1.6 - angleNextStep) / (1.6 - 0.5)) * corrector;
+            if (angleNextStep > center && angleNextStep < maxAngle)
+                return -((angleNextStep - 1.7) / (2.5 - 1.7)) * corrector;
+            return 0;
         };
-        
-        float vel_giroNextStep = calculate_vel_giroNextStep();
-        vel_giroNextStep = std::clamp(calculate_vel_giro(), -2.f, 2.f);
 
-        
-
+        float vel_giroNextStep = std::clamp(calculate_vel_giroNextStep(), -2.f, 2.f);
         float vel_forwardNextStep = vel_forward;
 
         if (distance > 700)
-        {   
+        {
             qDebug() << "Siguiendo al siguiente paso del path";
             return RetVal(STATE::TRACK, vel_forwardNextStep, vel_giroNextStep);
         }
