@@ -129,7 +129,7 @@ void SpecificWorker::compute()
         obstacles = find_person_polygon_and_remove(tp_person.value(), obstacles);
 
     /// enlarge obstacles
-    obstacles = enlarge_polygons(obstacles, params.ROBOT_WIDTH);
+    obstacles = enlarge_polygons(obstacles, params.ROBOT_WIDTH/2);
     draw_obstacles(obstacles, &viewer->scene, Qt::darkMagenta);
 
     /// get walls as polygons
@@ -318,8 +318,9 @@ std::vector<QPolygonF> SpecificWorker::find_person_polygon_and_remove(const Robo
     QPointF pp = QPointF(std::stof(person.attributes.at("x_pos")), std::stof(person.attributes.at("y_pos")));
     // compute 8 point around pp in circular configuration
     std::vector<QPointF> ppoly;
-    for (auto i : iter::range(0.0, 2 * M_PI, M_PI / 2))
-        ppoly.push_back(pp + QPointF(80 * cos(i), 80 * sin(i)));
+    ppoly.push_back(pp);
+    for (auto i : iter::range(0.0, 2 * M_PI, M_PI / 6))
+        ppoly.push_back(pp + QPointF(200 * cos(i), 200 * sin(i)));
     // check if any polygon contains the person and remove it
     for (const auto &poly : obstacles)
     {
