@@ -1157,6 +1157,14 @@ src/CMakeFiles/grid2D.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
  /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLCDNumber \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpacerItem \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSplitter \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/CommonBehavior.h \
  /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
@@ -1175,6 +1183,22 @@ src/CMakeFiles/grid2D.dir/main.cpp.o: \
  /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/Lidar3D.h \
  /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/specificworker.h \
  /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/genericworker.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsItem \
+ /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QMouseEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QResizeEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/QOpenGLWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/qopenglwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/qtopenglwidgetsglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollBar \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsPolygonItem \
+ /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/Lidar3D.h \
+ /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/Grid2D.h \
  /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/specificmonitor.h \
  /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/commonbehaviorI.h \
  /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/grid2dI.h

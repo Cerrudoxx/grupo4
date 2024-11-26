@@ -457,6 +457,9 @@
  mmc:Q_OBJECT
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/genericmonitor.h
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/grid2D_autogen/moc_predefs.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/CommonBehavior.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/Grid2D.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/Lidar3D.h
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/config.h
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/genericworker.h
  mdp:/home/usuario/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h
@@ -2087,6 +2090,9 @@
  mmc:Q_OBJECT
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/specificmonitor.h
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/grid2D_autogen/moc_predefs.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/CommonBehavior.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/Grid2D.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/Lidar3D.h
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/config.h
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/genericmonitor.h
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/genericworker.h
@@ -2970,10 +2976,86 @@
  mmc:Q_OBJECT
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/genericworker.h
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/grid2D_autogen/moc_predefs.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/CommonBehavior.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/Grid2D.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/Lidar3D.h
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/config.h
  mdp:/home/usuario/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h
  mdp:/home/usuario/robocomp/robocomp_core/classes/qlog/qlog.h
  mdp:/usr/include/GL/gl.h
+ mdp:/usr/include/Ice/AsyncResult.h
+ mdp:/usr/include/Ice/BatchRequestQueueF.h
+ mdp:/usr/include/Ice/Buffer.h
+ mdp:/usr/include/Ice/BuiltinSequences.h
+ mdp:/usr/include/Ice/CommunicatorF.h
+ mdp:/usr/include/Ice/Comparable.h
+ mdp:/usr/include/Ice/Config.h
+ mdp:/usr/include/Ice/ConnectionF.h
+ mdp:/usr/include/Ice/ConnectionIF.h
+ mdp:/usr/include/Ice/Current.h
+ mdp:/usr/include/Ice/DefaultValueFactory.h
+ mdp:/usr/include/Ice/EndpointF.h
+ mdp:/usr/include/Ice/EndpointTypes.h
+ mdp:/usr/include/Ice/Exception.h
+ mdp:/usr/include/Ice/ExceptionHelpers.h
+ mdp:/usr/include/Ice/FactoryTable.h
+ mdp:/usr/include/Ice/FactoryTableInit.h
+ mdp:/usr/include/Ice/Format.h
+ mdp:/usr/include/Ice/GCObject.h
+ mdp:/usr/include/Ice/Handle.h
+ mdp:/usr/include/Ice/Identity.h
+ mdp:/usr/include/Ice/Incoming.h
+ mdp:/usr/include/Ice/IncomingAsyncF.h
+ mdp:/usr/include/Ice/InputStream.h
+ mdp:/usr/include/Ice/InstanceF.h
+ mdp:/usr/include/Ice/Instrumentation.h
+ mdp:/usr/include/Ice/LocalException.h
+ mdp:/usr/include/Ice/LocalObject.h
+ mdp:/usr/include/Ice/LoggerF.h
+ mdp:/usr/include/Ice/Object.h
+ mdp:/usr/include/Ice/ObjectAdapterF.h
+ mdp:/usr/include/Ice/ObjectF.h
+ mdp:/usr/include/Ice/ObserverHelper.h
+ mdp:/usr/include/Ice/Optional.h
+ mdp:/usr/include/Ice/OutgoingAsync.h
+ mdp:/usr/include/Ice/OutgoingAsyncF.h
+ mdp:/usr/include/Ice/OutputStream.h
+ mdp:/usr/include/Ice/Protocol.h
+ mdp:/usr/include/Ice/Proxy.h
+ mdp:/usr/include/Ice/ProxyF.h
+ mdp:/usr/include/Ice/ProxyFactoryF.h
+ mdp:/usr/include/Ice/ProxyHandle.h
+ mdp:/usr/include/Ice/ReferenceF.h
+ mdp:/usr/include/Ice/RequestHandlerF.h
+ mdp:/usr/include/Ice/ResponseHandlerF.h
+ mdp:/usr/include/Ice/ServantLocatorF.h
+ mdp:/usr/include/Ice/ServantManagerF.h
+ mdp:/usr/include/Ice/SlicedDataF.h
+ mdp:/usr/include/Ice/StreamHelpers.h
+ mdp:/usr/include/Ice/UniquePtr.h
+ mdp:/usr/include/Ice/UserExceptionFactory.h
+ mdp:/usr/include/Ice/Value.h
+ mdp:/usr/include/Ice/ValueF.h
+ mdp:/usr/include/Ice/ValueFactory.h
+ mdp:/usr/include/Ice/Version.h
+ mdp:/usr/include/IceUtil/Atomic.h
+ mdp:/usr/include/IceUtil/Cond.h
+ mdp:/usr/include/IceUtil/Config.h
+ mdp:/usr/include/IceUtil/Exception.h
+ mdp:/usr/include/IceUtil/Handle.h
+ mdp:/usr/include/IceUtil/Lock.h
+ mdp:/usr/include/IceUtil/Monitor.h
+ mdp:/usr/include/IceUtil/Mutex.h
+ mdp:/usr/include/IceUtil/MutexProtocol.h
+ mdp:/usr/include/IceUtil/PopDisableWarnings.h
+ mdp:/usr/include/IceUtil/PushDisableWarnings.h
+ mdp:/usr/include/IceUtil/ScopedArray.h
+ mdp:/usr/include/IceUtil/Shared.h
+ mdp:/usr/include/IceUtil/Thread.h
+ mdp:/usr/include/IceUtil/ThreadException.h
+ mdp:/usr/include/IceUtil/Time.h
+ mdp:/usr/include/IceUtil/Timer.h
+ mdp:/usr/include/IceUtil/UndefSysMacros.h
  mdp:/usr/include/alloca.h
  mdp:/usr/include/asm-generic/errno-base.h
  mdp:/usr/include/asm-generic/errno.h
@@ -3005,6 +3087,7 @@
  mdp:/usr/include/c++/12/bits/cpp_type_traits.h
  mdp:/usr/include/c++/12/bits/cxxabi_forced.h
  mdp:/usr/include/c++/12/bits/cxxabi_init_exception.h
+ mdp:/usr/include/c++/12/bits/deque.tcc
  mdp:/usr/include/c++/12/bits/enable_special_members.h
  mdp:/usr/include/c++/12/bits/erase_if.h
  mdp:/usr/include/c++/12/bits/exception.h
@@ -3057,6 +3140,7 @@
  mdp:/usr/include/c++/12/bits/shared_ptr_atomic.h
  mdp:/usr/include/c++/12/bits/shared_ptr_base.h
  mdp:/usr/include/c++/12/bits/specfun.h
+ mdp:/usr/include/c++/12/bits/sstream.tcc
  mdp:/usr/include/c++/12/bits/std_abs.h
  mdp:/usr/include/c++/12/bits/std_function.h
  mdp:/usr/include/c++/12/bits/std_mutex.h
@@ -3064,6 +3148,7 @@
  mdp:/usr/include/c++/12/bits/stl_algobase.h
  mdp:/usr/include/c++/12/bits/stl_bvector.h
  mdp:/usr/include/c++/12/bits/stl_construct.h
+ mdp:/usr/include/c++/12/bits/stl_deque.h
  mdp:/usr/include/c++/12/bits/stl_function.h
  mdp:/usr/include/c++/12/bits/stl_heap.h
  mdp:/usr/include/c++/12/bits/stl_iterator.h
@@ -3072,10 +3157,12 @@
  mdp:/usr/include/c++/12/bits/stl_list.h
  mdp:/usr/include/c++/12/bits/stl_map.h
  mdp:/usr/include/c++/12/bits/stl_multimap.h
+ mdp:/usr/include/c++/12/bits/stl_multiset.h
  mdp:/usr/include/c++/12/bits/stl_numeric.h
  mdp:/usr/include/c++/12/bits/stl_pair.h
  mdp:/usr/include/c++/12/bits/stl_raw_storage_iter.h
  mdp:/usr/include/c++/12/bits/stl_relops.h
+ mdp:/usr/include/c++/12/bits/stl_set.h
  mdp:/usr/include/c++/12/bits/stl_tempbuf.h
  mdp:/usr/include/c++/12/bits/stl_tree.h
  mdp:/usr/include/c++/12/bits/stl_uninitialized.h
@@ -3091,6 +3178,7 @@
  mdp:/usr/include/c++/12/bits/uses_allocator_args.h
  mdp:/usr/include/c++/12/bits/utility.h
  mdp:/usr/include/c++/12/bits/vector.tcc
+ mdp:/usr/include/c++/12/cassert
  mdp:/usr/include/c++/12/cctype
  mdp:/usr/include/c++/12/cerrno
  mdp:/usr/include/c++/12/climits
@@ -3101,6 +3189,7 @@
  mdp:/usr/include/c++/12/concepts
  mdp:/usr/include/c++/12/cstddef
  mdp:/usr/include/c++/12/cstdint
+ mdp:/usr/include/c++/12/cstdio
  mdp:/usr/include/c++/12/cstdlib
  mdp:/usr/include/c++/12/cstring
  mdp:/usr/include/c++/12/ctime
@@ -3108,6 +3197,7 @@
  mdp:/usr/include/c++/12/cwctype
  mdp:/usr/include/c++/12/debug/assertions.h
  mdp:/usr/include/c++/12/debug/debug.h
+ mdp:/usr/include/c++/12/deque
  mdp:/usr/include/c++/12/exception
  mdp:/usr/include/c++/12/ext/aligned_buffer.h
  mdp:/usr/include/c++/12/ext/alloc_traits.h
@@ -3143,6 +3233,8 @@
  mdp:/usr/include/c++/12/pstl/glue_numeric_defs.h
  mdp:/usr/include/c++/12/random
  mdp:/usr/include/c++/12/ratio
+ mdp:/usr/include/c++/12/set
+ mdp:/usr/include/c++/12/sstream
  mdp:/usr/include/c++/12/stdexcept
  mdp:/usr/include/c++/12/streambuf
  mdp:/usr/include/c++/12/string
@@ -3624,6 +3716,7 @@
  mdp:/usr/include/x86_64-linux-gnu/sys/cdefs.h
  mdp:/usr/include/x86_64-linux-gnu/sys/select.h
  mdp:/usr/include/x86_64-linux-gnu/sys/syscall.h
+ mdp:/usr/include/x86_64-linux-gnu/sys/time.h
  mdp:/usr/include/x86_64-linux-gnu/sys/types.h
  mdp:/usr/lib/gcc/x86_64-linux-gnu/12/include/adxintrin.h
  mdp:/usr/lib/gcc/x86_64-linux-gnu/12/include/amxbf16intrin.h
@@ -3721,11 +3814,88 @@
  mmc:Q_OBJECT
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/specificworker.h
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/grid2D_autogen/moc_predefs.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/CommonBehavior.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/Grid2D.h
+ mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/Lidar3D.h
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/config.h
  mdp:/home/usuario/robocomp/components/grupo4/practica4/grid2D/src/genericworker.h
+ mdp:/home/usuario/robocomp/robocomp_core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h
  mdp:/home/usuario/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h
  mdp:/home/usuario/robocomp/robocomp_core/classes/qlog/qlog.h
  mdp:/usr/include/GL/gl.h
+ mdp:/usr/include/Ice/AsyncResult.h
+ mdp:/usr/include/Ice/BatchRequestQueueF.h
+ mdp:/usr/include/Ice/Buffer.h
+ mdp:/usr/include/Ice/BuiltinSequences.h
+ mdp:/usr/include/Ice/CommunicatorF.h
+ mdp:/usr/include/Ice/Comparable.h
+ mdp:/usr/include/Ice/Config.h
+ mdp:/usr/include/Ice/ConnectionF.h
+ mdp:/usr/include/Ice/ConnectionIF.h
+ mdp:/usr/include/Ice/Current.h
+ mdp:/usr/include/Ice/DefaultValueFactory.h
+ mdp:/usr/include/Ice/EndpointF.h
+ mdp:/usr/include/Ice/EndpointTypes.h
+ mdp:/usr/include/Ice/Exception.h
+ mdp:/usr/include/Ice/ExceptionHelpers.h
+ mdp:/usr/include/Ice/FactoryTable.h
+ mdp:/usr/include/Ice/FactoryTableInit.h
+ mdp:/usr/include/Ice/Format.h
+ mdp:/usr/include/Ice/GCObject.h
+ mdp:/usr/include/Ice/Handle.h
+ mdp:/usr/include/Ice/Identity.h
+ mdp:/usr/include/Ice/Incoming.h
+ mdp:/usr/include/Ice/IncomingAsyncF.h
+ mdp:/usr/include/Ice/InputStream.h
+ mdp:/usr/include/Ice/InstanceF.h
+ mdp:/usr/include/Ice/Instrumentation.h
+ mdp:/usr/include/Ice/LocalException.h
+ mdp:/usr/include/Ice/LocalObject.h
+ mdp:/usr/include/Ice/LoggerF.h
+ mdp:/usr/include/Ice/Object.h
+ mdp:/usr/include/Ice/ObjectAdapterF.h
+ mdp:/usr/include/Ice/ObjectF.h
+ mdp:/usr/include/Ice/ObserverHelper.h
+ mdp:/usr/include/Ice/Optional.h
+ mdp:/usr/include/Ice/OutgoingAsync.h
+ mdp:/usr/include/Ice/OutgoingAsyncF.h
+ mdp:/usr/include/Ice/OutputStream.h
+ mdp:/usr/include/Ice/Protocol.h
+ mdp:/usr/include/Ice/Proxy.h
+ mdp:/usr/include/Ice/ProxyF.h
+ mdp:/usr/include/Ice/ProxyFactoryF.h
+ mdp:/usr/include/Ice/ProxyHandle.h
+ mdp:/usr/include/Ice/ReferenceF.h
+ mdp:/usr/include/Ice/RequestHandlerF.h
+ mdp:/usr/include/Ice/ResponseHandlerF.h
+ mdp:/usr/include/Ice/ServantLocatorF.h
+ mdp:/usr/include/Ice/ServantManagerF.h
+ mdp:/usr/include/Ice/SlicedDataF.h
+ mdp:/usr/include/Ice/StreamHelpers.h
+ mdp:/usr/include/Ice/UniquePtr.h
+ mdp:/usr/include/Ice/UserExceptionFactory.h
+ mdp:/usr/include/Ice/Value.h
+ mdp:/usr/include/Ice/ValueF.h
+ mdp:/usr/include/Ice/ValueFactory.h
+ mdp:/usr/include/Ice/Version.h
+ mdp:/usr/include/IceUtil/Atomic.h
+ mdp:/usr/include/IceUtil/Cond.h
+ mdp:/usr/include/IceUtil/Config.h
+ mdp:/usr/include/IceUtil/Exception.h
+ mdp:/usr/include/IceUtil/Handle.h
+ mdp:/usr/include/IceUtil/Lock.h
+ mdp:/usr/include/IceUtil/Monitor.h
+ mdp:/usr/include/IceUtil/Mutex.h
+ mdp:/usr/include/IceUtil/MutexProtocol.h
+ mdp:/usr/include/IceUtil/PopDisableWarnings.h
+ mdp:/usr/include/IceUtil/PushDisableWarnings.h
+ mdp:/usr/include/IceUtil/ScopedArray.h
+ mdp:/usr/include/IceUtil/Shared.h
+ mdp:/usr/include/IceUtil/Thread.h
+ mdp:/usr/include/IceUtil/ThreadException.h
+ mdp:/usr/include/IceUtil/Time.h
+ mdp:/usr/include/IceUtil/Timer.h
+ mdp:/usr/include/IceUtil/UndefSysMacros.h
  mdp:/usr/include/alloca.h
  mdp:/usr/include/asm-generic/errno-base.h
  mdp:/usr/include/asm-generic/errno.h
@@ -3757,6 +3927,7 @@
  mdp:/usr/include/c++/12/bits/cpp_type_traits.h
  mdp:/usr/include/c++/12/bits/cxxabi_forced.h
  mdp:/usr/include/c++/12/bits/cxxabi_init_exception.h
+ mdp:/usr/include/c++/12/bits/deque.tcc
  mdp:/usr/include/c++/12/bits/enable_special_members.h
  mdp:/usr/include/c++/12/bits/erase_if.h
  mdp:/usr/include/c++/12/bits/exception.h
@@ -3809,6 +3980,7 @@
  mdp:/usr/include/c++/12/bits/shared_ptr_atomic.h
  mdp:/usr/include/c++/12/bits/shared_ptr_base.h
  mdp:/usr/include/c++/12/bits/specfun.h
+ mdp:/usr/include/c++/12/bits/sstream.tcc
  mdp:/usr/include/c++/12/bits/std_abs.h
  mdp:/usr/include/c++/12/bits/std_function.h
  mdp:/usr/include/c++/12/bits/std_mutex.h
@@ -3816,6 +3988,7 @@
  mdp:/usr/include/c++/12/bits/stl_algobase.h
  mdp:/usr/include/c++/12/bits/stl_bvector.h
  mdp:/usr/include/c++/12/bits/stl_construct.h
+ mdp:/usr/include/c++/12/bits/stl_deque.h
  mdp:/usr/include/c++/12/bits/stl_function.h
  mdp:/usr/include/c++/12/bits/stl_heap.h
  mdp:/usr/include/c++/12/bits/stl_iterator.h
@@ -3824,10 +3997,12 @@
  mdp:/usr/include/c++/12/bits/stl_list.h
  mdp:/usr/include/c++/12/bits/stl_map.h
  mdp:/usr/include/c++/12/bits/stl_multimap.h
+ mdp:/usr/include/c++/12/bits/stl_multiset.h
  mdp:/usr/include/c++/12/bits/stl_numeric.h
  mdp:/usr/include/c++/12/bits/stl_pair.h
  mdp:/usr/include/c++/12/bits/stl_raw_storage_iter.h
  mdp:/usr/include/c++/12/bits/stl_relops.h
+ mdp:/usr/include/c++/12/bits/stl_set.h
  mdp:/usr/include/c++/12/bits/stl_tempbuf.h
  mdp:/usr/include/c++/12/bits/stl_tree.h
  mdp:/usr/include/c++/12/bits/stl_uninitialized.h
@@ -3843,6 +4018,7 @@
  mdp:/usr/include/c++/12/bits/uses_allocator_args.h
  mdp:/usr/include/c++/12/bits/utility.h
  mdp:/usr/include/c++/12/bits/vector.tcc
+ mdp:/usr/include/c++/12/cassert
  mdp:/usr/include/c++/12/cctype
  mdp:/usr/include/c++/12/cerrno
  mdp:/usr/include/c++/12/climits
@@ -3853,6 +4029,7 @@
  mdp:/usr/include/c++/12/concepts
  mdp:/usr/include/c++/12/cstddef
  mdp:/usr/include/c++/12/cstdint
+ mdp:/usr/include/c++/12/cstdio
  mdp:/usr/include/c++/12/cstdlib
  mdp:/usr/include/c++/12/cstring
  mdp:/usr/include/c++/12/ctime
@@ -3860,6 +4037,7 @@
  mdp:/usr/include/c++/12/cwctype
  mdp:/usr/include/c++/12/debug/assertions.h
  mdp:/usr/include/c++/12/debug/debug.h
+ mdp:/usr/include/c++/12/deque
  mdp:/usr/include/c++/12/exception
  mdp:/usr/include/c++/12/ext/aligned_buffer.h
  mdp:/usr/include/c++/12/ext/alloc_traits.h
@@ -3895,6 +4073,8 @@
  mdp:/usr/include/c++/12/pstl/glue_numeric_defs.h
  mdp:/usr/include/c++/12/random
  mdp:/usr/include/c++/12/ratio
+ mdp:/usr/include/c++/12/set
+ mdp:/usr/include/c++/12/sstream
  mdp:/usr/include/c++/12/stdexcept
  mdp:/usr/include/c++/12/streambuf
  mdp:/usr/include/c++/12/string
@@ -4251,8 +4431,10 @@
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/qwaitcondition.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/qwineventnotifier.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/qxmlstream.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/QMouseEvent
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/QPaintDevice
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/QPaintDeviceWindow
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/QResizeEvent
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/QSurfaceFormat
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/QTransform
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtGui/QWindow
@@ -4373,9 +4555,35 @@
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstatemachine.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstatemachineglobal.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qtstatemachine-config.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsItem
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsPolygonItem
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollBar
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollbar.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h
  mdp:/usr/include/x86_64-linux-gnu/sys/cdefs.h
  mdp:/usr/include/x86_64-linux-gnu/sys/select.h
  mdp:/usr/include/x86_64-linux-gnu/sys/syscall.h
+ mdp:/usr/include/x86_64-linux-gnu/sys/time.h
  mdp:/usr/include/x86_64-linux-gnu/sys/types.h
  mdp:/usr/lib/gcc/x86_64-linux-gnu/12/include/adxintrin.h
  mdp:/usr/lib/gcc/x86_64-linux-gnu/12/include/amxbf16intrin.h

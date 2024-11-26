@@ -996,6 +996,22 @@ src/CMakeFiles/grid2D.dir/grid2D_autogen/mocs_compilation.cpp.o: \
  /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLCDNumber \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlcdnumber.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpacerItem \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSplitter \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsplitter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/CommonBehavior.h \
  /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QStateMachine \
@@ -1013,4 +1029,8 @@ src/CMakeFiles/grid2D.dir/grid2D_autogen/mocs_compilation.cpp.o: \
  /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/grid2D_autogen/EWIEGA46WW/../../genericmonitor.h \
  /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/grid2D_autogen/EWIEGA46WW/moc_specificworker.cpp \
  /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/grid2D_autogen/EWIEGA46WW/../../specificworker.h \
- /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/genericworker.h
+ /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/genericworker.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsItem \
+ /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/grid2D_autogen/EWIEGA46WW/../../Lidar3D.h \
+ /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/grid2D_autogen/EWIEGA46WW/../../Grid2D.h

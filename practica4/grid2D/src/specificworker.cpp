@@ -18,81 +18,65 @@
  */
 #include "specificworker.h"
 
+
+#define RESET "\033[0m"
+#define YELLOW "\033[33m"
+#define BLUE "\033[34m"
+#define RED "\033[31m"
+#define PURPLE "\033[35m"
+
 /**
-* \brief Default constructor
-*/
+ * \brief Default constructor
+ */
 SpecificWorker::SpecificWorker(TuplePrx tprx, bool startup_check) : GenericWorker(tprx)
 {
-	this->startup_check_flag = startup_check;
-	// Uncomment if there's too many debug messages
-	// but it removes the possibility to see the messages
-	// shown in the console with qDebug()
-//	QLoggingCategory::setFilterRules("*.debug=false\n");
+
 }
 
 /**
-* \brief Default destructor
-*/
+ * \brief Default destructor
+ */
 SpecificWorker::~SpecificWorker()
 {
-	std::cout << "Destroying SpecificWorker" << std::endl;
+    std::cout << "Destroying SpecificWorker" << std::endl;
 }
-
 bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
-//	THE FOLLOWING IS JUST AN EXAMPLE
-//	To use innerModelPath parameter you should uncomment specificmonitor.cpp readConfig method content
-//	try
-//	{
-//		RoboCompCommonBehavior::Parameter par = params.at("InnerModelPath");
-//		std::string innermodel_path = par.value;
-//		innerModel = std::make_shared(innermodel_path);
-//	}
-//	catch(const std::exception &e) { qFatal("Error reading config params"); }
-	
-
-	return true;
+    return true;
 }
+
+
 
 void SpecificWorker::initialize()
 {
-	std::cout << "Initialize worker" << std::endl;
-	if(this->startup_check_flag)
-	{
-		this->startup_check();
-	}
-	else
-	{
+	qDebug() << "Initialize Grid2D";
 
-		#ifdef HIBERNATION_ENABLED
-			hibernationChecker.start(500);
-		#endif
+    // visor
+    viewer = new AbstractGraphicViewer(this->frame, QRectF(-5000, 2500, 10000, -5000));
+    viewer->setWindowTitle("Grid2D");
 
-		this->setPeriod(STATES::Compute, 100);
-		//this->setPeriod(STATES::Emergency, 500);
-
-	}
-
+    qDebug() << "Viewer created";
 }
+
 
 void SpecificWorker::compute()
 {
-    std::cout << "Compute worker" << std::endl;
-	//computeCODE
-	//QMutexLocker locker(mutex);
-	//try
-	//{
-	//  camera_proxy->getYImage(0,img, cState, bState);
-    //    if (img.empty())
-    //        emit goToEmergency()
-	//  memcpy(image_gray.data, &img[0], m_width*m_height*sizeof(uchar));
-	//  searchTags(image_gray);
-	//}
-	//catch(const Ice::Exception &e)
-	//{
-	//  std::cout << "Error reading from Camera" << e << std::endl;
-	//}
-	
+      RoboCompLidar3D::TData ldata;
+    try
+    {
+        ldata = lidar3d_proxy->getLidarData("bpearl", 0, 2 * M_PI, 1);
+    }
+    catch (const Ice::Exception &e)
+    {
+        std::cout << e << std::endl;
+    }
+
+    RoboCompLidar3D::TPoints p_filter;
+    std::ranges::copy_if(ldata.points, std::back_inserter(p_filter),
+                         [](auto &a)
+                         { return a.z < 500 and a.distance2d > 200; });
+
+    draw_lidar(p_filter, &viewer->scene);
 	
 }
 

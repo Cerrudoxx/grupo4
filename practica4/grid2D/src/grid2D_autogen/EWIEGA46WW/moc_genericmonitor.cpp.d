@@ -1,5 +1,8 @@
 /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/grid2D_autogen/EWIEGA46WW/moc_genericmonitor.cpp: /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/genericmonitor.h \
   /home/usuario/robocomp/components/grupo4/practica4/grid2D/src/grid2D_autogen/moc_predefs.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/grid2D/src/CommonBehavior.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/grid2D/src/Grid2D.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/grid2D/src/Lidar3D.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/grid2D/src/config.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/grid2D/src/genericworker.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h \

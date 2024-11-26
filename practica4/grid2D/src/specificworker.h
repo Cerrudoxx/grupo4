@@ -22,18 +22,23 @@
 	@author authorname
 */
 
-
-
 #ifndef SPECIFICWORKER_H
 #define SPECIFICWORKER_H
 
 #define HIBERNATION_ENABLED
 
+//Aspirador
 #include <genericworker.h>
+#include <QGraphicsItem>
+#include "abstract_graphic_viewer/abstract_graphic_viewer.h"
+#include "Lidar3D.h"
+
+//Nuevo
+#include "Grid2D.h"
 
 class SpecificWorker : public GenericWorker
 {
-Q_OBJECT
+	Q_OBJECT
 public:
 	SpecificWorker(TuplePrx tprx, bool startup_check);
 	~SpecificWorker();
@@ -41,31 +46,35 @@ public:
 
 	RoboCompGrid2D::Result Grid2D_getPaths(RoboCompGrid2D::TPoint source, RoboCompGrid2D::TPoint target);
 
-
 public slots:
 	void initialize();
 	void compute();
 	void emergency();
 	void restore();
 	int startup_check();
+
 private:
-	bool startup_check_flag;
+
+	AbstractGraphicViewer *viewer;
 
 
-    //Activity 4
-    enum class StateCell{ {
-        EMPTY,
-        OCCUPIED,
-        UNKNOWN
-    };
+	// Activity 4
+	enum class StateCell
+	{
+		EMPTY,
+		OCCUPIED,
+		UNKNOWN
+	};
 
-    
-    struct TCell{
-        int x;
-        int y;
-        StateCell state;
-        QGraphicsItem* graphics_item;
-    }
+	struct TCell
+	{
+		int x;
+		int y;
+		StateCell state;
+		QGraphicsItem *graphics_item;
+	};
+
+	void draw_lidar(auto &filtered_points, QGraphicsScene *scene);
 
 
 };
