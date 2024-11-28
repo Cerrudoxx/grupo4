@@ -27,14 +27,16 @@
 
 #define HIBERNATION_ENABLED
 
-//Aspirador
+// Aspirador
 #include <genericworker.h>
 #include <QGraphicsItem>
 #include "abstract_graphic_viewer/abstract_graphic_viewer.h"
 #include "Lidar3D.h"
 
-//Nuevo
+// Nuevo
 #include "Grid2D.h"
+#include <vector>
+#include <Eigen/Dense>
 
 class SpecificWorker : public GenericWorker
 {
@@ -54,9 +56,66 @@ public slots:
 	int startup_check();
 
 private:
+	struct Params
+	{
+		float ROBOT_WIDTH = 460;  // mm
+		float ROBOT_LENGTH = 480; // mm
+
+		float MAX_ADV_SPEED = 1000; // mm/s
+		float MAX_ROT_SPEED = 1;	// rad/s
+
+		float TURN_THRESHOLD = ROBOT_LENGTH + 70; // mm 530 Distnacia minima para girar (evita chocar con pared)
+
+		// SPIRAL THRESHOLD
+		float SPIRAL_THRESHOLD = 1500; // mm Distancia minima alrededor para empezar a girar en espiral
+
+		// FOLLOW_WALL THRESHOLDS
+		float STOP_FOLLOW_WALL_THRESHOLD = TURN_THRESHOLD;				 // mm Distancia mininma para dejar de seguir la pared (ahora igual a TURN_THRESHOLD)
+		float START_FOLLOW_WALL_THRESHOLD = 850;						 // mm Distancia minima para empezar a seguir la pared
+		float MIN_FOLLOW_WALL_DISTANCE = TURN_THRESHOLD + 170;			 // mm 660 Distancia minima a la pared para seguir la pared (ancho del robot + margen)
+		float MAX_FOLLOW_WALL_DISTANCE = MIN_FOLLOW_WALL_DISTANCE + 300; // mm 960 Distancia maxima a la pared para seguir la pared (ancho del robot + margen)
+
+		// FOLLOW_WALL COUNTER
+		int MIN_FOLLOW_WALL_COUNTER = 200;								   // Numero de iteraciones minimo para seguir la pared
+		int FOLLOW_WALL_COUNTER = MIN_FOLLOW_WALL_COUNTER + 200;		   // Numero de iteraciones maximo para seguir la pared
+		int MIN_FOLLOW_WALL_COUNTER_RESET = FOLLOW_WALL_COUNTER;		   // Numero de iteraciones para resetear el contador de seguir la pared
+		int FOLLOW_WALL_COUNTER_RESET = MIN_FOLLOW_WALL_COUNTER_RESET * 2; // Numero de iteraciones para resetear el contador de seguir la pared
+
+		float ADVANCE_THRESHOLD = ROBOT_WIDTH * 1.2; // mm
+
+		// AWAY_FROM_WALL THRESHOLD
+		float AWAY_WALL_THRESHOLD = 2.5 * 1000;			   // mm Distancia minima para alejarse de la pared
+		float AWAY_WALL_SECURITY_BACK = ROBOT_LENGTH + 50; // mm Distancia minima para no chocar con la pared al alejarse
+
+		// SPIRAL PARAMS
+		float VEL_INICIAL = 300.f; // m/s usados para reset de velocidad
+		float ROT_INICIAL = 0.85f; // rad/s usados para reset de velocidad de giro
+
+		float VEL_ACTUAL = VEL_INICIAL; // m/s usado en espiral
+		float ROT_ACTUAL = ROT_INICIAL; // rad/s usado en espiral
+
+		float ALFA_GIRO = 1.15; // multiplicador de velocidad de giro en espiral
+
+		// LIDAR 3D
+		float LIDAR_OFFSET = 9.f / 10.f; // eight tenths of vector's half size
+		float LIDAR_FRONT_SECTION = 0.5; // rads, aprox 30 degrees
+
+		float LIDAR_RIGHT_SIDE_SECTION = M_PI / 3; // rads, 90 degrees
+		float LIDAR_LEFT_SIDE_SECTION = -M_PI / 3; // rads, 90 degrees
+
+		std::string LIDAR_NAME_LOW = "bpearl";
+		std::string LIDAR_NAME_HIGH = "helios";
+		QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
+
+		float WALL_MIN_DISTANCE = 1000; // mm
+	};
+	Params params;
 
 	AbstractGraphicViewer *viewer;
-
+	// GRID
+	static constexpr int GRID_DIMENSION_MM = 5000;
+	static constexpr int TILE_SIZE_MM = 100;
+	static constexpr int GRID_SIZE = GRID_DIMENSION_MM / TILE_SIZE_MM;
 
 	// Activity 4
 	enum class StateCell
@@ -74,9 +133,16 @@ private:
 		QGraphicsItem *graphics_item;
 	};
 
+	std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid;
+
 	void draw_lidar(auto &filtered_points, QGraphicsScene *scene);
 
-
+	// lidar
+	std::vector<Eigen::Vector2f> read_lidar_helios();
+	void inicializarGrid(std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> &grid, QGraphicsScene *scene, auto &filtered_points);
+	void draw_grid(auto &grid, QGraphicsScene *scene);
+	std::pair<int, int> realToGrid(float x, float y);
+	std::pair<float, float> gridToReal(int i, int j);
 };
 
 #endif
