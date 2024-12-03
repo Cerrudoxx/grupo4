@@ -25,7 +25,7 @@
 #ifndef SPECIFICWORKER_H
 #define SPECIFICWORKER_H
 
-#define HIBERNATION_ENABLED
+//#define HIBERNATION_ENABLED
 
 // Aspirador
 #include <genericworker.h>
@@ -37,7 +37,9 @@
 #include "Grid2D.h"
 #include <vector>
 #include <Eigen/Dense>
-
+#include <queue>
+#include <cppitertools/enumerate.hpp>
+#include <cppitertools/range.hpp>
 class SpecificWorker : public GenericWorker
 {
 	Q_OBJECT
@@ -138,11 +140,14 @@ private:
 	void draw_lidar(auto &filtered_points, QGraphicsScene *scene);
 
 	// lidar
-	std::vector<Eigen::Vector2f> read_lidar_helios();
-	void inicializarGrid(std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> &grid, QGraphicsScene *scene, auto &filtered_points);
-	void draw_grid(auto &grid, QGraphicsScene *scene);
-	std::pair<int, int> realToGrid(float x, float y);
-	std::pair<float, float> gridToReal(int i, int j);
+	std::vector<Eigen::Vector2f> read_lidar_bpearl();
+	void initializeGrid(auto &grid, QGraphicsScene *scene);
+	void updateGrid(auto lidarPoints, auto &grid);
+	std::tuple<int, int> realToGrid(float x, float y);
+	void DrawGrid(auto &grid, QGraphicsScene *scene);
+	QPointF gridToReal(int i, int j);
+
+	QGraphicsPolygonItem *robot_draw;
 };
 
 #endif

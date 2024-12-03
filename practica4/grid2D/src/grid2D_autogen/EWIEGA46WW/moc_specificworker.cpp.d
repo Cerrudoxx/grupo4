@@ -187,6 +187,7 @@
   /usr/include/c++/12/bits/stl_multiset.h \
   /usr/include/c++/12/bits/stl_numeric.h \
   /usr/include/c++/12/bits/stl_pair.h \
+  /usr/include/c++/12/bits/stl_queue.h \
   /usr/include/c++/12/bits/stl_raw_storage_iter.h \
   /usr/include/c++/12/bits/stl_relops.h \
   /usr/include/c++/12/bits/stl_set.h \
@@ -259,6 +260,7 @@
   /usr/include/c++/12/pstl/glue_algorithm_defs.h \
   /usr/include/c++/12/pstl/glue_memory_defs.h \
   /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/queue \
   /usr/include/c++/12/random \
   /usr/include/c++/12/ratio \
   /usr/include/c++/12/set \
@@ -1047,4 +1049,8 @@
   /usr/lib/gcc/x86_64-linux-gnu/12/include/xsaveintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/xsaveoptintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/xsavesintrin.h \
-  /usr/lib/gcc/x86_64-linux-gnu/12/include/xtestintrin.h
+  /usr/lib/gcc/x86_64-linux-gnu/12/include/xtestintrin.h \
+  /usr/local/include/cppitertools/enumerate.hpp \
+  /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
+  /usr/local/include/cppitertools/internal/iterbase.hpp \
+  /usr/local/include/cppitertools/range.hpp

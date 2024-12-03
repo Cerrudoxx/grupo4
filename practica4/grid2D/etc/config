@@ -5,7 +5,7 @@ Grid2D.Endpoints=tcp -p 13500
 
 
 # Proxies for required interfaces
-Lidar3DProxy = lidar3d:tcp -h localhost -p 11990
+Lidar3DProxy = lidar3d:tcp -h localhost -p 11991
 
 
 

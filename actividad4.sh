@@ -19,13 +19,13 @@ qdbus org.kde.yakuake /yakuake/sessions runCommandInTerminal $session_id "bin/We
 qdbus org.kde.yakuake /yakuake/sessions org.kde.yakuake.raiseSession $session_id
 
 # LIDAR3D-HELIOS
-TAB_NAME="helios"
+TAB_NAME="bpearl"
 DIRECTORY_PATH="~/robocomp/components/robocomp-robolab/components/hardware/laser/lidar3D" # replace with your desired path
 session_id=$(qdbus org.kde.yakuake /yakuake/sessions org.kde.yakuake.addSession)
 qdbus org.kde.yakuake /yakuake/tabs org.kde.yakuake.setTabTitle "$session_id" "$TAB_NAME"
 qdbus org.kde.yakuake /yakuake/sessions runCommandInTerminal $session_id "cd $DIRECTORY_PATH"
 qdbus org.kde.yakuake /yakuake/sessions runCommandInTerminal $session_id "cmake . && make -j8"
-qdbus org.kde.yakuake /yakuake/sessions runCommandInTerminal $session_id "bin/Lidar3D etc/config_helios_webots"
+qdbus org.kde.yakuake /yakuake/sessions runCommandInTerminal $session_id "bin/Lidar3D etc/config_pearl_webots"
 qdbus org.kde.yakuake /yakuake/sessions org.kde.yakuake.raiseSession $session_id
 
 # Grid2D

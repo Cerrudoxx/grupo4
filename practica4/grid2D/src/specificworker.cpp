@@ -42,48 +42,39 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
     return true;
 }
-std::pair<int, int> SpecificWorker::realToGrid(float x, float y)
+std::tuple<int, int> SpecificWorker::realToGrid(float x, float y)
 {
-    int i = static_cast<int>((x + (GRID_SIZE / 2) * TILE_SIZE_MM) / TILE_SIZE_MM);
-    int j = static_cast<int>((y + (GRID_SIZE / 2) * TILE_SIZE_MM) / TILE_SIZE_MM);
-    return {i, j};
+    int i = (static_cast<float>(GRID_SIZE) / GRID_DIMENSION_MM) * x + (GRID_SIZE / 2);
+    int j = (static_cast<float>(GRID_SIZE) / GRID_DIMENSION_MM) * y + (GRID_SIZE / 2);
+    // if (i < 0 || i >= GRID_SIZE || j < 0 || j >= GRID_SIZE)
+    // {
+    // 	return std::nullopt;
+    // }
+
+    return std::make_tuple(i, j);
 }
 
-std::pair<float, float> SpecificWorker::gridToReal(int i, int j)
+QPointF SpecificWorker::gridToReal(int i, int j)
 {
-    float x = (i - GRID_SIZE / 2) * TILE_SIZE_MM + TILE_SIZE_MM / 2;
-    float y = (j - GRID_SIZE / 2) * TILE_SIZE_MM + TILE_SIZE_MM / 2;
-    return {x, y};
-}
 
-void SpecificWorker::inicializarGrid(std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> &grid, QGraphicsScene *scene, auto &filtered_points)
-{
-    for (const auto &p : filtered_points)
-    {
-        auto [i, j] = realToGrid(p.x, p.y);
-        grid[i][j].state = StateCell::EMPTY;
-        grid[i][j].graphics_item = nullptr;
-    }
-}
+    float x = GRID_DIMENSION_MM / GRID_SIZE * i - (GRID_DIMENSION_MM / 2);
+    float y = GRID_DIMENSION_MM / GRID_SIZE * j - (GRID_DIMENSION_MM / 2);
 
+    return QPointF(x, y);
+}
 
 void SpecificWorker::initialize()
 {
-    qDebug() << "Initialize Grid2D";
+    std::cout << "Initialize worker" << std::endl;
+    ///////////// Your code ////////
+    // Viewer
+    viewer = new AbstractGraphicViewer(this->frame, params.GRID_MAX_DIM);
+    auto [r, e] = viewer->add_robot(params.ROBOT_WIDTH, params.ROBOT_LENGTH, 0, 100, QColor("Blue"));
+    robot_draw = r;
+    viewer->show();
 
-    // visor
-    viewer = new AbstractGraphicViewer(this->frame, QRectF(-5000, 2500, 10000, -5000));
-    viewer->setWindowTitle("Grid2D");
-
-    // initialize grid
-    RoboCompLidar3D::TData ldata = lidar3d_proxy->getLidarData("helios", 0, 2 * M_PI, 1);
-     RoboCompLidar3D::TPoints p_filter;
-    std::ranges::copy_if(ldata.points, std::back_inserter(p_filter),
-                         [](auto &a)
-                         { return a.z < 500 and a.distance2d > 200; });
-    inicializarGrid(grid, &viewer->scene, p_filter);
-
-    qDebug() << "Viewer created";
+    initializeGrid(grid, &viewer->scene);
+    ///////////////////////////////
 }
 
 void SpecificWorker::compute()
@@ -91,7 +82,7 @@ void SpecificWorker::compute()
     RoboCompLidar3D::TData ldata;
     try
     {
-        ldata = lidar3d_proxy->getLidarData("helios", 0, 2 * M_PI, 1);
+        ldata = lidar3d_proxy->getLidarData("bpearl", 0, 2 * M_PI, 1);
     }
     catch (const Ice::Exception &e)
     {
@@ -104,13 +95,14 @@ void SpecificWorker::compute()
                          { return a.z < 500 and a.distance2d > 200; });
 
     draw_lidar(p_filter, &viewer->scene);
-    draw_grid(grid, &viewer->scene);
+    updateGrid(p_filter, grid);
+    DrawGrid(grid, &viewer->scene);
 }
 /**
  * Draws LIDAR points onto a QGraphicsScene.
  *
- * This method clears any existing graphical items from the scene, then iterates over the filtered
- * LIDAR points to add new items. Each LIDAR point is represented as a colored rectangle. The point
+ * This method clears any existing graphical graphics_items from the scene, then iterates over the filtered
+ * LIDAR points to add new graphics_items. Each LIDAR point is represented as a colored rectangle. The point
  * with the minimum distance is highlighted in red, while the other points are drawn in green.
  *
  * @param filtered_points A collection of filtered points to be drawn, each containing the coordinates
@@ -129,24 +121,72 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
     }
     items.clear();
 
-    auto color = QColor(Qt::green);
-    auto brush = QBrush(QColor(Qt::green));
+    auto color = QColor(Qt::darkGreen);
+    auto brush = QBrush(QColor(Qt::darkGreen));
     for (const auto &p : filtered_points)
     {
-        auto item = scene->addRect(-50, -50, 100, 100, color, brush);
+        // los dos primeros valores son la posicion inicial del rectangulo, y los otros dos son las dimesiones del mismo
+        auto item = scene->addRect(-25, -25, 100, 50, color, brush);
         item->setPos(p.x, p.y);
         items.push_back(item);
     }
 }
 
-void SpecificWorker::draw_grid(auto &grid, QGraphicsScene *scene)
+void SpecificWorker::initializeGrid(auto &grid, QGraphicsScene *scene)
 {
-    for (int i = 0; i < GRID_SIZE; i++)
-    {
-        for (int j = 0; j < GRID_SIZE; j++)
+
+    for (auto &&[i, row] : grid | iter::enumerate)
+        for (auto &&[j, celda] : row | iter::enumerate)
         {
-            printf("");
+
+            celda.graphics_item = viewer->scene.addRect(TILE_SIZE_MM / 2, TILE_SIZE_MM / 2, TILE_SIZE_MM, TILE_SIZE_MM,
+                                                        QPen(QColor("White"), 20), QBrush(QColor("Light Gray")));
+            celda.graphics_item->setPos(gridToReal(i, j));
+            celda.state = StateCell::EMPTY;
+            celda.x = i;
+            celda.y = j;
         }
+}
+
+void SpecificWorker::DrawGrid(auto &grid, QGraphicsScene *scene){
+    for (auto &&[i, row] : grid | iter::enumerate)
+        for (auto &&[j, celda] : row | iter::enumerate)
+        {
+            if(celda.state == StateCell::OCCUPIED){
+                celda.graphics_item = viewer->scene.addRect(TILE_SIZE_MM / 2, TILE_SIZE_MM / 2, TILE_SIZE_MM, TILE_SIZE_MM,
+                                                        QPen(QColor("White"), 20), QBrush(QColor("Black")));
+                celda.graphics_item->setPos(gridToReal(celda.x, celda.y));
+            }
+                
+        }
+            
+}
+
+float euclideanDistance(float x, float y)
+{
+    return std::sqrt(x * x + y * y);
+}
+
+void SpecificWorker::updateGrid(auto lidarPoints, auto &grid)
+{
+    int robot_x = 0;
+    int robot_y = 0;
+    for (const auto &p : lidarPoints)
+    {
+        auto distancia = euclideanDistance(p.x, p.y);
+        for(const auto &salto: iter::range(0.f, 1.f, distancia/TILE_SIZE_MM)){
+            auto r= p.norm()*salto;
+            auto [i, j] = realToGrid(r.x, r.y);
+            grid[i][j].state = StateCell::EMPTY;
+            grid[i][j].graphics_item->setBrush(QBrush(QColor("White")));
+        }
+        auto [i, j] = realToGrid(p.x, p.y);
+        grid[i][j].state = StateCell::OCCUPIED;
+        grid[i][j].graphics_item->setBrush(QBrush(QColor("Red")));
+
+
+
+        
     }
 }
 
@@ -174,17 +214,16 @@ int SpecificWorker::startup_check()
     return 0;
 }
 
-std::vector<Eigen::Vector2f> SpecificWorker::read_lidar_helios()
+std::vector<Eigen::Vector2f> SpecificWorker::read_lidar_bpearl()
 {
     try
     {
-        auto ldata = lidar3d_proxy->getLidarData("helios", 0, 2 * M_PI, 2);
+        auto ldata = lidar3d_proxy->getLidarData("bpearl", 0, 2 * M_PI, 1);
         // filter points according to height and distance
-
         std::vector<Eigen::Vector2f> p_filter;
         for (const auto &a : ldata.points)
         {
-            if (a.z > 1300 and a.distance2d > 200)
+            if (a.z < 500 and a.distance2d > 200)
                 p_filter.emplace_back(a.x, a.y);
         }
         return p_filter;
