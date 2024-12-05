@@ -132,7 +132,7 @@ private:
 		int x;
 		int y;
 		StateCell state;
-		QGraphicsItem *graphics_item;
+		QGraphicsRectItem *graphics_item;
 	};
 
 	std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid;
@@ -142,11 +142,13 @@ private:
 	// lidar
 	std::vector<Eigen::Vector2f> read_lidar_bpearl();
 	void initializeGrid(auto &grid, QGraphicsScene *scene);
-	void updateGrid(auto lidarPoints, auto &grid);
-	std::tuple<int, int> realToGrid(float x, float y);
+	void updateGrid(auto lidarPoints, auto &grid, auto &gridMoves);
+	std::optional<std::tuple<int, int>> realToGrid(float x, float y);
 	void DrawGrid(auto &grid, QGraphicsScene *scene);
 	QPointF gridToReal(int i, int j);
 
+void rutaDijkstra(int x, int y, int x2, int y2, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid, std::vector<std::vector<bool>> &gridMoves)
+;
 	QGraphicsPolygonItem *robot_draw;
 };
 
