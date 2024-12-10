@@ -73,41 +73,70 @@ void SpecificWorker::initialize()
     viewer->show();
 
     initializeGrid(grid, &viewer->scene);
+
+    QObject::connect(viewer, &AbstractGraphicViewer::new_mouse_coordinates, this, &SpecificWorker::mouse);
+
     ///////////////////////////////
 }
 
-void SpecificWorker::compute()
+void SpecificWorker::mouse(QPointF p)
 {
-    RoboCompLidar3D::TData ldata;
+    std::cout << "Mouse clicked at " << p.x() << " " << p.y() << std::endl;
+    
+}
+
+std::vector<Eigen::Vector2f> SpecificWorker::getLidarData(std::string lidar_name)
+{
     try
     {
-        ldata = lidar3d_proxy->getLidarData("bpearl", 0, 2 * M_PI, 1);
+        auto ldata = lidar3d_proxy->getLidarData(lidar_name, 0, 2 * M_PI, 1);
+        // filter points according to height and distance
+        std::vector<Eigen::Vector2f> p_filter;
+        for (const auto &a : ldata.points)
+        {
+            if (a.z < 500 and a.distance2d > 200)
+                p_filter.emplace_back(a.x, a.y);
+        }
+        return p_filter;
     }
     catch (const Ice::Exception &e)
     {
         std::cout << e << std::endl;
     }
+    return {};
+}
 
-    RoboCompLidar3D::TPoints p_filter;
-    std::ranges::copy_if(ldata.points, std::back_inserter(p_filter),
-                         [](auto &a)
-                         { return a.z < 500 and a.distance2d > 200; });
-
-    std::vector<Eigen::Vector2f> eigen_p_filter;
-    std::transform(p_filter.begin(), p_filter.end(), std::back_inserter(eigen_p_filter),
-                   [](const auto &p)
-                   { return Eigen::Vector2f(p.x, p.y); });
+void SpecificWorker::compute()
+{
+    auto p_filter = getLidarData("bpearl");
 
     draw_lidar(p_filter, &viewer->scene);
-    std::vector<std::vector<bool>> gridMoves(GRID_SIZE, std::vector<bool>(GRID_SIZE, false));
-    
 
-    //TODO: Implementar la funcion que pinte el grid
-    rutaDijkstra(0, 0, 10, 10, grid, gridMoves);
-    updateGrid(eigen_p_filter, grid, gridMoves);
+    //TODO: TERMINAR DE IMPLEMENTAR, se vuelve a poner a 0,0 el punto target
     
-    //DrawGrid(grid, &viewer->scene);
+    mouse(p_target);
+    qDebug() << "Punto target: " << p_target;
+    auto pGrid = realToGrid(p_target.x(), p_target.y());
+    auto x = std::get<0>(pGrid.value());
+    auto y = std::get<1>(pGrid.value());
+    Eigen::Vector2f target = Eigen::Vector2f(x, y);
+    Eigen::Vector2f source = Eigen::Vector2f(params.RobotX, params.RobotY);
+
+    updateGrid(p_filter);
+
+    auto path = rutaDijkstra(source, target);
+
+    draw_path(path, &viewer->scene);
+
+
+
+
+
+
 }
+
+
+
 /**
  * Draws LIDAR points onto a QGraphicsScene.
  *
@@ -138,10 +167,35 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
     {
         // los dos primeros valores son la posicion inicial del rectangulo, y los otros dos son las dimesiones del mismo
         auto item = scene->addRect(-25, -25, 25, 25, color, brush);
-        item->setPos(p.x, p.y);
+        item->setPos(p.x(), p.y());
         items.push_back(item);
     }
-    //qDebug() << "Drawing lidar done";
+    // qDebug() << "Drawing lidar done";
+}
+
+void SpecificWorker::draw_path(auto &filtered_points, QGraphicsScene *scene)
+{
+    qDebug() << "Drawing lidar";
+    static std::vector<QGraphicsItem *> items; // store items so they can be shown between iterations
+
+    // remove all items drawn in the previous iteration
+    for (auto i : items)
+    {
+        scene->removeItem(i);
+        delete i;
+    }
+    items.clear();
+
+    auto color = QColor(Qt::blue);
+    auto brush = QBrush(QColor(Qt::blue));
+    for (const auto &p : filtered_points)
+    {
+        // los dos primeros valores son la posicion inicial del rectangulo, y los otros dos son las dimesiones del mismo
+        auto item = scene->addRect(-25, -25, 50, 50, color, brush);
+        item->setPos(p.x(), p.y());
+        items.push_back(item);
+    }
+    // qDebug() << "Drawing lidar done";
 }
 
 void SpecificWorker::initializeGrid(auto &grid, QGraphicsScene *scene)
@@ -174,66 +228,47 @@ void SpecificWorker::DrawGrid(auto &grid, QGraphicsScene *scene)
         }
 }
 
-
-void SpecificWorker::updateGrid(auto lidarPoints, auto &grid, auto &gridMoves)
+void SpecificWorker::updateGrid(auto lidarPoints)
 {
     qDebug() << "Updating grid";
-    int robot_x = 0;
-    int robot_y = 0;
     const auto brushWhite = QBrush(QColor("White"));
     const auto brushRed = QBrush(QColor("Red"));
     const auto brushLightGray = QBrush(QColor("Light Gray"));
 
+    // Reset grid state
     for (auto &&[i, row] : grid | iter::enumerate)
         for (auto &&[j, celda] : row | iter::enumerate)
         {
             celda.state = StateCell::UNKNOWN;
             celda.graphics_item->setBrush(brushLightGray);
         }
+
+    // Update grid with lidar points
     for (const auto &p : lidarPoints)
     {
-
         auto s = p.norm() / TILE_SIZE_MM;
         auto delta = 1 / s;
-        for (const auto &k : iter::range(0.f, 1.f, delta))
+        for (float k = 0.f; k < 1.f; k += delta)
         {
             auto r = p * k;
-            auto optIndices = realToGrid(r.x(), r.y());
-            qDebug() << "r: " << r.x() << " " << r.y();
-            qDebug() << "k: " << k;
-            qDebug() << "s: " << s;
-
-            if (optIndices.has_value())
+            if (auto optIndices = realToGrid(r.x(), r.y()); optIndices.has_value())
             {
                 auto [i, j] = optIndices.value();
-               
                 grid[i][j].state = StateCell::EMPTY;
                 grid[i][j].graphics_item->setBrush(brushWhite);
-                    qDebug() << "Pintando [i][j]" << i <<"," <<j <<" en blanco";
             }
         }
-        auto optIndices = realToGrid(p.x(), p.y());
-        if (optIndices.has_value())
+        if (auto optIndices = realToGrid(p.x(), p.y()); optIndices.has_value())
         {
             auto [i, j] = optIndices.value();
-            if (i > 0 && j > 0 && i < GRID_SIZE && j < GRID_SIZE)
+            if (i >= 0 && j >= 0 && i < GRID_SIZE && j < GRID_SIZE)
             {
-                qDebug() << "Pintando [i][j]" << i <<"," <<j <<" en rojo";
-                
                 grid[i][j].state = StateCell::OCCUPIED;
                 grid[i][j].graphics_item->setBrush(brushRed);
             }
         }
     }
 
-    for (auto &&[i, row] : grid | iter::enumerate)
-        for (auto &&[j, celda] : row | iter::enumerate)
-        {
-            if (gridMoves[i][j])
-            {
-                celda.graphics_item->setBrush(QBrush(QColor("Blue")));
-            }
-        }
     qDebug() << "Updating grid done";
 }
 
@@ -290,45 +325,62 @@ RoboCompGrid2D::Result SpecificWorker::Grid2D_getPaths(RoboCompGrid2D::TPoint so
     // implementCODE
 }
 
-void SpecificWorker::rutaDijkstra(int x, int y, int x2, int y2, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid, std::vector<std::vector<bool>> &gridMoves)
+std::vector<QPointF> SpecificWorker::rutaDijkstra(Eigen::Vector2f source, Eigen::Vector2f target)
 {
     // implementCODE
-    std::priority_queue<std::tuple<int, int, int>, std::vector<std::tuple<int, int, int>>, std::greater<>> pq;
-    pq.emplace(0, x, y);
-    std::vector<std::vector<int>> dist(GRID_SIZE, std::vector<int>(GRID_SIZE, INT_MAX));
-    dist[x][y] = 0;
+    using Node = std::tuple<int, int, float>; // x, y, cost
+    auto cmp = [](Node left, Node right)
+    { return std::get<2>(left) > std::get<2>(right); };
+    std::priority_queue<Node, std::vector<Node>, decltype(cmp)> open_list(cmp);
+    std::vector<std::vector<float>> cost(GRID_SIZE, std::vector<float>(GRID_SIZE, std::numeric_limits<float>::max()));
+    std::vector<std::vector<std::pair<int, int>>> came_from(GRID_SIZE, std::vector<std::pair<int, int>>(GRID_SIZE, {-1, -1}));
+
+    int x = static_cast<int>(source.x());
+    int y = static_cast<int>(source.y());
+    int x2 = static_cast<int>(target.x());
+    int y2 = static_cast<int>(target.y());
+
+    open_list.emplace(x, y, 0);
+    cost[x][y] = 0;
 
     std::vector<std::pair<int, int>> directions = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
-    while (!pq.empty())
+    while (!open_list.empty())
     {
-        auto [d, cx, cy] = pq.top();
-        pq.pop();
+        auto [cx, cy, ccost] = open_list.top();
+        open_list.pop();
 
         if (cx == x2 && cy == y2)
-        {
-            std::cout << "Path found with distance: " << d << std::endl;
-            return;
-        }
+            break;
 
         for (const auto &[dx, dy] : directions)
         {
             int nx = cx + dx;
             int ny = cy + dy;
-
-            if (nx >= 0 && nx < GRID_SIZE && ny >= 0 && ny < GRID_SIZE && grid[nx][ny].state != StateCell::OCCUPIED)
+            if (nx >= 0 && nx < GRID_SIZE && ny >= 0 && ny < GRID_SIZE && grid[nx][ny].state == StateCell::EMPTY)
             {
-                int new_dist = d + 1;
-                if (new_dist < dist[nx][ny])
+                float new_cost = ccost + 1; // assuming uniform cost
+                if (new_cost < cost[nx][ny])
                 {
-                    dist[nx][ny] = new_dist;
-                    pq.emplace(new_dist, nx, ny);
-                    gridMoves[nx][ny] = true;
+                    cost[nx][ny] = new_cost;
+                    open_list.emplace(nx, ny, new_cost);
+                    came_from[nx][ny] = {cx, cy};
                 }
             }
         }
     }
-    std::cout << "No path found" << std::endl;
+
+    std::vector<QPointF> path;
+    int cx = x2, cy = y2;
+    while (cx != x || cy != y)
+    {
+        path.emplace_back(gridToReal(cx, cy));
+        std::tie(cx, cy) = came_from[cx][cy];
+    }
+    path.emplace_back(gridToReal(x, y));
+    std::reverse(path.begin(), path.end());
+
+    return path;
 }
 
 /**************************************/

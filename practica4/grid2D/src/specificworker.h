@@ -25,7 +25,7 @@
 #ifndef SPECIFICWORKER_H
 #define SPECIFICWORKER_H
 
-//#define HIBERNATION_ENABLED
+// #define HIBERNATION_ENABLED
 
 // Aspirador
 #include <genericworker.h>
@@ -56,6 +56,7 @@ public slots:
 	void emergency();
 	void restore();
 	int startup_check();
+	void mouse(QPointF);
 
 private:
 	struct Params
@@ -110,6 +111,9 @@ private:
 		QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
 
 		float WALL_MIN_DISTANCE = 1000; // mm
+
+		int RobotX = 25;
+		int RobotY = 25;
 	};
 	Params params;
 
@@ -137,19 +141,26 @@ private:
 
 	std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid;
 
+	QPointF p_target=QPointF(0,0);
+
+	
+	std::vector<Eigen::Vector2f> getLidarData(std::string lidar_name);
+
 	void draw_lidar(auto &filtered_points, QGraphicsScene *scene);
 
 	// lidar
 	std::vector<Eigen::Vector2f> read_lidar_bpearl();
 	void initializeGrid(auto &grid, QGraphicsScene *scene);
-	void updateGrid(auto lidarPoints, auto &grid, auto &gridMoves);
+	void updateGrid(auto lidarPoints);
 	std::optional<std::tuple<int, int>> realToGrid(float x, float y);
 	void DrawGrid(auto &grid, QGraphicsScene *scene);
 	QPointF gridToReal(int i, int j);
 
-void rutaDijkstra(int x, int y, int x2, int y2, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid, std::vector<std::vector<bool>> &gridMoves)
-;
+	std::vector<QPointF> rutaDijkstra(Eigen::Vector2f source, Eigen::Vector2f target);
 	QGraphicsPolygonItem *robot_draw;
+	void draw_path(auto &filtered_points, QGraphicsScene *scene);
+
+
 };
 
 #endif
