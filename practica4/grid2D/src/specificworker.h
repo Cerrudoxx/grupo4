@@ -114,6 +114,8 @@ private:
 
 		int RobotX = 25;
 		int RobotY = 25;
+
+		Eigen::Vector2f p_target = Eigen::Vector2f(RobotX, RobotY);
 	};
 	Params params;
 
@@ -141,7 +143,7 @@ private:
 
 	std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid;
 
-	QPointF p_target=QPointF(0,0);
+	
 
 	
 	std::vector<Eigen::Vector2f> getLidarData(std::string lidar_name);

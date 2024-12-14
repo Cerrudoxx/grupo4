@@ -82,7 +82,7 @@ void SpecificWorker::initialize()
 void SpecificWorker::mouse(QPointF p)
 {
     std::cout << "Mouse clicked at " << p.x() << " " << p.y() << std::endl;
-    
+    params.p_target = Eigen::Vector2f(p.x(), p.y());
 }
 
 std::vector<Eigen::Vector2f> SpecificWorker::getLidarData(std::string lidar_name)
@@ -109,33 +109,53 @@ std::vector<Eigen::Vector2f> SpecificWorker::getLidarData(std::string lidar_name
 void SpecificWorker::compute()
 {
     auto p_filter = getLidarData("bpearl");
-
     draw_lidar(p_filter, &viewer->scene);
 
-    //TODO: TERMINAR DE IMPLEMENTAR, se vuelve a poner a 0,0 el punto target
-    
-    mouse(p_target);
-    qDebug() << "Punto target: " << p_target;
-    auto pGrid = realToGrid(p_target.x(), p_target.y());
-    auto x = std::get<0>(pGrid.value());
-    auto y = std::get<1>(pGrid.value());
-    Eigen::Vector2f target = Eigen::Vector2f(x, y);
-    Eigen::Vector2f source = Eigen::Vector2f(params.RobotX, params.RobotY);
+    if (!viewer || grid.empty())
+    {
+        std::cerr << "Error: Viewer or grid is not initialized" << std::endl;
+        return;
+    }
 
     updateGrid(p_filter);
 
+    auto targetPoint = params.p_target;
+    if (targetPoint.x() == 0 && targetPoint.y() == 0)
+    {
+        std::cerr << "Error: Target point not selected" << std::endl;
+        return;
+    }
+
+    auto gridTarget = realToGrid(targetPoint.x(), targetPoint.y());
+    if (!gridTarget.has_value())
+    {
+        std::cerr << "Error: Target point is out of grid bounds" << std::endl;
+        return;
+    }
+
+    auto [gridX, gridY] = gridTarget.value();
+    if (grid[gridX][gridY].state != StateCell::EMPTY)
+    {
+        std::cerr << "Error: Target point is in an unknown space" << std::endl;
+        return;
+    }
+
+    Eigen::Vector2f target(gridX, gridY);
+    Eigen::Vector2f source(params.RobotX, params.RobotY);
+
+    qDebug() << "Source: " << source.x() << " " << source.y();
+    qDebug() << "Target: " << target.x() << " " << target.y();
+    qDebug() << "Computing path...";
+
     auto path = rutaDijkstra(source, target);
+    if (path.empty())
+    {
+        std::cerr << "Error: Path could not be found" << std::endl;
+        return;
+    }
 
     draw_path(path, &viewer->scene);
-
-
-
-
-
-
 }
-
-
 
 /**
  * Draws LIDAR points onto a QGraphicsScene.
@@ -150,7 +170,7 @@ void SpecificWorker::compute()
  */
 void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
 {
-    qDebug() << "Drawing lidar";
+    qDebug() << "Drawing lidar...";
     static std::vector<QGraphicsItem *> items; // store items so they can be shown between iterations
 
     // remove all items drawn in the previous iteration
