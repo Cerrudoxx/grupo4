@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/usuario/robocomp/components/grupo4/practica3
+CMAKE_SOURCE_DIR = /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuario/robocomp/components/grupo4/practica3/build
+CMAKE_BINARY_DIR = /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/build
 
 # Utility rule file for obs_person_tracker_autogen.
 
@@ -67,8 +67,8 @@ include src/CMakeFiles/obs_person_tracker_autogen.dir/compiler_depend.make
 include src/CMakeFiles/obs_person_tracker_autogen.dir/progress.make
 
 src/CMakeFiles/obs_person_tracker_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target obs_person_tracker"
-	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && /usr/bin/cmake -E cmake_autogen /home/usuario/robocomp/components/grupo4/practica3/build/src/CMakeFiles/obs_person_tracker_autogen.dir/AutogenInfo.json Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target obs_person_tracker"
+	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/build/src && /usr/bin/cmake -E cmake_autogen /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/build/src/CMakeFiles/obs_person_tracker_autogen.dir/AutogenInfo.json Debug
 
 obs_person_tracker_autogen: src/CMakeFiles/obs_person_tracker_autogen
 obs_person_tracker_autogen: src/CMakeFiles/obs_person_tracker_autogen.dir/build.make
@@ -79,10 +79,10 @@ src/CMakeFiles/obs_person_tracker_autogen.dir/build: obs_person_tracker_autogen
 .PHONY : src/CMakeFiles/obs_person_tracker_autogen.dir/build
 
 src/CMakeFiles/obs_person_tracker_autogen.dir/clean:
-	cd /home/usuario/robocomp/components/grupo4/practica3/build/src && $(CMAKE_COMMAND) -P CMakeFiles/obs_person_tracker_autogen.dir/cmake_clean.cmake
+	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/build/src && $(CMAKE_COMMAND) -P CMakeFiles/obs_person_tracker_autogen.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/obs_person_tracker_autogen.dir/clean
 
 src/CMakeFiles/obs_person_tracker_autogen.dir/depend:
-	cd /home/usuario/robocomp/components/grupo4/practica3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robocomp/components/grupo4/practica3 /home/usuario/robocomp/components/grupo4/practica3/src /home/usuario/robocomp/components/grupo4/practica3/build /home/usuario/robocomp/components/grupo4/practica3/build/src /home/usuario/robocomp/components/grupo4/practica3/build/src/CMakeFiles/obs_person_tracker_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3 /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/src /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/build /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/build/src /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica3/build/src/CMakeFiles/obs_person_tracker_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/obs_person_tracker_autogen.dir/depend
 

@@ -339,10 +339,16 @@ std::vector<Eigen::Vector2f> SpecificWorker::read_lidar_bpearl()
 
 RoboCompGrid2D::Result SpecificWorker::Grid2D_getPaths(RoboCompGrid2D::TPoint source, RoboCompGrid2D::TPoint target)
 {
-#ifdef HIBERNATION_ENABLED
-    hibernation = true;
-#endif
-    // implementCODE
+    RoboCompGrid2D::Result result;
+    auto path = rutaDijkstra(Eigen::Vector2f(source.x, source.y), Eigen::Vector2f(target.x, target.y));
+    for (const auto &point : path)
+    {
+        RoboCompGrid2D::TPoint tpoint;
+        tpoint.x = point.x();
+        tpoint.y = point.y();
+        result.path.push_back(tpoint);
+    }
+    return result;
 }
 
 std::vector<QPointF> SpecificWorker::rutaDijkstra(Eigen::Vector2f source, Eigen::Vector2f target)
