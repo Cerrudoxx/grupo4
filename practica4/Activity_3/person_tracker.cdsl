@@ -1,0 +1,15 @@
+import "VisualElementsPub.idsl";
+import "OmniRobot.idsl";
+import "Grid2D.idsl";
+
+Component obs_person_tracker
+{
+    Communications
+    {
+        requires OmniRobot, Grid2D;
+        subscribesTo VisualElementsPub;
+    };
+    language Cpp11;
+    gui Qt(QWidget);
+};
+

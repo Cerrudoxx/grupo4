@@ -1,0 +1,15 @@
+/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles/edit_cache.dir
+/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles/rebuild_cache.dir
+/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles/list_install_components.dir
+/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles/install.dir
+/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles/install/local.dir
+/home/usuario/robocomp/components/grupo4/practica3/build/CMakeFiles/install/strip.dir
+/home/usuario/robocomp/components/grupo4/practica3/build/src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_practica3_src.dir
+/home/usuario/robocomp/components/grupo4/practica3/build/src/CMakeFiles/obs_person_tracker.dir
+/home/usuario/robocomp/components/grupo4/practica3/build/src/CMakeFiles/edit_cache.dir
+/home/usuario/robocomp/components/grupo4/practica3/build/src/CMakeFiles/rebuild_cache.dir
+/home/usuario/robocomp/components/grupo4/practica3/build/src/CMakeFiles/list_install_components.dir
+/home/usuario/robocomp/components/grupo4/practica3/build/src/CMakeFiles/install.dir
+/home/usuario/robocomp/components/grupo4/practica3/build/src/CMakeFiles/install/local.dir
+/home/usuario/robocomp/components/grupo4/practica3/build/src/CMakeFiles/install/strip.dir
+/home/usuario/robocomp/components/grupo4/practica3/build/src/CMakeFiles/obs_person_tracker_autogen.dir

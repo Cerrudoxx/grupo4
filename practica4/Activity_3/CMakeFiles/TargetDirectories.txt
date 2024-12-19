@@ -1,0 +1,15 @@
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/CMakeFiles/edit_cache.dir
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/CMakeFiles/rebuild_cache.dir
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/CMakeFiles/list_install_components.dir
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/CMakeFiles/install.dir
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/CMakeFiles/install/local.dir
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/CMakeFiles/install/strip.dir
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_practica4_Activity_3_src.dir
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/CMakeFiles/obs_person_tracker.dir
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/CMakeFiles/edit_cache.dir
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/CMakeFiles/rebuild_cache.dir
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/CMakeFiles/list_install_components.dir
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/CMakeFiles/install.dir
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/CMakeFiles/install/local.dir
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/CMakeFiles/install/strip.dir
+/home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/CMakeFiles/obs_person_tracker_autogen.dir
