@@ -360,22 +360,7 @@ RoboCompGrid2D::Result SpecificWorker::Grid2D_getPaths(RoboCompGrid2D::TPoint so
         return result;
     }
 
-    if (gridTarget.has_value())
-    {
-        auto [targetX, targetY] = gridTarget.value();
-        for (int i = -2; i <= 2; ++i)
-        {
-            for (int j = -2; j <= 2; ++j)
-            {
-                int ni = targetX + i;
-                int nj = targetY + j;
-                if (ni >= 0 && ni < GRID_SIZE && nj >= 0 && nj < GRID_SIZE)
-                {
-                    grid[ni][nj].state = StateCell::EMPTY;
-                }
-            }
-        }
-    }
+ 
 
     auto path = rutaDijkstra(sourceVec, targetVec);
     qDebug() << "Path size: " << path.size();
@@ -388,7 +373,7 @@ RoboCompGrid2D::Result SpecificWorker::Grid2D_getPaths(RoboCompGrid2D::TPoint so
     else
     {
         
-        draw_path(path, &viewer->scene);
+        //draw_path(path, &viewer->scene);
         for (const auto &point : path)
         {
             //qDebug() << "Point: " << point.x() << " " << point.y();
@@ -432,7 +417,6 @@ std::vector<QPointF> SpecificWorker::rutaDijkstra(Eigen::Vector2f source, Eigen:
                 if (ni >= 0 && ni < GRID_SIZE && nj >= 0 && nj < GRID_SIZE)
                 {
                     grid[ni][nj].state = StateCell::EMPTY;
-                    grid[ni][nj].graphics_item->setBrush(QBrush(QColor("Cyan")));
                 }
             }
         }
