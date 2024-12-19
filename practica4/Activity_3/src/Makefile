@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/usuario/robocomp/components/grupo4/practica4/Activity_3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3
+CMAKE_BINARY_DIR = /home/usuario/robocomp/components/grupo4/practica4/Activity_3
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/CMakeFiles /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src//CMakeFiles/progress.marks
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/CMakeFiles 0
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robocomp/components/grupo4/practica4/Activity_3/CMakeFiles /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src//CMakeFiles/progress.marks
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/robocomp/components/grupo4/practica4/Activity_3/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_practica4_Activity_3_src.dir/rule:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_practica4_Activity_3_src.dir/rule
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_practica4_Activity_3_src.dir/rule
 .PHONY : src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_practica4_Activity_3_src.dir/rule
 
 # Convenience name for target.
@@ -172,12 +172,12 @@ ICES__home_usuario_robocomp_components_grupo4_practica4_Activity_3_src: src/CMak
 
 # fast build rule for target.
 ICES__home_usuario_robocomp_components_grupo4_practica4_Activity_3_src/fast:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_practica4_Activity_3_src.dir/build.make src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_practica4_Activity_3_src.dir/build
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_practica4_Activity_3_src.dir/build.make src/CMakeFiles/ICES__home_usuario_robocomp_components_grupo4_practica4_Activity_3_src.dir/build
 .PHONY : ICES__home_usuario_robocomp_components_grupo4_practica4_Activity_3_src/fast
 
 # Convenience name for target.
 src/CMakeFiles/obs_person_tracker.dir/rule:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/obs_person_tracker.dir/rule
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/obs_person_tracker.dir/rule
 .PHONY : src/CMakeFiles/obs_person_tracker.dir/rule
 
 # Convenience name for target.
@@ -186,12 +186,12 @@ obs_person_tracker: src/CMakeFiles/obs_person_tracker.dir/rule
 
 # fast build rule for target.
 obs_person_tracker/fast:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/build
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/build
 .PHONY : obs_person_tracker/fast
 
 # Convenience name for target.
 src/CMakeFiles/obs_person_tracker_autogen.dir/rule:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/obs_person_tracker_autogen.dir/rule
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/obs_person_tracker_autogen.dir/rule
 .PHONY : src/CMakeFiles/obs_person_tracker_autogen.dir/rule
 
 # Convenience name for target.
@@ -200,7 +200,7 @@ obs_person_tracker_autogen: src/CMakeFiles/obs_person_tracker_autogen.dir/rule
 
 # fast build rule for target.
 obs_person_tracker_autogen/fast:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker_autogen.dir/build.make src/CMakeFiles/obs_person_tracker_autogen.dir/build
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker_autogen.dir/build.make src/CMakeFiles/obs_person_tracker_autogen.dir/build
 .PHONY : obs_person_tracker_autogen/fast
 
 Camera360RGB.o: Camera360RGB.cpp.o
@@ -208,7 +208,7 @@ Camera360RGB.o: Camera360RGB.cpp.o
 
 # target to build an object file
 Camera360RGB.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.o
 .PHONY : Camera360RGB.cpp.o
 
 Camera360RGB.i: Camera360RGB.cpp.i
@@ -216,7 +216,7 @@ Camera360RGB.i: Camera360RGB.cpp.i
 
 # target to preprocess a source file
 Camera360RGB.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.i
 .PHONY : Camera360RGB.cpp.i
 
 Camera360RGB.s: Camera360RGB.cpp.s
@@ -224,7 +224,7 @@ Camera360RGB.s: Camera360RGB.cpp.s
 
 # target to generate assembly for a file
 Camera360RGB.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Camera360RGB.cpp.s
 .PHONY : Camera360RGB.cpp.s
 
 CommonBehavior.o: CommonBehavior.cpp.o
@@ -232,7 +232,7 @@ CommonBehavior.o: CommonBehavior.cpp.o
 
 # target to build an object file
 CommonBehavior.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.o
 .PHONY : CommonBehavior.cpp.o
 
 CommonBehavior.i: CommonBehavior.cpp.i
@@ -240,7 +240,7 @@ CommonBehavior.i: CommonBehavior.cpp.i
 
 # target to preprocess a source file
 CommonBehavior.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.i
 .PHONY : CommonBehavior.cpp.i
 
 CommonBehavior.s: CommonBehavior.cpp.s
@@ -248,7 +248,7 @@ CommonBehavior.s: CommonBehavior.cpp.s
 
 # target to generate assembly for a file
 CommonBehavior.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/CommonBehavior.cpp.s
 .PHONY : CommonBehavior.cpp.s
 
 GenericBase.o: GenericBase.cpp.o
@@ -256,7 +256,7 @@ GenericBase.o: GenericBase.cpp.o
 
 # target to build an object file
 GenericBase.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.o
 .PHONY : GenericBase.cpp.o
 
 GenericBase.i: GenericBase.cpp.i
@@ -264,7 +264,7 @@ GenericBase.i: GenericBase.cpp.i
 
 # target to preprocess a source file
 GenericBase.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.i
 .PHONY : GenericBase.cpp.i
 
 GenericBase.s: GenericBase.cpp.s
@@ -272,7 +272,7 @@ GenericBase.s: GenericBase.cpp.s
 
 # target to generate assembly for a file
 GenericBase.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/GenericBase.cpp.s
 .PHONY : GenericBase.cpp.s
 
 Grid2D.o: Grid2D.cpp.o
@@ -280,7 +280,7 @@ Grid2D.o: Grid2D.cpp.o
 
 # target to build an object file
 Grid2D.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Grid2D.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Grid2D.cpp.o
 .PHONY : Grid2D.cpp.o
 
 Grid2D.i: Grid2D.cpp.i
@@ -288,7 +288,7 @@ Grid2D.i: Grid2D.cpp.i
 
 # target to preprocess a source file
 Grid2D.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Grid2D.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Grid2D.cpp.i
 .PHONY : Grid2D.cpp.i
 
 Grid2D.s: Grid2D.cpp.s
@@ -296,7 +296,7 @@ Grid2D.s: Grid2D.cpp.s
 
 # target to generate assembly for a file
 Grid2D.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Grid2D.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Grid2D.cpp.s
 .PHONY : Grid2D.cpp.s
 
 Lidar3D.o: Lidar3D.cpp.o
@@ -304,7 +304,7 @@ Lidar3D.o: Lidar3D.cpp.o
 
 # target to build an object file
 Lidar3D.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.o
 .PHONY : Lidar3D.cpp.o
 
 Lidar3D.i: Lidar3D.cpp.i
@@ -312,7 +312,7 @@ Lidar3D.i: Lidar3D.cpp.i
 
 # target to preprocess a source file
 Lidar3D.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.i
 .PHONY : Lidar3D.cpp.i
 
 Lidar3D.s: Lidar3D.cpp.s
@@ -320,7 +320,7 @@ Lidar3D.s: Lidar3D.cpp.s
 
 # target to generate assembly for a file
 Lidar3D.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/Lidar3D.cpp.s
 .PHONY : Lidar3D.cpp.s
 
 OmniRobot.o: OmniRobot.cpp.o
@@ -328,7 +328,7 @@ OmniRobot.o: OmniRobot.cpp.o
 
 # target to build an object file
 OmniRobot.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.o
 .PHONY : OmniRobot.cpp.o
 
 OmniRobot.i: OmniRobot.cpp.i
@@ -336,7 +336,7 @@ OmniRobot.i: OmniRobot.cpp.i
 
 # target to preprocess a source file
 OmniRobot.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.i
 .PHONY : OmniRobot.cpp.i
 
 OmniRobot.s: OmniRobot.cpp.s
@@ -344,7 +344,7 @@ OmniRobot.s: OmniRobot.cpp.s
 
 # target to generate assembly for a file
 OmniRobot.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.s
 .PHONY : OmniRobot.cpp.s
 
 VisualElementsPub.o: VisualElementsPub.cpp.o
@@ -352,7 +352,7 @@ VisualElementsPub.o: VisualElementsPub.cpp.o
 
 # target to build an object file
 VisualElementsPub.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.o
 .PHONY : VisualElementsPub.cpp.o
 
 VisualElementsPub.i: VisualElementsPub.cpp.i
@@ -360,7 +360,7 @@ VisualElementsPub.i: VisualElementsPub.cpp.i
 
 # target to preprocess a source file
 VisualElementsPub.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.i
 .PHONY : VisualElementsPub.cpp.i
 
 VisualElementsPub.s: VisualElementsPub.cpp.s
@@ -368,7 +368,7 @@ VisualElementsPub.s: VisualElementsPub.cpp.s
 
 # target to generate assembly for a file
 VisualElementsPub.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.s
 .PHONY : VisualElementsPub.cpp.s
 
 commonbehaviorI.o: commonbehaviorI.cpp.o
@@ -376,7 +376,7 @@ commonbehaviorI.o: commonbehaviorI.cpp.o
 
 # target to build an object file
 commonbehaviorI.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o
 .PHONY : commonbehaviorI.cpp.o
 
 commonbehaviorI.i: commonbehaviorI.cpp.i
@@ -384,7 +384,7 @@ commonbehaviorI.i: commonbehaviorI.cpp.i
 
 # target to preprocess a source file
 commonbehaviorI.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.i
 .PHONY : commonbehaviorI.cpp.i
 
 commonbehaviorI.s: commonbehaviorI.cpp.s
@@ -392,7 +392,7 @@ commonbehaviorI.s: commonbehaviorI.cpp.s
 
 # target to generate assembly for a file
 commonbehaviorI.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.s
 .PHONY : commonbehaviorI.cpp.s
 
 dbscan.o: dbscan.cpp.o
@@ -400,7 +400,7 @@ dbscan.o: dbscan.cpp.o
 
 # target to build an object file
 dbscan.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o
 .PHONY : dbscan.cpp.o
 
 dbscan.i: dbscan.cpp.i
@@ -408,7 +408,7 @@ dbscan.i: dbscan.cpp.i
 
 # target to preprocess a source file
 dbscan.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.i
 .PHONY : dbscan.cpp.i
 
 dbscan.s: dbscan.cpp.s
@@ -416,7 +416,7 @@ dbscan.s: dbscan.cpp.s
 
 # target to generate assembly for a file
 dbscan.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.s
 .PHONY : dbscan.cpp.s
 
 genericmonitor.o: genericmonitor.cpp.o
@@ -424,7 +424,7 @@ genericmonitor.o: genericmonitor.cpp.o
 
 # target to build an object file
 genericmonitor.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o
 .PHONY : genericmonitor.cpp.o
 
 genericmonitor.i: genericmonitor.cpp.i
@@ -432,7 +432,7 @@ genericmonitor.i: genericmonitor.cpp.i
 
 # target to preprocess a source file
 genericmonitor.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.i
 .PHONY : genericmonitor.cpp.i
 
 genericmonitor.s: genericmonitor.cpp.s
@@ -440,7 +440,7 @@ genericmonitor.s: genericmonitor.cpp.s
 
 # target to generate assembly for a file
 genericmonitor.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.s
 .PHONY : genericmonitor.cpp.s
 
 genericworker.o: genericworker.cpp.o
@@ -448,7 +448,7 @@ genericworker.o: genericworker.cpp.o
 
 # target to build an object file
 genericworker.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.o
 .PHONY : genericworker.cpp.o
 
 genericworker.i: genericworker.cpp.i
@@ -456,7 +456,7 @@ genericworker.i: genericworker.cpp.i
 
 # target to preprocess a source file
 genericworker.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.i
 .PHONY : genericworker.cpp.i
 
 genericworker.s: genericworker.cpp.s
@@ -464,7 +464,7 @@ genericworker.s: genericworker.cpp.s
 
 # target to generate assembly for a file
 genericworker.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.s
 .PHONY : genericworker.cpp.s
 
 home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.o: home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
@@ -472,7 +472,7 @@ home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.o
 
 # target to build an object file
 home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
 .PHONY : home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
 
 home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.i: home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
@@ -480,7 +480,7 @@ home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.i
 
 # target to preprocess a source file
 home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
 .PHONY : home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
 
 home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.s: home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
@@ -488,7 +488,7 @@ home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.s
 
 # target to generate assembly for a file
 home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
 .PHONY : home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
 
 home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.o: home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
@@ -496,7 +496,7 @@ home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.o: home/robocomp/robocomp
 
 # target to build an object file
 home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
 .PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
 
 home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.i: home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
@@ -504,7 +504,7 @@ home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.i: home/robocomp/robocomp
 
 # target to preprocess a source file
 home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
 .PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
 
 home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.s: home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
@@ -512,7 +512,7 @@ home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.s: home/robocomp/robocomp
 
 # target to generate assembly for a file
 home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
 .PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
 
 home/robocomp/robocomp/classes/qcustomplot/qcustomplot.o: home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o
@@ -520,7 +520,7 @@ home/robocomp/robocomp/classes/qcustomplot/qcustomplot.o: home/robocomp/robocomp
 
 # target to build an object file
 home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o
 .PHONY : home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.o
 
 home/robocomp/robocomp/classes/qcustomplot/qcustomplot.i: home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.i
@@ -528,7 +528,7 @@ home/robocomp/robocomp/classes/qcustomplot/qcustomplot.i: home/robocomp/robocomp
 
 # target to preprocess a source file
 home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.i
 .PHONY : home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.i
 
 home/robocomp/robocomp/classes/qcustomplot/qcustomplot.s: home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.s
@@ -536,7 +536,7 @@ home/robocomp/robocomp/classes/qcustomplot/qcustomplot.s: home/robocomp/robocomp
 
 # target to generate assembly for a file
 home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.s
 .PHONY : home/robocomp/robocomp/classes/qcustomplot/qcustomplot.cpp.s
 
 home/robocomp/robocomp/classes/qlog/qlog.o: home/robocomp/robocomp/classes/qlog/qlog.cpp.o
@@ -544,7 +544,7 @@ home/robocomp/robocomp/classes/qlog/qlog.o: home/robocomp/robocomp/classes/qlog/
 
 # target to build an object file
 home/robocomp/robocomp/classes/qlog/qlog.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o
 .PHONY : home/robocomp/robocomp/classes/qlog/qlog.cpp.o
 
 home/robocomp/robocomp/classes/qlog/qlog.i: home/robocomp/robocomp/classes/qlog/qlog.cpp.i
@@ -552,7 +552,7 @@ home/robocomp/robocomp/classes/qlog/qlog.i: home/robocomp/robocomp/classes/qlog/
 
 # target to preprocess a source file
 home/robocomp/robocomp/classes/qlog/qlog.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.i
 .PHONY : home/robocomp/robocomp/classes/qlog/qlog.cpp.i
 
 home/robocomp/robocomp/classes/qlog/qlog.s: home/robocomp/robocomp/classes/qlog/qlog.cpp.s
@@ -560,7 +560,7 @@ home/robocomp/robocomp/classes/qlog/qlog.s: home/robocomp/robocomp/classes/qlog/
 
 # target to generate assembly for a file
 home/robocomp/robocomp/classes/qlog/qlog.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.s
 .PHONY : home/robocomp/robocomp/classes/qlog/qlog.cpp.s
 
 home/robocomp/robocomp/classes/rapplication/rapplication.o: home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o
@@ -568,7 +568,7 @@ home/robocomp/robocomp/classes/rapplication/rapplication.o: home/robocomp/roboco
 
 # target to build an object file
 home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o
 .PHONY : home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o
 
 home/robocomp/robocomp/classes/rapplication/rapplication.i: home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
@@ -576,7 +576,7 @@ home/robocomp/robocomp/classes/rapplication/rapplication.i: home/robocomp/roboco
 
 # target to preprocess a source file
 home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
 .PHONY : home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
 
 home/robocomp/robocomp/classes/rapplication/rapplication.s: home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
@@ -584,7 +584,7 @@ home/robocomp/robocomp/classes/rapplication/rapplication.s: home/robocomp/roboco
 
 # target to generate assembly for a file
 home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
 .PHONY : home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
 
 home/robocomp/robocomp/classes/sigwatch/sigwatch.o: home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o
@@ -592,7 +592,7 @@ home/robocomp/robocomp/classes/sigwatch/sigwatch.o: home/robocomp/robocomp/class
 
 # target to build an object file
 home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o
 .PHONY : home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o
 
 home/robocomp/robocomp/classes/sigwatch/sigwatch.i: home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
@@ -600,7 +600,7 @@ home/robocomp/robocomp/classes/sigwatch/sigwatch.i: home/robocomp/robocomp/class
 
 # target to preprocess a source file
 home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
 .PHONY : home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
 
 home/robocomp/robocomp/classes/sigwatch/sigwatch.s: home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
@@ -608,7 +608,7 @@ home/robocomp/robocomp/classes/sigwatch/sigwatch.s: home/robocomp/robocomp/class
 
 # target to generate assembly for a file
 home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
 .PHONY : home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
 
 main.o: main.cpp.o
@@ -616,7 +616,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/main.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -624,7 +624,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/main.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -632,7 +632,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/main.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 obs_person_tracker_autogen/mocs_compilation.o: obs_person_tracker_autogen/mocs_compilation.cpp.o
@@ -640,7 +640,7 @@ obs_person_tracker_autogen/mocs_compilation.o: obs_person_tracker_autogen/mocs_c
 
 # target to build an object file
 obs_person_tracker_autogen/mocs_compilation.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilation.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilation.cpp.o
 .PHONY : obs_person_tracker_autogen/mocs_compilation.cpp.o
 
 obs_person_tracker_autogen/mocs_compilation.i: obs_person_tracker_autogen/mocs_compilation.cpp.i
@@ -648,7 +648,7 @@ obs_person_tracker_autogen/mocs_compilation.i: obs_person_tracker_autogen/mocs_c
 
 # target to preprocess a source file
 obs_person_tracker_autogen/mocs_compilation.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilation.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilation.cpp.i
 .PHONY : obs_person_tracker_autogen/mocs_compilation.cpp.i
 
 obs_person_tracker_autogen/mocs_compilation.s: obs_person_tracker_autogen/mocs_compilation.cpp.s
@@ -656,7 +656,7 @@ obs_person_tracker_autogen/mocs_compilation.s: obs_person_tracker_autogen/mocs_c
 
 # target to generate assembly for a file
 obs_person_tracker_autogen/mocs_compilation.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilation.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilation.cpp.s
 .PHONY : obs_person_tracker_autogen/mocs_compilation.cpp.s
 
 room_detector.o: room_detector.cpp.o
@@ -664,7 +664,7 @@ room_detector.o: room_detector.cpp.o
 
 # target to build an object file
 room_detector.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o
 .PHONY : room_detector.cpp.o
 
 room_detector.i: room_detector.cpp.i
@@ -672,7 +672,7 @@ room_detector.i: room_detector.cpp.i
 
 # target to preprocess a source file
 room_detector.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.i
 .PHONY : room_detector.cpp.i
 
 room_detector.s: room_detector.cpp.s
@@ -680,7 +680,7 @@ room_detector.s: room_detector.cpp.s
 
 # target to generate assembly for a file
 room_detector.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.s
 .PHONY : room_detector.cpp.s
 
 specificmonitor.o: specificmonitor.cpp.o
@@ -688,7 +688,7 @@ specificmonitor.o: specificmonitor.cpp.o
 
 # target to build an object file
 specificmonitor.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/specificmonitor.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/specificmonitor.cpp.o
 .PHONY : specificmonitor.cpp.o
 
 specificmonitor.i: specificmonitor.cpp.i
@@ -696,7 +696,7 @@ specificmonitor.i: specificmonitor.cpp.i
 
 # target to preprocess a source file
 specificmonitor.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/specificmonitor.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/specificmonitor.cpp.i
 .PHONY : specificmonitor.cpp.i
 
 specificmonitor.s: specificmonitor.cpp.s
@@ -704,7 +704,7 @@ specificmonitor.s: specificmonitor.cpp.s
 
 # target to generate assembly for a file
 specificmonitor.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/specificmonitor.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/specificmonitor.cpp.s
 .PHONY : specificmonitor.cpp.s
 
 specificworker.o: specificworker.cpp.o
@@ -712,7 +712,7 @@ specificworker.o: specificworker.cpp.o
 
 # target to build an object file
 specificworker.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.o
 .PHONY : specificworker.cpp.o
 
 specificworker.i: specificworker.cpp.i
@@ -720,7 +720,7 @@ specificworker.i: specificworker.cpp.i
 
 # target to preprocess a source file
 specificworker.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.i
 .PHONY : specificworker.cpp.i
 
 specificworker.s: specificworker.cpp.s
@@ -728,7 +728,7 @@ specificworker.s: specificworker.cpp.s
 
 # target to generate assembly for a file
 specificworker.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.s
 .PHONY : specificworker.cpp.s
 
 visibility_graph.o: visibility_graph.cpp.o
@@ -736,7 +736,7 @@ visibility_graph.o: visibility_graph.cpp.o
 
 # target to build an object file
 visibility_graph.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o
 .PHONY : visibility_graph.cpp.o
 
 visibility_graph.i: visibility_graph.cpp.i
@@ -744,7 +744,7 @@ visibility_graph.i: visibility_graph.cpp.i
 
 # target to preprocess a source file
 visibility_graph.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.i
 .PHONY : visibility_graph.cpp.i
 
 visibility_graph.s: visibility_graph.cpp.s
@@ -752,7 +752,7 @@ visibility_graph.s: visibility_graph.cpp.s
 
 # target to generate assembly for a file
 visibility_graph.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.s
 .PHONY : visibility_graph.cpp.s
 
 visualelementspubI.o: visualelementspubI.cpp.o
@@ -760,7 +760,7 @@ visualelementspubI.o: visualelementspubI.cpp.o
 
 # target to build an object file
 visualelementspubI.cpp.o:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.o
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.o
 .PHONY : visualelementspubI.cpp.o
 
 visualelementspubI.i: visualelementspubI.cpp.i
@@ -768,7 +768,7 @@ visualelementspubI.i: visualelementspubI.cpp.i
 
 # target to preprocess a source file
 visualelementspubI.cpp.i:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.i
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.i
 .PHONY : visualelementspubI.cpp.i
 
 visualelementspubI.s: visualelementspubI.cpp.s
@@ -776,7 +776,7 @@ visualelementspubI.s: visualelementspubI.cpp.s
 
 # target to generate assembly for a file
 visualelementspubI.cpp.s:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.s
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/obs_person_tracker.dir/build.make src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.s
 .PHONY : visualelementspubI.cpp.s
 
 # Help Target
@@ -877,6 +877,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/usuario/robocomp/components/grupo4/practica4/Activity_3 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

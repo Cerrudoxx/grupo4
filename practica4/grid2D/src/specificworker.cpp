@@ -143,18 +143,18 @@ void SpecificWorker::compute()
     Eigen::Vector2f target(gridX, gridY);
     Eigen::Vector2f source(params.RobotX, params.RobotY);
 
-    qDebug() << "Source: " << source.x() << " " << source.y();
-    qDebug() << "Target: " << target.x() << " " << target.y();
-    qDebug() << "Computing path...";
+    // qDebug() << "Source: " << source.x() << " " << source.y();
+    // qDebug() << "Target: " << target.x() << " " << target.y();
+    // qDebug() << "Computing path...";
 
-    auto path = rutaDijkstra(source, target);
-    if (path.empty())
-    {
-        std::cerr << "Error: Path could not be found" << std::endl;
-        return;
-    }
+    // auto path = rutaDijkstra(source, target);
+    // if (path.empty())
+    // {
+    //     std::cerr << "Error: Path could not be found" << std::endl;
+    //     return;
+    // }
 
-    draw_path(path, &viewer->scene);
+    // draw_path(path, &viewer->scene);
 }
 
 /**
@@ -339,14 +339,69 @@ std::vector<Eigen::Vector2f> SpecificWorker::read_lidar_bpearl()
 
 RoboCompGrid2D::Result SpecificWorker::Grid2D_getPaths(RoboCompGrid2D::TPoint source, RoboCompGrid2D::TPoint target)
 {
+
+    qDebug() << "Grid2D_getPaths";
     RoboCompGrid2D::Result result;
-    auto path = rutaDijkstra(Eigen::Vector2f(source.x, source.y), Eigen::Vector2f(target.x, target.y));
-    for (const auto &point : path)
+    
+ 
+    auto gridTarget = realToGrid(target.x, target.y);
+    Eigen::Vector2f sourceVec = Eigen::Vector2f(params.RobotX, params.RobotY);
+    Eigen::Vector2f targetVec = Eigen::Vector2f(std::get<0>(gridTarget.value()), std::get<1>(gridTarget.value()));
+
+    qDebug() << "Source: " << sourceVec.x() << " " << sourceVec.y();
+    qDebug() << "Target: " << targetVec.x() << " " << targetVec.y();
+
+    // real to grid, cambiar a libre la zona del target
+
+    if (!gridTarget.has_value())
     {
-        RoboCompGrid2D::TPoint tpoint;
-        tpoint.x = point.x();
-        tpoint.y = point.y();
-        result.path.push_back(tpoint);
+        result.valid = false;
+        result.errorMsg = "Target point is out of grid bounds";
+        return result;
+    }
+
+    if (gridTarget.has_value())
+    {
+        auto [targetX, targetY] = gridTarget.value();
+        for (int i = -2; i <= 2; ++i)
+        {
+            for (int j = -2; j <= 2; ++j)
+            {
+                int ni = targetX + i;
+                int nj = targetY + j;
+                if (ni >= 0 && ni < GRID_SIZE && nj >= 0 && nj < GRID_SIZE)
+                {
+                    grid[ni][nj].state = StateCell::EMPTY;
+                }
+            }
+        }
+    }
+
+    auto path = rutaDijkstra(sourceVec, targetVec);
+    qDebug() << "Path size: " << path.size();
+    if (path.empty())
+    {
+        result.valid = false;
+        result.errorMsg = "Path could not be found";
+        return result;
+    }
+    else
+    {
+        
+        draw_path(path, &viewer->scene);
+        for (const auto &point : path)
+        {
+            //qDebug() << "Point: " << point.x() << " " << point.y();
+            result.path.emplace_back(RoboCompGrid2D::TPoint{static_cast<float>(point.x()), static_cast<float>(point.y()), 0});
+        }
+    
+    }
+
+    qDebug() << "Returning result";
+    result.valid = true;
+    for (const auto &p : result.path)
+    {
+        qDebug() << "Path: " << p.x << " " << p.y;
     }
     return result;
 }
@@ -365,6 +420,23 @@ std::vector<QPointF> SpecificWorker::rutaDijkstra(Eigen::Vector2f source, Eigen:
     int y = static_cast<int>(source.y());
     int x2 = static_cast<int>(target.x());
     int y2 = static_cast<int>(target.y());
+
+    if (x2 >= 0 && x2 < GRID_SIZE && y2 >= 0 && y2 < GRID_SIZE)
+    {
+        for (int i = -1; i <= 1; ++i)
+        {
+            for (int j = -1; j <= 1; ++j)
+            {
+                int ni = x2 + i;
+                int nj = y2 + j;
+                if (ni >= 0 && ni < GRID_SIZE && nj >= 0 && nj < GRID_SIZE)
+                {
+                    grid[ni][nj].state = StateCell::EMPTY;
+                    grid[ni][nj].graphics_item->setBrush(QBrush(QColor("Cyan")));
+                }
+            }
+        }
+    }
 
     open_list.emplace(x, y, 0);
     cost[x][y] = 0;

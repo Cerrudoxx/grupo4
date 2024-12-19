@@ -94,7 +94,7 @@ void SpecificWorker::initialize()
 void SpecificWorker::compute()
 {
 
-    qDebug() << "Linea 95";
+    qDebug() << "Compute worker";
     /// check if there is new YOLO data in buffer
     std::expected<RoboCompVisualElementsPub::TObject, std::string> tp_person = std::unexpected("No person found");
     auto [data_] = buffer.read_first();
@@ -111,39 +111,41 @@ void SpecificWorker::compute()
         lcdNumber_angle_to_person->display(atan2(std::stof(tp_person.value().attributes.at("x_pos")),
                                                  std::stof(tp_person.value().attributes.at("y_pos"))));
     }
-    qDebug() << "Linea 112";
+
     
-        RoboCompGrid2D::TPoint robot_coords;  
-         robot_coords.x = 25;
-        robot_coords.y = 25;
-     RoboCompGrid2D::TPoint person_coords;
+    RoboCompGrid2D::TPoint robot_coords{25, 25};
+    RoboCompGrid2D::TPoint person_coords;
+    qDebug() << "Coordenadas del robot: " << robot_coords.x << " " << robot_coords.y;
     if (tp_person)
     {
        
         person_coords.x = std::stoi(tp_person.value().attributes.at("x_pos"));
         person_coords.y = std::stoi(tp_person.value().attributes.at("y_pos"));
-    
+        qDebug() << "Persona detectada en compute";
+        qDebug() << "Coordenadas de la persona: " << person_coords.x << " " << person_coords.y;
      
     }
     else{
         qDebug() << "Persona no detectada en compute";
-        person_coords.x = 25;
-        person_coords.y = 25;
+        person_coords.x = 0;
+        person_coords.y = 0;
     }
 
-    qDebug() << "Linea 120";
     try 
     {   
         if (grid2d_proxy)
-        {
+        {   
+            qDebug() << "grid2d_proxy getting paths";
             auto path = grid2d_proxy->getPaths(robot_coords, person_coords);
+            qDebug() << "Path calculado";
+            sleep(5);
         }
         else
         {
             qDebug() << "grid2d_proxy is not initialized.";
         }
         omnirobot_proxy->setSpeedBase(0.f, 0, 0);
-    qDebug() << "Linea 124";
+
     }
     
     catch (const Ice::Exception &e)

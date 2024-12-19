@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../../../../../../../../robocomp/components/grupo4/practica4/Activity_3/src/specificworker.h"
+#include "../../specificworker.h"
 #include <QtGui/qtextcursor.h>
 #include <QScreen>
 #include <QtCore/qbytearray.h>

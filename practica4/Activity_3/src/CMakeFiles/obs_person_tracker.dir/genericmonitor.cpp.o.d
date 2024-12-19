@@ -760,7 +760,7 @@ src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o: \
  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericworker.h \
  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/config.h \
  /home/robocomp/robocomp/classes/qlog/qlog.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/config.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/config.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGuiDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
@@ -949,7 +949,7 @@ src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiversion.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/ui_mainUI.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h \
@@ -981,7 +981,7 @@ src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/CommonBehavior.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/CommonBehavior.h \
  /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
@@ -995,9 +995,9 @@ src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/Camera360RGB.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/GenericBase.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/Grid2D.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/Lidar3D.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/OmniRobot.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/VisualElementsPub.h
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/Camera360RGB.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/GenericBase.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/Grid2D.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/Lidar3D.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/OmniRobot.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/VisualElementsPub.h

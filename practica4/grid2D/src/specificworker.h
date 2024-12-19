@@ -112,8 +112,8 @@ private:
 
 		float WALL_MIN_DISTANCE = 1000; // mm
 
-		int RobotX = 25;
-		int RobotY = 25;
+		int RobotX = GRID_DIMENSION_MM / TILE_SIZE_MM / 2;
+		int RobotY = GRID_DIMENSION_MM / TILE_SIZE_MM / 2;
 
 		Eigen::Vector2f p_target = Eigen::Vector2f(RobotX, RobotY);
 	};
@@ -121,7 +121,7 @@ private:
 
 	AbstractGraphicViewer *viewer;
 	// GRID
-	static constexpr int GRID_DIMENSION_MM = 5000;
+	static constexpr int GRID_DIMENSION_MM = 10000;
 	static constexpr int TILE_SIZE_MM = 100;
 	static constexpr int GRID_SIZE = GRID_DIMENSION_MM / TILE_SIZE_MM;
 

@@ -2650,9 +2650,9 @@ src/CMakeFiles/obs_person_tracker.dir/VisualElementsPub.cpp.o: src/VisualElement
   src/Camera360RGB.h \
   src/Lidar3D.h
 
-src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o: /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/commonbehaviorI.cpp \
+src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o: src/commonbehaviorI.cpp \
   /usr/include/stdc-predef.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/commonbehaviorI.h \
+  src/commonbehaviorI.h \
   /usr/include/Ice/Ice.h \
   /usr/include/IceUtil/PushDisableWarnings.h \
   /usr/include/Ice/Config.h \
@@ -3082,8 +3082,8 @@ src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o: /home/usuario/roboc
   /usr/include/IceUtil/UUID.h \
   src/CommonBehavior.h \
   src/config.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericworker.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/config.h \
+  src/genericworker.h \
+  src/config.h \
   /home/robocomp/robocomp/classes/qlog/qlog.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends \
@@ -3788,11 +3788,11 @@ src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o: /home/usuario/roboc
   src/Lidar3D.h \
   src/OmniRobot.h \
   src/VisualElementsPub.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericmonitor.h
+  src/genericmonitor.h
 
-src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o: /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/dbscan.cpp \
+src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o: src/dbscan.cpp \
   /usr/include/stdc-predef.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/dbscan.h \
+  src/dbscan.h \
   /usr/include/opencv4/opencv2/opencv.hpp \
   /usr/include/opencv4/opencv2/opencv_modules.hpp \
   /usr/include/opencv4/opencv2/core.hpp \
@@ -6147,9 +6147,9 @@ src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o: /home/usuario/robocomp/compo
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qmath.h
 
-src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o: /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericmonitor.cpp \
+src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o: src/genericmonitor.cpp \
   /usr/include/stdc-predef.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericmonitor.h \
+  src/genericmonitor.h \
   /usr/include/Ice/Ice.h \
   /usr/include/IceUtil/PushDisableWarnings.h \
   /usr/include/Ice/Config.h \
@@ -7040,8 +7040,8 @@ src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o: /home/usuario/roboco
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qwineventnotifier.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qxmlstream.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtcoreversion.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericworker.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/config.h \
+  src/genericworker.h \
+  src/config.h \
   /home/robocomp/robocomp/classes/qlog/qlog.h \
   src/config.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
@@ -7286,10 +7286,10 @@ src/CMakeFiles/obs_person_tracker.dir/genericmonitor.cpp.o: /home/usuario/roboco
   src/OmniRobot.h \
   src/VisualElementsPub.h
 
-src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.o: /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericworker.cpp \
+src/CMakeFiles/obs_person_tracker.dir/genericworker.cpp.o: src/genericworker.cpp \
   /usr/include/stdc-predef.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericworker.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/config.h \
+  src/genericworker.h \
+  src/config.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -12537,9 +12537,9 @@ src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/si
   /usr/include/x86_64-linux-gnu/bits/sigthread.h \
   /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
   src/obs_person_tracker_autogen/include/moc_sigwatch.cpp \
-  /home/robocomp/robocomp/classes/sigwatch/sigwatch.h
+  /robocomp/robocomp/classes/sigwatch/sigwatch.h
 
-src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/main.cpp \
+src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: src/main.cpp \
   /usr/include/stdc-predef.h \
   /usr/include/signal.h \
   /usr/include/features.h \
@@ -13834,9 +13834,9 @@ src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: /home/usuario/robocomp/compone
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
   /home/robocomp/robocomp/classes/qlog/qlog.h \
   src/config.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/config.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericmonitor.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericworker.h \
+  src/config.h \
+  src/genericmonitor.h \
+  src/genericworker.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
   src/ui_mainUI.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
@@ -13868,7 +13868,7 @@ src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: /home/usuario/robocomp/compone
   src/Lidar3D.h \
   src/OmniRobot.h \
   src/VisualElementsPub.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/specificworker.h \
+  src/specificworker.h \
   src/genericworker.h \
   /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
@@ -13932,7 +13932,7 @@ src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: /home/usuario/robocomp/compone
   /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportversion.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimeZone \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/room_detector.h \
+  src/room_detector.h \
   /usr/include/Eigen/Dense \
   /usr/include/Eigen/Core \
   /usr/include/Eigen/src/Core/util/DisableStupidWarnings.h \
@@ -14158,10 +14158,10 @@ src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: /home/usuario/robocomp/compone
   /usr/include/opencv4/opencv2/core/cvdef.h \
   /usr/include/opencv4/opencv2/imgproc.hpp \
   /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/room.h \
+  src/room.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsItem \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPolygonF \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/dbscan.h \
+  src/dbscan.h \
   /usr/include/opencv4/opencv2/opencv.hpp \
   /usr/include/opencv4/opencv2/calib3d.hpp \
   /usr/include/opencv4/opencv2/features2d.hpp \
@@ -14239,7 +14239,7 @@ src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: /home/usuario/robocomp/compone
   /usr/include/opencv4/opencv2/video.hpp \
   /usr/include/opencv4/opencv2/video/tracking.hpp \
   /usr/include/opencv4/opencv2/video/background_segm.hpp \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/visibility_graph.h \
+  src/visibility_graph.h \
   /usr/include/CGAL/Simple_cartesian.h \
   /usr/include/CGAL/Cartesian/Cartesian_base.h \
   /usr/include/CGAL/basic.h \
@@ -16208,14 +16208,13 @@ src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: /home/usuario/robocomp/compone
   /usr/local/include/cppitertools/internal/iterbase.hpp \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsLineItem \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsEllipseItem \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/specificmonitor.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/commonbehaviorI.h \
-  src/visualelementspubI.h \
-  src/genericworker.h
+  src/specificmonitor.h \
+  src/commonbehaviorI.h \
+  src/visualelementspubI.h
 
 src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilation.cpp.o: src/obs_person_tracker_autogen/mocs_compilation.cpp \
   /usr/include/stdc-predef.h \
-  src/obs_person_tracker_autogen/FGDXZBSX76/moc_abstract_graphic_viewer.cpp \
+  src/obs_person_tracker_autogen/AF5EVGCUJC/moc_abstract_graphic_viewer.cpp \
   /usr/include/c++/12/memory \
   /usr/include/c++/12/bits/allocator.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
@@ -16449,7 +16448,7 @@ src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilatio
   /usr/include/c++/12/bits/uses_allocator_args.h \
   /usr/include/c++/12/pstl/glue_memory_defs.h \
   /usr/include/c++/12/pstl/execution_defs.h \
-  /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+  /robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
@@ -16704,8 +16703,8 @@ src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilatio
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainterpath.h \
   /usr/include/c++/12/iostream \
-  src/obs_person_tracker_autogen/YNADVVBD3P/moc_GRAFCETStep.cpp \
-  /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
+  src/obs_person_tracker_autogen/WJD4WNSKOL/moc_GRAFCETStep.cpp \
+  /robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
   /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
   /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \
@@ -16717,8 +16716,8 @@ src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilatio
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
   /usr/include/c++/12/mutex \
   /usr/include/c++/12/bits/unique_lock.h \
-  src/obs_person_tracker_autogen/ROJA6K4NDP/moc_qcustomplot.cpp \
-  /home/robocomp/robocomp/classes/qcustomplot/qcustomplot.h \
+  src/obs_person_tracker_autogen/Y55KOZ7QAZ/moc_qcustomplot.cpp \
+  /robocomp/robocomp/classes/qcustomplot/qcustomplot.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qpointer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSharedPointer \
@@ -17408,7 +17407,7 @@ src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilatio
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimeZone \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QScreen \
   src/obs_person_tracker_autogen/EWIEGA46WW/moc_genericmonitor.cpp \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericmonitor.h \
+  src/genericmonitor.h \
   /usr/include/Ice/Ice.h \
   /usr/include/IceUtil/PushDisableWarnings.h \
   /usr/include/Ice/Config.h \
@@ -17540,8 +17539,8 @@ src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilatio
   /usr/include/Ice/UUID.h \
   /usr/include/IceUtil/UUID.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericworker.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/config.h \
+  src/genericworker.h \
+  src/config.h \
   /home/robocomp/robocomp/classes/qlog/qlog.h \
   src/config.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
@@ -17569,12 +17568,12 @@ src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilatio
   src/OmniRobot.h \
   src/VisualElementsPub.h \
   src/obs_person_tracker_autogen/EWIEGA46WW/moc_genericworker.cpp \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericworker.h \
+  src/genericworker.h \
   src/obs_person_tracker_autogen/EWIEGA46WW/moc_specificmonitor.cpp \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/specificmonitor.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericmonitor.h \
+  src/specificmonitor.h \
+  src/genericmonitor.h \
   src/obs_person_tracker_autogen/EWIEGA46WW/moc_specificworker.cpp \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/specificworker.h \
+  src/specificworker.h \
   src/genericworker.h \
   /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
   /usr/include/c++/12/expected \
@@ -17587,7 +17586,7 @@ src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilatio
   /usr/include/c++/12/bits/stl_queue.h \
   /usr/include/c++/12/thread \
   /home/robocomp/robocomp/classes/qcustomplot/qcustomplot.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/room_detector.h \
+  src/room_detector.h \
   /usr/include/Eigen/Dense \
   /usr/include/Eigen/Core \
   /usr/include/Eigen/src/Core/util/DisableStupidWarnings.h \
@@ -17813,10 +17812,10 @@ src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilatio
   /usr/include/opencv4/opencv2/core/cvdef.h \
   /usr/include/opencv4/opencv2/imgproc.hpp \
   /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/room.h \
+  src/room.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsItem \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPolygonF \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/dbscan.h \
+  src/dbscan.h \
   /usr/include/opencv4/opencv2/opencv.hpp \
   /usr/include/opencv4/opencv2/calib3d.hpp \
   /usr/include/opencv4/opencv2/features2d.hpp \
@@ -17894,7 +17893,7 @@ src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilatio
   /usr/include/opencv4/opencv2/video.hpp \
   /usr/include/opencv4/opencv2/video/tracking.hpp \
   /usr/include/opencv4/opencv2/video/background_segm.hpp \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/visibility_graph.h \
+  src/visibility_graph.h \
   /usr/include/CGAL/Simple_cartesian.h \
   /usr/include/CGAL/Cartesian/Cartesian_base.h \
   /usr/include/CGAL/basic.h \
@@ -19864,9 +19863,9 @@ src/CMakeFiles/obs_person_tracker.dir/obs_person_tracker_autogen/mocs_compilatio
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsLineItem \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsEllipseItem
 
-src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o: /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/room_detector.cpp \
+src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o: src/room_detector.cpp \
   /usr/include/stdc-predef.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/room_detector.h \
+  src/room_detector.h \
   /usr/include/c++/12/vector \
   /usr/include/c++/12/bits/stl_algobase.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
@@ -20936,7 +20935,7 @@ src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o: /home/usuario/robocom
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qwineventnotifier.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qxmlstream.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtcoreversion.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/room.h \
+  src/room.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsItem \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPolygonF \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpolygon.h \
@@ -20954,10 +20953,10 @@ src/CMakeFiles/obs_person_tracker.dir/room_detector.cpp.o: /home/usuario/robocom
   /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
   /usr/local/include/cppitertools/range.hpp
 
-src/CMakeFiles/obs_person_tracker.dir/specificmonitor.cpp.o: /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/specificmonitor.cpp \
+src/CMakeFiles/obs_person_tracker.dir/specificmonitor.cpp.o: src/specificmonitor.cpp \
   /usr/include/stdc-predef.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/specificmonitor.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericmonitor.h \
+  src/specificmonitor.h \
+  src/genericmonitor.h \
   /usr/include/Ice/Ice.h \
   /usr/include/IceUtil/PushDisableWarnings.h \
   /usr/include/Ice/Config.h \
@@ -21848,8 +21847,8 @@ src/CMakeFiles/obs_person_tracker.dir/specificmonitor.cpp.o: /home/usuario/roboc
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qwineventnotifier.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qxmlstream.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtcoreversion.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericworker.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/config.h \
+  src/genericworker.h \
+  src/config.h \
   /home/robocomp/robocomp/classes/qlog/qlog.h \
   src/config.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
@@ -22094,9 +22093,9 @@ src/CMakeFiles/obs_person_tracker.dir/specificmonitor.cpp.o: /home/usuario/roboc
   src/OmniRobot.h \
   src/VisualElementsPub.h
 
-src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.o: /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/specificworker.cpp \
+src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.o: src/specificworker.cpp \
   /usr/include/stdc-predef.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/specificworker.h \
+  src/specificworker.h \
   src/genericworker.h \
   src/config.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h \
@@ -23402,7 +23401,7 @@ src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.o: /home/usuario/roboco
   /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportversion.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimeZone \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/room_detector.h \
+  src/room_detector.h \
   /usr/include/Eigen/Dense \
   /usr/include/Eigen/Core \
   /usr/include/Eigen/src/Core/util/DisableStupidWarnings.h \
@@ -23628,10 +23627,10 @@ src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.o: /home/usuario/roboco
   /usr/include/opencv4/opencv2/core/cvdef.h \
   /usr/include/opencv4/opencv2/imgproc.hpp \
   /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/room.h \
+  src/room.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsItem \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPolygonF \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/dbscan.h \
+  src/dbscan.h \
   /usr/include/opencv4/opencv2/opencv.hpp \
   /usr/include/opencv4/opencv2/calib3d.hpp \
   /usr/include/opencv4/opencv2/features2d.hpp \
@@ -23709,7 +23708,7 @@ src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.o: /home/usuario/roboco
   /usr/include/opencv4/opencv2/video.hpp \
   /usr/include/opencv4/opencv2/video/tracking.hpp \
   /usr/include/opencv4/opencv2/video/background_segm.hpp \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/visibility_graph.h \
+  src/visibility_graph.h \
   /usr/include/CGAL/Simple_cartesian.h \
   /usr/include/CGAL/Cartesian/Cartesian_base.h \
   /usr/include/CGAL/basic.h \
@@ -25682,9 +25681,9 @@ src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.o: /home/usuario/roboco
   /usr/local/include/cppitertools/sliding_window.hpp \
   /usr/local/include/cppitertools/internal/iteratoriterator.hpp
 
-src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/visibility_graph.cpp \
+src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: src/visibility_graph.cpp \
   /usr/include/stdc-predef.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/visibility_graph.h \
+  src/visibility_graph.h \
   /usr/include/c++/12/vector \
   /usr/include/c++/12/bits/stl_algobase.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
@@ -28305,9 +28304,9 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: /home/usuario/robo
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QLineF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h
 
-src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.o: /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/visualelementspubI.cpp \
+src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.o: src/visualelementspubI.cpp \
   /usr/include/stdc-predef.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/visualelementspubI.h \
+  src/visualelementspubI.h \
   /usr/include/Ice/Ice.h \
   /usr/include/IceUtil/PushDisableWarnings.h \
   /usr/include/Ice/Config.h \
@@ -28739,8 +28738,8 @@ src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.o: /home/usuario/ro
   src/Camera360RGB.h \
   src/Lidar3D.h \
   src/config.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericworker.h \
-  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/config.h \
+  src/genericworker.h \
+  src/config.h \
   /home/robocomp/robocomp/classes/qlog/qlog.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends \
@@ -29445,31 +29444,29 @@ src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.o: /home/usuario/ro
   src/OmniRobot.h
 
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/visualelementspubI.h:
+src/visualelementspubI.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QLineF:
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/specificworker.cpp:
-
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/specificmonitor.cpp:
+src/specificmonitor.cpp:
 
 /usr/local/include/cppitertools/internal/iter_tuples.hpp:
 
 /usr/local/include/cppitertools/internal/iteratoriterator.hpp:
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/room_detector.cpp:
+src/room_detector.cpp:
 
 src/obs_person_tracker_autogen/EWIEGA46WW/moc_specificworker.cpp:
 
 src/obs_person_tracker_autogen/EWIEGA46WW/moc_specificmonitor.cpp:
 
-src/obs_person_tracker_autogen/YNADVVBD3P/moc_GRAFCETStep.cpp:
+src/obs_person_tracker_autogen/Y55KOZ7QAZ/moc_qcustomplot.cpp:
 
-src/obs_person_tracker_autogen/FGDXZBSX76/moc_abstract_graphic_viewer.cpp:
+/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h:
 
 src/visualelementspubI.h:
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/specificmonitor.h:
+src/specificmonitor.h:
 
 /usr/include/CGAL/STL_Extension/internal/info_check.h:
 
@@ -29848,6 +29845,8 @@ src/visualelementspubI.h:
 /usr/include/CGAL/Filtered_kernel/internal/Static_filters/Coplanar_3.h:
 
 /usr/include/CGAL/Filtered_kernel/internal/Static_filters/Collinear_3.h:
+
+/usr/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h:
 
 /usr/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_2.h:
 
@@ -30284,6 +30283,8 @@ src/visualelementspubI.h:
 /usr/include/boost/multiprecision/cpp_int/checked.hpp:
 
 /usr/include/CGAL/Distance_2/Point_2_Line_2.h:
+
+src/obs_person_tracker_autogen/WJD4WNSKOL/moc_GRAFCETStep.cpp:
 
 /usr/include/CGAL/Distance_2/Point_2_Ray_2.h:
 
@@ -30785,8 +30786,6 @@ src/visualelementspubI.h:
 
 /usr/include/boost/predef/hardware/simd/x86.h:
 
-/usr/include/boost/predef/hardware/simd.h:
-
 /usr/include/boost/predef/platform/windows_runtime.h:
 
 /usr/include/boost/predef/platform/windows_system.h:
@@ -30959,13 +30958,11 @@ src/visualelementspubI.h:
 
 /usr/include/CGAL/basic.h:
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/visibility_graph.h:
+src/room_detector.h:
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/room_detector.h:
+src/specificworker.h:
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/specificworker.h:
-
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/main.cpp:
+src/main.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/sigthread.h:
 
@@ -31283,9 +31280,7 @@ src/visualelementspubI.h:
 
 /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h:
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericworker.cpp:
-
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericmonitor.cpp:
+src/genericmonitor.cpp:
 
 /usr/include/boost/mpl/aux_/erase_impl.hpp:
 
@@ -31797,8 +31792,6 @@ src/visualelementspubI.h:
 
 /usr/include/boost/predef/architecture/x86.h:
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/visibility_graph.cpp:
-
 /usr/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_intersection.h:
 
 /usr/include/boost/predef/architecture/superh.h:
@@ -32113,9 +32106,7 @@ src/visualelementspubI.h:
 
 /usr/include/boost/range/detail/has_member_size.hpp:
 
-/usr/include/boost/predef/library/std/vacpp.h:
-
-/usr/include/boost/type_traits/add_volatile.hpp:
+/usr/include/boost/preprocessor/slot/detail/shared.hpp:
 
 /usr/include/c++/12/thread:
 
@@ -32589,6 +32580,8 @@ src/ui_mainUI.h:
 
 /usr/include/armadillo_bits/strip.hpp:
 
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qcolorspace.h:
+
 /usr/include/boost/mpl/list/list40.hpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qclipboard.h:
@@ -32738,8 +32731,6 @@ src/ui_mainUI.h:
 /usr/include/boost/archive/basic_archive.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
-
-/usr/include/boost/preprocessor/slot/detail/shared.hpp:
 
 /usr/include/armadillo_bits/distr_param.hpp:
 
@@ -33023,6 +33014,8 @@ src/obs_person_tracker_autogen/include/moc_sigwatch.cpp:
 
 /usr/include/armadillo_bits/op_hist_bones.hpp:
 
+src/specificworker.cpp:
+
 /usr/include/boost/type_traits/detail/config.hpp:
 
 /usr/include/c++/12/math.h:
@@ -33090,6 +33083,26 @@ src/obs_person_tracker_autogen/include/moc_sigwatch.cpp:
 /usr/include/boost/smart_ptr/detail/sp_noexcept.hpp:
 
 /usr/include/boost/range/detail/extract_optional_type.hpp:
+
+/usr/include/boost/mpl/list/list20.hpp:
+
+/usr/include/opencv4/opencv2/flann/dynamic_bitset.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmimedatabase.h:
+
+/usr/include/armadillo_bits/fn_polyval.hpp:
+
+/usr/include/c++/12/bits/fs_dir.h:
+
+/usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_common.hpp:
+
+/usr/include/Eigen/src/QR/FullPivHouseholderQR.h:
+
+/usr/include/boost/move/detail/pointer_element.hpp:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsplitter.h:
+
+/usr/include/boost/mpl/aux_/arity.hpp:
 
 /usr/include/boost/random/hyperexponential_distribution.hpp:
 
@@ -33209,6 +33222,10 @@ src/obs_person_tracker_autogen/include/moc_sigwatch.cpp:
 
 /usr/include/c++/12/numbers:
 
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedmemory.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qcommandlineoption.h:
+
 /usr/include/opencv4/opencv2/flann/index_testing.h:
 
 /usr/include/armadillo_bits/spdiagview_bones.hpp:
@@ -33256,6 +33273,8 @@ src/obs_person_tracker_autogen/include/moc_sigwatch.cpp:
 /usr/include/boost/algorithm/string/iter_find.hpp:
 
 /usr/include/boost/range/has_range_iterator.hpp:
+
+src/obs_person_tracker_autogen/AF5EVGCUJC/moc_abstract_graphic_viewer.cpp:
 
 /usr/include/c++/12/bits/move_only_function.h:
 
@@ -33405,6 +33424,10 @@ src/Lidar3D.cpp:
 
 /usr/include/boost/preprocessor/slot/detail/def.hpp:
 
+/usr/include/boost/predef/hardware/simd.h:
+
+src/dbscan.h:
+
 /usr/include/c++/12/semaphore:
 
 /usr/include/boost/predef/architecture/parisc.h:
@@ -33486,10 +33509,6 @@ src/Lidar3D.cpp:
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
 /usr/include/armadillo_bits/fn_chi2rnd.hpp:
-
-src/genericworker.h:
-
-/usr/include/c++/12/bits/stl_raw_storage_iter.h:
 
 /usr/include/c++/12/bits/stl_uninitialized.h:
 
@@ -33717,19 +33736,9 @@ src/obs_person_tracker_autogen/EWIEGA46WW/moc_genericmonitor.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericmonitor.h:
-
 /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainter.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedmemory.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qcommandlineoption.h:
-
-/usr/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h:
-
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericworker.h:
 
 /usr/include/c++/12/bits/stl_algobase.h:
 
@@ -33953,8 +33962,6 @@ src/obs_person_tracker_autogen/EWIEGA46WW/moc_genericmonitor.cpp:
 
 /usr/include/armadillo_bits/SizeMat_meat.hpp:
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/dbscan.cpp:
-
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/boost/fusion/view/transform_view/transform_view.hpp:
@@ -33984,8 +33991,6 @@ src/Grid2D.h:
 /home/robocomp/robocomp/classes/qlog/qlog.h:
 
 /usr/include/armadillo_bits/SpCol_bones.hpp:
-
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/room.h:
 
 /usr/include/boost/mpl/vector/aux_/iterator.hpp:
 
@@ -34283,8 +34288,6 @@ src/Camera360RGB.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qpointingdevice.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtGui/qcolorspace.h:
-
 /usr/include/boost/predef/architecture/sparc.h:
 
 /usr/include/armadillo_bits/SpRow_meat.hpp:
@@ -34358,6 +34361,20 @@ src/GenericBase.h:
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
 /usr/include/armadillo_bits/spglue_join_meat.hpp:
+
+src/dbscan.cpp:
+
+/usr/include/boost/predef/compiler/iar.h:
+
+/usr/include/boost/mpl/greater.hpp:
+
+/usr/include/armadillo_bits/xvec_htrans_bones.hpp:
+
+/usr/include/boost/fusion/sequence/intrinsic/detail/segmented_begin.hpp:
+
+/usr/include/boost/type_traits/has_divides_assign.hpp:
+
+/usr/include/armadillo_bits/gmm_diag_bones.hpp:
 
 /usr/include/c++/12/bits/shared_ptr_atomic.h:
 
@@ -34448,6 +34465,8 @@ src/GenericBase.h:
 /usr/include/boost/type_traits/has_nothrow_destructor.hpp:
 
 /usr/include/c++/12/string:
+
+src/genericmonitor.h:
 
 /usr/include/c++/12/bits/node_handle.h:
 
@@ -34741,8 +34760,6 @@ src/CommonBehavior.h:
 
 /usr/include/opencv4/opencv2/core/version.hpp:
 
-src/obs_person_tracker_autogen/ROJA6K4NDP/moc_qcustomplot.cpp:
-
 /usr/include/boost/archive/detail/iserializer.hpp:
 
 /usr/include/c++/12/bits/semaphore_base.h:
@@ -34868,10 +34885,6 @@ src/obs_person_tracker_autogen/ROJA6K4NDP/moc_qcustomplot.cpp:
 /usr/include/CGAL/Intersections_3/Line_3_Tetrahedron_3.h:
 
 /usr/include/Ice/ProxyHandle.h:
-
-/usr/include/boost/mpl/list/aux_/include_preprocessed.hpp:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qobject_impl.h:
 
 /usr/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_3.h:
 
@@ -35289,33 +35302,11 @@ src/VisualElementsPub.cpp:
 
 /usr/include/boost/type_traits/is_rvalue_reference.hpp:
 
+src/commonbehaviorI.h:
+
 src/VisualElementsPub.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/avx512vpopcntdqintrin.h:
-
-/usr/include/boost/mpl/list/list20.hpp:
-
-/usr/include/opencv4/opencv2/flann/dynamic_bitset.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qmimedatabase.h:
-
-/usr/include/armadillo_bits/fn_polyval.hpp:
-
-/usr/include/c++/12/bits/fs_dir.h:
-
-/usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_common.hpp:
-
-/usr/include/Eigen/src/QR/FullPivHouseholderQR.h:
-
-/usr/include/boost/move/detail/pointer_element.hpp:
-
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsplitter.h:
-
-/usr/include/boost/mpl/aux_/arity.hpp:
-
-/usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:
 
 /usr/include/boost/call_traits.hpp:
 
@@ -35407,8 +35398,6 @@ src/CommonBehavior.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/dbscan.h:
-
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qpagedpaintdevice.h:
 
 /usr/include/Ice/Application.h:
@@ -35452,6 +35441,10 @@ src/OmniRobot.cpp:
 /usr/include/CGAL/Handle_hash_function.h:
 
 /usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp:
+
+/usr/include/c++/12/bits/stl_raw_storage_iter.h:
+
+src/genericworker.h:
 
 /usr/include/boost/mpl/same_as.hpp:
 
@@ -35687,8 +35680,6 @@ src/Grid2D.cpp:
 
 /usr/include/armadillo_bits/spglue_schur_meat.hpp:
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/commonbehaviorI.cpp:
-
 /usr/include/boost/preprocessor/identity.hpp:
 
 /usr/include/armadillo_bits/spglue_max_bones.hpp:
@@ -35713,6 +35704,8 @@ src/Grid2D.cpp:
 
 /usr/include/armadillo_bits/fn_intersect.hpp:
 
+src/room.h:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qhashfunctions.h:
 
 /usr/include/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
@@ -35728,6 +35721,10 @@ src/Grid2D.cpp:
 /usr/include/boost/range/iterator.hpp:
 
 /usr/include/c++/12/tr1/beta_function.tcc:
+
+/usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qabstracttextdocumentlayout.h:
 
@@ -35750,6 +35747,10 @@ src/Grid2D.cpp:
 /usr/include/boost/archive/detail/abi_suffix.hpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainerinfo.h:
+
+/usr/include/boost/mpl/list/aux_/include_preprocessed.hpp:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qobject_impl.h:
 
 /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
 
@@ -35853,8 +35854,6 @@ src/Grid2D.cpp:
 
 /usr/include/Eigen/src/Core/IndexedView.h:
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/commonbehaviorI.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h:
 
 /usr/include/Eigen/src/Core/DiagonalProduct.h:
@@ -35883,11 +35882,11 @@ src/Grid2D.cpp:
 
 /usr/include/armadillo_bits/SpToDOp_meat.hpp:
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/visualelementspubI.cpp:
-
 /usr/include/Eigen/src/Core/products/Parallelizer.h:
 
 /usr/include/armadillo_bits/fn_trapz.hpp:
+
+src/visibility_graph.h:
 
 /usr/include/wchar.h:
 
@@ -36107,6 +36106,8 @@ src/Grid2D.cpp:
 
 /usr/include/boost/fusion/container/list/list_fwd.hpp:
 
+src/genericworker.cpp:
+
 /usr/include/mlpack/core/util/binding_details.hpp:
 
 /usr/include/armadillo_bits/fn_eigs_sym.hpp:
@@ -36230,6 +36231,8 @@ src/Grid2D.cpp:
 /usr/include/boost/type_traits/is_reference.hpp:
 
 /usr/include/boost/type_traits/remove_reference.hpp:
+
+/robocomp/robocomp/classes/sigwatch/sigwatch.h:
 
 /usr/include/boost/type_traits/is_function.hpp:
 
@@ -36473,6 +36476,8 @@ src/Grid2D.cpp:
 
 /usr/include/boost/preprocessor/list/adt.hpp:
 
+src/visibility_graph.cpp:
+
 /usr/include/boost/ref.hpp:
 
 /usr/include/boost/preprocessor/detail/is_binary.hpp:
@@ -36484,6 +36489,8 @@ src/Grid2D.cpp:
 /usr/include/boost/preprocessor/repetition/enum_trailing_params.hpp:
 
 /usr/include/boost/preprocessor/list/fold_right.hpp:
+
+/robocomp/robocomp/classes/qcustomplot/qcustomplot.h:
 
 /usr/include/CGAL/Point_3.h:
 
@@ -36611,18 +36618,6 @@ src/Grid2D.cpp:
 
 /usr/include/boost/preprocessor/dec.hpp:
 
-/usr/include/boost/predef/compiler/iar.h:
-
-/usr/include/boost/mpl/greater.hpp:
-
-/usr/include/armadillo_bits/xvec_htrans_bones.hpp:
-
-/usr/include/boost/fusion/sequence/intrinsic/detail/segmented_begin.hpp:
-
-/usr/include/boost/type_traits/has_divides_assign.hpp:
-
-/usr/include/armadillo_bits/gmm_diag_bones.hpp:
-
 /usr/include/boost/type_traits/is_pointer.hpp:
 
 /usr/include/mlpack/core/tree/hrectbound_impl.hpp:
@@ -36698,6 +36693,8 @@ src/Grid2D.cpp:
 /usr/include/CGAL/Intersections_3/internal/Sphere_3_Triangle_3_do_intersect.h:
 
 /usr/include/boost/type_traits/is_pod.hpp:
+
+src/commonbehaviorI.cpp:
 
 /usr/include/boost/type_traits/is_scalar.hpp:
 
@@ -37357,6 +37354,10 @@ src/obs_person_tracker_autogen/mocs_compilation.cpp:
 
 /usr/include/armadillo_bits/glue_intersect_meat.hpp:
 
+/usr/include/boost/predef/library/std/vacpp.h:
+
+/usr/include/boost/type_traits/add_volatile.hpp:
+
 /usr/include/boost/smart_ptr/detail/sp_nullptr_t.hpp:
 
 /usr/include/armadillo_bits/op_max_bones.hpp:
@@ -37729,8 +37730,6 @@ src/obs_person_tracker_autogen/mocs_compilation.cpp:
 
 /usr/include/armadillo_bits/fn_rank.hpp:
 
-/home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/config.h:
-
 /usr/include/armadillo_bits/fn_reverse.hpp:
 
 /usr/include/CGAL/Cartesian/line_constructions_2.h:
@@ -38020,6 +38019,8 @@ src/obs_person_tracker_autogen/mocs_compilation.cpp:
 /usr/include/boost/fusion/view/joint_view/joint_view_iterator.hpp:
 
 /usr/include/armadillo_bits/op_cx_scalar_meat.hpp:
+
+/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h:
 
 /usr/include/armadillo_bits/op_cumsum_meat.hpp:
 

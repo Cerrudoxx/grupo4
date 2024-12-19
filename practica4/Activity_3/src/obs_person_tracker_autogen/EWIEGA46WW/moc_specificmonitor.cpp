@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../../../../../../../../robocomp/components/grupo4/practica4/Activity_3/src/specificmonitor.h"
+#include "../../specificmonitor.h"
 #include <QtGui/qtextcursor.h>
 #include <QScreen>
 #include <QtCore/qbytearray.h>

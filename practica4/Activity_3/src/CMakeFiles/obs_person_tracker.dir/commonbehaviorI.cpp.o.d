@@ -306,8 +306,8 @@ src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o: \
  /usr/include/IceUtil/StringUtil.h /usr/include/iconv.h \
  /usr/include/langinfo.h /usr/include/nl_types.h /usr/include/Ice/UUID.h \
  /usr/include/IceUtil/UUID.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/CommonBehavior.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/config.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/CommonBehavior.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/config.h \
  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericworker.h \
  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/config.h \
  /home/robocomp/robocomp/classes/qlog/qlog.h \
@@ -950,7 +950,7 @@ src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiversion.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/ui_mainUI.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h \
@@ -995,10 +995,10 @@ src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/Camera360RGB.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/GenericBase.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/Grid2D.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/Lidar3D.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/OmniRobot.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo4/practica4/Activity_3/src/VisualElementsPub.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/Camera360RGB.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/GenericBase.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/Grid2D.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/Lidar3D.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/OmniRobot.h \
+ /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/VisualElementsPub.h \
  /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/genericmonitor.h

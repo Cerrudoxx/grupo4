@@ -18,6 +18,21 @@ qdbus org.kde.yakuake /yakuake/sessions runCommandInTerminal $session_id "cd $DI
 qdbus org.kde.yakuake /yakuake/sessions runCommandInTerminal $session_id "bin/Webots2Robocomp etc/config"
 qdbus org.kde.yakuake /yakuake/sessions org.kde.yakuake.raiseSession $session_id
 
+TAB_NAME="helios"
+DIRECTORY_PATH="~/robocomp_ws/src/robocomp/components/robocomp-robolab/components/hardware/laser/lidar3D" # replace with your desired path
+session_id=$(qdbus org.kde.yakuake /yakuake/sessions org.kde.yakuake.addSession)
+qdbus org.kde.yakuake /yakuake/tabs org.kde.yakuake.setTabTitle "$session_id" "$TAB_NAME"
+qdbus org.kde.yakuake /yakuake/sessions runCommandInTerminal $session_id "cd $DIRECTORY_PATH"
+qdbus org.kde.yakuake /yakuake/sessions runCommandInTerminal $session_id "cmake . && make -j8"
+qdbus org.kde.yakuake /yakuake/sessions runCommandInTerminal $session_id "bin/Lidar3D etc/config_helios_webots"
+
+TAB_NAME="bpearl"
+DIRECTORY_PATH="~/robocomp_ws/src/robocomp/components/robocomp-robolab/components/hardware/laser/lidar3D" # replace with your desired path
+session_id=$(qdbus org.kde.yakuake /yakuake/sessions org.kde.yakuake.addSession)
+qdbus org.kde.yakuake /yakuake/tabs org.kde.yakuake.setTabTitle "$session_id" "$TAB_NAME"
+qdbus org.kde.yakuake /yakuake/sessions runCommandInTerminal $session_id "cd $DIRECTORY_PATH"
+qdbus org.kde.yakuake /yakuake/sessions runCommandInTerminal $session_id "cmake . && make -j8"
+qdbus org.kde.yakuake /yakuake/sessions runCommandInTerminal $session_id "bin/Lidar3D etc/config_pearl_webots"
 
 # CAMERA
 TAB_NAME="camera"
@@ -62,7 +77,7 @@ qdbus org.kde.yakuake /yakuake/sessions org.kde.yakuake.raiseSession $session_id
 
 # Obs_person_tracker
 TAB_NAME="obs_person_tracker"
-DIRECTORY_PATH="~/robocomp/components/grupo4/practica4/Activity3"
+DIRECTORY_PATH="~/robocomp/components/grupo4/practica4/Activity_3"
 session_id=$(qdbus org.kde.yakuake /yakuake/sessions org.kde.yakuake.addSession)
 qdbus org.kde.yakuake /yakuake/tabs org.kde.yakuake.setTabTitle "$session_id" "$TAB_NAME"
 qdbus org.kde.yakuake /yakuake/sessions runCommandInTerminal $session_id "cd $DIRECTORY_PATH"
