@@ -1,10 +1,10 @@
 src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
- /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/visibility_graph.cpp \
+ /home/antonio/robocomp/components/grupo4/practica4/Activity_3/src/visibility_graph.cpp \
  /usr/include/stdc-predef.h \
- /home/usuario/robocomp/components/grupo4/practica4/Activity_3/src/visibility_graph.h \
- /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_algobase.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
+ /home/antonio/robocomp/components/grupo4/practica4/Activity_3/src/visibility_graph.h \
+ /usr/include/c++/13/vector /usr/include/c++/13/bits/requires_hosted.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/timesize.h \
@@ -12,55 +12,62 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h \
- /usr/include/c++/12/pstl/pstl_config.h \
- /usr/include/c++/12/bits/functexcept.h \
- /usr/include/c++/12/bits/exception_defines.h \
- /usr/include/c++/12/bits/cpp_type_traits.h \
- /usr/include/c++/12/ext/type_traits.h \
- /usr/include/c++/12/ext/numeric_traits.h \
- /usr/include/c++/12/bits/stl_pair.h /usr/include/c++/12/type_traits \
- /usr/include/c++/12/bits/move.h /usr/include/c++/12/bits/utility.h \
- /usr/include/c++/12/compare /usr/include/c++/12/concepts \
- /usr/include/c++/12/bits/stl_iterator_base_types.h \
- /usr/include/c++/12/bits/iterator_concepts.h \
- /usr/include/c++/12/bits/ptr_traits.h \
- /usr/include/c++/12/bits/ranges_cmp.h \
- /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
- /usr/include/c++/12/bits/concept_check.h \
- /usr/include/c++/12/debug/assertions.h \
- /usr/include/c++/12/bits/stl_iterator.h /usr/include/c++/12/new \
- /usr/include/c++/12/bits/exception.h \
- /usr/include/c++/12/bits/stl_construct.h \
- /usr/include/c++/12/debug/debug.h \
- /usr/include/c++/12/bits/predefined_ops.h \
- /usr/include/c++/12/bits/allocator.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
- /usr/include/c++/12/bits/new_allocator.h \
- /usr/include/c++/12/bits/memoryfwd.h \
- /usr/include/c++/12/bits/stl_uninitialized.h \
- /usr/include/c++/12/ext/alloc_traits.h \
- /usr/include/c++/12/bits/alloc_traits.h \
- /usr/include/c++/12/bits/stl_vector.h \
- /usr/include/c++/12/initializer_list \
- /usr/include/c++/12/bits/stl_bvector.h \
- /usr/include/c++/12/bits/functional_hash.h \
- /usr/include/c++/12/bits/hash_bytes.h /usr/include/c++/12/bits/refwrap.h \
- /usr/include/c++/12/bits/invoke.h \
- /usr/include/c++/12/bits/stl_function.h \
- /usr/include/c++/12/backward/binders.h \
- /usr/include/c++/12/bits/range_access.h \
- /usr/include/c++/12/bits/vector.tcc /usr/include/c++/12/map \
- /usr/include/c++/12/bits/stl_tree.h \
- /usr/include/c++/12/ext/aligned_buffer.h \
- /usr/include/c++/12/bits/node_handle.h \
- /usr/include/c++/12/bits/stl_map.h /usr/include/c++/12/tuple \
- /usr/include/c++/12/bits/uses_allocator.h \
- /usr/include/c++/12/bits/stl_multimap.h \
- /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/queue \
- /usr/include/c++/12/deque /usr/include/c++/12/bits/stl_deque.h \
- /usr/include/c++/12/bits/deque.tcc /usr/include/c++/12/bits/stl_heap.h \
- /usr/include/c++/12/bits/stl_queue.h /usr/include/c++/12/cmath \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+ /usr/include/c++/13/pstl/pstl_config.h \
+ /usr/include/c++/13/bits/stl_algobase.h \
+ /usr/include/c++/13/bits/functexcept.h \
+ /usr/include/c++/13/bits/exception_defines.h \
+ /usr/include/c++/13/bits/cpp_type_traits.h \
+ /usr/include/c++/13/ext/type_traits.h \
+ /usr/include/c++/13/ext/numeric_traits.h \
+ /usr/include/c++/13/bits/stl_pair.h /usr/include/c++/13/type_traits \
+ /usr/include/c++/13/bits/move.h /usr/include/c++/13/bits/utility.h \
+ /usr/include/c++/13/compare /usr/include/c++/13/concepts \
+ /usr/include/c++/13/bits/stl_iterator_base_types.h \
+ /usr/include/c++/13/bits/iterator_concepts.h \
+ /usr/include/c++/13/bits/ptr_traits.h \
+ /usr/include/c++/13/bits/ranges_cmp.h \
+ /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/13/bits/concept_check.h \
+ /usr/include/c++/13/debug/assertions.h \
+ /usr/include/c++/13/bits/stl_iterator.h /usr/include/c++/13/new \
+ /usr/include/c++/13/bits/exception.h \
+ /usr/include/c++/13/bits/stl_construct.h \
+ /usr/include/c++/13/debug/debug.h \
+ /usr/include/c++/13/bits/predefined_ops.h /usr/include/c++/13/bit \
+ /usr/include/c++/13/bits/allocator.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
+ /usr/include/c++/13/bits/new_allocator.h \
+ /usr/include/c++/13/bits/memoryfwd.h \
+ /usr/include/c++/13/bits/stl_uninitialized.h \
+ /usr/include/c++/13/ext/alloc_traits.h \
+ /usr/include/c++/13/bits/alloc_traits.h \
+ /usr/include/c++/13/bits/stl_vector.h \
+ /usr/include/c++/13/initializer_list \
+ /usr/include/c++/13/bits/stl_bvector.h \
+ /usr/include/c++/13/bits/functional_hash.h \
+ /usr/include/c++/13/bits/hash_bytes.h /usr/include/c++/13/bits/refwrap.h \
+ /usr/include/c++/13/bits/invoke.h \
+ /usr/include/c++/13/bits/stl_function.h \
+ /usr/include/c++/13/backward/binders.h \
+ /usr/include/c++/13/bits/range_access.h \
+ /usr/include/c++/13/bits/vector.tcc \
+ /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+ /usr/include/c++/13/bits/uses_allocator.h \
+ /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
+ /usr/include/c++/13/bits/ranges_util.h \
+ /usr/include/c++/13/bits/ranges_base.h \
+ /usr/include/c++/13/bits/max_size_type.h /usr/include/c++/13/numbers \
+ /usr/include/c++/13/map /usr/include/c++/13/bits/stl_tree.h \
+ /usr/include/c++/13/ext/aligned_buffer.h \
+ /usr/include/c++/13/bits/node_handle.h \
+ /usr/include/c++/13/bits/stl_map.h \
+ /usr/include/c++/13/bits/stl_multimap.h \
+ /usr/include/c++/13/bits/erase_if.h /usr/include/c++/13/queue \
+ /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_deque.h \
+ /usr/include/c++/13/bits/deque.tcc /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/stl_queue.h /usr/include/c++/13/cmath \
  /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
@@ -77,8 +84,7 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/c++/12/bits/std_abs.h /usr/include/stdlib.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h \
+ /usr/include/c++/13/bits/std_abs.h /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
@@ -106,27 +112,27 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/c++/12/bits/specfun.h /usr/include/c++/12/limits \
- /usr/include/c++/12/tr1/gamma.tcc \
- /usr/include/c++/12/tr1/special_function_util.h \
- /usr/include/c++/12/tr1/bessel_function.tcc \
- /usr/include/c++/12/tr1/beta_function.tcc \
- /usr/include/c++/12/tr1/ell_integral.tcc \
- /usr/include/c++/12/tr1/exp_integral.tcc \
- /usr/include/c++/12/tr1/hypergeometric.tcc \
- /usr/include/c++/12/tr1/legendre_function.tcc \
- /usr/include/c++/12/tr1/modified_bessel_func.tcc \
- /usr/include/c++/12/tr1/poly_hermite.tcc \
- /usr/include/c++/12/tr1/poly_laguerre.tcc \
- /usr/include/c++/12/tr1/riemann_zeta.tcc \
+ /usr/include/c++/13/bits/specfun.h /usr/include/c++/13/limits \
+ /usr/include/c++/13/tr1/gamma.tcc \
+ /usr/include/c++/13/tr1/special_function_util.h \
+ /usr/include/c++/13/tr1/bessel_function.tcc \
+ /usr/include/c++/13/tr1/beta_function.tcc \
+ /usr/include/c++/13/tr1/ell_integral.tcc \
+ /usr/include/c++/13/tr1/exp_integral.tcc \
+ /usr/include/c++/13/tr1/hypergeometric.tcc \
+ /usr/include/c++/13/tr1/legendre_function.tcc \
+ /usr/include/c++/13/tr1/modified_bessel_func.tcc \
+ /usr/include/c++/13/tr1/poly_hermite.tcc \
+ /usr/include/c++/13/tr1/poly_laguerre.tcc \
+ /usr/include/c++/13/tr1/riemann_zeta.tcc \
  /usr/include/CGAL/Simple_cartesian.h \
  /usr/include/CGAL/Cartesian/Cartesian_base.h /usr/include/CGAL/basic.h \
  /usr/include/CGAL/config.h /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
- /usr/include/boost/config/compiler/gcc.hpp /usr/include/c++/12/cstddef \
+ /usr/include/boost/config/compiler/gcc.hpp \
  /usr/include/boost/config/detail/select_stdlib_config.hpp \
- /usr/include/c++/12/version \
+ /usr/include/c++/13/version \
  /usr/include/boost/config/stdlib/libstdcpp3.hpp /usr/include/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
@@ -136,7 +142,7 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
  /usr/include/boost/config/detail/select_platform_config.hpp \
- /usr/include/boost/config/platform/linux.hpp /usr/include/c++/12/cstdlib \
+ /usr/include/boost/config/platform/linux.hpp /usr/include/c++/13/cstdlib \
  /usr/include/boost/config/detail/posix_features.hpp \
  /usr/include/boost/config/detail/suffix.hpp \
  /usr/include/boost/config/helper_macros.hpp \
@@ -210,7 +216,7 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/boost/predef/library.h \
  /usr/include/boost/predef/library/c.h \
  /usr/include/boost/predef/library/c/_prefix.h \
- /usr/include/boost/predef/detail/_cassert.h /usr/include/c++/12/cassert \
+ /usr/include/boost/predef/detail/_cassert.h /usr/include/c++/13/cassert \
  /usr/include/assert.h /usr/include/boost/predef/library/c/cloudabi.h \
  /usr/include/boost/predef/library/c/gnu.h \
  /usr/include/boost/predef/library/c/uc.h \
@@ -219,9 +225,9 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/boost/predef/library/std.h \
  /usr/include/boost/predef/library/std/_prefix.h \
  /usr/include/boost/predef/detail/_exception.h \
- /usr/include/c++/12/exception /usr/include/c++/12/bits/exception_ptr.h \
- /usr/include/c++/12/bits/cxxabi_init_exception.h \
- /usr/include/c++/12/typeinfo /usr/include/c++/12/bits/nested_exception.h \
+ /usr/include/c++/13/exception /usr/include/c++/13/bits/exception_ptr.h \
+ /usr/include/c++/13/bits/cxxabi_init_exception.h \
+ /usr/include/c++/13/typeinfo /usr/include/c++/13/bits/nested_exception.h \
  /usr/include/boost/predef/library/std/cxx.h \
  /usr/include/boost/predef/library/std/dinkumware.h \
  /usr/include/boost/predef/library/std/libcomo.h \
@@ -275,39 +281,36 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/boost/predef/hardware/simd/arm/versions.h \
  /usr/include/boost/predef/hardware/simd/ppc.h \
  /usr/include/boost/predef/hardware/simd/ppc/versions.h \
- /usr/include/boost/predef/version.h /usr/include/c++/12/algorithm \
- /usr/include/c++/12/bits/stl_algo.h \
- /usr/include/c++/12/bits/algorithmfwd.h \
- /usr/include/c++/12/bits/stl_tempbuf.h \
- /usr/include/c++/12/bits/uniform_int_dist.h \
- /usr/include/c++/12/bits/ranges_algo.h \
- /usr/include/c++/12/bits/ranges_algobase.h \
- /usr/include/c++/12/bits/ranges_base.h \
- /usr/include/c++/12/bits/max_size_type.h /usr/include/c++/12/numbers \
- /usr/include/c++/12/bits/ranges_util.h \
- /usr/include/c++/12/pstl/glue_algorithm_defs.h \
- /usr/include/c++/12/pstl/execution_defs.h \
+ /usr/include/boost/predef/version.h /usr/include/c++/13/algorithm \
+ /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/algorithmfwd.h \
+ /usr/include/c++/13/bits/uniform_int_dist.h \
+ /usr/include/c++/13/bits/stl_tempbuf.h \
+ /usr/include/c++/13/bits/ranges_algo.h /usr/include/c++/13/optional \
+ /usr/include/c++/13/bits/enable_special_members.h \
+ /usr/include/c++/13/bits/ranges_algobase.h \
+ /usr/include/c++/13/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/13/pstl/execution_defs.h \
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
- /usr/include/c++/12/iterator /usr/include/c++/12/iosfwd \
- /usr/include/c++/12/bits/stringfwd.h /usr/include/c++/12/bits/postypes.h \
- /usr/include/c++/12/cwchar /usr/include/wchar.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h \
+ /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
+ /usr/include/c++/13/iosfwd /usr/include/c++/13/bits/stringfwd.h \
+ /usr/include/c++/13/bits/postypes.h /usr/include/c++/13/cwchar \
+ /usr/include/wchar.h /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/c++/12/bits/stream_iterator.h \
- /usr/include/c++/12/bits/streambuf_iterator.h \
- /usr/include/c++/12/streambuf /usr/include/c++/12/bits/localefwd.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/c++locale.h \
- /usr/include/c++/12/clocale /usr/include/locale.h \
- /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/12/cctype \
- /usr/include/ctype.h /usr/include/c++/12/bits/ios_base.h \
- /usr/include/c++/12/ext/atomicity.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/gthr.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/gthr-default.h \
+ /usr/include/c++/13/bits/streambuf_iterator.h \
+ /usr/include/c++/13/streambuf /usr/include/c++/13/bits/localefwd.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
+ /usr/include/c++/13/clocale /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/13/cctype \
+ /usr/include/ctype.h /usr/include/c++/13/bits/ios_base.h \
+ /usr/include/c++/13/ext/atomicity.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
  /usr/include/pthread.h /usr/include/sched.h \
  /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
@@ -319,49 +322,48 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/atomic_word.h \
- /usr/include/c++/12/bits/locale_classes.h /usr/include/c++/12/string \
- /usr/include/c++/12/bits/char_traits.h /usr/include/c++/12/cstdint \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h /usr/include/stdint.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/include/c++/12/bits/ostream_insert.h \
- /usr/include/c++/12/bits/cxxabi_forced.h \
- /usr/include/c++/12/bits/basic_string.h /usr/include/c++/12/string_view \
- /usr/include/c++/12/bits/string_view.tcc \
- /usr/include/c++/12/ext/string_conversions.h /usr/include/c++/12/cstdio \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
+ /usr/include/c++/13/bits/locale_classes.h /usr/include/c++/13/string \
+ /usr/include/c++/13/bits/char_traits.h \
+ /usr/include/c++/13/bits/ostream_insert.h \
+ /usr/include/c++/13/bits/cxxabi_forced.h \
+ /usr/include/c++/13/bits/basic_string.h /usr/include/c++/13/string_view \
+ /usr/include/c++/13/bits/string_view.tcc \
+ /usr/include/c++/13/ext/string_conversions.h /usr/include/c++/13/cstdio \
  /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/c++/12/cerrno /usr/include/errno.h \
+ /usr/include/c++/13/cerrno /usr/include/errno.h \
  /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
  /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
- /usr/include/c++/12/bits/charconv.h \
- /usr/include/c++/12/bits/basic_string.tcc \
- /usr/include/c++/12/bits/locale_classes.tcc \
- /usr/include/c++/12/system_error \
- /usr/include/x86_64-linux-gnu/c++/12/bits/error_constants.h \
- /usr/include/c++/12/stdexcept /usr/include/c++/12/bits/streambuf.tcc \
- /usr/include/c++/12/array /usr/include/c++/12/utility \
- /usr/include/c++/12/bits/stl_relops.h /usr/include/c++/12/unordered_set \
- /usr/include/c++/12/bits/hashtable.h \
- /usr/include/c++/12/bits/hashtable_policy.h \
- /usr/include/c++/12/bits/enable_special_members.h \
- /usr/include/c++/12/bits/unordered_set.h \
- /usr/include/c++/12/unordered_map \
- /usr/include/c++/12/bits/unordered_map.h /usr/include/c++/12/functional \
- /usr/include/c++/12/bits/std_function.h \
- /usr/include/c++/12/bits/move_only_function.h \
- /usr/include/c++/12/bits/mofunc_impl.h /usr/include/c++/12/thread \
- /usr/include/c++/12/stop_token /usr/include/c++/12/atomic \
- /usr/include/c++/12/bits/atomic_base.h \
- /usr/include/c++/12/bits/atomic_lockfree_defines.h \
- /usr/include/c++/12/bits/atomic_wait.h /usr/include/c++/12/climits \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/syslimits.h \
+ /usr/include/c++/13/bits/charconv.h \
+ /usr/include/c++/13/bits/basic_string.tcc \
+ /usr/include/c++/13/bits/locale_classes.tcc \
+ /usr/include/c++/13/system_error \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
+ /usr/include/c++/13/stdexcept /usr/include/c++/13/bits/streambuf.tcc \
+ /usr/include/c++/13/array /usr/include/c++/13/utility \
+ /usr/include/c++/13/bits/stl_relops.h /usr/include/c++/13/unordered_set \
+ /usr/include/c++/13/bits/unordered_set.h \
+ /usr/include/c++/13/bits/hashtable.h \
+ /usr/include/c++/13/bits/hashtable_policy.h \
+ /usr/include/c++/13/unordered_map \
+ /usr/include/c++/13/bits/unordered_map.h /usr/include/c++/13/functional \
+ /usr/include/c++/13/bits/std_function.h \
+ /usr/include/c++/13/bits/move_only_function.h \
+ /usr/include/c++/13/bits/mofunc_impl.h /usr/include/c++/13/thread \
+ /usr/include/c++/13/stop_token /usr/include/c++/13/atomic \
+ /usr/include/c++/13/bits/atomic_base.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/c++/13/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/13/bits/atomic_wait.h /usr/include/c++/13/climits \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
  /usr/include/linux/limits.h \
@@ -372,45 +374,52 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
  /usr/include/x86_64-linux-gnu/bits/syscall.h \
- /usr/include/c++/12/bits/std_mutex.h \
- /usr/include/c++/12/bits/std_thread.h \
- /usr/include/c++/12/bits/unique_ptr.h /usr/include/c++/12/ostream \
- /usr/include/c++/12/ios /usr/include/c++/12/bits/basic_ios.h \
- /usr/include/c++/12/bits/locale_facets.h /usr/include/c++/12/cwctype \
+ /usr/include/c++/13/bits/std_mutex.h \
+ /usr/include/c++/13/bits/std_thread.h \
+ /usr/include/c++/13/bits/unique_ptr.h /usr/include/c++/13/ostream \
+ /usr/include/c++/13/ios /usr/include/c++/13/bits/basic_ios.h \
+ /usr/include/c++/13/bits/locale_facets.h /usr/include/c++/13/cwctype \
  /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/ctype_base.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/ctype_inline.h \
- /usr/include/c++/12/bits/locale_facets.tcc \
- /usr/include/c++/12/bits/basic_ios.tcc \
- /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/semaphore \
- /usr/include/c++/12/bits/semaphore_base.h \
- /usr/include/c++/12/bits/chrono.h /usr/include/c++/12/ratio \
- /usr/include/c++/12/ctime /usr/include/c++/12/bits/parse_numbers.h \
- /usr/include/c++/12/bits/atomic_timed_wait.h \
- /usr/include/c++/12/bits/this_thread_sleep.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
+ /usr/include/c++/13/bits/locale_facets.tcc \
+ /usr/include/c++/13/bits/basic_ios.tcc \
+ /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/semaphore \
+ /usr/include/c++/13/bits/semaphore_base.h \
+ /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
+ /usr/include/c++/13/cstdint /usr/include/c++/13/ctime \
+ /usr/include/c++/13/bits/parse_numbers.h \
+ /usr/include/c++/13/bits/atomic_timed_wait.h \
+ /usr/include/c++/13/bits/this_thread_sleep.h \
  /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /usr/include/c++/12/chrono /usr/include/c++/12/sstream \
- /usr/include/c++/12/istream /usr/include/c++/12/bits/istream.tcc \
- /usr/include/c++/12/bits/sstream.tcc /usr/include/CGAL/license/lgpl.h \
- /usr/include/CGAL/license.h /usr/include/c++/12/fstream \
- /usr/include/c++/12/bits/codecvt.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
- /usr/include/c++/12/bits/fstream.tcc /usr/include/c++/12/iostream \
+ /usr/include/c++/13/chrono /usr/include/c++/13/sstream \
+ /usr/include/c++/13/istream /usr/include/c++/13/bits/istream.tcc \
+ /usr/include/c++/13/bits/sstream.tcc \
+ /usr/include/c++/13/bits/shared_ptr.h \
+ /usr/include/c++/13/bits/shared_ptr_base.h \
+ /usr/include/c++/13/bits/allocated_ptr.h \
+ /usr/include/c++/13/ext/concurrence.h /usr/include/c++/13/bits/align.h \
+ /usr/include/c++/13/bits/chrono_io.h /usr/include/c++/13/iomanip \
+ /usr/include/c++/13/locale \
+ /usr/include/c++/13/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/13/bits/codecvt.h \
+ /usr/include/c++/13/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/13/bits/locale_conv.h \
+ /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/format \
+ /usr/include/c++/13/charconv /usr/include/c++/13/span \
+ /usr/include/c++/13/variant /usr/include/CGAL/license/lgpl.h \
+ /usr/include/CGAL/license.h /usr/include/c++/13/fstream \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
+ /usr/include/c++/13/bits/fstream.tcc /usr/include/c++/13/iostream \
  /usr/include/CGAL/assertions.h /usr/include/CGAL/Uncertain.h \
  /usr/include/CGAL/enum.h /usr/include/CGAL/Kernel/Same_uncertainty.h \
  /usr/include/CGAL/Origin.h /usr/include/CGAL/Origin_impl.h \
- /usr/include/CGAL/Profile_counter.h /usr/include/c++/12/iomanip \
- /usr/include/c++/12/locale \
- /usr/include/c++/12/bits/locale_facets_nonio.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/12/bits/locale_facets_nonio.tcc \
- /usr/include/c++/12/bits/locale_conv.h \
- /usr/include/c++/12/bits/quoted_string.h \
- /usr/include/CGAL/disable_warnings.h /usr/include/CGAL/enable_warnings.h \
- /usr/include/CGAL/assertions_impl.h \
+ /usr/include/CGAL/Profile_counter.h /usr/include/CGAL/disable_warnings.h \
+ /usr/include/CGAL/enable_warnings.h /usr/include/CGAL/assertions_impl.h \
  /usr/include/CGAL/assertions_behaviour.h /usr/include/CGAL/exceptions.h \
  /usr/include/boost/lexical_cast.hpp \
  /usr/include/boost/range/iterator_range_core.hpp \
@@ -746,14 +755,14 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/boost/move/detail/std_ns_begin.hpp \
  /usr/include/boost/move/detail/std_ns_end.hpp \
  /usr/include/boost/lexical_cast/detail/converter_lexical_streams.hpp \
- /usr/include/c++/12/cstring \
+ /usr/include/c++/13/cstring \
  /usr/include/boost/lexical_cast/detail/lcast_char_constants.hpp \
  /usr/include/boost/lexical_cast/detail/lcast_unsigned_converters.hpp \
  /usr/include/boost/noncopyable.hpp \
  /usr/include/boost/lexical_cast/detail/inf_nan.hpp \
  /usr/include/boost/math/special_functions/sign.hpp \
- /usr/include/boost/math/tools/config.hpp /usr/include/c++/12/cfloat \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/float.h \
+ /usr/include/boost/math/tools/config.hpp /usr/include/c++/13/cfloat \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
  /usr/include/boost/math/tools/user.hpp \
  /usr/include/boost/math/special_functions/math_fwd.hpp \
  /usr/include/boost/math/special_functions/detail/round_fwd.hpp \
@@ -884,12 +893,12 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/boost/mpl/aux_/preprocessed/gcc/less_equal.hpp \
  /usr/include/boost/mpl/greater_equal.hpp \
  /usr/include/boost/mpl/aux_/preprocessed/gcc/greater_equal.hpp \
- /usr/include/c++/12/stdlib.h /usr/include/c++/12/math.h \
- /usr/include/boost/config/no_tr1/complex.hpp /usr/include/c++/12/complex \
+ /usr/include/c++/13/stdlib.h /usr/include/c++/13/math.h \
+ /usr/include/boost/config/no_tr1/complex.hpp /usr/include/c++/13/complex \
  /usr/include/boost/math/special_functions/detail/fp_traits.hpp \
  /usr/include/boost/math/special_functions/fpclassify.hpp \
  /usr/include/boost/math/tools/real_cast.hpp \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/quadmath.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/quadmath.h \
  /usr/include/boost/integer.hpp /usr/include/boost/integer_fwd.hpp \
  /usr/include/boost/detail/basic_pointerbuf.hpp /usr/include/CGAL/tags.h \
  /usr/include/CGAL/IO/io_tags.h /usr/include/CGAL/number_type_basic.h \
@@ -915,17 +924,17 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/CGAL/is_convertible.h \
  /usr/include/CGAL/Scalar_factor_traits.h \
  /usr/include/CGAL/Algebraic_extension_traits.h \
- /usr/include/c++/12/numeric /usr/include/c++/12/bits/stl_numeric.h \
- /usr/include/c++/12/bit /usr/include/c++/12/pstl/glue_numeric_defs.h \
+ /usr/include/c++/13/numeric /usr/include/c++/13/bits/stl_numeric.h \
+ /usr/include/c++/13/pstl/glue_numeric_defs.h \
  /usr/include/CGAL/Needs_parens_as_product.h /usr/include/CGAL/IO/io.h \
  /usr/include/CGAL/IO/Color.h /usr/include/CGAL/array.h \
  /usr/include/CGAL/utils_classes.h /usr/include/CGAL/utils.h \
- /usr/include/CGAL/FPU.h /usr/include/c++/12/fenv.h /usr/include/fenv.h \
+ /usr/include/CGAL/FPU.h /usr/include/c++/13/fenv.h /usr/include/fenv.h \
  /usr/include/x86_64-linux-gnu/bits/fenv.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/xmmintrin.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/mmintrin.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/mm_malloc.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h \
  /usr/include/CGAL/test_FPU_rounding_mode_impl.h \
  /usr/include/CGAL/float.h /usr/include/CGAL/double.h \
  /usr/include/CGAL/number_utils.h /usr/include/CGAL/long_double.h \
@@ -944,8 +953,8 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/boost/type_index/stl_type_index.hpp \
  /usr/include/boost/type_index/type_index_facade.hpp \
  /usr/include/boost/container_hash/hash_fwd.hpp \
- /usr/include/boost/core/demangle.hpp /usr/include/c++/12/cxxabi.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/cxxabi_tweaks.h \
+ /usr/include/boost/core/demangle.hpp /usr/include/c++/13/cxxabi.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/cxxabi_tweaks.h \
  /usr/include/boost/variant/detail/config.hpp \
  /usr/include/boost/variant/variant_fwd.hpp \
  /usr/include/boost/blank_fwd.hpp \
@@ -1063,17 +1072,12 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/boost/optional/detail/optional_reference_spec.hpp \
  /usr/include/boost/optional/detail/optional_relops.hpp \
  /usr/include/boost/optional/detail/optional_swap.hpp \
- /usr/include/boost/any.hpp /usr/include/c++/12/memory \
- /usr/include/c++/12/bits/stl_raw_storage_iter.h \
- /usr/include/c++/12/bits/align.h /usr/include/c++/12/bits/shared_ptr.h \
- /usr/include/c++/12/bits/shared_ptr_base.h \
- /usr/include/c++/12/bits/allocated_ptr.h \
- /usr/include/c++/12/ext/concurrence.h \
- /usr/include/c++/12/bits/shared_ptr_atomic.h \
- /usr/include/c++/12/backward/auto_ptr.h \
- /usr/include/c++/12/bits/ranges_uninitialized.h \
- /usr/include/c++/12/bits/uses_allocator_args.h \
- /usr/include/c++/12/pstl/glue_memory_defs.h \
+ /usr/include/boost/any.hpp /usr/include/c++/13/memory \
+ /usr/include/c++/13/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/13/bits/shared_ptr_atomic.h \
+ /usr/include/c++/13/backward/auto_ptr.h \
+ /usr/include/c++/13/bits/ranges_uninitialized.h \
+ /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/CGAL/Kernel_traits.h /usr/include/CGAL/Kernel_traits_fwd.h \
  /usr/include/CGAL/basic_classes.h /usr/include/CGAL/Bbox_2.h \
  /usr/include/CGAL/Dimension.h /usr/include/Eigen/Core \
@@ -1081,7 +1085,7 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/Eigen/src/Core/util/Macros.h \
  /usr/include/Eigen/src/Core/util/ConfigureVectorization.h \
  /usr/include/Eigen/src/Core/util/MKL_support.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/omp.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/omp.h \
  /usr/include/Eigen/src/Core/util/Constants.h \
  /usr/include/Eigen/src/Core/util/Meta.h \
  /usr/include/Eigen/src/Core/util/ForwardDeclarations.h \
@@ -1239,13 +1243,12 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/boost/container_hash/detail/hash_float.hpp \
  /usr/include/boost/container_hash/detail/float_functions.hpp \
  /usr/include/boost/container_hash/detail/limits.hpp \
- /usr/include/boost/integer/static_log2.hpp /usr/include/c++/12/typeindex \
- /usr/include/c++/12/optional /usr/include/c++/12/variant \
+ /usr/include/boost/integer/static_log2.hpp /usr/include/c++/13/typeindex \
  /usr/include/boost/container_hash/extensions.hpp \
- /usr/include/boost/detail/container_fwd.hpp /usr/include/c++/12/list \
- /usr/include/c++/12/bits/stl_list.h /usr/include/c++/12/bits/list.tcc \
- /usr/include/c++/12/set /usr/include/c++/12/bits/stl_set.h \
- /usr/include/c++/12/bits/stl_multiset.h /usr/include/c++/12/bitset \
+ /usr/include/boost/detail/container_fwd.hpp /usr/include/c++/13/list \
+ /usr/include/c++/13/bits/stl_list.h /usr/include/c++/13/bits/list.tcc \
+ /usr/include/c++/13/set /usr/include/c++/13/bits/stl_set.h \
+ /usr/include/c++/13/bits/stl_multiset.h /usr/include/c++/13/bitset \
  /usr/include/CGAL/Cartesian/Point_2.h \
  /usr/include/CGAL/Cartesian/Weighted_point_2.h \
  /usr/include/CGAL/Handle_for.h /usr/include/CGAL/memory.h \
@@ -1693,8 +1696,8 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/CGAL/Lazy_exact_nt.h /usr/include/CGAL/Handle.h \
  /usr/include/CGAL/Lazy.h /usr/include/CGAL/min_max_n.h \
  /usr/include/CGAL/Default.h /usr/include/CGAL/is_iterator.h \
- /usr/include/CGAL/transforming_iterator.h /usr/include/c++/12/mutex \
- /usr/include/c++/12/bits/unique_lock.h /usr/include/CGAL/boost_mp.h \
+ /usr/include/CGAL/transforming_iterator.h /usr/include/c++/13/mutex \
+ /usr/include/c++/13/bits/unique_lock.h /usr/include/CGAL/boost_mp.h \
  /usr/include/boost/multiprecision/number.hpp \
  /usr/include/boost/mpl/max.hpp \
  /usr/include/boost/type_traits/is_complex.hpp \
@@ -1935,7 +1938,7 @@ src/CMakeFiles/obs_person_tracker.dir/visibility_graph.cpp.o: \
  /usr/include/CGAL/license/Triangulation_2.h \
  /usr/include/CGAL/Triangulation_2.h \
  /usr/include/CGAL/Triangulation_data_structure_2.h \
- /usr/include/c++/12/stack /usr/include/c++/12/bits/stl_stack.h \
+ /usr/include/c++/13/stack /usr/include/c++/13/bits/stl_stack.h \
  /usr/include/CGAL/Compact_container.h /usr/include/CGAL/CC_safe_handle.h \
  /usr/include/CGAL/Time_stamper.h /usr/include/CGAL/Has_timestamp.h \
  /usr/include/CGAL/Has_member.h \
