@@ -42,7 +42,7 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
     return true;
 }
-std::optional<std::tuple<int, int>> SpecificWorker::realToGrid(float x, float y)
+QPointF SpecificWorker::realToGrid(float x, float y)
 {
     int i = (static_cast<float>(GRID_SIZE) / GRID_DIMENSION_MM) * x + (GRID_SIZE / 2);
     int j = (static_cast<float>(GRID_SIZE) / GRID_DIMENSION_MM) * y + (GRID_SIZE / 2);
@@ -50,7 +50,7 @@ std::optional<std::tuple<int, int>> SpecificWorker::realToGrid(float x, float y)
     if (i < 0 or i >= GRID_SIZE or j < 0 or j >= GRID_SIZE)
         return {};
 
-    return std::make_tuple(i, j);
+    return QPointF(i, j);
 }
 
 QPointF SpecificWorker::gridToReal(int i, int j)
@@ -108,53 +108,50 @@ std::vector<Eigen::Vector2f> SpecificWorker::getLidarData(std::string lidar_name
 
 void SpecificWorker::compute()
 {
-    auto p_filter = getLidarData("bpearl");
-    draw_lidar(p_filter, &viewer->scene);
+//         auto p_filter = getLidarData("bpearl");
+//         draw_lidar(p_filter, &viewer->scene);
 
-    if (!viewer || grid.empty())
-    {
-        std::cerr << "Error: Viewer or grid is not initialized" << std::endl;
-        return;
-    }
+//         if (!viewer || grid.empty())
+//         {
+//             std::cerr << "Error: Viewer or grid is not initialized" << std::endl;
+//             return;
+//         }
 
-    updateGrid(p_filter);
+//         updateGrid(p_filter);
 
-    auto targetPoint = params.p_target;
-    if (targetPoint.x() == 0 && targetPoint.y() == 0)
-    {
-        std::cerr << "Error: Target point not selected" << std::endl;
-        return;
-    }
+//         auto targetPoint = params.p_target;
+//         if (targetPoint.x() == 0 && targetPoint.y() == 0)
+//         {
+//             std::cerr << "Error: Target point not selected" << std::endl;
+//             return;
+//         }
 
-    auto gridTarget = realToGrid(targetPoint.x(), targetPoint.y());
-    if (!gridTarget.has_value())
-    {
-        std::cerr << "Error: Target point is out of grid bounds" << std::endl;
-        return;
-    }
+//         auto gridTarget = realToGrid(targetPoint.x(), targetPoint.y());
+//         int gridX = gridTarget.x();
+//         int gridY = gridTarget.y();
 
-    auto [gridX, gridY] = gridTarget.value();
-    if (grid[gridX][gridY].state != StateCell::EMPTY)
-    {
-        std::cerr << "Error: Target point is in an unknown space" << std::endl;
-        return;
-    }
+//         if (grid[gridX][gridY].state != StateCell::EMPTY)
+//         {
+//             std::cerr << "Error: Target point is in an unknown space" << std::endl;
+//             return;
+//         }
 
-    Eigen::Vector2f target(gridX, gridY);
-    Eigen::Vector2f source(params.RobotX, params.RobotY);
+//         Eigen::Vector2f target(gridX, gridY);
+//         Eigen::Vector2f source(params.RobotX, params.RobotY);
 
-    // qDebug() << "Source: " << source.x() << " " << source.y();
-    // qDebug() << "Target: " << target.x() << " " << target.y();
-    // qDebug() << "Computing path...";
+//         qDebug() << "Source: " << source.x() << " " << source.y();
+//         qDebug() << "Target: " << target.x() << " " << target.y();
+//         qDebug() << "Computing path...";
 
-    // auto path = rutaDijkstra(source, target);
-    // if (path.empty())
-    // {
-    //     std::cerr << "Error: Path could not be found" << std::endl;
-    //     return;
-    // }
+//         auto path = rutaDijkstra(source, target);
+//         if (path.empty())
+//         {
+//             std::cerr << "Error: Path could not be found" << std::endl;
+//             return;
+//         }
 
-    // draw_path(path, &viewer->scene);
+//         draw_path(path, &viewer->scene);
+
 }
 
 /**
@@ -168,7 +165,7 @@ void SpecificWorker::compute()
  *                        and distance.
  * @param scene A pointer to the QGraphicsScene where the points will be drawn.
  */
-void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
+void SpecificWorker::draw_lidar(const std::vector<Eigen::Vector2f> &filtered_points, QGraphicsScene *scene)
 {
     qDebug() << "Drawing lidar...";
     static std::vector<QGraphicsItem *> items; // store items so they can be shown between iterations
@@ -176,8 +173,11 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
     // remove all items drawn in the previous iteration
     for (auto i : items)
     {
-        scene->removeItem(i);
-        delete i;
+        if (scene->items().contains(i))
+        {
+            scene->removeItem(i);
+            delete i;
+        }
     }
     items.clear();
 
@@ -259,6 +259,12 @@ void SpecificWorker::updateGrid(auto lidarPoints)
     for (auto &&[i, row] : grid | iter::enumerate)
         for (auto &&[j, celda] : row | iter::enumerate)
         {
+            if (celda.graphics_item == nullptr)
+            {
+                celda.graphics_item = viewer->scene.addRect(TILE_SIZE_MM / 2, TILE_SIZE_MM / 2, TILE_SIZE_MM, TILE_SIZE_MM,
+                                                            QPen(QColor("White"), 20), QBrush(QColor("Light Gray")));
+                celda.graphics_item->setPos(gridToReal(i, j));
+            }
             celda.state = StateCell::UNKNOWN;
             celda.graphics_item->setBrush(brushLightGray);
         }
@@ -271,21 +277,23 @@ void SpecificWorker::updateGrid(auto lidarPoints)
         for (float k = 0.f; k < 1.f; k += delta)
         {
             auto r = p * k;
-            if (auto optIndices = realToGrid(r.x(), r.y()); optIndices.has_value())
+            QPointF gridPoint = realToGrid(r.x(), r.y());
+            int i = gridPoint.x();
+            int j = gridPoint.y();
+            if (i >= 0 && j >= 0 && i < GRID_SIZE && j < GRID_SIZE)
             {
-                auto [i, j] = optIndices.value();
                 grid[i][j].state = StateCell::EMPTY;
                 grid[i][j].graphics_item->setBrush(brushWhite);
             }
         }
-        if (auto optIndices = realToGrid(p.x(), p.y()); optIndices.has_value())
+
+        QPointF gridPoint = realToGrid(p.x(), p.y());
+        int i = gridPoint.x();
+        int j = gridPoint.y();
+        if (i >= 0 && j >= 0 && i < GRID_SIZE && j < GRID_SIZE)
         {
-            auto [i, j] = optIndices.value();
-            if (i >= 0 && j >= 0 && i < GRID_SIZE && j < GRID_SIZE)
-            {
-                grid[i][j].state = StateCell::OCCUPIED;
-                grid[i][j].graphics_item->setBrush(brushRed);
-            }
+            grid[i][j].state = StateCell::OCCUPIED;
+            grid[i][j].graphics_item->setBrush(brushRed);
         }
     }
 
@@ -339,128 +347,143 @@ std::vector<Eigen::Vector2f> SpecificWorker::read_lidar_bpearl()
 
 RoboCompGrid2D::Result SpecificWorker::Grid2D_getPaths(RoboCompGrid2D::TPoint source, RoboCompGrid2D::TPoint target)
 {
+   
+        qDebug() << "Grid2D_getPaths";
 
-    qDebug() << "Grid2D_getPaths";
-    RoboCompGrid2D::Result result;
-    
- 
-    auto gridTarget = realToGrid(target.x, target.y);
-    Eigen::Vector2f sourceVec = Eigen::Vector2f(params.RobotX, params.RobotY);
-    Eigen::Vector2f targetVec = Eigen::Vector2f(std::get<0>(gridTarget.value()), std::get<1>(gridTarget.value()));
+        auto p_filter = getLidarData("bpearl");
+        draw_lidar(p_filter, &viewer->scene);
 
-    qDebug() << "Source: " << sourceVec.x() << " " << sourceVec.y();
-    qDebug() << "Target: " << targetVec.x() << " " << targetVec.y();
-
-    // real to grid, cambiar a libre la zona del target
-
-    if (!gridTarget.has_value())
-    {
-        result.valid = false;
-        result.errorMsg = "Target point is out of grid bounds";
-        return result;
-    }
-
- 
-
-    auto path = rutaDijkstra(sourceVec, targetVec);
-    qDebug() << "Path size: " << path.size();
-    if (path.empty())
-    {
-        result.valid = false;
-        result.errorMsg = "Path could not be found";
-        return result;
-    }
-    else
-    {
-        
-        //draw_path(path, &viewer->scene);
-        for (const auto &point : path)
+        if (!viewer || grid.empty())
         {
-            //qDebug() << "Point: " << point.x() << " " << point.y();
-            result.path.emplace_back(RoboCompGrid2D::TPoint{static_cast<float>(point.x()), static_cast<float>(point.y()), 0});
+            std::cerr << "Error: Viewer or grid is not initialized" << std::endl;
+            RoboCompGrid2D::Result result;
         }
-    
-    }
 
-    qDebug() << "Returning result";
-    result.valid = true;
-    for (const auto &p : result.path)
-    {
-        qDebug() << "Path: " << p.x << " " << p.y;
-    }
-    return result;
+        updateGrid(p_filter);
+
+        RoboCompGrid2D::Result result;
+
+        auto gridTarget = realToGrid(target.x, target.y);
+        int gridX = gridTarget.x();
+        int gridY = gridTarget.y();
+
+        Eigen::Vector2f sourceVec = Eigen::Vector2f(params.RobotX, params.RobotY);
+        Eigen::Vector2f targetVec = Eigen::Vector2f(gridX, gridY);
+
+        qDebug() << "Source: " << sourceVec.x() << " " << sourceVec.y();
+        qDebug() << "Target: " << targetVec.x() << " " << targetVec.y();
+
+        auto path = rutaDijkstra(sourceVec, targetVec);
+        qDebug() << "Path size: " << path.size();
+        if (path.empty())
+        {
+            result.valid = false;
+            result.errorMsg = "Path could not be found";
+        
+        }
+        else
+        {
+
+            draw_path(path, &viewer->scene);
+            sleep(30);
+            for (const auto &point : path)
+            {
+                // qDebug() << "Point: " << point.x() << " " << point.y();
+                result.path.emplace_back(RoboCompGrid2D::TPoint{static_cast<float>(point.x()), static_cast<float>(point.y()), 0});
+            }
+        }
+
+        qDebug() << "Returning result";
+        result.valid = true;
+        for (const auto &p : result.path)
+        {
+            qDebug() << "Path: " << p.x << " " << p.y;
+        }
+      
+
+        return result;
+    
 }
 
 std::vector<QPointF> SpecificWorker::rutaDijkstra(Eigen::Vector2f source, Eigen::Vector2f target)
 {
-    // implementCODE
+    qDebug() << "Computing path...";
+
     using Node = std::tuple<int, int, float>; // x, y, cost
     auto cmp = [](Node left, Node right)
     { return std::get<2>(left) > std::get<2>(right); };
     std::priority_queue<Node, std::vector<Node>, decltype(cmp)> open_list(cmp);
+
     std::vector<std::vector<float>> cost(GRID_SIZE, std::vector<float>(GRID_SIZE, std::numeric_limits<float>::max()));
     std::vector<std::vector<std::pair<int, int>>> came_from(GRID_SIZE, std::vector<std::pair<int, int>>(GRID_SIZE, {-1, -1}));
 
-    int x = static_cast<int>(source.x());
-    int y = static_cast<int>(source.y());
-    int x2 = static_cast<int>(target.x());
-    int y2 = static_cast<int>(target.y());
+    int startX = static_cast<int>(source.x());
+    int startY = static_cast<int>(source.y());
+    int targetX = static_cast<int>(target.x());
+    int targetY = static_cast<int>(target.y());
 
-    if (x2 >= 0 && x2 < GRID_SIZE && y2 >= 0 && y2 < GRID_SIZE)
+    if (targetX < 0 || targetX >= GRID_SIZE || targetY < 0 || targetY >= GRID_SIZE)
+        return {};
+
+    // Ensure target area is empty
+    for (int i = -1; i <= 1; ++i)
     {
-        for (int i = -1; i <= 1; ++i)
+        for (int j = -1; j <= 1; ++j)
         {
-            for (int j = -1; j <= 1; ++j)
+            int ni = targetX + i;
+            int nj = targetY + j;
+            if (ni >= 0 && ni < GRID_SIZE && nj >= 0 && nj < GRID_SIZE)
             {
-                int ni = x2 + i;
-                int nj = y2 + j;
-                if (ni >= 0 && ni < GRID_SIZE && nj >= 0 && nj < GRID_SIZE)
-                {
-                    grid[ni][nj].state = StateCell::EMPTY;
-                }
+                grid[ni][nj].state = StateCell::EMPTY;
             }
         }
     }
 
-    open_list.emplace(x, y, 0);
-    cost[x][y] = 0;
+    open_list.emplace(startX, startY, 0);
+    cost[startX][startY] = 0;
 
     std::vector<std::pair<int, int>> directions = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
     while (!open_list.empty())
     {
-        auto [cx, cy, ccost] = open_list.top();
+        auto [currentX, currentY, currentCost] = open_list.top();
         open_list.pop();
 
-        if (cx == x2 && cy == y2)
+        if (currentX == targetX && currentY == targetY)
             break;
 
         for (const auto &[dx, dy] : directions)
         {
-            int nx = cx + dx;
-            int ny = cy + dy;
-            if (nx >= 0 && nx < GRID_SIZE && ny >= 0 && ny < GRID_SIZE && grid[nx][ny].state == StateCell::EMPTY)
+            int nextX = currentX + dx;
+            int nextY = currentY + dy;
+            if (nextX >= 0 && nextX < GRID_SIZE && nextY >= 0 && nextY < GRID_SIZE && grid[nextX][nextY].state == StateCell::EMPTY)
             {
-                float new_cost = ccost + 1; // assuming uniform cost
-                if (new_cost < cost[nx][ny])
+                float newCost = currentCost + 1; // assuming uniform cost
+                if (newCost < cost[nextX][nextY])
                 {
-                    cost[nx][ny] = new_cost;
-                    open_list.emplace(nx, ny, new_cost);
-                    came_from[nx][ny] = {cx, cy};
+                    cost[nextX][nextY] = newCost;
+                    open_list.emplace(nextX, nextY, newCost);
+                    came_from[nextX][nextY] = {currentX, currentY};
                 }
             }
         }
     }
 
     std::vector<QPointF> path;
-    int cx = x2, cy = y2;
-    while (cx != x || cy != y)
+    int currentX = targetX, currentY = targetY;
+    while (currentX != startX || currentY != startY)
     {
-        path.emplace_back(gridToReal(cx, cy));
-        std::tie(cx, cy) = came_from[cx][cy];
+        path.emplace_back(gridToReal(currentX, currentY));
+        auto [prevX, prevY] = came_from[currentX][currentY];
+        if (prevX == -1 && prevY == -1)
+            break;
+        currentX = prevX;
+        currentY = prevY;
     }
-    path.emplace_back(gridToReal(x, y));
+    path.emplace_back(gridToReal(startX, startY));
     std::reverse(path.begin(), path.end());
+
+    qDebug() << "Dijkstra calculated";
 
     return path;
 }

@@ -121,7 +121,7 @@ private:
 
 	AbstractGraphicViewer *viewer;
 	// GRID
-	static constexpr int GRID_DIMENSION_MM = 10000;
+	static constexpr int GRID_DIMENSION_MM = 5000;
 	static constexpr int TILE_SIZE_MM = 100;
 	static constexpr int GRID_SIZE = GRID_DIMENSION_MM / TILE_SIZE_MM;
 
@@ -143,26 +143,24 @@ private:
 
 	std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid;
 
-	
-
-	
 	std::vector<Eigen::Vector2f> getLidarData(std::string lidar_name);
 
-	void draw_lidar(auto &filtered_points, QGraphicsScene *scene);
+	void draw_lidar(const std::vector<Eigen::Vector2f>  &filtered_points, QGraphicsScene *scene);
 
 	// lidar
 	std::vector<Eigen::Vector2f> read_lidar_bpearl();
 	void initializeGrid(auto &grid, QGraphicsScene *scene);
+
+
 	void updateGrid(auto lidarPoints);
-	std::optional<std::tuple<int, int>> realToGrid(float x, float y);
+
 	void DrawGrid(auto &grid, QGraphicsScene *scene);
 	QPointF gridToReal(int i, int j);
+	QPointF realToGrid(float x, float y);
 
 	std::vector<QPointF> rutaDijkstra(Eigen::Vector2f source, Eigen::Vector2f target);
 	QGraphicsPolygonItem *robot_draw;
 	void draw_path(auto &filtered_points, QGraphicsScene *scene);
-
-
 };
 
 #endif

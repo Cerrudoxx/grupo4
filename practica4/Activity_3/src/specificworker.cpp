@@ -138,6 +138,10 @@ void SpecificWorker::compute()
             qDebug() << "grid2d_proxy getting paths";
             auto path = grid2d_proxy->getPaths(robot_coords, person_coords);
             qDebug() << "Path calculado";
+            for (auto e: path.path){
+                qDebug() << e.x << " " << e.y;
+            }
+
         }
         else
         {
@@ -151,6 +155,11 @@ void SpecificWorker::compute()
     {
         std::cout << e << std::endl;
     }
+    
+
+    qDebug() << "Fin de compute \n";
+    sleep(30);
+
 }
 
 //////////////////////////////////////////////////////////////////
