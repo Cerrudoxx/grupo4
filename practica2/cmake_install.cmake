@@ -47,7 +47,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/antonio/robocomp/components/grupo4/practica2/src/cmake_install.cmake")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
    "/home/robocomp/robocomp/etc-default/person_tracker.conf")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)

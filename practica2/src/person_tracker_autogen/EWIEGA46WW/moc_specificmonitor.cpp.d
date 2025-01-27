@@ -1,8 +1,15 @@
 /home/antonio/robocomp/components/grupo4/practica2/src/person_tracker_autogen/EWIEGA46WW/moc_specificmonitor.cpp: /home/antonio/robocomp/components/grupo4/practica2/src/specificmonitor.h \
   /home/antonio/robocomp/components/grupo4/practica2/src/person_tracker_autogen/moc_predefs.h \
+  /home/antonio/robocomp/components/grupo4/practica2/src/Camera360RGB.h \
+  /home/antonio/robocomp/components/grupo4/practica2/src/CommonBehavior.h \
+  /home/antonio/robocomp/components/grupo4/practica2/src/GenericBase.h \
+  /home/antonio/robocomp/components/grupo4/practica2/src/Lidar3D.h \
+  /home/antonio/robocomp/components/grupo4/practica2/src/OmniRobot.h \
+  /home/antonio/robocomp/components/grupo4/practica2/src/VisualElementsPub.h \
   /home/antonio/robocomp/components/grupo4/practica2/src/config.h \
   /home/antonio/robocomp/components/grupo4/practica2/src/genericmonitor.h \
   /home/antonio/robocomp/components/grupo4/practica2/src/genericworker.h \
+  /home/antonio/robocomp/components/grupo4/practica2/src/ui_mainUI.h \
   /home/antonio/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
   /home/antonio/robocomp/core/classes/qlog/qlog.h \
   /usr/include/GL/gl.h \
@@ -459,6 +466,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractanimation.h \
@@ -788,6 +796,31 @@
   /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstatemachine.h \
   /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstatemachineglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qtstatemachine-config.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLCDNumber \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpacerItem \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSplitter \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlcdnumber.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsplitter.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/syscall.h \

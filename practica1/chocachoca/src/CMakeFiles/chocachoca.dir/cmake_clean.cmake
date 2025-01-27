@@ -44,8 +44,6 @@ file(REMOVE_RECURSE
   "Lidar3D.h"
   "OmniRobot.cpp"
   "OmniRobot.h"
-  "chocachoca_autogen/mocs_compilation.cpp"
-  "chocachoca_autogen/timestamp"
   "ui_mainUI.h"
 )
 
